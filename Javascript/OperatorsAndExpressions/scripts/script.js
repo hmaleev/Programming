@@ -93,10 +93,77 @@ function task6()
 	 	};
 
 }
-//task7
-
-//task8
-function task8()
+function task7()
 {
-	
+var  input=10;
+            var isPrime = true;
+            
+            alert("The Prime numbers between 1 and 100 are: ");
+
+            for (var number = 2; number <= 100; number++)
+            {
+                for (var prime = 2; prime <= 100; prime++)
+                {
+                    if (number != prime && number % prime == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+
+                }
+                
+                
+                if (isPrime)
+                {
+                    document.writeln( "Prime: "+number );
+                }
+                isPrime = true;
+            }
+}
+   
+//task8
+function CalculateTrapezoidArea()
+{
+	var a=4;
+	var b=2;
+	var h=2;
+	var result;
+	result=((a+b)/2)*h;
+	alert("The area of the trapezoid is: "+result)
+}
+//task9
+
+function task9()
+{
+	        var radius = 3;
+            var x;
+            var y;
+            var a = 1;
+            var b = 1;
+            var top = 1;
+            var left = -1;
+            var width = 6;
+            var height = 2;
+
+            var input;
+            var result;
+
+
+            alert("please write the coordinate of x: ");
+            input = Console.ReadLine();
+            x = Double.Parse(input);
+            alert("please write the coordinate of y: ");
+            input = Console.ReadLine();
+            y = Double.Parse(input);
+            if ((x<5 && x>-1) && (y<1 && y>-1))
+                alert("this point lies inside a rectangle" );
+            else
+                alert("this point does not lie inside a rectangle");
+
+            //result = ((x-a) * (x-a)) + ((y-b) * (y-b));
+            //if (result < (radius * radius))
+            //    Console.WriteLine("the point is inside a circle");
+            //else
+            //    Console.WriteLine("This point isn't inside a circle");
+
 }
