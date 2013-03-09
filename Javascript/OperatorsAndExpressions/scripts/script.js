@@ -1,5 +1,5 @@
 //task 1
-function task1 ()
+function CheckForEvenNumber ()
  {
 	var a =prompt ("Please choose a number to check");
 
@@ -14,10 +14,10 @@ function task1 ()
 }
 
 //task 2
-function task2 ()
+function CheckDivison ()
 {
 	var check = false;
-	var number=35;
+	var number=prompt ("Please choose a number to check");
 	if (number%5==0 && number%7==0) 
 		{
 			check =true;
@@ -33,7 +33,7 @@ function task2 ()
 }
 		
 //task 3
-function task3 ()
+function CalculateRectangleArea ()
 {
 var width=prompt("choose the length of the rectangle:");
 var height=prompt("Choose the width of the rectangle");
@@ -44,9 +44,9 @@ alert("The area is: "+area);
 }
 
 //task 4
-function task4 ()
+function CheckThirdDigit ()
 {
-var number=1832;
+var number=prompt ("Please choose a number with at least 3 numbers to check");;
 var result;
 number = number/100;
 result=number%10
@@ -61,9 +61,9 @@ if (result%7>=0 && result%7<1)
 }
 
 //task5
-function task5()
+function CheckThirdBit()
 {
-	var number=16;
+	var number=prompt ("Please choose a number to check");;
 	var mask=1<<3;
 	var result =number&mask;
 	result=result>>3
@@ -72,7 +72,7 @@ function task5()
 }
 
 //task6
-function task6()
+function FindPointInCircle()
 {
 	var xCoordinate=5;
 	var yCoordinate=2;
@@ -93,9 +93,11 @@ function task6()
 	 	};
 
 }
-function task7()
+
+
+
+function FindPrimeNumbers()
 {
-var  input=10;
             var isPrime = true;
             
             alert("The Prime numbers between 1 and 100 are: ");
@@ -111,16 +113,18 @@ var  input=10;
                     }
 
                 }
-                
-                
+
                 if (isPrime)
                 {
-                    document.writeln( "Prime: "+number );
+ document.getElementById("result2").innerHTML=document.writeln(number);
+
                 }
                 isPrime = true;
             }
 }
-   
+
+
+
 //task8
 function CalculateTrapezoidArea()
 {
