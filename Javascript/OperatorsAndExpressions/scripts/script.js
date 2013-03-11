@@ -5,12 +5,12 @@ function CheckForEvenNumber ()
 
 	if (a%2==0) 
 	{
-		alert("The result is: Even")
+		alert("The result is: Even");
 	} 
 	else
 	{
-	alert("The result is: Odd")
-	};
+	alert("The result is: Odd");
+	}
 }
 
 //task 2
@@ -24,12 +24,12 @@ function CheckDivison ()
 		}
 		if (check==true)
 		{
-			alert("This number can be divided by both 5 and 7")
+			alert("This number can be divided by both 5 and 7");
 		} 
 		else
 		{
-			alert("This number can't be divided by both	 5 and 7")
-		};
+			alert("This number can't be divided by both	 5 and 7");
+		}
 }
 		
 //task 3
@@ -46,27 +46,27 @@ alert("The area is: "+area);
 //task 4
 function CheckThirdDigit ()
 {
-var number=prompt ("Please choose a number with at least 3 numbers to check");;
+var number=prompt ("Please choose a number with at least 3 numbers to check");
 var result;
 number = number/100;
-result=number%10
+result=number%10;
 if (result%7>=0 && result%7<1)
- {
- 	alert("the third digit is 7")
- }
-  else
-  	{
-  		alert("the third digit isn't 7")
-  	};
+{
+	alert("the third digit is 7");
+}
+else
+	{
+		alert("the third digit isn't 7");
+	}
 }
 
 //task5
 function CheckThirdBit()
 {
-	var number=prompt ("Please choose a number to check");;
-	var mask=1<<3;
-	var result =number&mask;
-	result=result>>3
+	var number=prompt ("Please choose a number to check");
+	var mask=(1<<3);
+	var result =(number&mask);
+	result=(result>>3);
 	
 	alert("The third bit in this number is: " +result);
 }
@@ -81,16 +81,16 @@ function FindPointInCircle()
 	var result;
 	var point;
 	var circle;
-	circle=Math.pow(radius,2)
+	circle=Math.pow(radius,2);
 	point=Math.pow( (xCoordinate-center) ,2) + Math.pow( (xCoordinate-center) ,2);
 	if (point<circle) 
 		{
-			alert("the point is inside a circle")
+			alert("the point is inside a circle");
 		}
 	else
-	 	{
-			alert("the point is not inside a circle")
-	 	};
+		{
+			alert("the point is not inside a circle");
+		}
 
 }
 
@@ -98,29 +98,25 @@ function FindPointInCircle()
 
 function FindPrimeNumbers()
 {
-            var isPrime = true;
-            
-            alert("The Prime numbers between 1 and 100 are: ");
+			var isPrime = true; 
+			alert("The Prime numbers between 1 and 100 are: ");
+			for (var number = 2; number <= 100; number++)
+			{
+			for (var prime = 2; prime <= 100; prime++)
+			{
+				if (number != prime && number % prime == 0)
+					{
+						isPrime = false;
+						break;
+					}
+				}
 
-            for (var number = 2; number <= 100; number++)
-            {
-                for (var prime = 2; prime <= 100; prime++)
-                {
-                    if (number != prime && number % prime == 0)
-                    {
-                        isPrime = false;
-                        break;
-                    }
-
-                }
-
-                if (isPrime)
-                {
- document.getElementById("result2").innerHTML=document.writeln(number);
-
-                }
-                isPrime = true;
-            }
+				if (isPrime)
+				 {
+					document.getElementById("result2").innerHTML=document.writeln(number);
+				}
+				isPrime = true;
+			}
 }
 
 
@@ -133,7 +129,7 @@ function CalculateTrapezoidArea()
 	var h=2;
 	var result;
 	result=((a+b)/2)*h;
-	alert("The area of the trapezoid is: "+result)
+	alert("The area of the trapezoid is: "+result);
 }
 //task9
 
@@ -160,9 +156,9 @@ function task9()
             input = Console.ReadLine();
             y = Double.Parse(input);
             if ((x<5 && x>-1) && (y<1 && y>-1))
-                alert("this point lies inside a rectangle" );
+              {  alert("this point lies inside a rectangle" ); }
             else
-                alert("this point does not lie inside a rectangle");
+             {   alert("this point does not lie inside a rectangle"); }
 
             //result = ((x-a) * (x-a)) + ((y-b) * (y-b));
             //if (result < (radius * radius))
