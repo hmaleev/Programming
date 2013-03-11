@@ -1,15 +1,9 @@
-1.Write an if statement that examines two integer variables and exchanges their values if the first one is greater than the second one.
-2.Write a script that shows the sign (+ or -) of the product of three real numbers without calculating it. Use a sequence of if statements.
-3.Write a script that finds the biggest of three integers using nested if statements.
-4.Sort 3 real values in descending order using nested if statements.
-5.Write script that asks for a digit and depending on the input shows the name of that digit (in English) using a switch statement.
-6.Write a script that enters the coefficients a, b and c of a quadratic equation
-		a*x2 + b*x + c = 0
-		and calculates and prints its real roots. Note that quadratic equations may have 0, 1 or 2 real roots.
-7.Write a script that finds the greatest of given 5 variables.
-8.Write a script that converts a number in the range [0...999] to a text corresponding to its English pronunciation. Examples:
-	0 ? "Zero"
-	273 ? "Two hundred seventy three"
-	400 ? "Four hundred"
-	501 ? "Five hundred and one"
-	711 ? "Seven hundred and eleven"
+1.Write an expression that checks if given integer is odd or even.
+2.Write a boolean expression that checks for given integer if it can be divided (without remainder) by 7 and 5 in the same time.
+3.Write an expression that calculates rectangle’s area by given width and height.
+4.Write an expression that checks for given integer if its third digit (right-to-left) is 7. E. g. 1732  true.
+5.Write a boolean expression for finding if the bit 3 (counting from 0) of a given integer is 1 or 0.
+6.Write an expression that checks if given print (x,  y) is within a circle K(O, 5).
+7.Write an expression that checks if given positive integer number n (n ≤ 100) is prime. E.g. 37 is prime.
+8.Write an expression that calculates trapezoid's area by given sides a and b and height h.
+9.Write an expression that checks for given point (x, y) if it is within the circle K( (1,1), 3) and out of the rectangle R(top=1, left=-1, width=6, height=2).
