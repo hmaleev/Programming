@@ -82,7 +82,7 @@ function FindPointInCircle()
 	var point;
 	var circle;
 	circle=Math.pow(radius,2);
-	point=Math.pow( (xCoordinate-center) ,2) + Math.pow( (xCoordinate-center) ,2);
+	point=Math.pow( (xCoordinate-center) ,2) + Math.pow( (yCoordinate-center) ,2);
 	if (point<circle) 
 		{
 			alert("the point is inside a circle");
@@ -99,7 +99,8 @@ function FindPointInCircle()
 function FindPrimeNumbers()
 {
 			var isPrime = true; 
-			alert("The Prime numbers between 1 and 100 are: ");
+			var input = prompt("enter a number:")
+			//alert("The Prime numbers between 1 and 100 are: ");
 			for (var number = 2; number <= 100; number++)
 			{
 			for (var prime = 2; prime <= 100; prime++)
@@ -111,10 +112,18 @@ function FindPrimeNumbers()
 					}
 				}
 
-				if (isPrime)
+				if (isPrime==true && number==input)
 				 {
-					document.getElementById("result2").innerHTML=document.writeln(number);
+					alert("This number is Prime")
+					break;
 				}
+				if (isPrime==false && number==input)
+				 {
+					alert("This number is not Prime")
+					break;
+				}
+
+
 				isPrime = true;
 			}
 }
@@ -135,35 +144,39 @@ function CalculateTrapezoidArea()
 
 function task9()
 {
-	        var radius = 3;
-            var x;
-            var y;
-            var a = 1;
-            var b = 1;
-            var top = 1;
-            var left = -1;
-            var width = 6;
-            var height = 2;
+    var radius = 3;
+    var xCoordinate = prompt("please write the coordinate of x: ");
+    var yCoordinate = prompt("please write the coordinate of y: ");;
+    var xCenter = 1;
+    var yCenter = 1;
 
-            var input;
-            var result;
+    var width = 6;
+    var height = 2;
+
+    var top = 1;
+    var left = -1;
+    var	right =left+width;
+	var	bottom =top-height;
+	
+    
+	var circle=Math.pow(radius,2);
+	//var point=Math.pow( (xCoordinate-center) ,2) + Math.pow( (xCoordinate-center) ,2);
+	var point = Math.pow((xCoordinate-xCenter),2)+Math.pow((yCoordinate-yCenter),2)
 
 
-            alert("please write the coordinate of x: ");
-            input = Console.ReadLine();
-            x = Double.Parse(input);
-            alert("please write the coordinate of y: ");
-            input = Console.ReadLine();
-            y = Double.Parse(input);
-            if ((x<5 && x>-1) && (y<1 && y>-1))
-              {  alert("this point lies inside a rectangle" ); }
-            else
-             {   alert("this point does not lie inside a rectangle"); }
-
-            //result = ((x-a) * (x-a)) + ((y-b) * (y-b));
-            //if (result < (radius * radius))
-            //    Console.WriteLine("the point is inside a circle");
-            //else
-            //    Console.WriteLine("This point isn't inside a circle");
-
+    if ((xCoordinate<right && xCoordinate>left) && (yCoordinate<top && yCoordinate>bottom))
+    { 
+    	if (point<circle)
+    	{
+    		alert("The point lies inside both a circle and rectangle")
+    	} else
+    	{
+    		alert("The point lies inside a rectangle, but not inside a circle")
+    	};
+ 	}
+    else
+    {
+       alert("this point doesn't lie inside a rectangle and circle"); 
+    }
+    
 }
