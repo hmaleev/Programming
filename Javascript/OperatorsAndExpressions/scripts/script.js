@@ -1,15 +1,15 @@
 //task 1
 function CheckForEvenNumber ()
  {
-	var a =prompt ("Please choose a number to check");
+	var firstNumber =parseInt(prompt ("Please choose a number to check"));
 
-	if (a%2==0) 
+	if (firstNumber%2==0) 
 	{
-		alert("The result is: Even");
+		alert("This number is: Even");
 	} 
 	else
 	{
-	alert("The result is: Odd");
+	alert("This number is: Odd");
 	}
 }
 
@@ -17,7 +17,7 @@ function CheckForEvenNumber ()
 function CheckDivison ()
 {
 	var check = false;
-	var number=prompt ("Please choose a number to check");
+	var number=parseInt(prompt ("Please choose a number to check"));
 	if (number%5==0 && number%7==0) 
 		{
 			check =true;
@@ -28,15 +28,15 @@ function CheckDivison ()
 		} 
 		else
 		{
-			alert("This number can't be divided by both	 5 and 7");
+			alert("This number can't be divided by both 5 and 7");
 		}
 }
 		
 //task 3
 function CalculateRectangleArea ()
 {
-var width=prompt("choose the length of the rectangle:");
-var height=prompt("Choose the width of the rectangle");
+var width=parseInt(prompt("choose the length of the rectangle:"));
+var height=parseInt(prompt("Choose the width of the rectangle"));
 var area;
 
 area=width*height;
@@ -46,11 +46,12 @@ alert("The area is: "+area);
 //task 4
 function CheckThirdDigit ()
 {
-var number=prompt ("Please choose a number with at least 3 numbers to check");
+var number=parseInt(prompt ("Please choose a number with at least 3 numbers to check"));
 var result;
 number = number/100;
-result=number%10;
-if (result%7>=0 && result%7<1)
+result=parseInt(number%10);
+
+if (result%7==0)
 {
 	alert("the third digit is 7");
 }
@@ -63,7 +64,7 @@ else
 //task5
 function CheckThirdBit()
 {
-	var number=prompt ("Please choose a number to check");
+	var number=parseInt(prompt ("Please choose a number to check"));
 	var mask=(1<<3);
 	var result =(number&mask);
 	result=(result>>3);
@@ -74,8 +75,8 @@ function CheckThirdBit()
 //task6
 function FindPointInCircle()
 {
-	var xCoordinate=5;
-	var yCoordinate=2;
+	var xCoordinate=parseInt(prompt ("Please choose  the X coordinate of the point to check"));
+	var yCoordinate=parseInt(prompt ("Please choose  the Y coordinate of the point to check"));
 	var radius =5;
 	var center=0;
 	var result;
@@ -99,8 +100,7 @@ function FindPointInCircle()
 function FindPrimeNumbers()
 {
 			var isPrime = true; 
-			var input = prompt("enter a number:")
-			//alert("The Prime numbers between 1 and 100 are: ");
+			var input = parseInt(prompt("enter a number:"));
 			for (var number = 2; number <= 100; number++)
 			{
 			for (var prime = 2; prime <= 100; prime++)
@@ -133,9 +133,9 @@ function FindPrimeNumbers()
 //task8
 function CalculateTrapezoidArea()
 {
-	var a=4;
-	var b=2;
-	var h=2;
+	var a=parseInt(prompt ("Please choose  the length of side a"));
+	var b=parseInt(prompt ("Please choose  the length of side b"));
+	var h=parseInt(prompt ("Please choose  the height of the trapezoid"));
 	var result;
 	result=((a+b)/2)*h;
 	alert("The area of the trapezoid is: "+result);
@@ -160,7 +160,6 @@ function task9()
 	
     
 	var circle=Math.pow(radius,2);
-	//var point=Math.pow( (xCoordinate-center) ,2) + Math.pow( (xCoordinate-center) ,2);
 	var point = Math.pow((xCoordinate-xCenter),2)+Math.pow((yCoordinate-yCenter),2)
 
 
