@@ -70,7 +70,7 @@ for(var i in document)
 	{
 		max=i;
 	}
-}
+}	document.getElementById("MinAndMaxPropertyResult").innerHTML+="Document propeties: "+"</br>";
 	document.getElementById("MinAndMaxPropertyResult").innerHTML+="MAX: "+max+"</br>";
 	document.getElementById("MinAndMaxPropertyResult").innerHTML+="MIN: "+min+"</br>";
 
@@ -84,8 +84,8 @@ for(var i in document)
 	{
 		max=property;
 	}
-}
-	document.getElementById("MinAndMaxPropertyResult").innerHTML+="window MAX: "+max+"</br>";
+}	document.getElementById("MinAndMaxPropertyResult").innerHTML+="Window propeties: "+"</br>";
+	document.getElementById("MinAndMaxPropertyResult").innerHTML+="MAX: "+max+"</br>";
 	document.getElementById("MinAndMaxPropertyResult").innerHTML+="MIN: "+min+"</br>";
 var min="z";
 var max="a";
@@ -99,7 +99,7 @@ for(var property in navigator)
 	{
 		max=property;
 	}
-}
+}	document.getElementById("MinAndMaxPropertyResult").innerHTML+="Navigator propeties: "+"</br>";
 	document.getElementById("MinAndMaxPropertyResult").innerHTML+="navigator MAX: "+max+"</br>";
 	document.getElementById("MinAndMaxPropertyResult").innerHTML+="MIN: "+min+"</br>";
 
