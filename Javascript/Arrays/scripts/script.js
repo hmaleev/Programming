@@ -90,23 +90,164 @@ for (var i = 0; i<array.length-1; i++)
 function Task4 ()
 {
 
+var array = new Array (3, 2, 3, 4, 5, 6, 4)
+var count=1;
+var max=1;
+var result = new Array();
+
+var startPosition;
+
+for (var i = array.length-1; i>=0; i--) 
+{
+	 if (i>=1 && array[i]==array[i-1]+1)
+	{
+		count++;
+		
+		
+	}
+	else
+	{
+	   count=1;
+
+	}
+	if (max<count)
+	{
+	   max=count
+	  
+	   startPosition=i-1;
+	  
+	  
+	}
+
+}
+document.getElementById("task4").innerHTML +="The longest increasing sequence is:</br>"
+;
+	for (var i = 0; i<max; i++,startPosition++) 
+	{
+		result[i]=array[startPosition];
+		document.getElementById("task4").innerHTML +=result[i]+" ";
+	}
+
 }
 
 //task 5
 function Task5 ()
 {
+	var array = new Array (4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3 );
 
+    var  number;
+    var  exchange;
+    var  count=1;
+    var  maxCount = 0;
+    var element=0;
+   for (var i = 0; i < array.length; i++)
+            {
+                for (var j = i + 1; j < array.length; j++)
+                {
+                    if (array[i] > array[j])
+                    {
+                        exchange = array[i];
+                        array[i] = array[j];
+                        array[j] = exchange;
+                    }
+
+                }
+            }
+    for (var i = 01; i < array.length; i++)
+     {
+     document.getElementById("task5").innerHTML +=array[i]+" ";
+    };
 }
 
 //task 6
 function Task6 ()
 {
+	var array = new Array (4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3 );
 
+    var  number;
+    var  exchange;
+    var  count=1;
+    var  maxCount = 0;
+    var element=0;
+   for (var i = 0; i < array.length; i++)
+            {
+                for (var j = i + 1; j < array.length; j++)
+                {
+                    if (array[i] > array[j])
+                    {
+                        exchange = array[i];
+                        array[i] = array[j];
+                        array[j] = exchange;
+                    }
+
+                }
+            }
+            for (var i = 0; i < array.length-2; i++)
+            {
+                if (array[i]==array[i+1])
+                {
+                    count++;
+                }
+                else
+                {
+                    count = 1;
+                }
+                if (count>maxCount)
+                {
+                    maxCount = count;
+                    element = array[i];
+                }
+
+            }
+            document.getElementById("task6").innerHTML +="The most frequent element is:"+element+" - " +maxCount+"times";
 }
+
+
+
 
 //task 7
 function Task7 ()
 {
+   			var array = new Array (5,2,4,3,6,1,7,8);
+            var number = 4;
+            var exchange;
+            var min = 0;
+            var max = array.length - 1;
+            var mid = (min + max) / 2;
+
+            for (var i = 0; i < array.length; i++)
+            {
+                for (var j = i + 1; j < array.length-1; j++)
+                {
+                    if (array[i] > array[j])
+                    {
+                        exchange = array[i];
+                        array[i] = array[j];
+                        array[j] = exchange;
+                    }
+                }
+            }          
+            while( mid < array.length)
+            {
+                if (array[mid] > number)
+                {
+                    max = mid;
+                    mid = (max + min) / 2;
+                    continue;
+                   
+                }
+                else if (array[mid] < number)
+                {
+                    min = mid ;
+                    mid = (min + max) / 2;
+                }
+                if (array[mid]==number)
+                {
+		document.getElementById("task7").innerHTML +=mid+" ";
+
+                  break;
+                }
+            }
 
 }
 
