@@ -1,6 +1,8 @@
 
 ol li div
-{	width: 20%;
+{	display: block;
+	width: 20%;
 	background-color: #000;
 	color:#0C0;
+	overflow: auto;
 }
