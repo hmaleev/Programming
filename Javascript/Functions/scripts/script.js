@@ -2,13 +2,31 @@
 function Task1 ()
 {
 	document.getElementById("task1").innerHTML="";
-	var number =42;
+	var number=parseInt(document.getElementById("input1").value);
 	var result;
 
 	LastDigit(number);
 	function LastDigit (number)
 	{ 
-		var digit = number%10;
+		if (number>=10 ) 
+		{
+			var digit = number%10;
+
+		}
+		if (number<-10)
+		{	
+			number=number*-1;
+			var digit=number%10;
+		}
+		if (number>=0 && number <=9) 
+		{
+			var digit=number;
+		};
+		if (number>-9 && number<0) 
+			{
+			number=number*-1;
+			var digit=number;
+			};
 		switch (digit)
 		{
 			case 0: result="Zero"; break;
@@ -32,7 +50,7 @@ function Task1 ()
 function Task2 ()
 {
 	document.getElementById("task2").innerHTML;
-	var number =4205;
+	var number=parseInt(document.getElementById("input2").value);
 	var arr1 = new Array();
 	var result;
 	
