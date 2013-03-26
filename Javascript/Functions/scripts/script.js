@@ -114,9 +114,7 @@ function Task5 ()
 {
 	var inputText = document.getElementById("inputNumber").value;
 	var number=document.getElementById("Number2").value;
-
 	var arr1=inputText.split(" "||",");
-
 
 	var count=0;
 		for (var i = 0; i <=arr1.length; i++)
@@ -135,19 +133,44 @@ function Task5 ()
 //task 6
 function Task6 ()
 {
-var isBigger =false;
-var arr1=new Array(1,1,3,1,3,6,6,6,7);
+	var isBigger =false;
+	var inputText = document.getElementById("inputNumber3").value;
+	var position=parseInt( document.getElementById("position").value);
 
-if (arr1[2]>arr1[1] && arr1[2]>arr1[3])
-{
-	isBigger=true;
-document.getElementById("task6").innerHTML=isBigger;
-};
+	var array=inputText.split(" "||",");
+
+	if (array[position]>array[position-1] && array[position]>array[position+1])
+	{
+		isBigger=true;
+		document.getElementById("task6").innerHTML+=isBigger;
+	}
+	else
+	{
+		isBigger=false;
+		document.getElementById("task6").innerHTML+=isBigger;
+	}
 }
-
 
 //task 7
 function Task7 ()
 {
 
+	var isBigger =false;
+	var inputText = document.getElementById("inputNumber5").value;
+	var array=inputText.split(" "||",");
+
+
+	for (var position = 1; position <array.length-1; position ++) 
+	{
+		if (array[position]>array[position-1] && array[position]>array[position+1])
+		{
+			isBigger=true;
+			document.getElementById("task7").innerHTML+="Thie index of the first number bigger than its neighbours is: "+ position;
+		}
+		else
+		{
+			isBigger=false;
+			document.getElementById("task7").innerHTML+="-1" + " (There is no element bigger than its neighbours)";
+		}
+	};
 }
