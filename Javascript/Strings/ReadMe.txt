@@ -1,9 +1,58 @@
-1.Write a script that allocates array of 20 integers and initializes each element by its index multiplied by 5. Print the obtained array on the console.
-2.Write a script that compares two char arrays lexicographically (letter by letter).
-3.Write a script that finds the maximal sequence of equal elements in an array.
-		Example: {2, 1, 1, 2, 3, 3, 2, 2, 2, 1}  {2, 2, 2}.
-4.Write a script that finds the maximal increasing sequence in an array. Example:{3, 2, 3, 4, 2, 2, 4} -> {2, 3, 4}.
-5.Sorting an array means to arrange its elements in increasing order. Write a script to sort an array. Use the "selection sort" algorithm: Find the smallest element, move it at the first position, find the smallest from the rest, move it at the second position, etc.Hint: Use a second array
-6.Write a program that finds the most frequent number in an array. Example:
-	{4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3} -> 4 (5 times)
-7.Write a program that finds the index of given element in a sorted array of integers by using the binary search algorithm (find it in Wikipedia)
+1.Write a JavaScript function reverses string and returns it
+	Example: "sample" -> "elpmas".
+	
+2.Write a JavaScript function to check if in a given expression the brackets are put correctly.
+	Example of correct expression: ((a+b)/5-d).
+	Example of incorrect expression: )(a+b)).
+	
+3.Write a JavaScript function that finds how many times a substring is contained in a given text (perform case insensitive search).
+		Example: The target substring is "in". The text is as follows:
+				"We are living in an yellow submarine. We don't have anything else. Inside the submarine is very tight. So we are drinking all the day. We will move out of it in 5 days."
+		The result is: 9.
+		
+4.You are given a text. Write a function that changes the text in all regions:
+	<upcase>text</upcase> to uppercase.
+	<lowcase>text</lowcase> to lowercase
+	<mixcase>text</mixcase> to mix casing(random)
+"We are <mixcase>living</mixcase> in a <upcase>yellow submarine</upcase>. We <mixcase>don't</mixcase> have <lowcase>anything</lowcase> else."
+The expected result:
+"We are LiVinG in a YELLOW SUBMARINE. We dOn'T have anything else."
+Regions can be nested
+
+5.Write a function that replaces non breaking white-spaces in a text with &nbsp;
+
+6.Write a function that extracts the content of a html page given as text. The function should return anything that is in a tag, without the tags:
+	<html><head><title>Sample site</title></head><body><div>text<div>more text</div>and more...</div>in body</body></html>
+Result:
+	Sample sitetextmore textand more...in body
+	
+7.Write a script that parses an URL address given in the format:[protocol]://[server]/[resource]
+	and extracts from it the [protocol], [server] and [resource] elements. Return the elements in a JSON object.
+	For example from the URL: http://www.devbg.org/forum/index.php the following information should be extracted:
+	{protocol: "http",server: "www.devbg.org", resource: "/forum/index.php"}
+
+8.
+Write a JavaScript function that replaces in a HTML document given as string all the tags <a href="…">…</a> with corresponding tags [URL=…]…/URL]. Sample HTML fragment:
+<p>Please visit <a href="http://academy.telerik. com">our site</a> to choose a training course. Also visit <a href="www.devbg.org">our forum</a> to discuss the courses.</p>
+Result:
+<p>Please visit [URL=http://academy.telerik. com]our site[/URL] to choose a training course. Also visit [URL=www.devbg.org]our forum[/URL] to discuss the courses.</p>
+
+9.Write a function for extracting all email addresses from given text. All substrings that match the format <identifier>@<host>…<domain> should be recognized as emails. Return the emails as array of strings.
+
+10.Write a program that extracts from a given text all palindromes, e.g. "ABBA", "lamal", "exe".
+
+var str = stringFormat("Hello {0}!","Peter")
+//str = "Hello Peter!";
+
+11. Write a function that formats a string using placeholders:
+var str = stringFormat("Hello {0}!","Peter");
+//str = "Hello Peter!";
+The function should work with up to 30 placeholders and all types
+var format = "{0}, {1}, {0} text {2}";
+var str = stringFormat(format,1,"Pesho","Gosho");
+//str = "1, Pesho, 1 text Gosho"
+
+
+
+
+
