@@ -4,9 +4,9 @@ using System.Text;
 
 namespace CowsAndBullsGame
 {
-   /* public class Engine
+     class Engine
     {
-        public void Game()
+     public  void CheckInput(string number, string input)
         {
             Console.Clear();
             char[] numberArray = new char[4];
@@ -36,5 +36,57 @@ namespace CowsAndBullsGame
             Console.WriteLine("Cows - {0}", cowCount);
             Console.WriteLine("Bulls - {0}", bullCount);
         }
-    }*/
+
+     public void Run(HumanPlayer playerOne,HumanPlayer playerTwo)
+     {
+         bool playerOneTurn = true;
+         bool playerTwoTurn = false;
+
+         while (true)
+         {
+               if (playerOneTurn == true)
+         {
+             Console.WriteLine("{0}'s turn", playerOne.PlayerName);
+             Console.WriteLine("Enter a number: ");
+             playerOne.Input = Console.ReadLine();
+         }
+         else
+         {
+             Console.WriteLine("{0}'s turn", playerTwo.PlayerName);
+             Console.WriteLine("Enter a number: ");
+             playerTwo.Input = Console.ReadLine();
+         }
+
+         if (playerOne.Input != playerTwo.Number && playerOneTurn == true)
+         {
+
+
+             CheckInput(playerTwo.Number, playerOne.Input);
+             playerOneTurn = false;
+             playerTwoTurn = true;
+             continue;
+         }
+         else if (playerOne.Input == playerTwo.Number && playerOneTurn == true)
+         {
+             CheckInput(playerTwo.Number, playerOne.Input);
+             Console.WriteLine("{0} WINS!", playerOne.PlayerName);
+             break;
+         }
+
+         if (playerTwo.Input != playerOne.Number && playerTwoTurn == true)
+         {
+             CheckInput(playerOne.Number, playerTwo.Input);
+             playerOneTurn = true;
+             playerTwoTurn = false;
+         }
+         else if (playerTwo.Input == playerOne.Number && playerTwoTurn == true)
+         {
+             CheckInput(playerOne.Number, playerTwo.Input);
+             Console.WriteLine("{0} WINS!", playerTwo.PlayerName);
+             break;
+         }
+         }
+     }
+    }
+
 }
