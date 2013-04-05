@@ -129,7 +129,23 @@ function Task4 ()
 //task 5
 function Task5 ()
 {
-	
+    var text = "In computer-based text processing and digital typesetting, a non-breaking space, also known as a no-break space or non-breakable space (NBSP), is a variant of the space character that prevents an automatic line break (line wrap) at its position";
+    var text2=text;
+   // document.getElementById("task5").innerHTML = text;
+    for (var i = 0; i < text.length; i++) {
+        if (text[i] === " ")
+        {
+            text2[i] = "&nbsp";
+
+        }
+        else
+        {
+            text2[i] += text[i];
+        }
+
+    }
+   
+    document.getElementById("task5").innerHTML = text2;
 
 }
 
@@ -185,4 +201,73 @@ function Task7 ()
     document.getElementById("task7").innerHTML += protocol + "</br>";
     document.getElementById("task7").innerHTML += server + "</br>";
     document.getElementById("task7").innerHTML += resource;
+}
+
+//task 6
+function Task9()
+{
+    var text = "asd hmaleev@gmail.com asddf"
+    var isIdentifier = false;
+    var isEmail = false;
+    var isHost = false;
+    var isDomain = false;
+    var host="";
+    var domain="";
+    var identifier="";
+    var array;
+    var substring = "";
+    var newArray = [];
+    var isValidEmail = false;
+    array = text.split(" ");
+
+    for (var i = 0; i < array.length; i++)
+    {
+        substring = array[i];
+        if (substring.contains("@") && substring.contains("."))
+        {
+            
+            newArray[i] = substring;
+        }
+          
+    }
+
+    document.getElementById("task9").innerHTML += newArray + "</br>";
+
+
+
+}
+
+//task 6
+function Task10() {
+
+    var text = "abc abba exe ABCBA";
+    var array = new Array();
+    array = text.split(" ");
+    var substring;
+    var isPalindrome = false;
+    var count = 0;
+
+    for (var i = 0,j=array.length-1; i < array.length; i++,j--)
+    {
+        substring = array[i];
+        for (var j = 0, k = substring.length - 1; j < substring.length; j++, k--)
+        {
+            if (substring[j] === substring[k])
+            {
+                isPalindrome = true;
+            }
+            else {
+                isPalindrome = false;
+                break;
+            }
+
+        }
+        if (isPalindrome === true)
+        {
+            count++;
+        }
+        
+    }
+    document.getElementById("task10").innerHTML = count;
+
 }
