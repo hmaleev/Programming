@@ -11,18 +11,21 @@
 
 		<li>
 			<input  id="inputNumber" name="inputname" placeholder="enter your number here"></input>
-			<button onClick="CompareNumbers()";>Guess</button>
+			<div id="hiddenNumber"> </div>
+			<button onClick="CompareNumbers(); AddToHistory()";>Guess</button>
 			<div id="task1">  </div>
 			
 		
 			<button onClick="GenerateRandomNumber()";>Generate Random Number</button>
 			<div id="task2">  </div>
-			<div id="task3">  </div>
-			<div id="task4">  </div>
+			<button onClick="showHistory()";>Show History</button>
+			<button onClick="hideHistory()";>Hide History</button>
+			<button onClick="clearHistory()";>Clear History</button>
+			<div id="history">  </div>
 		</li>
 
 	</ol>	
-<a href="history.html"> History </a>
+<a href="menu.html"><button> Menu </button></a>
 
 
 </div>

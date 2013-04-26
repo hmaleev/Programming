@@ -3,6 +3,7 @@
 function CompareNumbers() {
 
     var playerNumber = document.getElementById("inputNumber").value;
+    document.getElementById("hiddenNumber").innerHTML = playerNumber;
     var playerNumberAsString = playerNumber.toString();
     var i;
     var j;
@@ -48,9 +49,9 @@ function GenerateRandomNumber() {
     }
 }
 
-function CheckForUniqueDigits(number2) {
+function CheckForUniqueDigits(randomNumber) {
 
-    var number = number2;
+    var number = randomNumber;
     //    var number = document.getElementById("task2").innerHTML;
     var isUnique = true;
     var i;
@@ -74,3 +75,29 @@ function CheckForUniqueDigits(number2) {
     //  document.getElementById("task3").innerHTML = isUnique + " ";
     return isUnique;
 };
+
+function AddToHistory() {
+
+    var playerNumber = document.getElementById("hiddenNumber").innerHTML;
+    var count = document.getElementById("task1").innerHTML;
+    document.getElementById("history").innerHTML += playerNumber + "</br>";
+    document.getElementById("history").innerHTML += count + "</br>";
+}
+
+function changeStyle() {
+
+    document.getElementById("style").href = "styles/style2.css"
+
+}
+function showHistory() {
+
+    document.getElementById("history").style.display ="inline"
+}
+function hideHistory() {
+
+    document.getElementById("history").style.display ="none"
+}
+function clearHistory() {
+
+    document.getElementById("history").innerHTML ="";
+}

@@ -11,12 +11,14 @@ div
 {
 	display: inline-block;
 	width: 400px;
-	background-color: #000;
+	background:#f00;
+	
 }
+
 ol li>div,a
 {	width: 90%;
 	display: block;
-	background-color: #000;
+	background-color: #f00;
 	color:#0C0;
 	overflow: auto;
 }
@@ -30,17 +32,17 @@ input
 	width: 90%;
 }
 button {
-	background-color: #000;
-	border: 1px solid #0C0;
-	color: #0C0;
+	background-color: #f00;
+	border: 1px solid #000;
+	color: #000;
 	border-collapse: collapse;
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
 button:active {
-	background-color: #0C0;
-	border: 1px solid #000;
-	color: #000;
+	background-color: #000;
+	border: 1px solid #f00;
+	color: #f00;
 	border-collapse: collapse;
 	margin-top: 5px;
 	margin-bottom: 5px;
@@ -53,7 +55,7 @@ input {
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
-#task2, #hiddenNumber, #history {
+#task2, #hiddenNumber {
 	display: none;
 }
 a {
