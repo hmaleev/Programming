@@ -14,13 +14,16 @@ div
 	background:#f00;
 	
 }
-
+ol {
+	list-style-type: none;
+}
 ol li>div,a
 {	width: 90%;
 	display: block;
 	background-color: #f00;
-	color:#0C0;
+	color:#000;
 	overflow: auto;
+
 }
 
 textarea
@@ -48,9 +51,9 @@ button:active {
 	margin-bottom: 5px;
 }
 input {
-	background-color: #000;
-	border: 1px solid #0C0;
-	color: #0C0;
+	background-color: #f00;
+	border: 1px solid #000;
+	color: #000;
 	border-collapse: collapse;
 	margin-top: 5px;
 	margin-bottom: 5px;
@@ -59,10 +62,10 @@ input {
 	display: none;
 }
 a {
-	color: #0C0;
+	color: #000;
 	text-decoration: none;
 	
 }
 p {
-	color:#0C0;
+	color:#000;
 }

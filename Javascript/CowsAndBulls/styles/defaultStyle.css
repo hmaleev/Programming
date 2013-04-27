@@ -13,6 +13,9 @@ div
 	width: 400px;
 	background-color: #000;
 }
+ol {
+	list-style-type: none;
+}
 ol li>div,a
 {	width: 90%;
 	display: block;

@@ -1,4 +1,8 @@
-//task 1
+
+var styles = new Array();
+styles[0] = "styles/defaultStyle.css";
+styles[1] = "styles/redStyle.css";
+styles[2] = "styles/blueStyle.css";
 
 function CompareNumbers() {
 
@@ -84,20 +88,37 @@ function AddToHistory() {
     document.getElementById("history").innerHTML += count + "</br>";
 }
 
-function changeStyle() {
 
-    document.getElementById("style").href = "styles/style2.css"
+function changeStyle(style) {
+
+    document.getElementById("style").href = style;
+    var text = document.getElementById("style").href;
+    saveState(text);
 
 }
+
 function showHistory() {
 
-    document.getElementById("history").style.display ="inline"
+    document.getElementById("history").style.display = "inline"
 }
+
 function hideHistory() {
 
-    document.getElementById("history").style.display ="none"
+    document.getElementById("history").style.display = "none"
 }
+
 function clearHistory() {
 
-    document.getElementById("history").innerHTML ="";
+    document.getElementById("history").innerHTML = "";
+}
+
+function saveState(text) {
+
+    var value = text;
+    var key = "path";
+    localStorage.setItem(key, value);
+}
+
+function restoreState() {
+    return localStorage["text"];
 }
