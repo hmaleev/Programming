@@ -69,3 +69,13 @@ a {
 p {
 	color:#fff;
 }
+select {
+background: #00f;
+border: 1px solid #fff;
+color:#fff;
+
+}
+option {
+background: #00f;
+color: #fff;
+}

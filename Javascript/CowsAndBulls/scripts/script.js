@@ -1,4 +1,3 @@
-
 var styles = new Array();
 styles[0] = "styles/defaultStyle.css";
 styles[1] = "styles/redStyle.css";
@@ -88,7 +87,6 @@ function AddToHistory() {
     document.getElementById("history").innerHTML += count + "</br>";
 }
 
-
 function changeStyle(style) {
 
     document.getElementById("style").href = style;
@@ -97,28 +95,9 @@ function changeStyle(style) {
 
 }
 
-function showHistory() {
-
-    document.getElementById("history").style.display = "inline"
-}
-
-function hideHistory() {
-
-    document.getElementById("history").style.display = "none"
-}
-
-function clearHistory() {
-
-    document.getElementById("history").innerHTML = "";
-}
-
 function saveState(text) {
 
     var value = text;
     var key = "path";
     localStorage.setItem(key, value);
-}
-
-function restoreState() {
-    return localStorage["text"];
 }
