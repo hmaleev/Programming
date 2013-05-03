@@ -21,7 +21,7 @@ ol li>div,a
 {	width: 90%;
 	display: block;
 	background-color: #f00;
-	color:#000;
+	color:#fff;
 	overflow: auto;
 
 }
@@ -36,44 +36,53 @@ input
 }
 button {
 	background-color: #f00;
-	border: 1px solid #000;
-	color: #000;
+	border: 1px solid #fff;
+	color: #fff;
 	border-collapse: collapse;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	margin-left:20px;
 }
 button:active {
-	background-color: #000;
+	background-color: #fff;
 	border: 1px solid #f00;
 	color: #f00;
 	border-collapse: collapse;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	margin-left:20px;
 }
 input {
 	background-color: #f00;
-	border: 1px solid #000;
-	color: #000;
+	border: 1px solid #fff;
+	color: #fff;
 	border-collapse: collapse;
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
-#task2, #hiddenNumber {
+#task2, #hiddenNumber, #history,#inputNumber, #GuessNumber {
 	display: none;
 }
+#showHistoryBtn, #hideHistoryBtn {
+	display: block;
+}
 a {
-	color: #000;
+	color: #fff;
 	text-decoration: none;
 	
 }
 p {
-	color:#000;
+	color:#fff;
+	padding: 10px;
 }
 select {
 background: #F00;
-border: 1px solid #000;
+border: 1px solid #fff;
+color: #fff;
+margin-left:20px;
 
 }
 option {
 background: #F00;
+color: #fff;
 }

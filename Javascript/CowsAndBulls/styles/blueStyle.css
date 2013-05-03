@@ -41,6 +41,7 @@ button {
 	border-collapse: collapse;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	margin-left: 20px;
 }
 button:active {
 	background-color: #fff;
@@ -49,6 +50,7 @@ button:active {
 	border-collapse: collapse;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	margin-left: 20px;
 }
 input {
 	background-color: #00f;
@@ -58,8 +60,11 @@ input {
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
-#task2, #hiddenNumber {
+#task2, #hiddenNumber, #history,#inputNumber, #GuessNumber {
 	display: none;
+}
+#showHistoryBtn, #hideHistoryBtn {
+	display: block;
 }
 a {
 	color: #fff;
@@ -68,12 +73,13 @@ a {
 }
 p {
 	color:#fff;
+	padding: 10px;
 }
 select {
 background: #00f;
 border: 1px solid #fff;
 color:#fff;
-
+margin-left: 20px;
 }
 option {
 background: #00f;

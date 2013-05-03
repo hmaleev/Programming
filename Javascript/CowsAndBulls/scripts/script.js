@@ -101,3 +101,40 @@ function saveState(text) {
     var key = "path";
     localStorage.setItem(key, value);
 }
+
+function AddToHistory() {
+
+    var playerNumber = document.getElementById("hiddenNumber").innerHTML;
+    var count = document.getElementById("task1").innerHTML;
+    document.getElementById("history").innerHTML += playerNumber + "</br>";
+    document.getElementById("history").innerHTML += count + "</br>";
+}
+
+function showHistory() {
+
+    document.getElementById("history").style.display = "inline";
+    document.getElementById("showHistoryBtn").style.display = "none";
+    document.getElementById("hideHistoryBtn").style.display = "inline";
+}
+
+function hideHistory() {
+
+    document.getElementById("history").style.display = "none";
+    document.getElementById("hideHistoryBtn").style.display = "none";
+    document.getElementById("showHistoryBtn").style.display = "inline";
+}
+
+function clearHistory() {
+
+    document.getElementById("history").innerHTML = "";
+}
+
+function startNewGame() {
+    GenerateRandomNumber();
+    //document.write("<script src='moreStuff.js' type='text/javascript'></script>");
+
+    document.getElementById("GuessNumber").style.display = "inline";
+    document.getElementById("inputNumber").style.display = "inline";
+    clearHistory();
+    hideHistory();
+}
