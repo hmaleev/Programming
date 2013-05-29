@@ -131,8 +131,6 @@ function clearHistory() {
 
 function startNewGame() {
     GenerateRandomNumber();
-    //document.write("<script src='moreStuff.js' type='text/javascript'></script>");
-
     document.getElementById("GuessNumber").style.display = "inline";
     document.getElementById("inputNumber").style.display = "inline";
     clearHistory();
