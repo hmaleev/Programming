@@ -3,6 +3,10 @@ styles[0] = "styles/defaultStyle.css";
 styles[1] = "styles/redStyle.css";
 styles[2] = "styles/blueStyle.css";
 
+var guessesCount = 0;
+var totalGuesses=0;
+ var results = new Array(5);
+ results[1] = 0;
 function CompareNumbers() {
 
     var playerNumber = document.getElementById("inputNumber").value;
@@ -22,11 +26,15 @@ function CompareNumbers() {
                 break;
             }
             if (playerNumber.charAt(i) === randomNumberAsString.charAt(j) && i !== j) {
-
                 cowCount++
                 break;
             };
         };
+    };
+    ++guessesCount;
+    if (bullCount ===4) {
+        totalGuesses = guessesCount;
+        guessesCount = 0;
     };
     document.getElementById("task1").innerHTML = "Cows: " + cowCount + " Bulls: " + bullCount;
 }
@@ -40,10 +48,8 @@ function GenerateRandomNumber() {
         lengthOfNumber = randomNumber.toString().length;
         if (lengthOfNumber === 4) {
             var isRandomNumber = CheckForUniqueDigits(randomNumber);
-
             break;
         };
-
     };
     if (!isRandomNumber) {
         GenerateRandomNumber();
@@ -80,7 +86,6 @@ function CheckForUniqueDigits(randomNumber) {
 };
 
 function AddToHistory() {
-
     var playerNumber = document.getElementById("hiddenNumber").innerHTML;
     var count = document.getElementById("task1").innerHTML;
     document.getElementById("history").innerHTML += playerNumber + "</br>";
@@ -135,4 +140,22 @@ function startNewGame() {
     document.getElementById("inputNumber").style.display = "inline";
     clearHistory();
     hideHistory();
+}
+
+function addToHighScore() {
+   
+
+    console.log(guessesCount);
+     console.log(totalGuesses);
+/*    var score = document.getElementById("highscore").innerHTML;
+    var count = guessesCount
+    document.getElementById("highscore").innerHTML += guessesCount + "</br>";
+
+    for (var i = 0; i < results.length; i++) {
+        if (results[i] === undefined) {
+            results[i] = guessesCount;
+        }
+        else if (results[i]<) {};
+    };
+    */
 }
