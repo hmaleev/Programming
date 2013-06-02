@@ -13,7 +13,12 @@
 		<h2>Your compelling tag line goes here</h2>
 		<img src="<?php echo get_template_directory_uri(); ?>/images/headerimg.jpg" width="940" height="200" alt=""><!-- header image -->
 	</header><!-- end of header -->
-	<nav><!-- top nav -->
+	<!-- top nav -->
+	<?php /*wp_nav_menu(array(
+	'theme_location' => 'top-site-menu',
+	'container' =>'nav')) */?>
+
+	<nav>
 		<div class="menu">
 			<ul>
 				<li><a href="#">Home</a></li>
@@ -24,6 +29,8 @@
 				<li><a href="#">Contact Us</a></li>
 			</ul>
 		</div>
-	</nav><!-- end of top nav -->
+	</nav>
+
+	<!-- end of top nav -->
 	
 	
