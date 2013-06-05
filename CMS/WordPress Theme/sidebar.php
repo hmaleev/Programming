@@ -2,7 +2,6 @@
 <?php 
 	if(!dynamic_sidebar('right-sidebar-1')) :
 ?>
-	
 				<h3>Things To Do</h3>
 					<ul>
 						<li><a href="#">Play Games</a></li>
@@ -32,16 +31,12 @@
 						<li><a href="#">Facebook</a></li>
 					</ul>
 
-		</aside><!-- end of sidebar1 -->
+		
 <?php 	endif; ?>
-
-
-
-
+</aside><!-- end of sidebar1 -->
 <aside id="sidebar2"><!-- sidebar2 -->
 <?php 
-
-if(!dynamic_sidebar('right-sidebar-2')) :
+	if(!dynamic_sidebar('right-sidebar-2')) :
 ?>
 				<h3>Stuff</h3>
 					<ul>
