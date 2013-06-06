@@ -14,11 +14,17 @@
 		<img src="<?php echo get_template_directory_uri(); ?>/images/headerimg.jpg" width="940" height="200" alt=""><!-- header image -->
 	</header><!-- end of header -->
 	<!-- top nav -->
-	<?php /*wp_nav_menu(array(
-	'theme_location' => 'top-site-menu',
-	'container' =>'nav')) */?>
-
 	<nav>
+	<?php 
+		wp_nav_menu(array(
+		'theme_location' => 'top-site-menu',
+		'container' =>'div',
+		'container_class' => 'menu',)) 
+
+	?>
+	</nav>
+
+<!--	<nav>
 		<div class="menu">
 			<ul>
 				<li><a href="#">Home</a></li>
@@ -30,7 +36,7 @@
 			</ul>
 		</div>
 	</nav>
-
+-->
 	<!-- end of top nav -->
 	
 	

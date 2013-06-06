@@ -34,6 +34,7 @@
 		
 <?php 	endif; ?>
 </aside><!-- end of sidebar1 -->
+
 <aside id="sidebar2"><!-- sidebar2 -->
 <?php 
 	if(!dynamic_sidebar('right-sidebar-2')) :
