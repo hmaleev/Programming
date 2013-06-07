@@ -272,3 +272,59 @@ footer p {
 margin-top: -15px;
 color: #faf0e6;
 }
+
+/* Comments */
+.form-allowed-tags {
+width:450px;
+text-align:justify;
+margin-left: 10px;
+}
+#comment {
+background: #555;
+color: #fff;
+border: 1px solid #555;
+border-radius: 10px;
+}
+.comment-form-author, .comment-form-email, .comment-form-url {
+margin-left:50px;
+}
+.comment-form-comment {
+position:relative;
+top:20px;
+}
+.comment-form-comment >label  {
+position:relative;
+top:-145px;
+left:50px;
+}
+#submit {
+background: #555;
+margin-left:50px;
+color:#fff;
+border-radius: 5px;
+border: 1px solid #555;
+}
+
+#submit:hover {
+background: #333;
+margin-left:50px;
+color:#fff;
+border-radius: 5px;
+border: 1px solid #333;
+}
+
+#submit:focus {
+background: #aaa;
+margin-left:50px;
+color:#fff;
+border-radius: 5px;
+border: 1px solid #333;
+}
+input {
+background: #555;
+color: #fff;
+border: 1px solid #555;
+border-radius: 5px;
+}
+
+
