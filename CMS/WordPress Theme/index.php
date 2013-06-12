@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 	
-	
 	<section id="main"><!-- #main content and sidebar area -->
 		<section id="content"><!-- #content -->
 		<!-- Start dynamic part -->
