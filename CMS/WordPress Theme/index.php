@@ -9,13 +9,18 @@
 			the_post();
 			?>	
 			<h2><?php the_title(); ?></h2>
-			<?php the_content(); ?>
 			
+			<?php the_content(); ?>
+				
+				<a href="<?php the_permalink();?>"> To full post </a>
 			
 				<?php 
 		endwhile;
 	endif;
-	?>					
+	?>	
+	</br>
+	</br>
+	<?php next_posts_link(); ?>
 	<!-- end dynamic part -->	
 		</section><!-- end of #content -->
 

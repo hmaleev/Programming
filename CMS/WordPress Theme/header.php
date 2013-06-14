@@ -5,6 +5,7 @@
 	<title>Telerik Academy</title>
 	<link rel="stylesheet" type="text/css" media="screen"  href="<?php bloginfo( 'stylesheet_url' ); ?>"/>
 	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	 <?php wp_head(); ?>
 </head>
 <body>
 <div id="wrapper"><!-- #wrapper -->
@@ -14,14 +15,7 @@
 		<img src="<?php echo get_template_directory_uri(); ?>/images/headerimg.jpg" width="940" height="200" alt=""><!-- header image -->
 	</header><!-- end of header -->
 	<!-- top nav -->
-	
-	<?php
-	
-	//echo '<nav>';
 
-		//echo '</nav>';
-
-	?>
 	
 	<?php
 if ( has_nav_menu( 'top-side-menu') ) {
@@ -48,7 +42,7 @@ else
 		</div>
 	</nav>';
 		?> 
-	</nav>
+	
  
 	<!-- end of top nav -->
 	
