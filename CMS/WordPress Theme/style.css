@@ -127,7 +127,44 @@ line-height: normal;
 nav .menu li {
 display: block;
 float: left;
+
 }
+/*
+.sub-menu  {
+margin: 0;
+padding: 17px 0 0 20px;
+list-style: none;
+line-height: normal;
+clear:both;
+
+}
+
+.sub-menu li {
+width:100px;
+float:left;
+border:1px solid #000;
+background:red;
+} 
+*/
+
+nav .menu li ul {
+	display: none;
+	position: relative;
+	
+}
+nav  .menu li:hover ul {
+
+  display:block;
+ 
+}
+nav .menu li:hover ul li {
+display:inline-block;
+width:200px;
+}
+.menu li ul li{
+    clear:both;
+}
+
 
 nav .menu a {
 display: block;

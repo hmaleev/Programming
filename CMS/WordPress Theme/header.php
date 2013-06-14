@@ -26,6 +26,7 @@ echo '<nav>';
 		'menu' => 'Top Menu',
 		'container' =>'div',
 		'container_class' =>'menu',
+		'depth' => 0,
 		));
 echo'</nav>';}
 else 
