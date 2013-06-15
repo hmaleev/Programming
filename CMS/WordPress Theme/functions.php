@@ -63,7 +63,7 @@ $footerSidebar4 = array(
 
 register_sidebar($footerSidebar3);
 register_sidebar($footerSidebar4);
-register_nav_menu ('top-side-menu','This is top side menu');
+register_nav_menu ('top-side-menu','This is top side menu. The menu must be named "Top Menu" to be shown correctly');
 
 $args = array(
 	'width'         => 940,
