@@ -10,9 +10,12 @@
 <body>
 <div id="wrapper"><!-- #wrapper -->
 	<header><!-- header -->
-		<h1><a href="#">Telerik Academy</a></h1>
-		<h2>Your compelling tag line goes here</h2>
-		<img src="<?php echo get_template_directory_uri(); ?>/images/headerimg.jpg" width="940" height="200" alt=""><!-- header image -->
+		<h1 id="header">
+			<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+		</h1>
+		<h2><?php bloginfo('description'); ?></h2>
+		<!--<img src="<?php// echo get_template_directory_uri(); ?>/images/headerimg.jpg" width="940" height="200" alt=""><!-- header image -->
+		<img src="<?php echo header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
 	</header><!-- end of header -->
 	<!-- top nav -->
 

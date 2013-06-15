@@ -64,4 +64,12 @@ $footerSidebar4 = array(
 register_sidebar($footerSidebar3);
 register_sidebar($footerSidebar4);
 register_nav_menu ('top-side-menu','This is top side menu');
+
+$args = array(
+	'width'         => 940,
+	'height'        => 200,
+	'default-image' => get_template_directory_uri() . '/images/header.jpg',
+	'uploads'       => true,
+);
+add_theme_support( 'custom-header', $args );
 ?>
