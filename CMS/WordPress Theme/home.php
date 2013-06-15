@@ -8,21 +8,20 @@
 		while (have_posts()):
 			the_post();
 			?>	
-			<h2><?php the_title(); ?></h2>
-			
+			<h2><a href="<?php the_permalink();?>"> <?php the_title(); ?></a></h2>		
 			<?php the_content(); ?>
-				
-				<a href="<?php the_permalink();?>"> To full post </a>
-			
+			<p><?php the_tags(); ?><p>
 				<?php 
 		endwhile;
 	endif;
 	?>	
-	<?php next_posts_link(); ?>
+
+	<p><?php next_posts_link(); ?></p>
 	<!-- end dynamic part -->	
 		</section><!-- end of #content -->
 
 		<?php get_sidebar('right-sidebar'); ?>
+		 <?php comments_template('',true); ?> 
 	</section><!-- end of #main content and sidebar-->
 	
 

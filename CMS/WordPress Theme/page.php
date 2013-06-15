@@ -9,10 +9,12 @@
 <body>
 <div id="wrapper"><!-- #wrapper -->
 	<header><!-- header -->
-		<h1><a href="#">Telerik Academy</a></h1>
-		<h2>Your compelling tag line goes here</h2>
-		<!-- <img src="images/headerimg.jpg" width="940" height="200" alt=""> -->
-		<!-- header image -->
+		<h1 id="header">
+			<a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+		</h1>
+		<h2><?php bloginfo('description'); ?></h2>
+		<!--<img src="<?php// echo get_template_directory_uri(); ?>/images/headerimg.jpg" width="940" height="200" alt=""><!-- header image -->
+		<img src="<?php echo header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
 	</header><!-- end of header -->
 	<nav>
 	<?php 
@@ -31,14 +33,72 @@
 		while (have_posts()):
 			the_post();
 			?>	
-			<h2><?php the_title(); ?></h2>
+		<h2><a href="<?php the_permalink();?>"> <?php the_title(); ?></a></h2>
 			<?php the_content(); ?>
 	<?php 
 		endwhile;
 	endif;
 	?>					
-	<!-- end dynamic part -->	
-		</section><!-- end of #content -->
+	<!-- end dynamic part -->
+	</section><!-- end of #content -->
+
+
+		<aside id="sidebar2"><!-- sidebar2 -->
+			<?php 
+				if(!dynamic_sidebar('page-sidebar-1')) :
+			?>
+				<h3>Stuff</h3>
+					<ul>
+						<li><a href="#">Curabitur sodales</a></li>
+						<li><a href="#">Sed dignissim</a></li>
+						<li><a href="#">Fusce nec</a></li>
+						<li><a href="#">Nulla quis</a></li>
+					</ul>
+
+				<h3>More Stuff</h3>
+					<ul>
+						<li><a href="#">Blah, blah and all blah</a></li>
+						<li><a href="#">More blah</a></li>
+					</ul>
+
+				<h3>S'more Goodies</h3>
+					<ul>
+						<li><a href="#">Curabitur sodales</a></li>
+						<li><a href="#">Sed dignissim</a></li>
+						<li><a href="#">Fusce nec</a></li>
+						<li><a href="#">Nulla quis</a></li>
+						<li><a href="#">Curabitur sodales</a></li>
+						<li><a href="#">Sed dignissim</a></li>
+						<li><a href="#">Fusce nec</a></li>
+						<li><a href="#">Nulla quis</a></li>
+					</ul>
+
+				<h3>Did You Know?</h3>
+					<ul>
+						<li><a href="#">Curabitur sodales</a></li>
+						<li><a href="#">Sed dignissim</a></li>
+						<li><a href="#">Fusce nec</a></li>
+						<li><a href="#">Nulla quis</a></li>
+						<li><a href="#">Curabitur sodales</a></li>
+						<li><a href="#">Sed dignissim</a></li>
+						<li><a href="#">Fusce nec</a></li>
+						<li><a href="#">Nulla quis</a></li>
+					</ul>
+
+				<h3>FAQ</h3>
+					<ul>
+						<li><a href="#">Curabitur sodales</a></li>
+						<li><a href="#">Sed dignissim</a></li>
+						<li><a href="#">Fusce nec</a></li>
+						<li><a href="#">Nulla quis</a></li>
+						<li><a href="#">Curabitur sodales</a></li>
+						<li><a href="#">Sed dignissim</a></li>
+						<li><a href="#">Fusce nec</a></li>
+						<li><a href="#">Nulla quis</a></li>
+					</ul>
+				<?php endif; ?>
+		</aside><!-- end of sidebar -->
+
 		 <?php comments_template('',true); ?> 
 	</section><!-- end of #main content and sidebar-->
 <?php get_footer() ?>
