@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>TimeCalculator</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- TimeCalculator references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/default.js"></script>
+</head>
+<body>
+    <h1>Start Date</h1>
+    <div data-win-control="WinJS.UI.DatePicker" id="startDate"></div>
+    <div  id="startDateResult"></div>
+
+    <h1>End Date</h1>
+    <div data-win-control="WinJS.UI.DatePicker" id="endDate"></div>
+    <div  id="endDateResult"></div>
+
+    <h1>Start Hour</h1>
+    <div data-win-control="WinJS.UI.TimePicker"  id="startHour"></div>
+    <div  id="startHourResult"></div>
+
+    <h1>End Hour</h1>
+    <div data-win-control="WinJS.UI.TimePicker" id="endHour"></div>
+    <div  id="endHourResult"></div>
+
+    <div  id="diff"></div>
+    <div id="HourDifference"></div>
+    <div data-win-control=" WinJS.UI.ToggleSwitch" id="switch"></div>
+   
+     <button id="calc">Calculate Days</button>
+    <button id="calcHours">Calculate Hours</button>
+</body>
+</html>
