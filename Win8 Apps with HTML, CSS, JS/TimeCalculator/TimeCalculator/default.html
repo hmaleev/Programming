@@ -14,27 +14,27 @@
     <script src="/js/default.js"></script>
 </head>
 <body>
-    <h1>Start Date</h1>
-    <div data-win-control="WinJS.UI.DatePicker" id="startDate"></div>
-    <div  id="startDateResult"></div>
-
-    <h1>End Date</h1>
-    <div data-win-control="WinJS.UI.DatePicker" id="endDate"></div>
-    <div  id="endDateResult"></div>
-
-    <h1>Start Hour</h1>
-    <div data-win-control="WinJS.UI.TimePicker"  id="startHour"></div>
-    <div  id="startHourResult"></div>
-
-    <h1>End Hour</h1>
-    <div data-win-control="WinJS.UI.TimePicker" id="endHour"></div>
-    <div  id="endHourResult"></div>
-
-    <div  id="diff"></div>
-    <div id="HourDifference"></div>
-    <div data-win-control=" WinJS.UI.ToggleSwitch" id="switch"></div>
+    <div id="Calculator">
+          <div  id="output"></div>
    
-     <button id="calc">Calculate Days</button>
-    <button id="calcHours">Calculate Hours</button>
+        <h1>Start Date and Hour</h1>
+        <div data-win-control="WinJS.UI.DatePicker" id="startDate"></div>
+        <div data-win-control="WinJS.UI.TimePicker"  id="startHour"></div>
+      
+        <h1>End Date And Hour</h1>
+        <div data-win-control="WinJS.UI.DatePicker" id="endDate"></div>
+        <div data-win-control="WinJS.UI.TimePicker" id="endHour"></div>
+
+        <div data-win-control=" WinJS.UI.ToggleSwitch"  data-win-options="{title:'Hide Date'}" id="switchDates"></div>
+        <div data-win-control=" WinJS.UI.ToggleSwitch"  data-win-options="{title:'Hide Hours'}" id="switchHours"></div>
+
+        <button id="open-button-id">Open</button>
+        <div id="menu-id" data-win-control="WinJS.UI.Menu", data-win-options="{anchor:'open-button-id'}">
+            <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'Days-menu-button-id',label:'Calculate Days'}"></button>
+            <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'Time-menu-button-id',label:'Calculate Hours'}"></button>
+            <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'DaysTime-menu-button-id',label:'Calculate Days and Hours'}"></button>
+       </div>
+    </div>
+
 </body>
 </html>

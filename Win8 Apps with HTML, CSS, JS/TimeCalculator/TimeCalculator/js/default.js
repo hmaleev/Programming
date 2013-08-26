@@ -16,20 +16,75 @@
             args.setPromise(WinJS.UI.processAll());
 
 
-            var calc = document.getElementById("calcDays");
-            calc.addEventListener("click", calculateDaysDifference);
+            var DaysDifference = document.getElementById("Days-menu-button-id");
+            DaysDifference.addEventListener("click", calculateDaysDifference);
 
-            var calc2 = document.getElementById("calcHours");
-            calc2.addEventListener("click", calculatehoursDifference);
+            var HoursDifference = document.getElementById("Time-menu-button-id");
+            HoursDifference.addEventListener("click", calculatehoursDifference);
 
-            var calc3 = document.getElementById("calcDaysAndHours");
-            calc3.addEventListener("click", calculateDaysAndHoursDifference);
+            var DaysHoursDifference = document.getElementById("DaysTime-menu-button-id");
+            DaysHoursDifference.addEventListener("click", calculateDaysAndHoursDifference);
+
+            var openElement = document.getElementById("open-button-id");
+            openElement.addEventListener("click", openElementClicked);
+            
+            var switchDateElement = document.getElementById("switchDates");
+            switchDateElement.addEventListener("change", HideOrShowDate);
+
+            var switchHoursElement = document.getElementById("switchHours");
+            switchHoursElement.addEventListener("change", HideOrShowHours);
+
         }
     };
 
     app.oncheckpoint = function (args) {
     };
    
+
+    var HideOrShowDate = function (eventinfo) {
+        var switchbtn =document.getElementById("switchDates");
+        var startDate = document.getElementById("startDate");
+        var endDate = document.getElementById("endDate");
+        var DaysDifference = document.getElementById("Days-menu-button-id");
+        var DaysHoursDifference = document.getElementById("DaysTime-menu-button-id");
+
+        if (switchbtn.className === "win-toggleswitch win-on") {
+
+            startDate.style.display = "none";
+            endDate.style.display = "none";
+            DaysDifference.style.display = "none";
+            DaysHoursDifference.style.display = "none";
+        }
+        else {
+            startDate.style.display = "inline-block";
+            endDate.style.display = "inline-block";
+            DaysDifference.style.display = "block";
+            DaysHoursDifference.style.display = "block";
+        }
+    }
+
+    var HideOrShowHours = function (eventinfo) {
+        var switchbtn = document.getElementById("switchHours");
+        var startHour = document.getElementById("startHour");
+        var endHour = document.getElementById("endHour");
+        var HoursDifference = document.getElementById("Time-menu-button-id");
+        var DaysHoursDifference = document.getElementById("DaysTime-menu-button-id");
+
+        if (switchbtn.className === "win-toggleswitch win-on") {
+
+            startHour.style.display = "none";
+            endHour.style.display = "none";
+            HoursDifference.style.display = "none";
+            DaysHoursDifference.style.display="none";
+        }
+        else {
+            startHour.style.display = "inline-block";
+            endHour.style.display = "inline-block";
+            HoursDifference.style.display = "block";
+            DaysHoursDifference.style.display = "block";
+        }
+    }
+
     var calculateDaysDifference = function (eventinfo) {
 
         var startDay = document.getElementById("startDate").winControl.current;
@@ -105,6 +160,11 @@
         var diff = "the difference is: " + (endYear - startYear) + " Years " + (endMonth - startMonth) + " Months "
            + (endDay - startDay) + " Days " + (endHour - startHour) + " Hours " + (endMinute - startMinute) + " Minutes";
         difference.innerText = diff;
+    }
+
+    var openElementClicked = function () {
+        var menu = document.getElementById("menu-id").winControl;
+        menu.show();
     }
     app.start();
 })();

@@ -1,6 +1,48 @@
 ﻿body {
+  background-color:#fff
 }
 
+h1 {
+    display: block;
+}
+#Calculator {
+    width: 1000px;
+    height: 320px;
+    border:5px solid red;
+    position:relative;
+    background-color:#808080;
+}
+#output {
+
+width:inherit;
+height:50px;
+background-color:#fff;
+color:#000;
+font-size:35px;
+}
+
+#startHour {
+    margin-left:10px;
+}
+#endHour {
+    margin-left: 10px;
+}
+#open-button-id{
+    position: absolute;
+    right: 75px;
+    bottom: 110px;
+}
+#switchDates {
+    position: absolute;
+    right: 75px;
+    bottom: 60px;
+}
+
+#switchHours {
+    position: absolute;
+    right: 75px;
+    bottom: 20px;
+}
 @media screen and (-ms-view-state: fullscreen-landscape) {
 }
 
