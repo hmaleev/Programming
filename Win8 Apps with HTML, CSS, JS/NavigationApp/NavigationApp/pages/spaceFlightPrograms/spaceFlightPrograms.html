@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>spaceFlightPrograms</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="spaceFlightPrograms.css" rel="stylesheet" />
+    <script src="spaceFlightPrograms.js"></script>
+</head>
+<body>
+    <div class="spaceFlightPrograms fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Welcome to spaceFlightPrograms</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <p>The most notable NASA activities are its space flight programs, both manned and unmanned. The latter can be either
+                 independent, carrying scientific equipment, or supportive, testing equipment for manned flights. In the beginning,
+                 NASA’s missions focused on the space race with the Soviet Union, which won the first round, but later USA took the
+                 initiative and won the final race to the Moon. The unmanned missions have until now explored most of our solar system.
+                 They have also brought telescopes for deep space exploration into orbit around the Earth together with satellites for 
+                studying Earth itself.
+            </p>
+              <div class="tile">
+                  <img src="../../images/north_american_x-15.jpg"alt="X15 Image" />
+                 
+                 <h1><a href="#" id="A1" onclick="GoToX15(event)"> X15 Rocket Plane</a></h1>
+            </div>
+            <div class="tile">
+                <img src="../../images/MercuryLogo.png" alt="ProjectMercury Image" />               
+                <h1><a href="#" id="A2" onclick="GoToProjectMercury(event)"> Project Mercury</a></h1>
+            </div>
+                        <div class="tile">
+                <img src="../../images/GeminiLogo.png" alt="Project Gemini Image" />               
+                <h1><a href="#" id="A3" onclick="GoToProjectGemini(event)"> Project Gemini</a></h1>
+            </div>
+                        <div class="tile">
+                <img src="../../images/ApolloLogo.png" alt="Project Apollo Image" />               
+                <h1><a href="#" id="A4" onclick="GoToProjectApollo(event)"> Project Apollo</a></h1>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

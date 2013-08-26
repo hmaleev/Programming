@@ -19,3 +19,8 @@ function gotocreation(e) {
     e.preventDefault();
     WinJS.Navigation.navigate('/pages/creation/creation.html');
 }
+
+function GoToSpaceFlightPrograms(e) {
+    e.preventDefault();
+    WinJS.Navigation.navigate('/pages/spaceFlightPrograms/spaceFlightPrograms.html');
+}

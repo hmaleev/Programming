@@ -7,10 +7,24 @@ p {
 .tile {
     background-color: #fff;
     border: 5px solid red;
-    width: 250px;
-    height: 200px;
+    /*width:300px;
+    height:200px;*/
+    display:inline-block;
+    margin:5px;
 }
-
+    .tile img {
+        display: block;
+        max-width:300px;
+        max-height:150px;
+    }
+    .tile h1 {
+        font-size: 20px;
+        background-color:green;
+        height:50px;
+    }
+        .tile h1 a {
+            color: #fff;
+        }
 @media screen and (-ms-view-state: snapped) {
     .homepage section[role=main] {
         margin-left: 20px;

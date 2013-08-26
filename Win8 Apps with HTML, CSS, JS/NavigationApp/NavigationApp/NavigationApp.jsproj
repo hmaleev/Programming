@@ -54,7 +54,12 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="css\default.css" />
+    <Content Include="images\ApolloLogo.png" />
+    <Content Include="images\GeminiLogo.png" />
     <Content Include="images\logo.png" />
+    <Content Include="images\MercuryLogo.png" />
+    <Content Include="images\NASALogo.gif" />
+    <Content Include="images\north_american_x-15.jpg" />
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
@@ -67,6 +72,21 @@
     <Content Include="pages\creation\creation.css" />
     <Content Include="pages\creation\creation.html" />
     <Content Include="pages\creation\creation.js" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\ProjectApollo\projectApollo.css" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\ProjectApollo\projectApollo.html" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\ProjectApollo\projectApollo.js" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\ProjectGemini\projectGemini.css" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\ProjectGemini\projectGemini.html" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\ProjectGemini\projectGemini.js" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\ProjectMercury\projectMercury.css" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\ProjectMercury\projectMercury.html" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\ProjectMercury\projectMercury.js" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\X-15 rocket plane\X-15RocketPlane.css" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\X-15 rocket plane\X-15RocketPlane.html" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\X-15 rocket plane\X-15RocketPlane.js" />
+    <Content Include="pages\spaceFlightPrograms\spaceFlightPrograms.css" />
+    <Content Include="pages\spaceFlightPrograms\spaceFlightPrograms.html" />
+    <Content Include="pages\spaceFlightPrograms\spaceFlightPrograms.js" />
     <None Include="NavigationApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
