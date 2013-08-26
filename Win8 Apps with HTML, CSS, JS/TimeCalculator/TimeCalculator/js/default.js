@@ -15,23 +15,15 @@
             }
             args.setPromise(WinJS.UI.processAll());
 
-            var startDate = document.getElementById("startDate");
-            startDate.addEventListener("change", startDayChange);
 
-            var endDate = document.getElementById("endDate");
-            endDate.addEventListener("change", endDayChange);
-
-            var startDate = document.getElementById("startHour");
-            startDate.addEventListener("change", startHourChange);
-
-            var endDate = document.getElementById("endHour");
-            endDate.addEventListener("change", endHourChange);
-
-            var calc = document.getElementById("calc");
+            var calc = document.getElementById("calcDays");
             calc.addEventListener("click", calculateDaysDifference);
 
             var calc2 = document.getElementById("calcHours");
             calc2.addEventListener("click", calculatehoursDifference);
+
+            var calc3 = document.getElementById("calcDaysAndHours");
+            calc3.addEventListener("click", calculateDaysAndHoursDifference);
         }
     };
 
@@ -40,12 +32,10 @@
    
     var calculateDaysDifference = function (eventinfo) {
 
-        var startDay = document.getElementById("startDateResult").innerText;
-        var endDay = document.getElementById("endDateResult").innerText;
+        var startDay = document.getElementById("startDate").winControl.current;
+        var endDay = document.getElementById("endDate").winControl.current;
      
-
-        var difference = document.getElementById("diff");
-
+        var difference = document.getElementById("output");
 
         var Day = new Date(startDay);
         var startDay = Day.getDate();
@@ -57,16 +47,16 @@
         var endMonth = Day.getMonth();
         var endYear = Day.getFullYear();
 
-        var diff = "the difference is: " + (startYear - endYear) + " Years " + (startMonth - endMonth) + " Months " + (startDay - endDay) + " Days"
+        var diff = "the difference is: " + (endYear - startYear) + " Years " + (endMonth - startMonth) + " Months " + (endDay - startDay) + " Days"
         difference.innerText = diff;
     }
 
     var calculatehoursDifference = function (eventinfo) {
 
-        var startHour = document.getElementById("startHourResult").innerText;
-        var endHour = document.getElementById("endHourResult").innerText;
+        var startHour = document.getElementById("startHour").winControl.current;
+        var endHour = document.getElementById("endHour").winControl.current;
      
-        var difference = document.getElementById("HourDifference");
+        var difference = document.getElementById("output");
 
 
         var Day = new Date(startHour);
@@ -77,41 +67,44 @@
         var endHour = Day.getHours();
         var endMinute = Day.getMinutes();
 
-        var diff = "The difference is: " + (startHour - endHour) + " Hours " + (startMinute - endMinute) + " Minutes "
+        var diff = "The difference is: " + (endHour - startHour) + " Hours " + (endMinute - startMinute) + " Minutes "
         difference.innerText = diff;
-
     }
 
-    var startDayChange = function (eventInfo) {
-        var result;
-        var day  = document.getElementById("startDateResult");
-        var datePickerElement = document.getElementById("startDate").winControl;
-        result = datePickerElement.current;
-        day.innerHTML = result
-    }
+    var calculateDaysAndHoursDifference = function (eventInfo) {
 
-    var endDayChange = function (eventInfo) {
-        var result;
-        var day = document.getElementById("endDateResult");
-        var datePickerElement = document.getElementById("endDate").winControl;
-        result = datePickerElement.current;
-        day.innerHTML = result
-    }
+        var startDay = document.getElementById("startDate").winControl.current;
+        var endDay = document.getElementById("endDate").winControl.current;
 
-    var startHourChange = function (eventInfo) {
-        var result;
-        var time = document.getElementById("startHourResult");
-        var datePickerElement = document.getElementById("startHour").winControl;
-        result = datePickerElement.current;
-        time.innerHTML = result
-    }
+        var difference = document.getElementById("output");
 
-    var endHourChange = function (eventInfo) {
-        var result;
-        var time = document.getElementById("endHourResult");
-        var datePickerElement = document.getElementById("endHour").winControl;
-        result = datePickerElement.current;
-        time.innerHTML = result
+        var Day = new Date(startDay);
+        var startDay = Day.getDate();
+        var startMonth = Day.getMonth();
+        var startYear = Day.getFullYear();
+
+        var Day = new Date(endDay);
+        var endDay = Day.getDate();
+        var endMonth = Day.getMonth();
+        var endYear = Day.getFullYear();
+
+        var difference = document.getElementById("output");
+
+
+        var startHour = document.getElementById("startHour").winControl.current;
+        var endHour = document.getElementById("endHour").winControl.current;
+
+        var Time = new Date(startHour);
+        var startHour = Time.getHours();
+        var startMinute = Time.getMinutes();
+
+        var Time = new Date(endHour);
+        var endHour = Time.getHours();
+        var endMinute = Time.getMinutes();
+
+        var diff = "the difference is: " + (endYear - startYear) + " Years " + (endMonth - startMonth) + " Months "
+           + (endDay - startDay) + " Days " + (endHour - startHour) + " Hours " + (endMinute - startMinute) + " Minutes";
+        difference.innerText = diff;
     }
     app.start();
 })();
