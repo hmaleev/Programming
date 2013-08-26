@@ -3,7 +3,7 @@
 (function () {
     "use strict";
 
-    WinJS.UI.Pages.define("/pages/spaceFlightPrograms/spaceFlightPrograms.html", {
+    WinJS.UI.Pages.define("/pages/spaceFlightPrograms/MannedMissions/SpaceShuttleProgram/spaceShuttleProgram.html", {
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
         ready: function (element, options) {
@@ -21,14 +21,3 @@
         }
     });
 })();
-
-
-function GoToMannedMissions(e) {
-    e.preventDefault();
-    WinJS.Navigation.navigate('/pages/spaceFlightPrograms/MannedMissions/mannedMissions.html');
-}
-
-function GoToUnmannedMissions(e) {
-    e.preventDefault();
-    WinJS.Navigation.navigate('/pages/spaceFlightPrograms/UnmannedMissions/unmannedMissions.html');
-}

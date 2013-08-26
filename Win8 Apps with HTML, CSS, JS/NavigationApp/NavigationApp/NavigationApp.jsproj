@@ -55,12 +55,15 @@
     </AppxManifest>
     <Content Include="css\default.css" />
     <Content Include="images\ApolloLogo.png" />
+    <Content Include="images\ApolloSouozLogo.png" />
     <Content Include="images\GeminiLogo.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\MercuryLogo.png" />
     <Content Include="images\NASALogo.gif" />
     <Content Include="images\north_american_x-15.jpg" />
+    <Content Include="images\SkylabLogo.png" />
     <Content Include="images\smalllogo.png" />
+    <Content Include="images\SpaceShuttleLogo.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
     <Content Include="js\default.js" />
@@ -72,6 +75,15 @@
     <Content Include="pages\creation\creation.css" />
     <Content Include="pages\creation\creation.html" />
     <Content Include="pages\creation\creation.js" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\Apollo-SoyuzTestProject\apolloSoyuzTestProject.css" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\Apollo-SoyuzTestProject\apolloSoyuzTestProject.html" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\Apollo-SoyuzTestProject\apolloSoyuzTestProject.js" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\InternationalSpaceStation\internationalSpaceStation.css" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\InternationalSpaceStation\internationalSpaceStation.html" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\InternationalSpaceStation\internationalSpaceStation.js" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\mannedMissions.css" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\mannedMissions.html" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\mannedMissions.js" />
     <Content Include="pages\spaceFlightPrograms\MannedMissions\ProjectApollo\projectApollo.css" />
     <Content Include="pages\spaceFlightPrograms\MannedMissions\ProjectApollo\projectApollo.html" />
     <Content Include="pages\spaceFlightPrograms\MannedMissions\ProjectApollo\projectApollo.js" />
@@ -81,12 +93,21 @@
     <Content Include="pages\spaceFlightPrograms\MannedMissions\ProjectMercury\projectMercury.css" />
     <Content Include="pages\spaceFlightPrograms\MannedMissions\ProjectMercury\projectMercury.html" />
     <Content Include="pages\spaceFlightPrograms\MannedMissions\ProjectMercury\projectMercury.js" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\Skylab\skylab.css" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\Skylab\skylab.html" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\Skylab\skylab.js" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\SpaceShuttleProgram\spaceShuttleProgram.css" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\SpaceShuttleProgram\spaceShuttleProgram.html" />
+    <Content Include="pages\spaceFlightPrograms\MannedMissions\SpaceShuttleProgram\spaceShuttleProgram.js" />
     <Content Include="pages\spaceFlightPrograms\MannedMissions\X-15 rocket plane\X-15RocketPlane.css" />
     <Content Include="pages\spaceFlightPrograms\MannedMissions\X-15 rocket plane\X-15RocketPlane.html" />
     <Content Include="pages\spaceFlightPrograms\MannedMissions\X-15 rocket plane\X-15RocketPlane.js" />
     <Content Include="pages\spaceFlightPrograms\spaceFlightPrograms.css" />
     <Content Include="pages\spaceFlightPrograms\spaceFlightPrograms.html" />
     <Content Include="pages\spaceFlightPrograms\spaceFlightPrograms.js" />
+    <Content Include="pages\spaceFlightPrograms\UnmannedMissions\unmannedMissions.css" />
+    <Content Include="pages\spaceFlightPrograms\UnmannedMissions\unmannedMissions.html" />
+    <Content Include="pages\spaceFlightPrograms\UnmannedMissions\unmannedMissions.js" />
     <None Include="NavigationApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
