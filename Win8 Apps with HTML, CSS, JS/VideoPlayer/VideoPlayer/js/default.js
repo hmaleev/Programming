@@ -7,6 +7,7 @@
 
     var app = WinJS.Application;
     var activation = Windows.ApplicationModel.Activation;
+    var playlist = new Windows.Media.Playlists.Playlist();
 
     app.onactivated = function (args) {
         if (args.detail.kind === activation.ActivationKind.launch) {
@@ -20,7 +21,7 @@
 
             var loadedVideosList = document.getElementById("loaded-videos");
             var player = document.getElementById("player");
-
+            //var list2 = document.getElementById("plList");
             loadedVideosList.addEventListener("click", function (event) {
                 var videoEntry = event.target;
 
@@ -40,34 +41,47 @@
                 videoEntry.innerHTML = "<strong>" + songName + "</strong>" + " Duration: " + duration.toLocaleString() +" seconds";
                 loadedVideosList.appendChild(videoEntry);
             }
-
+            var i = 0;
             var addSong = function (storageFile) {
                 var fileUrl = URL.createObjectURL(storageFile);
 
-                storageFile.properties.getMusicPropertiesAsync().then(function (properties) {
+                playlist.files.append(storageFile);
+           
+                storageFile.properties.getVideoPropertiesAsync().then(function (properties) {
                     
                   var title =  properties.title || storageFile.displayName;
                     properties.duration;
-
                     addSongListEntry(title, properties.duration, fileUrl);
                 });
             }
+           
 
             WinJS.Utilities.id("pick-file-button").listen("click", function () {
                 var openPicker = Windows.Storage.Pickers.FileOpenPicker();
+                openPicker.suggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.videosLibrary;
 
-                openPicker.fileTypeFilter.append("*");
+               
+                openPicker.fileTypeFilter.append(".avi");
+                openPicker.fileTypeFilter.append(".mp4");
+                openPicker.fileTypeFilter.append(".wmv");
                 openPicker.pickSingleFileAsync().then(addSong);
             });
 
             WinJS.Utilities.id("pick-multiple-files-button").listen("click", function () {
                 var openPicker = Windows.Storage.Pickers.FileOpenPicker();
-
-                openPicker.fileTypeFilter.append("*");
+                openPicker.suggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.videosLibrary;
+                openPicker.fileTypeFilter.append(".avi");
+                openPicker.fileTypeFilter.append(".mp4");
+                openPicker.fileTypeFilter.append(".wmv");
                 openPicker.pickMultipleFilesAsync().then(function (files) {
                     files.forEach(addSong);
                 });
             });
+
+            //var playlistContainer = function (playlist) {
+            //    var list2 = document.getElementById("loaded-videos");
+            //    list2.s
+            //}
             args.setPromise(WinJS.UI.processAll());
         }
     };
