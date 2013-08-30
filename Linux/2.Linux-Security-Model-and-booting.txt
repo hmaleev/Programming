@@ -1,0 +1,45 @@
+4. Write down at least 3 Linux file systems optimized especially for Flash drives(SD cards, USB Drives, SSD disks).
+
+F2FS (Flash Friendly File System) 
+
+The system is called flash friendly file system (f2fs) and is optimized for dealing with flash memory. According to the developers of the file system it’s designed for devices that use flash memory with a Flash Translation Layer, such as memorycards, USB drives and SSDs.
+This filesystem is supported in release 3.8  of the Linux kernel
+
+The file system uses sequential writes which means that new data is written directly after the block that was written last. This ensures a minimum of fragmentation of the data on the device. When the capacity is filled the file system starts at the first available free block again and the system will fill up deallocated areas to store new data.
+
+The file system is also designed to better cooperate with the Flash Translation Layer (FTL) which takes care of e.g. distributing data evenly over the flash chips to deal with the limited writes of flash memory. By adopting the new file system in the Linux kernel the operating system offers an additional option to deal with flash memory for software that deals with flash memory.
+
+JFFS/JFFS2 (Journalling Flash File System version)
+
+JFFS is a log-structured file system designed by Axis Communications AB in Sweden specifically for use on flash devices in embedded systems, which is aware of the restrictions imposed by flash technology and which operates directly on the flash chips, thereby avoiding the inefficiency of having two journalling file systems on top of each other. JFSS2 was first introduced in Linux kernel 2.4.10
+
+UBIFS (Unsorted Block Images File System)
+
+In a sense, UBIFS is a next generation of JFFS2 file-system, but it is very different and incompatible to JFFS2.UBIFS works on top of UBI. UBI is a separate software layer which may be
+found in drivers/mtd/ubi. UBI is basically a volume management and  wear-leveling layer. It provides so called UBI volumes which is a higher  level abstraction than a MTD device. The programming model of UBI devices  is very similar to MTD devices - they still consist of large eraseblocks,  they have read/write/erase operations, but UBI devices are devoid of  limitations like wear and bad blocks.
+
+
+Sources:
+
+JFFS2 
+
+	http://en.wikipedia.org/wiki/JFFS2
+	http://sourceware.org/jffs2/jffs2-html/
+	http://www.ecoscentric.com/ecospro/doc/html/ref/fs-jffs2-usage.html
+	
+UBIFS
+
+	http://en.wikipedia.org/wiki/UBIFS
+	http://www.linux-mtd.infradead.org/doc/ubifs.html#L_raw_vs_ftl
+	http://elinux.org/UBIFS
+	http://www.cs.fsu.edu/~baker/devices/lxr/http/source/linux/Documentation/filesystems/ubifs.txt - Documentation
+
+F2FS 
+	http://en.wikipedia.org/wiki/F2FS
+	http://www.mjmwired.net/kernel/Documentation/filesystems/f2fs.txt - Documentation
+
+
+Extra information:
+
+http://www.phoronix.com/scan.php?page=article&item=linux_f2fs_benchmarks&num=1
+http://www.embedded-linux.co.uk/downloads/ESC-5.4-flash_filesystems-slides.pdf

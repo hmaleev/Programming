@@ -1,0 +1,77 @@
+Lection 6 Networking Homework
+
+11. Describe the difference between dhclient and dhcpcd.
+
+------------------
+COMMAND dhclient
+------------------
+
+	The Internet Systems Consortium DHCP Client, dhclient, provides a means for configuring one or more network interfaces using the Dynamic Host Configuration Protocol, BOOTP protocol, or if these protocols fail, by statically assigning an address.
+
+On startup, dhclient reads the dhclient.conf for configuration instructions. It then gets a list of all the network interfaces that are configured in the current system. For each interface, it attempts to configure the interface using the DHCP protocol.
+
+In order to keep track of leases across system reboots and server restarts, dhclient keeps a list of leases it has been assigned in the dhclient.leases(5) file. On startup, after reading the dhclient.conf file, dhclient reads the dhclient.leases file to refresh its memory about what leases it has been assigned.
+
+	When a new lease is acquired, it is appended to the end of the dhclient.leases file. In order to prevent the file from becoming arbitrarily large, from time to time dhclient creates a new dhclient.leases file from its in-core lease database. The old version of the dhclient.leases file is retained under the name dhclient.leases~ until the next time dhclient rewrites the database.
+
+	Old leases are kept around in case the DHCP server is unavailable when dhclient is first invoked (generally during the initial system boot process). In that event, old leases from the dhclient.leases file which have not yet expired are tested, and if they are determined to be valid, they are used until either they expire or the DHCP server becomes available. 
+
+------------------
+COMMAND dhcpcd
+------------------
+
+	dhcpcd is an implementation of the DHCP client specified in RFC2131 (when -r option is not specified) and RFC1541 (when -r option is specified).
+It gets the host information (IP address, netmask, broadcast address, etc.) from a DHCP server and configures the network interface of the machine on which it is running. It also tries to renew the lease time according to RFC2131 or RFC1541 (obsolete).   
+
+
+	dhcpcd then runs the configuration script which writes DNS information to resolvconf(8), if available, otherwise directly to /etc/resolv.conf.  If the hostname is currently blank, (null) or localhost, or force_hostname is YES or TRUE or 1 then dhcpcd sets the hostname to the one supplied by the DHCP server.  dhcpcd then daemonises and waits for the lease renewal time to lapse.  It will then attempt to renew its lease and reconfigure if the new lease changes.
+
+	dhcpcd is also an implementation of the BOOTP client specified in RFC 951.
+
+	dhcpcd is also an implementation of an IPv6 Router Solicitor as specified in RFC 4861 and RFC 6106.  dhcpcd can optionally handle address and route
+management itself, and will do so by default if Router Solicitation is disabled in the kernel.  If dhcpcd is managing routes, dhcpcd sends Neighbor Solicitions to each advertising router periodically and will expire the ones that do not respond.
+
+-----------------------------------------
+DIFFERENCE BETWEEN dhclient AND dhcpcd
+-----------------------------------------
+
+	The main difference between dhclient and dhcpcd is the way both commands use leases. For example before  dhcpd  grants  a  lease to a host, it
+records the lease in the file dhcp.leases (5) and makes sure that the contents of  the file  are  flushed  to disk.   This ensures that even in the event of a system crash, dhcpd will not forget about a lease that it has assigned. On  startup,  after  reading  the  dhcpd.conf  file,  dhcpd  reads  the
+dhcpd.leases file to refresh its memory about  what  leases  have  been assigned.
+
+	New leases are appended to the end of the dhcpd.leases file.   In order to prevent the file from becoming arbitrarily large, from time to  time
+dhcpd  creates a new dhcpd.leases file from its in-core lease database. Once this file has been written  to  disk,  the  old  file  is  renamed
+dhcpd.leases~,  and  the  new  file  is  renamed dhcpd.leases.   If the system crashes in the middle of this  process,  whichever  dhcpd.leases
+file  remains  will  contain  all the lease information, so there is no need for a special crash recovery process.
+
+-----
+	The command dhclient  has the following behaviour: In order to keep track of  leases  across  system  reboots  and  server
+restarts,  dhclient  keeps a list of leases it has been assigned in the dhclient.leases file. On startup,  after  reading  the  dhclient.conf
+file,  dhclient  reads  the  dhclient.leases file to refresh its memory about what leases it has been assigned.
+
+	When a new lease is  acquired,  it  is  appended  to  the  end  of  the dhclient.leases  file. In  order  to  prevent the file from becoming
+arbitrarily  large,  from  time  to  time  dhclient   creates   a new dhclient.leases  file from its in-core lease database.  The old version
+of the dhclient.leases file is retained under the name dhclient.leases until the next time dhclient rewrites the database.
+
+	Old  leases are kept around in case the DHCP server is unavailable when dhclient is first invoked (generally during  the  initial  system  boot
+process).    In  that  event,  old leases from the dhclient.leases file which have not yet expired are tested, and if they are determined to be
+valid,  they  are  used  until  either  they  expire or the DHCP server becomes available.
+
+
+---------------
+SOURCES
+---------------
+
+FOR dhcpcd
+
+1.http://www.phystech.com/download/dhcpcd_man.html
+2.http://pic.dhe.ibm.com/infocenter/aix/v7r1/index.jsp?topic=%2Fcom.ibm.aix.cmds%2Fdoc%2Faixcmds2%2Fdhcpcd.htm
+3.http://en.wikipedia.org/wiki/DHCPD
+4.http://manpages.ubuntu.com/manpages/precise/man8/dhcpd.8.html
+
+FOR dhclient
+
+1.http://manpages.ubuntu.com/manpages/raring/en/man8/dhclient.8.html
+2.http://linux.about.com/library/cmd/blcmdl8_dhclient.htm
+3.http://linux.die.net/man/8/dhclient
+

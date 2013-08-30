@@ -1,0 +1,16 @@
+18. Describe the procedure of marking badblocks in Ext2/3/4 FS(including the tools that are needed).
+
+First use the command badblocks to find if there are any bad blocks on the hard drive.Then the device is unmounted. After that  the command e2fsck is used to mark the bad sectors.
+
+USED COMMANDS:
+
+badblocks -o filename dev/...	to find and put the list of all found bad blocks in file
+
+umount  - to unmount the file system
+
+e2fsck -l filename /dev/...' to mark the bad blocks as unusable 
+
+USED LINKS:
+http://www.linuxmisc.com/4-linux/eb46974f63e543ee.htm
+http://www.computerhope.com/unix/umount.htm
+http://superuser.com/questions/259063/view-bad-blocks-on-mounted-ext2-ext3-ext4-filesystem

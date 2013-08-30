@@ -1,0 +1,28 @@
+1. Describe the RBAC security model.
+
+	In computer systems security, role-based access control (RBAC) is an approach to restricting system access to authorized users. It is used many enterprises  and can implement mandatory access control (MAC) or discretionary access control (DAC). RBAC is sometimes referred to as role-based security.
+
+
+	Although organizations acknowledge the importance of RBAC, they are cautious about implementing this technique. RBAC has undeservedly gained the reputation that it involves a large effort – particularly in terms of management overhead – as well as lengthy and complex implementation cycles.
+
+	When properly implemented, RBAC enables users to carry out a wide range of authorized tasks by dynamically regulating their actions according to flexible functions, relationships, and constraints. This is in contrast to conventional methods of access control, which grant or revoke user access on a rigid, object-by-object basis. In RBAC, roles can be easily created, changed, or discontinued as the needs of the enterprise evolve, without having to individually update the privileges for every user.
+
+RBAC Picture: http://identitysander.files.wordpress.com/2009/11/rbac.png
+
+Three primary rules are defined for RBAC:
+
+   1. Role assignment: A subject can exercise a permission only if the subject has selected or been assigned a role.
+   2. Role authorization: A subject's active role must be authorized for the subject. With rule 1 above, this rule ensures that users can take on only roles 	   for which they are authorized.
+   3. Permission authorization: A subject can exercise a permission only if the permission is authorized for the subject's active role. With rules 1 and 2, 	  this rule ensures that users can exercise only permissions for which they are authorized.
+
+
+Used Links
+https://en.wikipedia.org/wiki/Role-based_access_control
+
+http://csrc.nist.gov/groups/SNS/rbac/documents/ferraiolo-kuhn-92.pdf
+
+http://csrc.nist.gov/rbac/sandhu96.pdf
+
+http://www.virtual-strategy.com/2012/09/26/monster-called-rbac
+
+http://searchsecurity.techtarget.com/definition/role-based-access-control-RBAC

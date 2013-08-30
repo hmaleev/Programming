@@ -1,0 +1,20 @@
+#!bin/bash
+
+# 4. Execute this: lynx --dump http://cnn.com
+#   Now get a the count of:
+# - how many internal links (links to the same hostname - cnn.com)
+# - how many external links (links to hostnames other then cnn.com)
+# - how many links to subdomains (links to hostnames *.cnn.com)
+# - how many links to direct javascript executions (something like this 'javascript:')
+
+echo "internal links" 
+lynx -dump "http://www.cnn.com/" | grep -o "http://www.cnn.com" | wc -l
+echo "external links"
+lynx -dump "http://www.cnn.com/" | grep -o "http.*" | grep -v "http://www.cnn.com" | wc -l
+echo "all subdomains"
+lynx -dump "http://www.cnn.com/" | grep -o "http.*" | grep -v "http://.*.cnn.com" | wc -l
+echo "all JavaScript"
+lynx -dump "http://www.cnn.com/" | grep -o "javascript:.*"  | wc -l
+echo "all links"
+lynx -dump "http://www.cnn.com/" | grep -v "http.*" | wc -l
+
