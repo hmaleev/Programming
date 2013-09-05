@@ -20,6 +20,8 @@ namespace XAMLCalculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        string number;
+     
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +29,24 @@ namespace XAMLCalculator
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            TextBox result = (TextBox)sender;
+            result.Text = number;
         }
+
+        //private void onDigitClick(object sender, RoutedEventArgs e)
+        //{
+        //    Button digit = (Button)sender;
+        //    number += digit.Content.ToString();
+
+        //}
+        public int CreateNumber(string input)
+        {
+            return int.Parse(input);
+        }
+
+        //private void onSignClick(object sender, RoutedEventArgs e)
+        //{
+
+        //}
     }
 }
