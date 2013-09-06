@@ -20,8 +20,8 @@ namespace XAMLCalculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        string number;
-     
+        string input =string.Empty;
+        int result = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -29,24 +29,105 @@ namespace XAMLCalculator
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            TextBox result = (TextBox)sender;
-            result.Text = number;
+            TextBox currentTextBox = sender as TextBox;
+            currentTextBox.Text = input;
         }
 
-        //private void onDigitClick(object sender, RoutedEventArgs e)
-        //{
-        //    Button digit = (Button)sender;
-        //    number += digit.Content.ToString();
 
-        //}
         public int CreateNumber(string input)
         {
             return int.Parse(input);
         }
 
-        //private void onSignClick(object sender, RoutedEventArgs e)
-        //{
+        private void onDigitClick(object sender, RoutedEventArgs e)
+        {
+            Button digit = (Button)sender;
+            input += digit.Content.ToString();
+        }
 
-        //}
+        private void onSignClick(object sender, RoutedEventArgs e)
+        {
+            Button digit = (Button)sender;
+            input += " " + digit.Content.ToString() +" " ;
+        }
+
+        private void onEqualsClick(object sender, RoutedEventArgs e)
+        {
+
+            result = 0;
+            int tempResult = 0;
+            string[] parsedInput = input.Split(' ');
+            for (int i = 0; i < parsedInput.Length; i++)
+            {
+                switch (parsedInput[i])
+                {
+                    default: 
+                        {
+                            break;
+                        }
+                    case "+": 
+                        {
+                            if (tempResult!=0)
+                            {
+                                result = tempResult + int.Parse(parsedInput[i + 1]);
+                            }
+                            else
+                            {
+                                result =  int.Parse(parsedInput[i - 1]) + int.Parse(parsedInput[i + 1]);
+                            }
+                            
+                            tempResult = result;
+                            break;
+                        }
+                    case "-":
+                        {
+                            if (tempResult != 0)
+                            {
+                                result = tempResult - int.Parse(parsedInput[i + 1]);
+                            }
+                            else
+                            {
+                                result = int.Parse(parsedInput[i - 1]) - int.Parse(parsedInput[i + 1]);
+                            }
+
+                            tempResult = result;
+                            break;
+                        }
+                    case "*":
+                        {
+                            if (tempResult != 0)
+                            {
+                                result = tempResult * int.Parse(parsedInput[i + 1]);
+                            }
+                            else
+                            {
+                                result = int.Parse(parsedInput[i - 1]) * int.Parse(parsedInput[i + 1]);
+                            }
+
+                            tempResult = result;
+                            break;
+                        }
+                    case "/":
+                        {
+                            if (tempResult != 0)
+                            {
+                                result = tempResult / int.Parse(parsedInput[i + 1]);
+                            }
+                            else
+                            {
+                                result = int.Parse(parsedInput[i - 1]) / int.Parse(parsedInput[i + 1]);
+                            }
+
+                            tempResult = result;
+                            break;
+                        }
+                }
+            }
+            MessageBox.Show(result.ToString());
+            input = string.Empty;
+            
+        }
+
+
     }
 }

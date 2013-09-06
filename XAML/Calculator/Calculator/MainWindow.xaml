@@ -46,7 +46,7 @@
 			<MenuItem Header="Edit"/>
 			<MenuItem Header="help"/>
 		</Menu>
-		<TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5"  Margin="2.5,11,2.5,2.5" TextChanged="TextBox_TextChanged" IsReadOnly="True">
+		<TextBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="5"  Margin="2.5,11,2.5,2.5" TextChanged="TextBox_TextChanged" FontFamily="Consolas" FontWeight="Bold" Cursor="Arrow" IsUndoEnabled="False" Text="s">
 			<TextBox.BorderBrush>
 				<LinearGradientBrush EndPoint="0,20" MappingMode="Absolute" StartPoint="0,0">
 					<GradientStop Color="#FFABADB3" Offset="0.05"/>
@@ -75,32 +75,32 @@
 		<Button Grid.Row="2" Grid.Column="4" Margin="2.5" Content="M+"/>
 		<Button Grid.Row="2" Grid.Column="5" Margin="2.5" Content="M-"/>
 
-		<Button Grid.Row="3" Grid.Column="1" Margin="2.5" Content="BACK"/>
+        <Button Grid.Row="3" Grid.Column="1" Margin="2.5" Content="&#8592;"/>
 		<Button Grid.Row="3" Grid.Column="2" Margin="2.5" Content="CE"/>
-		<Button Grid.Row="3" Grid.Column="3" Margin="2.5" Content="+-"/>
-		<Button Grid.Row="3" Grid.Column="4" Margin="2.5" Content="SQRT+"/>
-		<Button Grid.Row="3" Grid.Column="5" Margin="2.5" Content="M-"/>
+		<Button Grid.Row="3" Grid.Column="3" Margin="2.5" Content="C"/>
+        <Button Grid.Row="3" Grid.Column="4" Margin="2.5" Content="&#177;"/>
+        <Button Grid.Row="3" Grid.Column="5" Margin="2.5" Content="&#8730;"/>
 
-		<Button Grid.Row="4" Grid.Column="1" Margin="2.5" Content="7"/>
-		<Button Grid.Row="4" Grid.Column="2" Margin="2.5" Content="8"/>
-		<Button Grid.Row="4" Grid.Column="3" Margin="2.5" Content="9"/>
-		<Button Grid.Row="4" Grid.Column="4" Margin="2.5" Content="/"/>
+		<Button Grid.Row="4" Grid.Column="1" Margin="2.5" Content="7" Click="onDigitClick"/>
+        <Button Grid.Row="4" Grid.Column="2" Margin="2.5" Content="8" Click="onDigitClick"/>
+        <Button Grid.Row="4" Grid.Column="3" Margin="2.5" Content="9" Click="onDigitClick"/>
+		<Button Grid.Row="4" Grid.Column="4" Margin="2.5" Content="/" Click="onSignClick"/>
 		<Button Grid.Row="4" Grid.Column="5" Margin="2.5" Content="%"/>
-        
-		<Button Grid.Row="5" Grid.Column="1" Margin="2.5" Content="4"/>
-		<Button Grid.Row="5" Grid.Column="2" Margin="2.5" Content="5"/>
-		<Button Grid.Row="5" Grid.Column="3" Margin="2.5" Content="6"/>
-		<Button Grid.Row="5" Grid.Column="4" Margin="2.5" Content="*"/>
+
+        <Button Grid.Row="5" Grid.Column="1" Margin="2.5" Content="4" Click="onDigitClick"/>
+        <Button Grid.Row="5" Grid.Column="2" Margin="2.5" Content="5" Click="onDigitClick"/>
+        <Button Grid.Row="5" Grid.Column="3" Margin="2.5" Content="6" Click="onDigitClick"/>
+        <Button Grid.Row="5" Grid.Column="4" Margin="2.5" Content="*" Click="onSignClick"/>
 		<Button Grid.Row="5" Grid.Column="5" Margin="2.5" Content="1/x"/>
 
-		<Button Grid.Row="6" Grid.Column="1" Margin="2.5" Content="1"/>
-		<Button Grid.Row="6" Grid.Column="2" Margin="2.5" Content="2"/>
-		<Button Grid.Row="6" Grid.Column="3" Margin="2.5" Content="3"/>
-		<Button Grid.Row="6" Grid.Column="4" Margin="2.5" Content="-"/>
-		<Button Grid.Row="6" Grid.Column="5" Grid.RowSpan="2" Margin="2.5" Content="="/>
+        <Button Grid.Row="6" Grid.Column="1" Margin="2.5" Content="1" Click="onDigitClick"/>
+        <Button Grid.Row="6" Grid.Column="2" Margin="2.5" Content="2" Click="onDigitClick"/>
+        <Button Grid.Row="6" Grid.Column="3" Margin="2.5" Content="3" Click="onDigitClick"/>
+        <Button Grid.Row="6" Grid.Column="4" Margin="2.5" Content="-" Click="onSignClick"/>
+		<Button Grid.Row="6" Grid.Column="5" Grid.RowSpan="2" Margin="2.5" Content="=" Click="onEqualsClick"/>
 
-		<Button Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Margin="2.5" Content="0"/>
+        <Button Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Margin="2.5" Content="0"  Click="onDigitClick"/>
 		<Button Grid.Row="7" Grid.Column="3" Margin="2.5" Content=","/>
-		<Button Grid.Row="7" Grid.Column="4" Margin="2.5" Content="+"/>
+        <Button Grid.Row="7" Grid.Column="4" Margin="2.5" Content="+" Click="onSignClick"/>
 	</Grid>
 </Window>
