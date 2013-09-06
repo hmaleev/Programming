@@ -21,20 +21,13 @@ namespace XAMLCalculator
     public partial class MainWindow : Window
     {
         string input =string.Empty;
-        int result = 0;
+        decimal result = 0;
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            TextBox currentTextBox = sender as TextBox;
-            currentTextBox.Text = input;
-        }
-
-
-        public int CreateNumber(string input)
+        public int CreateNumber(string input) 
         {
             return int.Parse(input);
         }
@@ -43,19 +36,21 @@ namespace XAMLCalculator
         {
             Button digit = (Button)sender;
             input += digit.Content.ToString();
+            calculatorResult.FontSize = 12;
+            calculatorResult.Text = input;
         }
 
         private void onSignClick(object sender, RoutedEventArgs e)
         {
             Button digit = (Button)sender;
             input += " " + digit.Content.ToString() +" " ;
+            calculatorResult.Text = input;
         }
 
         private void onEqualsClick(object sender, RoutedEventArgs e)
         {
-
             result = 0;
-            int tempResult = 0;
+            decimal tempResult = 0;
             string[] parsedInput = input.Split(' ');
             for (int i = 0; i < parsedInput.Length; i++)
             {
@@ -69,11 +64,13 @@ namespace XAMLCalculator
                         {
                             if (tempResult!=0)
                             {
-                                result = tempResult + int.Parse(parsedInput[i + 1]);
+                                result = tempResult + decimal.Parse(parsedInput[i + 1]);
+                                //calculatorResult.Text = result.ToString();
                             }
                             else
                             {
-                                result =  int.Parse(parsedInput[i - 1]) + int.Parse(parsedInput[i + 1]);
+                                result = decimal.Parse(parsedInput[i - 1]) + decimal.Parse(parsedInput[i + 1]);
+                                //calculatorResult.Text = result.ToString();
                             }
                             
                             tempResult = result;
@@ -83,11 +80,11 @@ namespace XAMLCalculator
                         {
                             if (tempResult != 0)
                             {
-                                result = tempResult - int.Parse(parsedInput[i + 1]);
+                                result = tempResult - decimal.Parse(parsedInput[i + 1]);
                             }
                             else
                             {
-                                result = int.Parse(parsedInput[i - 1]) - int.Parse(parsedInput[i + 1]);
+                                result = decimal.Parse(parsedInput[i - 1]) - decimal.Parse(parsedInput[i + 1]);
                             }
 
                             tempResult = result;
@@ -97,11 +94,11 @@ namespace XAMLCalculator
                         {
                             if (tempResult != 0)
                             {
-                                result = tempResult * int.Parse(parsedInput[i + 1]);
+                                result = tempResult * decimal.Parse(parsedInput[i + 1]);
                             }
                             else
                             {
-                                result = int.Parse(parsedInput[i - 1]) * int.Parse(parsedInput[i + 1]);
+                                result = decimal.Parse(parsedInput[i - 1]) * decimal.Parse(parsedInput[i + 1]);
                             }
 
                             tempResult = result;
@@ -111,23 +108,28 @@ namespace XAMLCalculator
                         {
                             if (tempResult != 0)
                             {
-                                result = tempResult / int.Parse(parsedInput[i + 1]);
+                                result = tempResult / decimal.Parse(parsedInput[i + 1]);
                             }
                             else
                             {
-                                result = int.Parse(parsedInput[i - 1]) / int.Parse(parsedInput[i + 1]);
+                                result = decimal.Parse(parsedInput[i - 1]) / decimal.Parse(parsedInput[i + 1]);
                             }
-
                             tempResult = result;
                             break;
                         }
                 }
             }
-            MessageBox.Show(result.ToString());
+            calculatorResult.Text = result.ToString();
+            calculatorResult.FontSize = 24;
             input = string.Empty;
-            
         }
 
-
+        private void onDecimalSeparator(object sender, RoutedEventArgs e)
+        {
+            Button digit = (Button)sender;
+            input += digit.Content.ToString();
+            calculatorResult.FontSize = 12;
+            calculatorResult.Text = input;
+        }
     }
 }
