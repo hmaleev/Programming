@@ -1,0 +1,8 @@
+﻿<Window x:Class="TextBoxHW.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="200" Width="210">
+    <Grid>
+        <TextBox Width="150" Height="100" Text="This is a text box" ></TextBox>
+    </Grid>
+</Window>

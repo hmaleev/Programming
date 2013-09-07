@@ -1,0 +1,9 @@
+﻿<Window x:Class="ButtonHW.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel >
+        <Button Content="Button" Height="55" Click="onButtonClick"></Button>
+        <Label Name="counter" Height="55"></Label>
+    </StackPanel>
+</Window>

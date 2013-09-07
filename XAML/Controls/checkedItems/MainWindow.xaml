@@ -1,0 +1,12 @@
+﻿<Window x:Class="checkedItems.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <TextBox Name="TextBoxContent" TextWrapping="WrapWithOverflow"></TextBox>
+        <CheckBox Content="So long and thanks for all the fish" Checked="onChecked" Unchecked="onUnchecked"></CheckBox>
+        <CheckBox Content="Wizzard are never late. They arrive when they need to" Checked="onChecked" Unchecked="onUnchecked"></CheckBox>
+        <CheckBox Content="Doctor? Doctor Who?" Checked="onChecked" Unchecked="onUnchecked"></CheckBox>
+        <CheckBox Content="42" Checked="onChecked" Unchecked="onUnchecked"></CheckBox>
+    </StackPanel>
+</Window>
