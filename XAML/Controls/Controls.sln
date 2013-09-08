@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "checkedItems", "checkedItem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboBox", "ComboBox\ComboBox.csproj", "{BFF0EAFF-CBE8-4D9F-8DC0-8C6A548EB284}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordPad", "WordPad\WordPad.csproj", "{12C0C2D6-05B7-4AEE-8AB5-0D734BB98C81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{BFF0EAFF-CBE8-4D9F-8DC0-8C6A548EB284}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFF0EAFF-CBE8-4D9F-8DC0-8C6A548EB284}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFF0EAFF-CBE8-4D9F-8DC0-8C6A548EB284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12C0C2D6-05B7-4AEE-8AB5-0D734BB98C81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12C0C2D6-05B7-4AEE-8AB5-0D734BB98C81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12C0C2D6-05B7-4AEE-8AB5-0D734BB98C81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12C0C2D6-05B7-4AEE-8AB5-0D734BB98C81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
