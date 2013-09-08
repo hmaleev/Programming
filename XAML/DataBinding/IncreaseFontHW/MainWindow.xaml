@@ -1,0 +1,13 @@
+﻿<Window x:Class="IncreaseFontHW.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <TextBox Name="txt" Text="My name is Bond. James Bond" 
+                 FontSize="{Binding ElementName=Slider}" TextWrapping="WrapWithOverflow"></TextBox>
+        <Slider Name="Slider" ValueChanged="onValueChange" Maximum="42" Minimum="12"></Slider>
+        <Button Content="Set to default" Click="onSetDefaultClick"></Button>    
+        <Button Content="Set to medium" Click="onSetMediumClick"></Button>
+        <Button Content="Set to large" Click="onSetLargeClick"></Button>
+    </StackPanel >
+</Window>
