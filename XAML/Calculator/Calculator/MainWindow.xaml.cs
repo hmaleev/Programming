@@ -21,7 +21,11 @@ namespace XAMLCalculator
     public partial class MainWindow : Window
     {
         string input =string.Empty;
+        string currentNumber = string.Empty;
         decimal result = 0;
+        bool signIsMinus;
+        bool isDigit =false;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -35,16 +39,32 @@ namespace XAMLCalculator
         private void onDigitClick(object sender, RoutedEventArgs e)
         {
             Button digit = (Button)sender;
+            
+            currentNumber += digit.Content.ToString();
             input += digit.Content.ToString();
             calculatorResult.FontSize = 12;
             calculatorResult.Text = input;
+            signIsMinus = false;
+            isDigit = true;
         }
 
         private void onSignClick(object sender, RoutedEventArgs e)
         {
-            Button digit = (Button)sender;
-            input += " " + digit.Content.ToString() +" " ;
+            Button sign = (Button)sender;
+            currentNumber = string.Empty;
+            if (isDigit)
+            {
+                input += " " + sign.Content.ToString() + " ";
+                isDigit = false;
+            }
+            else
+            {
+                input += sign.Content.ToString();
+                isDigit = false;
+            }
             calculatorResult.Text = input;
+
+            calculatorResult.VerticalAlignment = VerticalAlignment.Top;
         }
 
         private void onEqualsClick(object sender, RoutedEventArgs e)
@@ -121,6 +141,7 @@ namespace XAMLCalculator
             }
             calculatorResult.Text = result.ToString();
             calculatorResult.FontSize = 24;
+            calculatorResult.VerticalAlignment = VerticalAlignment.Center;
             input = string.Empty;
         }
 
@@ -130,6 +151,41 @@ namespace XAMLCalculator
             input += digit.Content.ToString();
             calculatorResult.FontSize = 12;
             calculatorResult.Text = input;
+        }
+
+        private void onPlusMinusClick(object sender, RoutedEventArgs e)
+        {
+          
+            if (!signIsMinus)
+            {
+                string negatedNumber = currentNumber.Insert(0, "-");
+                input = input.Replace(currentNumber, negatedNumber);
+
+                signIsMinus = true;
+            }
+            else
+            {
+                string notNegatedNUmber = currentNumber;
+
+                calculatorResult.Text =input.Replace(currentNumber, notNegatedNUmber);
+                signIsMinus = false;
+            }
+           
+        }
+
+        private void onClearClick(object sender, RoutedEventArgs e)
+        {
+
+            input = string.Empty;
+            calculatorResult.Text = string.Empty;
+        }
+
+        private void onSquareRootClick(object sender, RoutedEventArgs e)
+        {
+            calculatorResult.Text = Math.Sqrt(double.Parse(input)).ToString();
+            calculatorResult.FontSize = 24;
+            calculatorResult.VerticalAlignment = VerticalAlignment.Center;
+            input = string.Empty;
         }
     }
 }
