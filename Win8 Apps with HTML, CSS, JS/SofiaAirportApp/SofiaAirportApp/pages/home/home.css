@@ -1,0 +1,39 @@
+﻿.homepage section[role=main] {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+
+.tile {
+    background-color: #fff;
+    display:inline-block;
+    width:40%;
+    height:80%;
+    margin:15px;
+}
+    .tile img {
+        height:50%;
+        
+    }
+    .tile h1 {
+        font-size: 20px;
+        background-color:green;
+        height:50%;
+    }
+        .tile h1 a {
+            color: #fff;
+        }
+
+@media screen and (-ms-view-state: snapped) {
+    .homepage section[role=main] {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .homepage section[role=main] {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}

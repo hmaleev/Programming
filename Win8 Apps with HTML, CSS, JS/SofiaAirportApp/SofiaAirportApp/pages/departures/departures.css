@@ -1,0 +1,33 @@
+﻿.departures section[role=main] {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+#txt {
+    display: none;
+}
+tr:nth-child(2n+3) {
+    background-color: green;
+
+}
+tr:nth-child(1),tr:nth-child(2) {
+    background-color: blue;
+        padding:0;
+        margin:0;
+}
+
+
+
+
+@media screen and (-ms-view-state: snapped) {
+    .departures section[role=main] {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .departures section[role=main] {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
