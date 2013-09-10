@@ -54,6 +54,8 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="css\default.css" />
+    <Content Include="images\drawing.svg" />
+    <Content Include="images\drawing2.svg" />
     <Content Include="images\logo.png" />
     <Content Include="images\planeLanding.png" />
     <Content Include="images\planeLanding.svg" />

@@ -11,10 +11,23 @@
     height:80%;
     margin:15px;
 }
-    .tile img {
-        height:50%;
+    .tile>.image {
+        display:block;
+        height:60%;
+        background-size:cover;
+       background-image: url(../../images/drawing.svg);
+        
         
     }
+        .tile>.image2 {
+        display:block;
+        height:60%;
+        background-size:cover;
+       background-image: url(../../images/drawing2.svg);
+        
+        
+    }
+
     .tile h1 {
         font-size: 20px;
         background-color:green;
