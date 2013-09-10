@@ -6,6 +6,7 @@
     display: none;
 }
 table {
+    font-size:1.2em;
     border-collapse:collapse;
 }
 td,th {
@@ -22,6 +23,57 @@ a,a:link,a:visited,a:hover,a:focus,a:active{
     .departures section[role=main] {
         margin-left: 20px;
         margin-right: 20px;
+    }
+
+     #txt {
+        display: none;
+    }
+
+    body {
+        height: 100%;
+    }
+
+    table {
+		font-size:0.9em;
+        width:295px;
+        table-layout: fixed;
+    }
+
+    td:nth-child(1), th:nth-child(1),td:nth-child(2), th:nth-child(2) {
+        display: none;
+    }
+
+    td:nth-child(3), th:nth-child(3),td:nth-child(8), th:nth-child(8) {
+        display: none;
+    }
+
+    td:nth-child(4), th:nth-child(4) {
+        width: 70px;
+        word-break: inherit;
+        word-wrap: break-word;
+    }
+
+
+    td:nth-child(5), th:nth-child(5) {
+        width: 28px;
+        word-break: inherit;
+        word-wrap: break-word;
+    }
+
+    td:nth-child(7), th:nth-child(7) {
+        width: 55px;
+        word-break: inherit;
+        word-wrap: break-word;
+    }
+
+    td:nth-child(6), th:nth-child(6) {
+        width: 35px;
+        word-break: inherit;
+        word-wrap: break-word;
+    }
+
+    a, a:link, a:visited, a:hover, a:focus, a:active {
+        color: #fff;
     }
 }
 
