@@ -16,6 +16,7 @@
             var currentPage;
             var endPage;
             var results = "20";
+            var link;
 
            WinJS.xhr({
                 url: "http://www.sofia-airport.bg/pages/arrivals.aspx",
@@ -28,11 +29,13 @@
                currentPage = document.getElementsByClassName("gridLinkActivePage");
                currentPage = currentPage[0].textContent;
                pageinfo.outerHTML = "";
+
                switch (results) {
                    case "10": endPage = parseInt(currentPage) + 1; break;
                    case "20": endPage = parseInt(currentPage) + 2; break;
                    case "30": endPage = parseInt(currentPage) + 3; break;
                }
+
                GetPages();
            })
           
@@ -47,38 +50,34 @@
                        table.innerHTML += document.getElementsByTagName("table")[x].innerHTML;
 
                        if (tableEndRow !== undefined) {
+                           table.rows[tableEndRow].innerHTML = "";
+                           table.rows[tableEndRow+1].innerHTML = "";
 
-                           table.rows[tableEndRow + 1].outerHTML = "";
-                           table.rows[tableEndRow].outerHTML = "";
+                      
+                       table.rows[0].outerHTML = "<tr><th>Дата</th><th>Час</th><th>Полет</th><th>Направление</th><th>Терминал</th><th>Очакван час</th><th>Статус</th><th>Наземен оператор</th></tr>";
+                       table.rows[1].innerHTML = " ";
+                       for (var i = 1; i < table.rows.length; i++) {
+                           console.log(i);
+                           if (i < table.rows.length-1 && table.rows[i+1].outerHTML!="<tr></tr>"    ) {
 
-                           for (var i = 1; i < table.rows.length; i++) {
+                               table.rows[i + 1].cells[3].outerHTML = "";
+                               table.rows[i+1].cells[8].outerHTML = ""
+                              // table.rows[i + 1].cells[4].childNodes[0].attributes.removeNamedItem("href");
+                           }
                                if (i % 2 == 1) {
-
-                                   table.rows[i].style.backgroundColor = "green";
-                                  
+                                   table.rows[i].style.backgroundColor = "#200C69";
+                                   table.rows[i].style.color = "#ffffff";
                                }
-                               table.rows[i].cells[9].outerHTML = ""
+                               else {
+                                   table.rows[i].style.backgroundColor = "#0093DD";
+                                   table.rows[i].style.color = "#ffffff";
+                               }
+                            
                            }
 
                        }
-                       table.rows[0].outerHTML = "<th>Дата</th><th>Час</th><th>Полет</th><th>Тип самолет</th><th>Направление</th><th>Терминал</th><th>Очакван час</th><th>Статус</th><th>Наземен оператор</th>";
-                       table.rows[1].outerHTML = "";
-
                        tableEndRow = table.rows.length;
-
-                       //for (var i = 1; i < table.rows.length; i++) {
-
-                       //    table.rows[i].cells[9].outerHTML = ""
-                       //}
-
-
                        x++;
-                       //for (var i = 0; i < table.rows.length; i++) {
-                       //    if (i % 2 == 1) {
-
-                       //        table.rows[i].style.backgroundColor = "green";
-                       //    }
-                       //}
 
                    },
               function (error) {
@@ -94,7 +93,7 @@
 
         updateLayout: function (element, viewState, lastViewState) {
             /// <param name="element" domElement="true" />
-
+            console.log(viewState);
             // TODO: Respond to changes in viewState.
         }
     });

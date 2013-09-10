@@ -33,6 +33,11 @@
         }
     });
 
+    app.onsettings = function (e) {
+        e.detail.applicationcommands = { "Preferences": { title: "Preferences", href: "/pages/settings/settings.html" } };
+        WinJS.UI.SettingsFlyout.populateSettings(e);
+    };
+
     app.oncheckpoint = function (args) {
         // TODO: This application is about to be suspended. Save any state
         // that needs to persist across suspensions here. If you need to 
