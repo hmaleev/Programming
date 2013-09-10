@@ -13,7 +13,7 @@
 }
     .tile>.image {
         display:block;
-        height:60%;
+        height:64%;
         background-size:cover;
        background-image: url(../../images/drawing.svg);
         
@@ -21,7 +21,7 @@
     }
         .tile>.image2 {
         display:block;
-        height:60%;
+        height:64%;
         background-size:cover;
        background-image: url(../../images/drawing2.svg);
         
@@ -29,9 +29,10 @@
     }
 
     .tile h1 {
-        font-size: 20px;
-        background-color:green;
-        height:50%;
+        font-size: 8em;
+		text-align:center;
+        background-color:#0093DD;
+        height:30%;
     }
         .tile h1 a {
             color: #fff;

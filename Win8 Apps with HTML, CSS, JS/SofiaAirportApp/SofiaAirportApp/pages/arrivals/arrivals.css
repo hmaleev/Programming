@@ -13,6 +13,7 @@ body {
 
 table {
     border-collapse: collapse;
+	font-size:1.2em;
 }
 
 td, th {
@@ -42,6 +43,7 @@ a, a:link, a:visited, a:hover, a:focus, a:active {
     }
 
     table {
+		font-size:0.9em;
         width:295px;
         table-layout: fixed;
     }
