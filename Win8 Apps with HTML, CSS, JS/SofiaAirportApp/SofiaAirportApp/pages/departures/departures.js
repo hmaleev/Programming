@@ -11,18 +11,20 @@
             var p = document.getElementById("txt");
             var table = document.getElementById("table-departures");
             table.innerHTML = "";
-            var x = 0;
+           
             var tableEndRow;
             var currentPage;
             var endPage;
             var results = Windows.Storage.ApplicationData.current.roamingSettings.values["displayFlights"];
+            var update = document.getElementById("update");
 
             WinJS.xhr({
                 url: "http://www.sofia-airport.bg/pages/departures.aspx",
                 type: "GET"
             }).then(function (response) {
                 console.log(response);
-                response.responseText
+                update.addEventListener("click", UpdateInformation, false);
+
                 var pageinfo = document.getElementById("pageinfo");
                 pageinfo.innerHTML = toStaticHTML(response.responseText);
                 currentPage = document.getElementsByClassName("gridLinkActivePage");
@@ -32,10 +34,58 @@
                     case "10": endPage = parseInt(currentPage) + 1; break;
                     case "20": endPage = parseInt(currentPage) + 2; break;
                 }
-                GetPages();
-            })
 
-            function GetPages() {
+                 var x = 0;
+                 console.log("here");
+                 table.innerHTML = "";
+                 for (var i = currentPage; i < endPage; i++) {
+
+                     WinJS.xhr({
+                         url: "http://www.sofia-airport.bg/pages/departures.aspx?lm01=103&lm02=51&lm03=51&p=" + i,
+                         type: "GET"
+                     }).then(function (response) {
+                         p.innerHTML += toStaticHTML(response.responseText);
+                         table.innerHTML += document.getElementsByTagName("table")[x].innerHTML;
+
+
+                         if (tableEndRow !== undefined && tableEndRow < table.rows.length) {
+                             table.rows[tableEndRow+1].innerHTML = "";
+                             table.rows[tableEndRow].innerHTML = "";
+
+                         }
+                         tableEndRow = table.rows.length;
+                         x++;
+                         table.rows[0].outerHTML = "<tr><th>Дата</th><th>Час</th><th>Полет</th><th>Направление</th><th>Терминал</th><th>Очакван час</th><th>Статус</th><th>Наземен оператор</th></tr>";
+                         table.rows[1].innerHTML = " ";
+                         for (var i = 1; i < table.rows.length; i++) {
+                             console.log(i);
+                             if (i % 2 == 1) {
+                                 table.rows[i].style.backgroundColor = "#200C69";
+                                 table.rows[i].style.color = "#ffffff";
+                             }
+                             else {
+                                 table.rows[i].style.backgroundColor = "#0093DD";
+                                 table.rows[i].style.color = "#ffffff";
+                             }
+                         }
+                         console.log(table.innerHTML);
+                     },
+                function (error) {
+                    console.log(error);
+                });
+                 }
+            })
+            update.addEventListener("click", UpdateInformation, false);
+
+            function UpdateInformation() {
+                console.log("here");
+                var p = document.getElementById("txt");
+                var table = document.getElementById("table-departures");
+                var results = Windows.Storage.ApplicationData.current.roamingSettings.values["displayFlights"];
+
+                var x = 0;
+                console.log("here");
+                table.innerHTML = "";
                 for (var i = currentPage; i < endPage; i++) {
 
                     WinJS.xhr({
@@ -45,24 +95,18 @@
                         p.innerHTML += toStaticHTML(response.responseText);
                         table.innerHTML += document.getElementsByTagName("table")[x].innerHTML;
 
-                        if (tableEndRow !== undefined) {
-                            table.rows[tableEndRow].innerHTML = "";
+
+                        if (tableEndRow !== undefined && tableEndRow < table.rows.length) {
                             table.rows[tableEndRow + 1].innerHTML = "";
+                            table.rows[tableEndRow].innerHTML = "";
 
                         }
-
                         tableEndRow = table.rows.length;
                         x++;
                         table.rows[0].outerHTML = "<tr><th>Дата</th><th>Час</th><th>Полет</th><th>Направление</th><th>Терминал</th><th>Очакван час</th><th>Статус</th><th>Наземен оператор</th></tr>";
                         table.rows[1].innerHTML = " ";
                         for (var i = 1; i < table.rows.length; i++) {
                             console.log(i);
-                            //if (i < table.rows.length - 1 && table.rows[i + 1].outerHTML != "<tr></tr>") {
-
-                            //    table.rows[i + 1].cells[3].outerHTML = "";
-                            //    table.rows[i + 1].cells[8].outerHTML = ""
-                            //    table.rows[i + 1].cells[4].childNodes[0].attributes.removeNamedItem("href");
-                            //}
                             if (i % 2 == 1) {
                                 table.rows[i].style.backgroundColor = "#200C69";
                                 table.rows[i].style.color = "#ffffff";
@@ -72,16 +116,20 @@
                                 table.rows[i].style.color = "#ffffff";
                             }
                         }
+                        console.log(table.innerHTML);
                     },
                function (error) {
                    console.log(error);
                });
                 }
             }
+
         },
 
         unload: function () {
             // TODO: Respond to navigations away from this page.
+          
+            addconsole.log("here");
         },
 
         updateLayout: function (element, viewState, lastViewState) {
@@ -91,3 +139,50 @@
         }
     });
 })();
+
+//function UpdateInformation() {
+//    console.log("here");
+//    var p = document.getElementById("txt");
+//    var table = document.getElementById("table-departures");
+//    var results = Windows.Storage.ApplicationData.current.roamingSettings.values["displayFlights"];
+    
+//    var x = 0;
+//    console.log("here");
+//    table.innerHTML = "";
+//    for (var i = currentPage; i < this.endPage; i++) {
+
+//        WinJS.xhr({
+//            url: "http://www.sofia-airport.bg/pages/departures.aspx?lm01=103&lm02=51&lm03=51&p=" + i,
+//            type: "GET"
+//        }).then(function (response) {
+//            p.innerHTML += toStaticHTML(response.responseText);
+//            table.innerHTML += document.getElementsByTagName("table")[x].innerHTML;
+
+
+//            if (tableEndRow !== undefined && tableEndRow < table.rows.length) {
+//                table.rows[tableEndRow + 1].innerHTML = "";
+//                table.rows[tableEndRow].innerHTML = "";
+
+//            }
+//            tableEndRow = table.rows.length;
+//            x++;
+//            table.rows[0].outerHTML = "<tr><th>Дата</th><th>Час</th><th>Полет</th><th>Направление</th><th>Терминал</th><th>Очакван час</th><th>Статус</th><th>Наземен оператор</th></tr>";
+//            table.rows[1].innerHTML = " ";
+//            for (var i = 1; i < table.rows.length; i++) {
+//                console.log(i);
+//                if (i % 2 == 1) {
+//                    table.rows[i].style.backgroundColor = "#200C69";
+//                    table.rows[i].style.color = "#ffffff";
+//                }
+//                else {
+//                    table.rows[i].style.backgroundColor = "#0093DD";
+//                    table.rows[i].style.color = "#ffffff";
+//                }
+//            }
+//            console.log(table.innerHTML);
+//        },
+//   function (error) {
+//       console.log(error);
+//   });
+//    }
+//}
