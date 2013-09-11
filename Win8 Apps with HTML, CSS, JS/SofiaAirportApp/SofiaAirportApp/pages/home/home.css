@@ -70,4 +70,37 @@
         margin-left: 100px;
         margin-right: 100px;
     }
+
+    .tile {
+    background-color: #fff;
+    display: block;
+    width: 80%;
+   height:50%;
+    margin: 15px;
+}
+    .tile > .image {
+        display: block;
+      
+        width:100%;
+        //height:35%;
+        background-size: cover;
+        background-image: url(../../images/drawing.svg);
+    }
+    .tile > .image2 {
+        display: block;
+       
+       width:100%;
+        background-size: cover;
+        background-image: url(../../images/drawing2.svg);
+    }
+    .tile h1 {
+        font-size: 8em;
+        text-align: center;
+        background-color: #0093DD;
+        height: 30%;
+    }
+        .tile h1 a {
+            color: #fff;
+        }
+
 }

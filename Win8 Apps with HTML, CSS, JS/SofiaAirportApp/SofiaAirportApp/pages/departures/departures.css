@@ -82,7 +82,33 @@ a,a:link,a:visited,a:hover,a:focus,a:active{
 
 @media screen and (-ms-view-state: fullscreen-portrait) {
     .departures section[role=main] {
-        margin-left: 100px;
-        margin-right: 100px;
+        margin-left: 60px;
+        /*//margin-right: 80px;*/
+    }
+        a, a:link, a:visited, a:hover, a:focus, a:active {
+        color: #fff;
+    }
+         #txt {
+        display: none;
+    }
+
+    body {
+        height: 100%;
+    }
+
+    table {
+		font-size:0.9em;
+        width:88%;
+        table-layout: fixed;
+    }
+        td:nth-child(4), th:nth-child(4),td:nth-child(5), th:nth-child(5) {
+        width: 70px;
+        word-break: inherit;
+        word-wrap: break-word;
+    }
+    td:nth-child(8), th:nth-child(8) {
+        width: 95px;
+        word-break: inherit;
+        word-wrap: break-word;
     }
 }
