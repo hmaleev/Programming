@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <VisualElements DisplayName="SofiaAirportApp" Logo="images/airportLogo.png" SmallLogo="images\smalllogo.png" Description="SofiaAirportApp" ForegroundText="light" BackgroundColor="#ffffff">
+      <VisualElements DisplayName="SofiaAirportApp" Logo="images/airportLogo.png" SmallLogo="images\smalllogo.png" Description="SofiaAirportApp" ForegroundText="light" BackgroundColor="#200C69">
         <DefaultTile ShowName="allLogos" ShortName="Sofia Airport" WideLogo="images/airportWideLogo.png" />
         <SplashScreen Image="images\splashscreen.png" />
       </VisualElements>
