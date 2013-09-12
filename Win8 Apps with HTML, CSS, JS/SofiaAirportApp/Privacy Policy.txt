@@ -1,3 +1,3 @@
-This application does not collect any personal information. It requires Internet connection to connect with server in order to show the flight information
+п»їThis application does not collect any personal information. It requires Internet connection to connect with server in order to show the flight information
 
-Това приложение не събира персонална информация. Приложението използва интернет връзка, за да се свърже със сървър и да предостави текущата информация на потребителя.
+РўРѕРІР° РїСЂРёР»РѕР¶РµРЅРёРµ РЅРµ СЃСЉР±РёСЂР° РїРµСЂСЃРѕРЅР°Р»РЅР° РёРЅС„РѕСЂРјР°С†РёСЏ. РџСЂРёР»РѕР¶РµРЅРёРµС‚Рѕ РёР·РїРѕР»Р·РІР° РёРЅС‚РµСЂРЅРµС‚ РІСЂСЉР·РєР°, Р·Р° РґР° СЃРµ СЃРІСЉСЂР¶Рµ СЃСЉСЃ СЃСЉСЂРІСЉСЂ Рё РґР° РїСЂРµРґРѕСЃС‚Р°РІРё С‚РµРєСѓС‰Р°С‚Р° РёРЅС„РѕСЂРјР°С†РёСЏ РЅР° РїРѕС‚СЂРµР±РёС‚РµР»СЏ.

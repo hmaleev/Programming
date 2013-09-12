@@ -47,8 +47,9 @@
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetPlatformVersion>8.0</TargetPlatformVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <PackageCertificateKeyFile>SofiaAirportApp_TemporaryKey.pfx</PackageCertificateKeyFile>
-    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <PackageCertificateKeyFile>SofiaAirportApp_StoreKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <PackageCertificateThumbprint>C1EB846F34408C7481680B071D606C6D1AB7F372</PackageCertificateThumbprint>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
@@ -82,6 +83,8 @@
     <Content Include="js\default.js" />
     <Content Include="js\navigator.js" />
     <Content Include="js\uiEditor.js" />
+    <None Include="SofiaAirportApp_StoreKey.pfx" />
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="pages\arrivals\arrivals.css" />
     <Content Include="pages\arrivals\arrivals.html" />
     <Content Include="pages\arrivals\arrivals.js" />

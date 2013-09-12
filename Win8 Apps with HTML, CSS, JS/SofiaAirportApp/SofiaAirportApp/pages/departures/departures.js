@@ -86,14 +86,14 @@
                         },
                    function (error) {
                        if (error.status == 502) {
-                           var msgpopup = new Windows.UI.Popups.MessageDialog("No internet connection found");
+                           var msgpopup = new Windows.UI.Popups.MessageDialog("Няма връзка с Интернет");
                            msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
 
                            msgpopup.showAsync();
                            n.Hide();
                        }
                        else {
-                           var msgpopup = new Windows.UI.Popups.MessageDialog("An error has occured");
+                           var msgpopup = new Windows.UI.Popups.MessageDialog("Възникна грешка");
                            msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
 
                            msgpopup.showAsync();
@@ -103,14 +103,14 @@
                     }
                 }, function (error) {
                         if (error.status == 502) {
-                            var msgpopup = new Windows.UI.Popups.MessageDialog("No internet connection found");
+                            var msgpopup = new Windows.UI.Popups.MessageDialog("Няма връзка с Интернет");
                             msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
 
                             msgpopup.showAsync();
                             n.Hide();
                         }
                         else {
-                            var msgpopup = new Windows.UI.Popups.MessageDialog("An error has occured");
+                            var msgpopup = new Windows.UI.Popups.MessageDialog("Възникна грешка");
                             msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
 
                             msgpopup.showAsync();
