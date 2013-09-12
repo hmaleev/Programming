@@ -4,7 +4,7 @@
   <Properties>
     <DisplayName>SofiaAirportApp</DisplayName>
     <PublisherDisplayName>Hristo</PublisherDisplayName>
-    <Logo>images\storelogo.png</Logo>
+    <Logo>images\airportStoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
     <OSMinVersion>6.2.1</OSMinVersion>
@@ -15,9 +15,9 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <VisualElements DisplayName="SofiaAirportApp" Logo="images/airportLogo.png" SmallLogo="images\smalllogo.png" Description="SofiaAirportApp" ForegroundText="light" BackgroundColor="#200C69">
+      <VisualElements DisplayName="SofiaAirportApp" Logo="images/airportLogo.png" SmallLogo="images/airportSmallLogo.png" Description="SofiaAirportApp" ForegroundText="light" BackgroundColor="#200C69" ToastCapable="false">
         <DefaultTile ShowName="allLogos" ShortName="Sofia Airport" WideLogo="images/airportWideLogo.png" />
-        <SplashScreen Image="images\splashscreen.png" />
+        <SplashScreen Image="images\airportSplashScreen.png" />
       </VisualElements>
     </Application>
   </Applications>
