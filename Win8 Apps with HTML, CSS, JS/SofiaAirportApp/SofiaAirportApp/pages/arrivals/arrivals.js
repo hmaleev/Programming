@@ -91,10 +91,38 @@
                             date = new Date().toGMTString()
                         },
                    function (error) {
-                       console.log(error);
+                       if (error.status == 502) {
+                           var msgpopup = new Windows.UI.Popups.MessageDialog("No internet connection found");
+                           msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+
+                           msgpopup.showAsync();
+                           n.Hide();
+                       }
+                       else {
+                           var msgpopup = new Windows.UI.Popups.MessageDialog("An error has occured");
+                           msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+
+                           msgpopup.showAsync();
+                           n.Hide();
+                       }
                    });
                     }
-                })
+                }, function (error) {
+                    if (error.status == 502) {
+                        var msgpopup = new Windows.UI.Popups.MessageDialog("No internet connection found");
+                        msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+
+                        msgpopup.showAsync();
+                        n.Hide();
+                    }
+                    else {
+                        var msgpopup = new Windows.UI.Popups.MessageDialog("An error has occured");
+                        msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+
+                        msgpopup.showAsync();
+                        n.Hide();
+                    }
+                });
         },
         unload: function () {
             // TODO: Respond to navigations away from this page.

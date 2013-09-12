@@ -50,13 +50,13 @@
                         case "20": endPage = parseInt(currentPage) + 2; break;
                     }
                     var x = 0;
-                   
+
                     for (var i = currentPage; i < endPage; i++) {
                         WinJS.xhr({
                             url: "http://www.sofia-airport.bg/pages/departures.aspx?lm01=103&lm02=51&lm03=51&p=" + i,
                             type: "GET",
                             headers: {
-                                    "If-Modified-Since": date
+                                "If-Modified-Since": date
                             }
                         }).then(function (response) {
                             p.innerHTML += toStaticHTML(response.responseText);
@@ -85,10 +85,38 @@
                             date = new Date().toGMTString()
                         },
                    function (error) {
-                       console.log(error);
+                       if (error.status == 502) {
+                           var msgpopup = new Windows.UI.Popups.MessageDialog("No internet connection found");
+                           msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+
+                           msgpopup.showAsync();
+                           n.Hide();
+                       }
+                       else {
+                           var msgpopup = new Windows.UI.Popups.MessageDialog("An error has occured");
+                           msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+
+                           msgpopup.showAsync();
+                           n.Hide();
+                       }
                    });
                     }
-                })
+                }, function (error) {
+                        if (error.status == 502) {
+                            var msgpopup = new Windows.UI.Popups.MessageDialog("No internet connection found");
+                            msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+
+                            msgpopup.showAsync();
+                            n.Hide();
+                        }
+                        else {
+                            var msgpopup = new Windows.UI.Popups.MessageDialog("An error has occured");
+                            msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+
+                            msgpopup.showAsync();
+                            n.Hide();
+                        }
+                });
         },
         unload: function () {
             // TODO: Respond to navigations away from this page.
