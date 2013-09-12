@@ -6,6 +6,8 @@
         // populates the page elements with the app's data.
         ready: function (element, options) {
             // TODO: Initialize the page here.
+            var appBar = document.getElementById("appbar");
+            appBar.disabled = true;
         }
     });
 })();

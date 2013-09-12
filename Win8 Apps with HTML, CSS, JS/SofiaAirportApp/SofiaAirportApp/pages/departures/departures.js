@@ -19,10 +19,19 @@
             var endPage;
             var results = Windows.Storage.ApplicationData.current.roamingSettings.values["displayFlights"];
             var update = document.getElementById("update");
+            var appBar = document.getElementById("appbar");
+            appBar.disabled = false;
 
             update.addEventListener("click", function () {
                 WinJS.Navigation.navigate("/pages/departures/departures.html");
+
             }, false);
+
+            var backBtn = document.getElementsByClassName("win-backbutton");
+            backBtn[0].addEventListener("click", function () {
+                WinJS.Navigation.navigate("/pages/home/home.html");
+            }, false);
+
             if (results===undefined) {
                 results = "20";
             }
