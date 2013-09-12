@@ -45,13 +45,11 @@
         .tile > .image {
             height: 210px;
             width: 260px;
-            /*background-size:cover;*/
             background-image: url(../../images/drawing.svg);
         }
         .tile > .image2 { 
             height: 210px;
             width: 260px;
-            /*background-size:cover;*/
             background-image: url(../../images/drawing2.svg);
         }
         .tile h1 {
@@ -75,20 +73,18 @@
     background-color: #fff;
     display: block;
     width: 80%;
-   height:50%;
+    height:50%;
     margin: 15px;
 }
     .tile > .image {
         display: block;
-      
         width:100%;
         background-size: cover;
         background-image: url(../../images/drawing.svg);
     }
     .tile > .image2 {
         display: block;
-       
-       width:100%;
+        width:100%;
         background-size: cover;
         background-image: url(../../images/drawing2.svg);
     }
@@ -101,5 +97,4 @@
         .tile h1 a {
             color: #fff;
         }
-
 }

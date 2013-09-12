@@ -2,21 +2,12 @@
 // http://go.microsoft.com/fwlink/?LinkId=232511
 (function () {
     "use strict";
-
     WinJS.UI.Pages.define("/pages/departures/departures.html", {
-        // This function is called whenever a user navigates to this page. It
-        // populates the page elements with the app's data.
-
         ready: function (element, options) {
             // TODO: Initialize the page here.
             var p = document.getElementById("txt");
             var table = document.getElementById("table-departures");
-            var date = new Date().toGMTString();
-            date = date.replace("UTC", "GMT");
             var pageinfo = document.getElementById("pageinfo");
-            var tableEndRow;
-            var currentPage;
-            var endPage;
             var results = Windows.Storage.ApplicationData.current.roamingSettings.values["displayFlights"];
             var update = document.getElementById("update");
             var appBar = document.getElementById("appbar");
@@ -37,15 +28,18 @@
             if (results===undefined) {
                 results = "20";
             }
+            var tableEndRow;
+            var currentPage;
+            var endPage;
+            var date = new Date().toGMTString();
+            date = date.replace("UTC", "GMT");
 
                 table.innerHTML = "<tbody></tbody>";
-            // console.log("Test");
                 n.Show();
                 WinJS.xhr({
                     url: "http://www.sofia-airport.bg/pages/departures.aspx",
                     type: "GET"
                 }).then(function (response) {
-                    console.log(response);
 
                     pageinfo.innerHTML = toStaticHTML(response.responseText);
                     currentPage = document.getElementsByClassName("gridLinkActivePage");
@@ -55,15 +49,11 @@
                         case "10": endPage = parseInt(currentPage) + 1; break;
                         case "20": endPage = parseInt(currentPage) + 2; break;
                     }
-
                     var x = 0;
-                    console.log("here");
                    
                     for (var i = currentPage; i < endPage; i++) {
-
                         WinJS.xhr({
                             url: "http://www.sofia-airport.bg/pages/departures.aspx?lm01=103&lm02=51&lm03=51&p=" + i,
-                           // url: "http://www.sofia-airport.bg/pages/departures.aspx?lm01=103&lm02=51&lm03=51&p=" + i+"&time="+date,
                             type: "GET",
                             headers: {
                                     "If-Modified-Since": date
@@ -71,7 +61,6 @@
                         }).then(function (response) {
                             p.innerHTML += toStaticHTML(response.responseText);
                             table.innerHTML += document.getElementsByTagName("tbody")[x].innerHTML;
-
 
                             if (tableEndRow !== undefined && tableEndRow < table.rows.length) {
                                 table.rows[tableEndRow + 1].innerHTML = "";
@@ -93,27 +82,19 @@
                                 }
                             }
                             n.Hide();
-                            console.log( "after hide");
                             date = new Date().toGMTString()
                         },
                    function (error) {
                        console.log(error);
                    });
                     }
-                    //n.Hide();
                 })
-            
         },
-
         unload: function () {
             // TODO: Respond to navigations away from this page.
-          
-            //addconsole.log("here");
         },
-
         updateLayout: function (element, viewState, lastViewState) {
             /// <param name="element" domElement="true" />
-
             // TODO: Respond to changes in viewState.
         }
     });

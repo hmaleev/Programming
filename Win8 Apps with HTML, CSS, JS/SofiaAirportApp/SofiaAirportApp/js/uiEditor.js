@@ -26,8 +26,6 @@
             },
 
             Hide: function () {
-                //this.body.removeChild(this.shadow);
-                //this.body.removeChild(this.progressBar);
                 this.progressBar.style.display = "none";
                 this.shadow.style.display = "none";
             }

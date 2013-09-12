@@ -50,11 +50,7 @@ a,a:link,a:visited,a:hover,a:focus,a:active{
         table-layout: fixed;
     }
 
-    td:nth-child(1), th:nth-child(1),td:nth-child(2), th:nth-child(2) {
-        display: none;
-    }
-
-    td:nth-child(3), th:nth-child(3),td:nth-child(8), th:nth-child(8) {
+    td:nth-child(1), th:nth-child(1),td:nth-child(2), th:nth-child(2), td:nth-child(3), th:nth-child(3),td:nth-child(8), th:nth-child(8) {
         display: none;
     }
 
@@ -63,7 +59,6 @@ a,a:link,a:visited,a:hover,a:focus,a:active{
         word-break: inherit;
         word-wrap: break-word;
     }
-
 
     td:nth-child(5), th:nth-child(5) {
         width: 28px;
@@ -91,7 +86,6 @@ a,a:link,a:visited,a:hover,a:focus,a:active{
 @media screen and (-ms-view-state: fullscreen-portrait) {
     .departures section[role=main] {
         margin-left: 60px;
-        /*//margin-right: 80px;*/
     }
         a, a:link, a:visited, a:hover, a:focus, a:active {
         color: #fff;
