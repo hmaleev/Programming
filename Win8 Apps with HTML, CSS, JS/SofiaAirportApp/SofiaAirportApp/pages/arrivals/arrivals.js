@@ -106,6 +106,9 @@
             var appBar = document.getElementById("appbar");
             appBar.disabled = false;
 
+            var n = new UI.ProgressBar(document.body);
+
+
             update.addEventListener("click", function () {
                 WinJS.Navigation.navigate("/pages/arrivals/arrivals.html");
 
@@ -125,7 +128,7 @@
             function UpdateInformation(e) {
                 //WinJS.UI.Fragments.clearCache();
                 table.innerHTML = "<tbody></tbody>";
-
+                n.Show();
                 WinJS.xhr({
                     url: "http://www.sofia-airport.bg/pages/arrivals.aspx",
                     type: "GET"
@@ -140,12 +143,9 @@
                         case "10": endPage = parseInt(currentPage) + 1; break;
                         case "20": endPage = parseInt(currentPage) + 2; break;
                     }
-
                     var x = 0;
-                    console.log("here");
-
                     for (var i = currentPage; i < endPage; i++) {
-
+                        
                         WinJS.xhr({
                             url: "http://www.sofia-airport.bg/pages/arrivals.aspx?lm01=103&lm02=51&lm03=51&p=" + i,
                             type: "GET",
@@ -176,6 +176,7 @@
                                     table.rows[i].style.color = "#ffffff";
                                 }
                             }
+                            n.Hide();
                             console.log(table.innerHTML);
                             date = new Date().toGMTString()
                         },

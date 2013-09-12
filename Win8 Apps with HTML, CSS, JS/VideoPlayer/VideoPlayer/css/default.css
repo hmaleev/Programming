@@ -1,5 +1,6 @@
 ﻿body {
 }
+
 video {
     width: 800px;
     height: 600px;
@@ -12,6 +13,9 @@ video {
 }
 
 @media screen and (-ms-view-state: snapped) {
+    video {
+        width: 300px;
+    }
 }
 
 @media screen and (-ms-view-state: fullscreen-portrait) {

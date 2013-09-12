@@ -22,6 +22,8 @@
             var appBar = document.getElementById("appbar");
             appBar.disabled = false;
 
+            var n = new UI.ProgressBar(document.body);
+
             update.addEventListener("click", function () {
                 WinJS.Navigation.navigate("/pages/departures/departures.html");
 
@@ -36,12 +38,9 @@
                 results = "20";
             }
 
-            UpdateInformation();
-          
-            function UpdateInformation(e) {
-                WinJS.UI.Fragments.clearCache();
                 table.innerHTML = "<tbody></tbody>";
-               // console.log("Test");
+            // console.log("Test");
+                n.Show();
                 WinJS.xhr({
                     url: "http://www.sofia-airport.bg/pages/departures.aspx",
                     type: "GET"
@@ -93,15 +92,17 @@
                                     table.rows[i].style.color = "#ffffff";
                                 }
                             }
-                            console.log(table.innerHTML);
+                            n.Hide();
+                            console.log( "after hide");
                             date = new Date().toGMTString()
                         },
                    function (error) {
                        console.log(error);
                    });
                     }
+                    //n.Hide();
                 })
-            }
+            
         },
 
         unload: function () {

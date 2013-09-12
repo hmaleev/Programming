@@ -21,6 +21,7 @@
 
             var loadedVideosList = document.getElementById("loaded-videos");
             var player = document.getElementById("player");
+            var i = 0;
             //var list2 = document.getElementById("plList");
             loadedVideosList.addEventListener("click", function (event) {
                 var videoEntry = event.target;
@@ -30,6 +31,8 @@
                 }
 
                 player.src = videoEntry.getAttribute("data-song-url");
+              
+           
                 player.play();
             });
 
@@ -46,7 +49,7 @@
                 var fileUrl = URL.createObjectURL(storageFile);
 
                 playlist.files.append(storageFile);
-           
+                
                 storageFile.properties.getVideoPropertiesAsync().then(function (properties) {
                     
                   var title =  properties.title || storageFile.displayName;

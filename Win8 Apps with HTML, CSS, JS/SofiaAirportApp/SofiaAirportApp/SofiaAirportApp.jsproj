@@ -69,6 +69,7 @@
     <Content Include="images\storelogo.png" />
     <Content Include="js\default.js" />
     <Content Include="js\navigator.js" />
+    <Content Include="js\uiEditor.js" />
     <Content Include="pages\arrivals\arrivals.css" />
     <Content Include="pages\arrivals\arrivals.html" />
     <Content Include="pages\arrivals\arrivals.js" />
