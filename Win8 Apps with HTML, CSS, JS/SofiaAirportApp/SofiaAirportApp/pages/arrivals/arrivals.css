@@ -31,6 +31,14 @@ a, a:link, a:visited, a:hover, a:focus, a:active {
     color: #fff;
 }
 
+#appbar,button {
+    background-color: #0093DD;
+    color:#ffffff;
+}
+.win-commandicon, .win-commandimage{
+    color: #fff;
+    border-color:#fff;
+}
 @media screen and (-ms-view-state: snapped) {
     .arrivals section[role=main] {
         margin-left: 20px;

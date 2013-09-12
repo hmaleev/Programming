@@ -82,7 +82,6 @@
         display: block;
       
         width:100%;
-        //height:35%;
         background-size: cover;
         background-image: url(../../images/drawing.svg);
     }
