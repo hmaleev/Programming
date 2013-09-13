@@ -34,7 +34,10 @@
     });
 
     app.onsettings = function (e) {
-        e.detail.applicationcommands = { "Preferences": { title: "Preferences", href: "/pages/settings/settings.html" } };
+        e.detail.applicationcommands = {
+            "Preferences": {title: "Preferences", href: "/pages/settings/settings.html"},
+            "PrivacyPolicy": { title: "Privacy Policy", href: "/pages/settings/privacyPolicy.html" }
+        };
         WinJS.UI.SettingsFlyout.populateSettings(e);
     };
 

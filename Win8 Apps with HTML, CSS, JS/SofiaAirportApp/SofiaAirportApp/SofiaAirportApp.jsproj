@@ -46,7 +46,7 @@
   <PropertyGroup>
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetPlatformVersion>8.0</TargetPlatformVersion>
-    <DefaultLanguage>en-US</DefaultLanguage>
+    <DefaultLanguage>bg-bg</DefaultLanguage>
     <PackageCertificateKeyFile>SofiaAirportApp_StoreKey.pfx</PackageCertificateKeyFile>
     <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <PackageCertificateThumbprint>C1EB846F34408C7481680B071D606C6D1AB7F372</PackageCertificateThumbprint>
@@ -95,6 +95,7 @@
     <Content Include="pages\home\home.html" />
     <Content Include="pages\home\home.js" />
     <Content Include="default.html" />
+    <Content Include="pages\settings\privacyPolicy.html" />
     <Content Include="pages\settings\settings.css" />
     <Content Include="pages\settings\settings.html" />
     <Content Include="pages\settings\settings.js" />
