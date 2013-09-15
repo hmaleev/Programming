@@ -1,0 +1,39 @@
+﻿.nokia section[role=main] {
+    margin-left: 50px;
+    margin-right: 120px;
+}
+body,html {
+    width: 100%;
+    column-width: 2500px;
+     overflow-x: auto
+}
+
+div li {
+
+display:block;
+float: left;
+height: 200px;
+position: relative;
+text-align: center;
+width: 100px;
+
+}
+    a strong {
+        display: block;
+        width:110px;
+    }
+
+
+@media screen and (-ms-view-state: snapped) {
+    .nokia section[role=main] {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .nokia section[role=main] {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
