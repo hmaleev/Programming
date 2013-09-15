@@ -11,8 +11,11 @@
             var pageContent = document.getElementById("pageInfo");
             var phones = document.getElementById("phones");
             var x;
+            for (var i = 1; i < 7; i++) {
+
+           
             WinJS.xhr({
-                url: "http://www.gsmarena.com/nokia-phones-1.php",
+                url: "http://www.gsmarena.com/nokia-phones-f-1-0-p"+i+".php",
                 type: "GET"
             }).done(function (response) {
                 pageContent.innerHTML = toStaticHTML(response.responseText);
@@ -25,6 +28,7 @@
             }, function (error) {
                 console.log(error.statusText)
             });
+            }
         },
 
         unload: function () {
