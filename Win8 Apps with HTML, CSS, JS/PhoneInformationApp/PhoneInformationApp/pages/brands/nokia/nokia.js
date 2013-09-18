@@ -23,7 +23,9 @@
                for (var i = 3; i < phonesList.length-1; i++) {
                    phones.innerHTML += phonesList[i].innerHTML;
                }
-
+               phones.addEventListener("click", function (event) {
+                   console.log ( event.href);
+               });
                 pageContent.innerHTML = " ";
             }, function (error) {
                 console.log(error.statusText)
