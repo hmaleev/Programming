@@ -10,8 +10,8 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Distance distance = new Distance();
-            float res = distance.Conversion(1, "yard", "m");
+            Temperature temperature = new Temperature();
+            float res = temperature.Conversion(1, "fahrenheit", "celsius");
             Console.WriteLine("{0}",res);
         }
     }

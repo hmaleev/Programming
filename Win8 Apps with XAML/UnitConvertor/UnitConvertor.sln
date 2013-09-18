@@ -5,8 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitConvertor", "UnitConvertor\UnitConvertor.csproj", "{E10B0116-E82C-4217-95B2-C6B35BE95A0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App2", "App2\App2.csproj", "{632DD440-DB3C-4555-82EF-DFEE344032CD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,30 +51,6 @@ Global
 		{E10B0116-E82C-4217-95B2-C6B35BE95A0E}.Release|x86.ActiveCfg = Release|x86
 		{E10B0116-E82C-4217-95B2-C6B35BE95A0E}.Release|x86.Build.0 = Release|x86
 		{E10B0116-E82C-4217-95B2-C6B35BE95A0E}.Release|x86.Deploy.0 = Release|x86
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Debug|ARM.ActiveCfg = Debug|ARM
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Debug|ARM.Build.0 = Debug|ARM
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Debug|ARM.Deploy.0 = Debug|ARM
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Debug|x64.ActiveCfg = Debug|x64
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Debug|x64.Build.0 = Debug|x64
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Debug|x64.Deploy.0 = Debug|x64
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Debug|x86.ActiveCfg = Debug|x86
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Debug|x86.Build.0 = Debug|x86
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Debug|x86.Deploy.0 = Debug|x86
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Release|ARM.ActiveCfg = Release|ARM
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Release|ARM.Build.0 = Release|ARM
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Release|ARM.Deploy.0 = Release|ARM
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Release|x64.ActiveCfg = Release|x64
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Release|x64.Build.0 = Release|x64
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Release|x64.Deploy.0 = Release|x64
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Release|x86.ActiveCfg = Release|x86
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Release|x86.Build.0 = Release|x86
-		{632DD440-DB3C-4555-82EF-DFEE344032CD}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
