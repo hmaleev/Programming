@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="CalculatePrimes.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CalculatePrimes"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock>
+            start number
+        </TextBlock>
+        <TextBox Name="StartNumber"></TextBox>
+        <TextBlock> final number</TextBlock>
+        <TextBox Name="FinalNumber"></TextBox>
+        <TextBlock Text="result"/>
+        <TextBox Name="Result"></TextBox>
+        <Button Content="Calc" Click="onCalculateClick"></Button>
+    </StackPanel>
+</Page>
