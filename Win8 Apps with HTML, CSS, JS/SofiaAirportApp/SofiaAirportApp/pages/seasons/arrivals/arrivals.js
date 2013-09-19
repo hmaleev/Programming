@@ -54,7 +54,7 @@
                     //    case "20": endPage = parseInt(currentPage) + 2; break;
                     //}
                     var x = 0;
-                    for (var i = 1; i < 4; i++) {
+                    for (var i = 1; i < 8; i++) {
                         
                         WinJS.xhr({
                             url: "http://www.sofia-airport.bg/pages/seasonArrivals.aspx?lm01=103&lm02=52&lm03=53&p=" + i,
@@ -64,12 +64,12 @@
                             }
                         }).then(function (response) {
                             p.innerHTML += toStaticHTML(response.responseText);
-                            table.innerHTML += document.getElementsByTagName("tbody")[x].innerHTML;
+                            table.innerHTML += document.getElementsByClassName("gridTable")[x].innerHTML;
 
-                            //if (tableEndRow !== undefined && tableEndRow < table.rows.length) {
-                            //    table.rows[tableEndRow + 1].innerHTML = "";
-                            //    table.rows[tableEndRow].innerHTML = "";
-                            //}
+                            if (tableEndRow !== undefined && tableEndRow < table.rows.length) {
+                                //table.rows[tableEndRow + 1].innerHTML = "";
+                                table.rows[tableEndRow].outerHTML = "";
+                            }
                             tableEndRow = table.rows.length;
                             x++;
                             //table.rows[0].outerHTML = "<tr><th>Дата</th><th>Час</th><th>Полет</th><th>Направление</th><th>Терминал</th><th>Очакван час</th><th>Статус</th><th>Наземен оператор</th></tr>";

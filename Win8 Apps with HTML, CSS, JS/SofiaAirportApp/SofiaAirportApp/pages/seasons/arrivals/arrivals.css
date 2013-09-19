@@ -14,7 +14,18 @@ body {
 
 table {
     border-collapse: collapse;
-	font-size:1.2em;
+    font-size: 1.2em;
+   
+}
+.gridTable td  {
+  width:200px;
+}
+
+#tableDiv {
+    column-width: 1150px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
 }
 
 td, th {
@@ -24,11 +35,11 @@ td, th {
     padding-right: 12px;
 }
 
-    td:nth-child(4), td:nth-child(10) {
+/*td:nth-child(4), td:nth-child(10) {
         display: none;
-    }
-   
-a, a:link, a:visited, a:hover, a:focus, a:active {
+    }*/
+
+/*a, a:link, a:visited, a:hover, a:focus, a:active {
     color: #fff;
 }
 
@@ -39,7 +50,7 @@ a, a:link, a:visited, a:hover, a:focus, a:active {
 .win-commandicon, .win-commandimage{
     color: #fff;
     border-color:#fff;
-}
+}*/
 
 @media screen and (-ms-view-state: snapped) {
     .arrivals section[role=main] {
