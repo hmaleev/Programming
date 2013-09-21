@@ -23,7 +23,7 @@ namespace PaintRT
     public sealed partial class MainPage : Page
     {
         RotateTransform rectRotation = new RotateTransform();
-        
+        TranslateTransform rectTranslation = new TranslateTransform();
         Point startPoint = new Point();
         Point endPoint = new Point();
         string currentElement;
@@ -33,6 +33,7 @@ namespace PaintRT
          
             this.InitializeComponent();
             rotatingCanvas.RenderTransform = rectRotation;
+            Slider.RenderTransform = rectTranslation;
            
         }
 
@@ -74,19 +75,12 @@ namespace PaintRT
             }
         }
 
-        private void onTappedLine(object sender, TappedRoutedEventArgs e)
-        {
-          
-            currentElement = "line";
-        }
-
-        private void onPaintFieldPointerPressed(object sender, PointerRoutedEventArgs e)
+        private void OnPaintFieldPointerPressed(object sender, PointerRoutedEventArgs e)
         {
             GetStartPoint(e);
         }
-
       
-        private void onPaintFieldPointerReleased(object sender, PointerRoutedEventArgs e)
+        private void OnPaintFieldPointerReleased(object sender, PointerRoutedEventArgs e)
         {
             GetEndPoint(e);
             string a = rectRotation.Angle.ToString();
@@ -97,6 +91,22 @@ namespace PaintRT
                 case "line":
                     {
                         paintField.Children.Add(CreateLine());
+                        break;
+                    }
+                case "rectangle":
+                    {
+                        var rectangle = CreateRectangle();
+                        paintField.Children.Add(rectangle);
+                        Canvas.SetTop(rectangle, startPoint.Y);
+                        Canvas.SetLeft(rectangle, startPoint.X);
+                        break;
+                    }
+                case "circle":
+                    {
+                        var circle = CreateCircle();
+                        paintField.Children.Add(circle);
+                        Canvas.SetLeft(circle, startPoint.X);
+                        Canvas.SetTop(circle, startPoint.Y);
                         break;
                     }
             }
@@ -124,6 +134,101 @@ namespace PaintRT
             line.X2 = endPoint.X;
             line.Y2 = endPoint.Y;
             return line;
+        }
+  
+        private Rectangle CreateRectangle()
+        {
+            Rectangle rectangle = new Rectangle();
+            Point tempPoint = new Point();
+            var width = endPoint.X - startPoint.X;
+            var height = endPoint.Y - startPoint.Y;
+
+            if (width < 0 && height < 0)
+            {
+
+                 width = startPoint.X- endPoint.X ;
+                 height = startPoint.Y - endPoint.Y;
+                 tempPoint = startPoint;
+                 startPoint = endPoint;
+                 endPoint = startPoint;
+            }
+            else if (width > 0 && height < 0)
+            {
+                 height = startPoint.Y - endPoint.Y;
+                 tempPoint.Y = startPoint.Y;
+                 startPoint.Y = endPoint.Y;
+                 endPoint.Y = startPoint.Y;
+            }
+            else if (width < 0 && height > 0)
+            {
+                width = startPoint.X - endPoint.X;
+                tempPoint.X = startPoint.X;
+                startPoint.X = endPoint.X;
+                endPoint.X = startPoint.X;
+            }
+
+            rectangle.Width = width;
+            rectangle.Height = height;
+            rectangle.Stroke = color;
+            rectangle.StrokeThickness = 2;
+            return rectangle;
+        }
+
+        private Ellipse CreateCircle()
+        {
+            Ellipse circle = new Ellipse();
+            Point tempPoint = new Point();
+            var width = endPoint.X - startPoint.X;
+            var height = endPoint.Y - startPoint.Y;
+
+            if (width < 0 && height < 0)
+            {
+                width = startPoint.X - endPoint.X;
+                height = startPoint.Y - endPoint.Y;
+                tempPoint = startPoint;
+                startPoint = endPoint;
+                endPoint = startPoint;
+            }
+            else if (width > 0 && height < 0)
+            {
+                height = startPoint.Y - endPoint.Y;
+                tempPoint.Y = startPoint.Y;
+                startPoint.Y = endPoint.Y;
+                endPoint.Y = startPoint.Y;
+            }
+            else if (width < 0 && height > 0)
+            {
+                width = startPoint.X - endPoint.X;
+                tempPoint.X = startPoint.X;
+                startPoint.X = endPoint.X;
+                endPoint.X = startPoint.X;
+            }
+
+            circle.Height = height;
+            circle.Width = width;
+            circle.Stroke = color;
+            circle.StrokeThickness = 2;
+            return circle;
+        }
+
+        private void onSlide(object sender, ManipulationDeltaRoutedEventArgs e)
+        {
+            var slider = sender as Canvas;
+            var test = e.Delta.Translation.X;
+
+            var xOffset = e.Delta.Translation.X;
+            currentElement = "rectangle";
+            
+            rectTranslation.X += xOffset;
+            if (rectTranslation.X > 20 && rectTranslation.X <60)
+            {
+                currentElement = "circle";
+            }
+            else if (rectTranslation.X > 85 && rectTranslation.X <130)
+            {
+                currentElement = "line";
+            }
+          //  rectTranslation.Y += yOffset;
         }
     }
 }
