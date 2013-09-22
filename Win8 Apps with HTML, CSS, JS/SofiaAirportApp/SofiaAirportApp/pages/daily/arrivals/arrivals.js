@@ -1,4 +1,5 @@
-﻿// For an introduction to the Page Control template, see the following documentation:
+﻿/// <reference path="../../../js/httpRequester.js" />
+// For an introduction to the Page Control template, see the following documentation:
 // http://go.microsoft.com/fwlink/?LinkId=232511
 (function () {
     "use strict";
@@ -58,6 +59,8 @@
                     var x = 0;
                     for (var i = currentPage; i < endPage; i++) {
                         
+                     
+
                         WinJS.xhr({
                             url: "http://www.sofia-airport.bg/pages/arrivals.aspx?lm01=103&lm02=51&lm03=51&p=" + i,
                             type: "GET",
@@ -65,6 +68,9 @@
                                 "If-Modified-Since": date
                             }
                         }).then(function (response) {
+
+                            Request.ErrorMessage(response.responseType, response.statusText);
+
                             p.innerHTML += toStaticHTML(response.responseText);
                             table.innerHTML += document.getElementsByTagName("tbody")[x].innerHTML;
 

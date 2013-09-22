@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneInformation.WebClientProject", "PhoneInformation.WebClientProject\PhoneInformation.WebClientProject.csproj", "{8E6B9E21-B32E-4FFF-83C3-25B5AE00AAFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E6B9E21-B32E-4FFF-83C3-25B5AE00AAFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E6B9E21-B32E-4FFF-83C3-25B5AE00AAFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E6B9E21-B32E-4FFF-83C3-25B5AE00AAFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E6B9E21-B32E-4FFF-83C3-25B5AE00AAFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

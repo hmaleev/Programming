@@ -81,6 +81,7 @@
     <Content Include="images\planeTakeOff.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="js\default.js" />
+    <Content Include="js\httpRequester.js" />
     <Content Include="js\navigator.js" />
     <Content Include="js\uiEditor.js" />
     <None Include="SofiaAirportApp_StoreKey.pfx" />

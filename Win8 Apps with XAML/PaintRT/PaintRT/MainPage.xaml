@@ -15,7 +15,7 @@
         <Canvas Grid.Column="0" Background="White" Name="paintField" Margin="-10,10,10,-10" PointerPressed="OnPaintFieldPointerPressed" PointerReleased="OnPaintFieldPointerReleased"></Canvas>
         <StackPanel Grid.Column="1">
 
-            <Canvas Height="40" Width="150"  Margin="-110 10 0 -30 " Background="White" Name="Slider" ManipulationDelta="onSlide" ManipulationMode="All">
+            <Canvas Height="40" Width="150"  Margin="-110 10 0 -30 " Background="White" Name="Slider" ManipulationDelta="OnSlide" ManipulationMode="All">
                     <Line X1="38" X2="2" Y1="2" Y2="38" StrokeThickness="1" Stroke="Black"></Line>
                     <Ellipse Margin="55 0 0 0  " Width="38" Height="38" Fill="Black"></Ellipse>
                     <Rectangle Margin="110 3 0 0" Height="34" Width="34" Fill="Black" StrokeThickness="1"></Rectangle>

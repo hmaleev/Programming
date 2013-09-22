@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
+using Windows.UI;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml.Shapes;
-using Windows.UI;
+
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace PaintRT
@@ -23,6 +18,7 @@ namespace PaintRT
     public sealed partial class MainPage : Page
     {
         RotateTransform rectRotation = new RotateTransform();
+
         TranslateTransform rectTranslation = new TranslateTransform();
         Point startPoint = new Point();
         Point endPoint = new Point();
@@ -30,8 +26,10 @@ namespace PaintRT
         SolidColorBrush color;
         public MainPage()
         {
-         
+            rectRotation.Angle = 0.1;
+            color = new SolidColorBrush( Colors.Red);
             this.InitializeComponent();
+          
             rotatingCanvas.RenderTransform = rectRotation;
             Slider.RenderTransform = rectTranslation;
            
@@ -53,23 +51,33 @@ namespace PaintRT
             rectRotation.CenterX = rect.Width / 2;
             rectRotation.CenterY = rect.Height / 2;
             rectRotation.Angle += e.Delta.Rotation;
+            color = new SolidColorBrush(Colors.Red);
+
             if (rectRotation.Angle>360)
             {
                 rectRotation.Angle -= 360;
             }
-            if ((rectRotation.Angle >= 0 && rectRotation.Angle <= 20) || (rectRotation.Angle >= -20 && rectRotation.Angle <= 0) || (rectRotation.Angle >= 345 && rectRotation.Angle <= 360))
+
+            bool isRed = (rectRotation.Angle >= 0 && rectRotation.Angle <= 20) || (rectRotation.Angle >= -20 && rectRotation.Angle <= 0) || (rectRotation.Angle >= 345 && rectRotation.Angle <= 360);
+            if (isRed)
             {
                 color = new SolidColorBrush(Colors.Red);
             }
-            else if ((rectRotation.Angle >= 65 && rectRotation.Angle <= 115) )
+
+            bool isGreen = (rectRotation.Angle >= 65 && rectRotation.Angle <= 115);
+            if (isGreen)
             {
                 color = new SolidColorBrush(Colors.Green);
             }
-            else if ((rectRotation.Angle >= 155 && rectRotation.Angle <= 205))
+
+            bool isBlue = (rectRotation.Angle >= 155 && rectRotation.Angle <= 205);
+            if (isBlue)
             {
                 color = new SolidColorBrush(Colors.Blue);
             }
-            else if ((rectRotation.Angle >= 245 && rectRotation.Angle <= 295))
+
+            bool isBlack = (rectRotation.Angle >= 245 && rectRotation.Angle <= 295);
+            if (isBlack)
             {
                 color = new SolidColorBrush(Colors.Black);
             }
@@ -83,7 +91,6 @@ namespace PaintRT
         private void OnPaintFieldPointerReleased(object sender, PointerRoutedEventArgs e)
         {
             GetEndPoint(e);
-            string a = rectRotation.Angle.ToString();
             switch (currentElement)
             {
                 default:
@@ -211,24 +218,25 @@ namespace PaintRT
             return circle;
         }
 
-        private void onSlide(object sender, ManipulationDeltaRoutedEventArgs e)
+        private void OnSlide(object sender, ManipulationDeltaRoutedEventArgs e)
         {
-            var slider = sender as Canvas;
-            var test = e.Delta.Translation.X;
+            //var slider = sender as Canvas;
+            currentElement = "rectangle";
 
             var xOffset = e.Delta.Translation.X;
-            currentElement = "rectangle";
-            
             rectTranslation.X += xOffset;
-            if (rectTranslation.X > 20 && rectTranslation.X <60)
+
+            bool isCircle = (rectTranslation.X > 30 && rectTranslation.X < 60);
+            if (isCircle)
             {
                 currentElement = "circle";
             }
-            else if (rectTranslation.X > 85 && rectTranslation.X <130)
+
+            bool isLine = (rectTranslation.X > 85 && rectTranslation.X < 130);
+            if (isLine)
             {
                 currentElement = "line";
             }
-          //  rectTranslation.Y += yOffset;
         }
     }
 }

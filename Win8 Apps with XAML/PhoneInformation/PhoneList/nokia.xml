@@ -1,0 +1,963 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Phones>
+  <Phone>
+    <Link>nokia_108_dual_sim-5703.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-108-dual-sim.jpg</Image>
+    <Name>108 Dual SIM</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_515-5663.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-515.jpg</Image>
+    <Name>515</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_107_dual_sim-5636.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-107.jpg</Image>
+    <Name>107 Dual SIM</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_106-5635.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-106.jpg</Image>
+    <Name>106</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_lumia_625-5438.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-lumia-625.jpg</Image>
+    <Name>Lumia 625</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_lumia_1020-5506.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-lumia-1020-ofic.jpg</Image>
+    <Name>Lumia 1020</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_208-5560.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-208.jpg</Image>
+    <Name>208</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_207-5559.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-207.jpg</Image>
+    <Name>207</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_lumia_925-5451.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-lumia-925-new.jpg</Image>
+    <Name>Lumia 925</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_lumia_928-5437.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-lumia-928-black.jpg</Image>
+    <Name>Lumia 928</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_asha_501-5445.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-asha-501-dual-sim.jpg</Image>
+    <Name>Asha 501</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_asha_210-5417.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-asha-210-1.jpg</Image>
+    <Name>Asha 210</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_lumia_720-5321.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-lumia-720.jpg</Image>
+    <Name>Lumia 720</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_lumia_520-5322.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-lumia-520.jpg</Image>
+    <Name>Lumia 520</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_301-5323.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-301.jpg</Image>
+    <Name>301</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_105-5324.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-105.jpg</Image>
+    <Name>105</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_asha_310-5291.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-asha-310.jpg</Image>
+    <Name>Asha 310</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_lumia_505-5150.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-lumia-505.jpg</Image>
+    <Name>Lumia 505</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_lumia_620-5147.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-lumia-620.jpg</Image>
+    <Name>Lumia 620</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_114-5145.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-114.jpg</Image>
+    <Name>114</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_206-5138.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-206.jpg</Image>
+    <Name>206</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_asha_205-5137.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-asha-205-new.jpg</Image>
+    <Name>Asha 205</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_109-5096.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-109.jpg</Image>
+    <Name>109</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_lumia_822-5090.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-lumia-822-new.jpg</Image>
+    <Name>Lumia 822</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_lumia_510-5069.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-lumia-510.jpg</Image>
+    <Name>Lumia 510</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_lumia_810-5024.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-lumia-810.jpg</Image>
+    <Name>Lumia 810</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_asha_309-5009.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-asha-309.jpg</Image>
+    <Name>Asha 309</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_asha_308-5010.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-asha-308.jpg</Image>
+    <Name>Asha 308</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_lumia_920-4967.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-lumia-920.jpg</Image>
+    <Name>Lumia 920</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_lumia_820-4968.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-lumia-820.jpg</Image>
+    <Name>Lumia 820</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_asha_311-4802.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-asha-311.jpg</Image>
+    <Name>Asha 311</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_asha_306-4801.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-asha-306.jpg</Image>
+    <Name>Asha 306</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_asha_305-4800.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-asha-305.jpg</Image>
+    <Name>Asha 305</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_113-4758.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-113.jpg</Image>
+    <Name>113</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_112-4757.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-112.jpg</Image>
+    <Name>112</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_111-4756.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-111.jpg</Image>
+    <Name>111</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_110-4755.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-110.jpg</Image>
+    <Name>110</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_lumia_610_nfc-4695.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-lumia-610-nfc.jpg</Image>
+    <Name>Lumia 610 NFC</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_103-4690.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-103.jpg</Image>
+    <Name>103</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_808_pureview-4577.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-808-pureview.jpg</Image>
+    <Name>808 PureView</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_800c-4662.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-800c.jpg</Image>
+    <Name>800c</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_lumia_610-4576.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-lumia-610.jpg</Image>
+    <Name>Lumia 610</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_asha_302-4546.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-asha-302-ofic.jpg</Image>
+    <Name>Asha 302</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_asha_203-4579.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-asha-203.jpg</Image>
+    <Name>Asha 203</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_asha_202-4580.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-asha-202.jpg</Image>
+    <Name>Asha 202</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_lumia_900-4578.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-lumia-900-white.jpg</Image>
+    <Name>Lumia 900</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_lumia_900_at&amp;t-4275.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-lumia-900-black.jpg</Image>
+    <Name>Lumia 900 AT&amp;T</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_801t-4391.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-801t.jpg</Image>
+    <Name>801T</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_x2_02-4354.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-x2-02.jpg</Image>
+    <Name>X2-02</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_lumia_800-4240.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-800-ofic.jpg</Image>
+    <Name>Lumia 800</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_lumia_710_t_mobile-4372.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-lumia-710-t-mobile.jpg</Image>
+    <Name>Lumia 710 T-Mobile</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_lumia_710-4276.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-lumia-710.jpg</Image>
+    <Name>Lumia 710</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_asha_303-4278.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-asha-303.jpg</Image>
+    <Name>Asha 303</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_asha_300-4279.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-asha-300.jpg</Image>
+    <Name>Asha 300</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_asha_201-4280.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-asha-201.jpg</Image>
+    <Name>Asha 201</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_asha_200-4281.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-asha-201.jpg</Image>
+    <Name>Asha 200</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_603-4243.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-603-ofic.jpg</Image>
+    <Name>603</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c2_05-4241.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-c2-05.jpg</Image>
+    <Name>C2-05</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_x2_05-4242.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-x2-05.jpg</Image>
+    <Name>X2-05</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c5_06-4220.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-c5-06.jpg</Image>
+    <Name>C5-06</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c5_05-4223.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-c5-05.jpg</Image>
+    <Name>C5-05</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c5_04-4222.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-c5-04.jpg</Image>
+    <Name>C5-04</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_101-4121.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-101.jpg</Image>
+    <Name>101</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_100-4120.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-100.jpg</Image>
+    <Name>100</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_701-4119.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-701.jpg</Image>
+    <Name>701</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_700-4021.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-700.jpg</Image>
+    <Name>700</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_600-4118.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-600.jpg</Image>
+    <Name>600</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c3_01_gold_edition-4113.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/Nokia-C3-01-Gold-Edition.jpg</Image>
+    <Name>C3-01 Gold Edition</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_500-4085.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-500.jpg</Image>
+    <Name>500</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_n9-3398.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/Nokia-N9-00-cyan.jpg</Image>
+    <Name>N9</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c5_5mp-4019.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-c5-00-5mp1.jpg</Image>
+    <Name>C5 5MP</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c2_06-3931.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/Nokia-C2-06-graphite.jpg</Image>
+    <Name>C2-06</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c2_03-3995.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/Nokia-C2-03-white-light-gold.jpg</Image>
+    <Name>C2-03</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c2_02-3996.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-c2-02.jpg</Image>
+    <Name>C2-02</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_702t-4020.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-702t.jpg</Image>
+    <Name>702T</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_t7-3915.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-t7-00-ofic.jpg</Image>
+    <Name>T7</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_n950-3997.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-n950.jpg</Image>
+    <Name>N950</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_oro-3961.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-oro.jpg</Image>
+    <Name>Oro</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_x1_01-3962.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-x1-01.jpg</Image>
+    <Name>X1-01</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_x7_00-3664.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-x7-ofic.jpg</Image>
+    <Name>X7-00</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_e6-3717.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-e6-00-ofic.jpg</Image>
+    <Name>E6</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c7_astound-3885.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-astound.jpg</Image>
+    <Name>C7 Astound</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_x1_00-3853.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-x1-00.jpg</Image>
+    <Name>X1-00</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_x2_01-3610.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-x2-01-ofic.jpg</Image>
+    <Name>X2-01</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c2_01-3638.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-c2-01-ofic.jpg</Image>
+    <Name>C2-01</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c5_03-3578.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-c5-03.jpg</Image>
+    <Name>C5-03</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_e7-3545.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-e7.jpg</Image>
+    <Name>E7</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c6_01-3524.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-c6-01-ofic.jpg</Image>
+    <Name>C6-01</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c7-3394.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-c7-ofic.jpg</Image>
+    <Name>C7</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c3_01_touch_and_type-3525.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/Nokia-C3-Touch-and-Type.jpg</Image>
+    <Name>C3-01 Touch and Type</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_5250-3477.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-5250.jpg</Image>
+    <Name>5250</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_x3_touch_and_type_s-3872.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-x3-02-touch-and-type.jpg</Image>
+    <Name>X3 Touch and Type S</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_x3_02_touch_and_type-3479.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/Nokia-X3-02.jpg</Image>
+    <Name>X3-02 Touch and Type</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_x6_8gb-3397.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-x6-8gb.jpg</Image>
+    <Name>X6 8GB</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_x5_01-3396.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-x5-ofic.jpg</Image>
+    <Name>X5-01</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_5233-3390.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-5228.jpg</Image>
+    <Name>5233</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_e73_mode-3348.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/Nokia-E73-Mode-ofic.jpg</Image>
+    <Name>E73 Mode</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c2_00-3367.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-c2-00.jpg</Image>
+    <Name>C2-00</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c1_02-3366.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-c1-02.jpg</Image>
+    <Name>C1-02</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c1_01-3365.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-c1-01.jpg</Image>
+    <Name>C1-01</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c1_00-3364.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-c1-00.jpg</Image>
+    <Name>C1-00</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_n8-3252.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-n8-silver.jpg</Image>
+    <Name>N8</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_x2-3304.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-x2.jpg</Image>
+    <Name>X2</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c6-3229.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-c6-ofic-new.jpg</Image>
+    <Name>C6</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_e5-3198.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-e5-ofic.jpg</Image>
+    <Name>E5</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c3-3269.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-c3-ofic.jpg</Image>
+    <Name>C3</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c5-3122.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-c5.jpg</Image>
+    <Name>C5</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_c5_td_scdma-3285.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-c5-china.jpg</Image>
+    <Name>C5 TD-SCDMA</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_x5_td_scdma-3286.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-x5.jpg</Image>
+    <Name>X5 TD-SCDMA</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_6303i_classic-3121.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-6303i-classic.jpg</Image>
+    <Name>6303i classic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_5132_xpressmusic-3041.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-5132.jpg</Image>
+    <Name>5132 XpressMusic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_x6_16gb-3109.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-x6-16gb-pink.jpg</Image>
+    <Name>X6 16GB</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_2710_navigation_edition-3051.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-2710-navigation-edition.jpg</Image>
+    <Name>2710 Navigation Edition</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_x6-2922.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-x6.jpg</Image>
+    <Name>X6</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_6700_slide-3035.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-6700-slide.jpg</Image>
+    <Name>6700 slide</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_7230-3034.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-7230.jpg</Image>
+    <Name>7230</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_5330_mobile_tv_edition-3020.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-5330-mobile-tv.jpg</Image>
+    <Name>5330 Mobile TV Edition</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_2690-3004.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-2690.jpg</Image>
+    <Name>2690</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_2220_slide-3005.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-2220.jpg</Image>
+    <Name>2220 slide</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_1800-3006.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-1800.jpg</Image>
+    <Name>1800</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_1616-3007.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-1616.jpg</Image>
+    <Name>1616</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_1280-3008.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-1280.jpg</Image>
+    <Name>1280</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_5235_comes_with_music-3056.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-5235.jpg</Image>
+    <Name>5235 Comes With Music</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_6788-2991.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-6788.jpg</Image>
+    <Name>6788</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_n97_mini-2921.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-n97-mini.jpg</Image>
+    <Name>N97 mini</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_x3-2923.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-x3.jpg</Image>
+    <Name>X3</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_n900-2917.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-n900.jpg</Image>
+    <Name>N900</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_5230-2909.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-5230.jpg</Image>
+    <Name>5230</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_3208c-2920.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-3208c.jpg</Image>
+    <Name>3208c</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_5800_navigation_edition-2906.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-5800-navigation-edition.jpg</Image>
+    <Name>5800 Navigation Edition</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_6350-2950.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-6350.jpg</Image>
+    <Name>6350</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_mural-2925.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-mural.jpg</Image>
+    <Name>Mural</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_6760_slide-2882.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-6760-slide.jpg</Image>
+    <Name>6760 slide</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_6790_surge-2869.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-surge.jpg</Image>
+    <Name>6790 Surge</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_3720_classic-2867.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-3720-classic.jpg</Image>
+    <Name>3720 classic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_5530_xpressmusic-2832.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-5530-xpressmusic.jpg</Image>
+    <Name>5530 XpressMusic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_e72-2831.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-e72.jpg</Image>
+    <Name>E72</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_3710_fold-2833.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-3710-fold.jpg</Image>
+    <Name>3710 fold</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_6730_classic-2811.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-6730-classic.jpg</Image>
+    <Name>6730 classic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_6600i_slide-2805.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-6600i-slide.jpg</Image>
+    <Name>6600i slide</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_7020-2802.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-7020.jpg</Image>
+    <Name>7020</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_2720_fold-2801.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-2720-f.jpg</Image>
+    <Name>2720 fold</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_2730_classic-2800.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-2730-classic.jpg</Image>
+    <Name>2730 classic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_e52-2792.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-e52.jpg</Image>
+    <Name>E52</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_6216_classic-2789.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-6216c.jpg</Image>
+    <Name>6216 classic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_5730_xpressmusic-2743.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-5730-xpressmusic.jpg</Image>
+    <Name>5730 XpressMusic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_5330_xpressmusic-2744.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-5330-xpressmusic.jpg</Image>
+    <Name>5330 XpressMusic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_5030_xpressradio-2745.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-5030-xpressradio.jpg</Image>
+    <Name>5030 XpressRadio</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_n86_8mp-2713.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-n86.jpg</Image>
+    <Name>N86 8MP</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_e75-2688.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-e75.jpg</Image>
+    <Name>E75</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_e55-2685.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-e55.jpg</Image>
+    <Name>E55</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_6720_classic-2686.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-6720-classic.jpg</Image>
+    <Name>6720 classic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_6710_navigator-2687.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-6710.jpg</Image>
+    <Name>6710 Navigator</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_5630_xpressmusic-2670.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-5630-e.jpg</Image>
+    <Name>5630 XpressMusic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_6700_classic-2659.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-6700-classic.jpg</Image>
+    <Name>6700 classic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_6303_classic-2658.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-6303-classic.jpg</Image>
+    <Name>6303 classic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_2700_classic-2657.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-2700-classic.jpg</Image>
+    <Name>2700 classic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_6208c-2621.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-6208c.jpg</Image>
+    <Name>6208c</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_8800_gold_arte-2620.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-8800-gold-arte.jpg</Image>
+    <Name>8800 Gold Arte</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_n97-2615.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-n97.jpg</Image>
+    <Name>N97</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_6260_slide-2613.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-6260-slide.jpg</Image>
+    <Name>6260 slide</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_e63-2599.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-e63.jpg</Image>
+    <Name>E63</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_7100_supernova-2568.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-7110-supernova.jpg</Image>
+    <Name>7100 Supernova</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_5130_xpressmusic-2569.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-5130-e.jpg</Image>
+    <Name>5130 XpressMusic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_2330_classic-2570.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-2330-classic.jpg</Image>
+    <Name>2330 classic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_2323_classic-2571.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-2323-classic.jpg</Image>
+    <Name>2323 classic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_1662-2912.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-1662.jpg</Image>
+    <Name>1662</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_1661-2572.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-1661.jpg</Image>
+    <Name>1661</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_1202-2573.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-1202.jpg</Image>
+    <Name>1202</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_5800_xpressmusic-2537.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-5800-xpressmusic.jpg</Image>
+    <Name>5800 XpressMusic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_n85-2496.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-n85.jpg</Image>
+    <Name>N85</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_n79-2497.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-n79.jpg</Image>
+    <Name>N79</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_8800_carbon_arte-2493.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-8800-carbon-arte.jpg</Image>
+    <Name>8800 Carbon Arte</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_3610_fold-2482.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-3610fold.jpg</Image>
+    <Name>3610 fold</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_7610_supernova-2444.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-7610-s.jpg</Image>
+    <Name>7610 Supernova</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_7510_supernova-2445.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-7510-s.jpg</Image>
+    <Name>7510 Supernova</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_7310_supernova-2446.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-7310-s.jpg</Image>
+    <Name>7310 Supernova</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_7210_supernova-2447.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-7210-s.jpg</Image>
+    <Name>7210 Supernova</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_e71-2425.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-e71.jpg</Image>
+    <Name>E71</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_e66-2426.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-e66.jpg</Image>
+    <Name>E66</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_6600_fold-2357.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-6600fold.jpg</Image>
+    <Name>6600 fold</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_703-4133.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-703.jpg</Image>
+    <Name>703</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_6600_slide-2355.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-6600slide.jpg</Image>
+    <Name>6600 slide</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_3600_slide-2356.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-3600slide.jpg</Image>
+    <Name>3600 slide</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_5320_xpressmusic-2348.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-5320.jpg</Image>
+    <Name>5320 XpressMusic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_5220_xpressmusic-2349.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-5220.jpg</Image>
+    <Name>5220 XpressMusic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_6212_classic-2345.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-6112-classic.jpg</Image>
+    <Name>6212 classic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_5000-2336.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-5000.jpg</Image>
+    <Name>5000</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_7070_prism-2338.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-7070-prism.jpg</Image>
+    <Name>7070 Prism</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_2680_slide-2337.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-2680-slide.jpg</Image>
+    <Name>2680 slide</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_1680_classic-2339.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-1680-classic.jpg</Image>
+    <Name>1680 classic</Name>
+  </Phone>
+  <Phone>
+    <Link>nokia_6300i-2331.php</Link>
+    <Image>http://cdn2.gsmarena.com/vv/thumb/nokia-6300i.jpg</Image>
+    <Name>6300i</Name>
+  </Phone>
+</Phones>
