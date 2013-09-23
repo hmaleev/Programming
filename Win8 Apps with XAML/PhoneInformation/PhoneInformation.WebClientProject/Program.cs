@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
 using System.Xml;
-
+using Newtonsoft.Json;
+using System.IO;
 namespace PhoneInformation.WebClientProject
 {
     class Program
@@ -20,9 +21,9 @@ namespace PhoneInformation.WebClientProject
 
             XmlNode phonesNode = xmlDoc.CreateElement("Phones");
             xmlDoc.AppendChild(phonesNode);
-            for (int i = 1; i <= 2; i++)
+            for (int i = 1; i <= 3; i++)
             {
-                var result = info.Load("http://www.gsmarena.com/blackberry-phones-f-36-0-p" + i + ".php");
+                var result = info.Load("http://www.gsmarena.com/lg-phones-f-20-0-p" + i + ".php");
               links = result.DocumentNode.SelectNodes("//div[@class='makers']//a");
               foreach (var item in links)
               {
@@ -42,8 +43,10 @@ namespace PhoneInformation.WebClientProject
                   phonesNode.AppendChild(phoneNode);
               }
             }
-
-            xmlDoc.Save(@"../../blackberry.xml");
+           var x= JsonConvert.SerializeObject(xmlDoc);
+      
+           File.WriteAllText(@"../../lg.json", x);
+           xmlDoc.Save(@"../../lg.xml");
             //Console.WriteLine("Done");
         }
     }
