@@ -1,16 +1,10 @@
-﻿/// <reference path="../../../js/httpRequester.js" />
-// For an introduction to the Page Control template, see the following documentation:
-// http://go.microsoft.com/fwlink/?LinkId=232511
-(function () {
+﻿(function () {
     "use strict";
 
     WinJS.UI.Pages.define("/pages/daily/arrivals/arrivals.html", {
-        // This function is called whenever a user navigates to this page. It
-        // populates the page elements with the app's data.
-        // TODO: Initialize the page here.
 
         ready: function (element, options) {
-            // TODO: Initialize the page here.
+
             var p = document.getElementById("txt");
             var table = document.getElementById("table-arrivals");
             var pageinfo = document.getElementById("pageinfo");
@@ -37,13 +31,13 @@
                 results = "20";
             }
                 table.innerHTML = "<tbody></tbody>";
-                n.Show();
+              //  n.Show();
                 var tableEndRow;
                 var currentPage;
                 var endPage;
 
                 WinJS.xhr({
-                    url: "http://www.sofia-airport.bg/pages/arrivals.aspx",
+                    url: "http://www.sofia-airport2.bg/pages/arrivals.aspx",
                     type: "GET"
                 }).then(function (response) {
 
@@ -114,29 +108,33 @@
                    });
                     }
                 }, function (error) {
-                    if (error.status == 502) {
-                        var msgpopup = new Windows.UI.Popups.MessageDialog("Няма връзка с Интернет");
-                        msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+                    
+                             var msgpopup = new Windows.UI.Popups.MessageDialog("Възникна грешка");
+                             msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+                             msgpopup.commands.append(new Windows.UI.Popups.UICommand("Изпрати съобщение до разрабочика", function () {
 
+                                 WinJS.xhr({
+                                     type: "post", user: "api", password: "key-434f9830mw3ezyg6e7a43bmfm2ujcp80",
+                                     //type: "post",
+                                     url: "https://api.mailgun.net/v2/sofia-airport-app.mailgun.org/messages",
+                                     headers: {
+                                         "Content-type": "application/x-www-form-urlencoded",
+                                         "From": "postmaster@sofia-airport-app.mailgun.org"
+                                     },
+                                     data: "from=postmaster@sofia-airport-app.mailgun.org&to=hmaleev@gmail.com&subject=" + error.response + "&text=" + error.responseText
+                                 }).then(function (success) {
+                                     console.log("Done");
+                                     var messageSent = new Windows.UI.Popups.MessageDialog("Съобщението е изпратено успешно");
+                                     messageSent.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+                                     messageSent.showAsync();
+                                 }, function (error) {
+                                     console.log("error")
+                                 });
+
+                             }));
                         msgpopup.showAsync();
                         n.Hide();
-                    }
-                    else {
-                        var msgpopup = new Windows.UI.Popups.MessageDialog("Възникна грешка");
-                        msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
-
-                        msgpopup.showAsync();
-                        n.Hide();
-                    }
                 });
-        },
-        unload: function () {
-            // TODO: Respond to navigations away from this page.
-        },
-
-        updateLayout: function (element, viewState, lastViewState) {
-            /// <param name="element" domElement="true" />
-            // TODO: Respond to changes in viewState.
         }
     });
 })();
