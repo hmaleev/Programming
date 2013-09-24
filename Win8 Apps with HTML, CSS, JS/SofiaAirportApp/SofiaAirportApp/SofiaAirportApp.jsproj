@@ -48,7 +48,7 @@
     <TargetPlatformVersion>8.0</TargetPlatformVersion>
     <DefaultLanguage>bg-bg</DefaultLanguage>
     <PackageCertificateKeyFile>SofiaAirportApp_StoreKey.pfx</PackageCertificateKeyFile>
-    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <PackageCertificateThumbprint>C1EB846F34408C7481680B071D606C6D1AB7F372</PackageCertificateThumbprint>
   </PropertyGroup>
   <ItemGroup>
@@ -81,7 +81,6 @@
     <Content Include="images\planeTakeOff.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="js\default.js" />
-    <Content Include="js\httpRequester.js" />
     <Content Include="js\navigator.js" />
     <Content Include="js\uiEditor.js" />
     <None Include="SofiaAirportApp_StoreKey.pfx" />

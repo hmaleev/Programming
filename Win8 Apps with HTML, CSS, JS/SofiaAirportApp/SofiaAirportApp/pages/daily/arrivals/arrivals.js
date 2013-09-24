@@ -13,6 +13,7 @@
             appBar.disabled = false;
             var n = new UI.ProgressBar(document.body);
             var update = document.getElementById("update");
+            var messageShown = false;
 
             update.addEventListener("click", function () {
                 WinJS.Navigation.navigate("/pages/daily/arrivals/arrivals.html");
@@ -31,13 +32,12 @@
                 results = "20";
             }
                 table.innerHTML = "<tbody></tbody>";
-              //  n.Show();
                 var tableEndRow;
                 var currentPage;
                 var endPage;
 
                 WinJS.xhr({
-                    url: "http://www.sofia-airport2.bg/pages/arrivals.aspx",
+                    url: "http://www.sofia-airport.bg/pages/arrivals.aspx",
                     type: "GET"
                 }).then(function (response) {
 
@@ -53,8 +53,6 @@
                     var x = 0;
                     for (var i = currentPage; i < endPage; i++) {
                         
-                     
-
                         WinJS.xhr({
                             url: "http://www.sofia-airport.bg/pages/arrivals.aspx?lm01=103&lm02=51&lm03=51&p=" + i,
                             type: "GET",
@@ -62,8 +60,6 @@
                                 "If-Modified-Since": date
                             }
                         }).then(function (response) {
-
-                            Request.ErrorMessage(response.responseType, response.statusText);
 
                             p.innerHTML += toStaticHTML(response.responseText);
                             table.innerHTML += document.getElementsByTagName("tbody")[x].innerHTML;
@@ -90,22 +86,38 @@
                             n.Hide();
                             date = new Date().toGMTString()
                         },
-                   function (error) {
-                       if (error.status == 502) {
-                           var msgpopup = new Windows.UI.Popups.MessageDialog("Няма връзка с Интернет");
-                           msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
-
-                           msgpopup.showAsync();
-                           n.Hide();
-                       }
-                       else {
+                       function (error) {
+                         
                            var msgpopup = new Windows.UI.Popups.MessageDialog("Възникна грешка");
                            msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+                           msgpopup.commands.append(new Windows.UI.Popups.UICommand("Изпрати съобщение до разрабочика", function () {
 
-                           msgpopup.showAsync();
+                               WinJS.xhr({
+                                   type: "post", user: "api", password: "key-434f9830mw3ezyg6e7a43bmfm2ujcp80",
+                                   //type: "post",
+                                   url: "https://api.mailgun.net/v2/sofia-airport-app.mailgun.org/messages",
+                                   headers: {
+                                       "Content-type": "application/x-www-form-urlencoded",
+                                       "From": "postmaster@sofia-airport-app.mailgun.org"
+                                   },
+                                   data: "from=postmaster@sofia-airport-app.mailgun.org&to=hmaleev@gmail.com&subject=Error Message" + error.status  + "&text=" + error.responseText
+                               }).then(function (success) {
+                                   console.log("Done");
+                                   var messageSent = new Windows.UI.Popups.MessageDialog("Съобщението е изпратено успешно");
+                                   messageSent.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+                                   messageSent.showAsync();
+                               }, function (error) {
+                                   console.log("error")
+                               });
+
+                           }));
+                           if (!messageShown) {
+                               msgpopup.showAsync();
+                               messageShown = true;
+                           }
+                          
                            n.Hide();
-                       }
-                   });
+                       });
                     }
                 }, function (error) {
                     
@@ -121,7 +133,7 @@
                                          "Content-type": "application/x-www-form-urlencoded",
                                          "From": "postmaster@sofia-airport-app.mailgun.org"
                                      },
-                                     data: "from=postmaster@sofia-airport-app.mailgun.org&to=hmaleev@gmail.com&subject=" + error.response + "&text=" + error.responseText
+                                     data: "from=postmaster@sofia-airport-app.mailgun.org&to=hmaleev@gmail.com&subject=Error Message " + error.status + "&text=" + error.responseText
                                  }).then(function (success) {
                                      console.log("Done");
                                      var messageSent = new Windows.UI.Popups.MessageDialog("Съобщението е изпратено успешно");

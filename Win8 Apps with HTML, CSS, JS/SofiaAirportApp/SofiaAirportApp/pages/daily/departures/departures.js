@@ -1,6 +1,4 @@
-﻿// For an introduction to the Page Control template, see the following documentation:
-// http://go.microsoft.com/fwlink/?LinkId=232511
-(function () {
+﻿(function () {
     "use strict";
     WinJS.UI.Pages.define("/pages/daily/departures/departures.html", {
         ready: function (element, options) {
@@ -11,8 +9,8 @@
             var results = Windows.Storage.ApplicationData.current.roamingSettings.values["displayFlights"];
             var update = document.getElementById("update");
             var appBar = document.getElementById("appbar");
+            var messageShown = false;
             appBar.disabled = false;
-
             var n = new UI.ProgressBar(document.body);
 
             update.addEventListener("click", function () {
@@ -85,45 +83,63 @@
                             date = new Date().toGMTString()
                         },
                    function (error) {
-                       if (error.status == 502) {
-                           var msgpopup = new Windows.UI.Popups.MessageDialog("Няма връзка с Интернет");
-                           msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+                       var msgpopup = new Windows.UI.Popups.MessageDialog("Възникна грешка");
+                       msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+                       msgpopup.commands.append(new Windows.UI.Popups.UICommand("Изпрати съобщение до разрабочика", function () {
 
-                           msgpopup.showAsync();
-                           n.Hide();
-                       }
-                       else {
-                           var msgpopup = new Windows.UI.Popups.MessageDialog("Възникна грешка");
-                           msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+                           WinJS.xhr({
+                               type: "post", user: "api", password: "key-434f9830mw3ezyg6e7a43bmfm2ujcp80",
+                               //type: "post",
+                               url: "https://api.mailgun.net/v2/sofia-airport-app.mailgun.org/messages",
+                               headers: {
+                                   "Content-type": "application/x-www-form-urlencoded",
+                                   "From": "postmaster@sofia-airport-app.mailgun.org"
+                               },
+                               data: "from=postmaster@sofia-airport-app.mailgun.org&to=hmaleev@gmail.com&subject=Error Message " + error.status + "&text=" + error.responseText
+                           }).then(function (success) {
+                               console.log("Done");
+                               var messageSent = new Windows.UI.Popups.MessageDialog("Съобщението е изпратено успешно");
+                               messageSent.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+                               messageSent.showAsync();
+                           }, function (error) {
+                               console.log("error")
+                           });
 
+                       }));
+                       if (!messageShown) {
                            msgpopup.showAsync();
-                           n.Hide();
+                           messageShown = true;
                        }
+                      
+                       n.Hide();
                    });
                     }
                 }, function (error) {
-                        if (error.status == 502) {
-                            var msgpopup = new Windows.UI.Popups.MessageDialog("Няма връзка с Интернет");
-                            msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+                    var msgpopup = new Windows.UI.Popups.MessageDialog("Възникна грешка");
+                    msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+                    msgpopup.commands.append(new Windows.UI.Popups.UICommand("Изпрати съобщение до разрабочика", function () {
 
-                            msgpopup.showAsync();
-                            n.Hide();
-                        }
-                        else {
-                            var msgpopup = new Windows.UI.Popups.MessageDialog("Възникна грешка");
-                            msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+                        WinJS.xhr({
+                            type: "post", user: "api", password: "key-434f9830mw3ezyg6e7a43bmfm2ujcp80",
+                            url: "https://api.mailgun.net/v2/sofia-airport-app.mailgun.org/messages",
+                            headers: {
+                                "Content-type": "application/x-www-form-urlencoded",
+                                "From": "postmaster@sofia-airport-app.mailgun.org"
+                            },
+                            data: "from=postmaster@sofia-airport-app.mailgun.org&to=hmaleev@gmail.com&subject=Error Message " + error.status + "&text=" + error.responseText
+                        }).then(function (success) {
+                            console.log("Done");
+                            var messageSent = new Windows.UI.Popups.MessageDialog("Съобщението е изпратено успешно");
+                            messageSent.commands.append(new Windows.UI.Popups.UICommand("Ok", function () { }));
+                            messageSent.showAsync();
+                        }, function (error) {
+                            console.log("error")
+                        });
 
-                            msgpopup.showAsync();
-                            n.Hide();
-                        }
+                    }));
+                    msgpopup.showAsync();
+                    n.Hide();
                 });
-        },
-        unload: function () {
-            // TODO: Respond to navigations away from this page.
-        },
-        updateLayout: function (element, viewState, lastViewState) {
-            /// <param name="element" domElement="true" />
-            // TODO: Respond to changes in viewState.
         }
     });
 })();
