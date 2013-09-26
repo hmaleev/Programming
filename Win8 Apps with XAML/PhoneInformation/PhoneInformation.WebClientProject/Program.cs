@@ -44,7 +44,7 @@ namespace PhoneInformation.WebClientProject
               }
             }
            var x= JsonConvert.SerializeObject(xmlDoc);
-      
+           var z = JsonConvert.DeserializeObject(x);
            File.WriteAllText(@"../../lg.json", x);
            xmlDoc.Save(@"../../lg.xml");
             //Console.WriteLine("Done");

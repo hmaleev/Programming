@@ -7,7 +7,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml.Shapes;
-
+using System.Xml;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace PaintRT
@@ -236,6 +236,19 @@ namespace PaintRT
             if (isLine)
             {
                 currentElement = "line";
+            }
+        }
+
+        private void OnSave(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            
+            foreach (var item in  paintField.Children)
+            {
+                if (item == item as Rectangle)
+                {
+                    var x = item as Rectangle;
+                }
+              
             }
         }
     }

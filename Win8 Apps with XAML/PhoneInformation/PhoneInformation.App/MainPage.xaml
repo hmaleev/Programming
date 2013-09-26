@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="PhoneInformation.App.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PhoneInformation.App"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition >
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Background="Red" Margin="10">
+            <TextBlock Text="Nokia" FontSize="80"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="1" Background="Red" Margin="10">
+            <TextBlock Text="Samsung" FontSize="80"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="2" Background="Red" Margin="10">
+            <TextBlock Text="Sony" FontSize="80"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="3" Background="Red" Margin="10">
+            <TextBlock Text="HTC" FontSize="80"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" Background="Red" Margin="10">
+            <TextBlock Text="Motorola" FontSize="80"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Background="Red" Margin="10">
+            <TextBlock Text="Apple" FontSize="80"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="2" Background="Red" Margin="10">
+            <TextBlock Text="Blackberry" FontSize="80" TextWrapping="Wrap"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="3" Background="Red" Margin="10">
+            <TextBlock Text="LG" FontSize="80" FontFamily="Global User Interface"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>

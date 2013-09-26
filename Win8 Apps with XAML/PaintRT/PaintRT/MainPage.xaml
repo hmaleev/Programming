@@ -20,7 +20,7 @@
                     <Ellipse Margin="55 0 0 0  " Width="38" Height="38" Fill="Black"></Ellipse>
                     <Rectangle Margin="110 3 0 0" Height="34" Width="34" Fill="Black" StrokeThickness="1"></Rectangle>
             </Canvas>
-            <Canvas Width="10" Height="30" Margin=" 10 40 0 0">
+            <Canvas  Width="10" Height="30" Margin=" 10 40 0 0">
                 <Line X1="0" X2="0" Y1="0" Y2="40" Stroke="White" StrokeThickness="5"></Line>
             </Canvas>
             <Canvas Name="rotatingCanvas" Width="300" Height="300" Margin="0 10 0 0" ManipulationMode="Rotate" ManipulationDelta="RotatingCanvas"   >
@@ -31,6 +31,7 @@
                 <Ellipse Fill="Blue" Width="90" Height="90" Margin="105 200"></Ellipse>
 
             </Canvas>
+            <Button Content="Save" Click="OnSave"/>
         </StackPanel>
     </Grid>
 </Page>
