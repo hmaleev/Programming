@@ -34,5 +34,45 @@ namespace PhoneInformation.App
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
         }
+
+        private void onNokiaTap(object sender, TappedRoutedEventArgs e)
+        {
+          this.Frame.Navigate(typeof( Views.Brands.Nokia));
+        }
+
+        private void onSamsungTap(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Views.Brands.Samsung));
+        }
+
+        private void onSonyTap(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Views.Brands.Sony));
+        }
+
+        private void onHTCTap(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Views.Brands.HTC));
+        }
+
+        private void onMotorolaTap(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Views.Brands.Motorola));
+        }
+
+        private void onAppleTap(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Views.Brands.Apple));
+        }
+
+        private void onBlackberryTap(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Views.Brands.Blackberry));
+        }
+
+        private void onLGTap(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Views.Brands.LG));
+        }
     }
 }
