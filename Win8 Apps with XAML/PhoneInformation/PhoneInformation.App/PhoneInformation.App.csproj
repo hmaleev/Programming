@@ -100,9 +100,6 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -112,10 +109,24 @@
     <Compile Include="Common\LayoutAwarePage.cs" />
     <Compile Include="Common\RichTextColumns.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="HttpRequester\HttpRequest.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\PhoneListModel.cs" />
+    <Compile Include="Models\PhoneModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ApplePhoneListViewModel.cs" />
+    <Compile Include="ViewModels\BlackberryPhoneListViewModel.cs" />
+    <Compile Include="ViewModels\HTCPhoneListViewModel.cs" />
+    <Compile Include="ViewModels\LGPhoneListViewModel.cs" />
+    <Compile Include="ViewModels\MotorolaPhoneListViewModel.cs" />
+    <Compile Include="ViewModels\NokiaPhoneListViewModel.cs" />
+    <Compile Include="ViewModels\PhoneListViewModel.cs" />
+    <Compile Include="ViewModels\SamsungPhoneListViewModel.cs" />
+    <Compile Include="ViewModels\SonyPhoneListViewModel.cs" />
+    <Compile Include="ViewModels\PhoneViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\Brands\Apple.xaml.cs">
       <DependentUpon>Apple.xaml</DependentUpon>
     </Compile>
@@ -145,6 +156,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="packages.config" />
     <None Include="PhoneInformation.App_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -199,6 +211,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\netcore45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>

@@ -1,12 +1,12 @@
 ﻿<common:LayoutAwarePage
     x:Name="pageRoot"
     x:Class="PhoneInformation.App.Views.Brands.Blackberry"
-    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:PhoneInformation.App.Views.Brands"
     xmlns:common="using:PhoneInformation.App.Common"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:viewModel="using:PhoneInformation.App.ViewModels"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
@@ -20,6 +20,9 @@
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
         <x:String x:Key="AppName">My Application</x:String>
     </Page.Resources>
+    <Page.DataContext>
+        <viewModel:BlackberryPhoneListViewModel/>
+    </Page.DataContext>
 
     <!--
         This grid acts as a root panel for the page that defines two rows:
@@ -40,13 +43,27 @@
             TabIndex="1"
             Grid.RowSpan="2"
             Padding="116,136,116,46"
-            ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
-            ItemTemplate="{StaticResource Standard250x250ItemTemplate}"
+            ItemsSource="{Binding Phones}"
             SelectionMode="None"
-            IsSwipeEnabled="false"/>
+            IsSwipeEnabled="false">
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Height="240" Width="110">
+                        <Image Source="{Binding ImageSrc}"
+                                Height="150"
+                                 />
+                        <TextBlock Text="{Binding Name}"
+                                   FontSize="24"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"
+                                   TextAlignment="Center"/>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
 
         <!-- Vertical scrolling list only used when snapped -->
-        <ListView
+        <!--<ListView
             x:Name="itemListView"
             AutomationProperties.AutomationId="ItemsListView"
             AutomationProperties.Name="Items"
@@ -58,7 +75,7 @@
             ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
             ItemTemplate="{StaticResource Standard80ItemTemplate}"
             SelectionMode="None"
-            IsSwipeEnabled="false"/>
+            IsSwipeEnabled="false"/>-->
 
         <!-- Back button and page title -->
         <Grid>
