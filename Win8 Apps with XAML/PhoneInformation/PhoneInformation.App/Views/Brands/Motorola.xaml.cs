@@ -11,6 +11,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using PhoneInformation.App.Models;
+using PhoneInformation.App.ViewModels;
 
 // The Items Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234233
 
@@ -39,6 +41,27 @@ namespace PhoneInformation.App.Views.Brands
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
             // TODO: Assign a bindable collection of items to this.DefaultViewModel["Items"]
+        }
+
+        private void onTap(object sender, TappedRoutedEventArgs e)
+        {
+            var x = itemGridView.SelectedItem as PhoneModel;
+          
+             this.Frame.Navigate(typeof(Views.DetailedInformation.DetailInformation));
+        }
+
+        private void itemGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+           // Pho selected = itemGridView.SelectedItem as PhoneModel;
+            var selected = itemGridView.SelectedItems;
+
+            if (selected.Count==2)
+            {
+                PhoneModel firstPhone = selected[0] as PhoneModel;
+                 PhoneModel secondPhone = selected[1] as PhoneModel;
+              //  this.Frame.Navigate(typeof(Views.DetailedInformation.DetailInformation));
+            }
         }
     }
 }

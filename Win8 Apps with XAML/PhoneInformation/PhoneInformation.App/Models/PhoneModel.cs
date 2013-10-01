@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace PhoneInformation.App.Models
 {
-    class PhoneModel
+    public class PhoneModel
     {
         private string name;
         private string link;
-        private string imageSource;
+        private string imageSrc;
 
         public PhoneModel()
         {
@@ -40,15 +40,15 @@ namespace PhoneInformation.App.Models
             }
         }
 
-        public string ImageSource
+        public string ImageSrc
         {
             get
             {
-                return this.imageSource;
+                return this.imageSrc;
             }
             set
             {
-                this.imageSource = value;
+                this.imageSrc = value;
             }
         }
     }
