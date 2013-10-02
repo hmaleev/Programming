@@ -142,6 +142,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\Logos\Apple_Logo.png" />
+    <Content Include="Assets\Logos\BlackBerry_Logo.png" />
+    <Content Include="Assets\Logos\HTC_Logo.jpg" />
+    <Content Include="Assets\Logos\Motorola_Logo.jpg" />
+    <Content Include="Assets\Logos\Nokia_Logo.png" />
+    <Content Include="Assets\Logos\Samsung_Logo.png" />
+    <Content Include="Assets\Logos\Sony_Logo.png" />
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />

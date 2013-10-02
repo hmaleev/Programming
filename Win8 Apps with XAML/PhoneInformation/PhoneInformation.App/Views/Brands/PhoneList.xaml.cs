@@ -46,7 +46,7 @@ namespace PhoneInformation.App.Views.Brands
         {
             var x = itemGridView.SelectedItem as PhoneModel;
             Url.location = x.Link;
-            this.Frame.Navigate(typeof(Views.DetailedInformation.DetailInformation));
+            this.Frame.Navigate(typeof(Views.Comparison.Comparison));
         }
     }
 }

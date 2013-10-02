@@ -69,7 +69,6 @@ namespace PhoneInformation.App.Views.DetailedInformation
                 GeneralInfo.Visibility = Visibility.Visible;
             }
         }
-
         private void onBodyTap(object sender, TappedRoutedEventArgs e)
         {
             if (BodyInfo.Visibility == Visibility.Visible)
@@ -154,7 +153,7 @@ namespace PhoneInformation.App.Views.DetailedInformation
                 FeaturesInfo.Visibility = Visibility.Visible;
             }
         }
-                private void onBatteryTap(object sender, TappedRoutedEventArgs e)
+        private void onBatteryTap(object sender, TappedRoutedEventArgs e)
         {
             if (BatteryInfo.Visibility == Visibility.Visible)
             {

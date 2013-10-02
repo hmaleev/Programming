@@ -48,5 +48,115 @@ namespace PhoneInformation.App.Views.Comparison
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
         }
+        
+        private void onGeneralTap(object sender, TappedRoutedEventArgs e)
+        {
+            if (GeneralInfo.Visibility==Visibility.Visible)
+            {
+                GeneralInfo.Visibility = Visibility.Collapsed;
+
+            }
+            else
+            {
+                GeneralInfo.Visibility = Visibility.Visible;
+            }
+        }
+        private void onBodyTap(object sender, TappedRoutedEventArgs e)
+        {
+            if (BodyInfo.Visibility == Visibility.Visible)
+            {
+                BodyInfo.Visibility = Visibility.Collapsed;
+
+            }
+            else
+            {
+                BodyInfo.Visibility = Visibility.Visible;
+            }
+        }
+        private void onDisplayTap(object sender, TappedRoutedEventArgs e)
+        {
+            if (DisplayInfo.Visibility == Visibility.Visible)
+            {
+                DisplayInfo.Visibility = Visibility.Collapsed;
+
+            }
+            else
+            {
+                DisplayInfo.Visibility = Visibility.Visible;
+            }
+        }
+        private void onSoundTap(object sender, TappedRoutedEventArgs e)
+        {
+            if (SoundInfo.Visibility == Visibility.Visible)
+            {
+                SoundInfo.Visibility = Visibility.Collapsed;
+
+            }
+            else
+            {
+                SoundInfo.Visibility = Visibility.Visible;
+            }
+        }
+        private void onMemoryTap(object sender, TappedRoutedEventArgs e)
+        {
+            if (MemoryInfo.Visibility == Visibility.Visible)
+            {
+                MemoryInfo.Visibility = Visibility.Collapsed;
+
+            }
+            else
+            {
+                MemoryInfo.Visibility = Visibility.Visible;
+            }
+        }
+        private void onDataTap(object sender, TappedRoutedEventArgs e)
+        {
+            if (DataInfo.Visibility == Visibility.Visible)
+            {
+                DataInfo.Visibility = Visibility.Collapsed;
+
+            }
+            else
+            {
+                DataInfo.Visibility = Visibility.Visible;
+            }
+        }
+        private void onCameraTap(object sender, TappedRoutedEventArgs e)
+        {
+            if (CameraInfo.Visibility == Visibility.Visible)
+            {
+                CameraInfo.Visibility = Visibility.Collapsed;
+
+            }
+            else
+            {
+                CameraInfo.Visibility = Visibility.Visible;
+            }
+        }
+        private void onFeaturesTap(object sender, TappedRoutedEventArgs e)
+        {
+            if (FeaturesInfo.Visibility == Visibility.Visible)
+            {
+                FeaturesInfo.Visibility = Visibility.Collapsed;
+
+            }
+            else
+            {
+                FeaturesInfo.Visibility = Visibility.Visible;
+            }
+        }
+        private void onBatteryTap(object sender, TappedRoutedEventArgs e)
+        {
+            if (BatteryInfo.Visibility == Visibility.Visible)
+            {
+                BatteryInfo.Visibility = Visibility.Collapsed;
+
+            }
+            else
+            {
+                BatteryInfo.Visibility = Visibility.Visible;
+            }
+        }
+
     }
 }

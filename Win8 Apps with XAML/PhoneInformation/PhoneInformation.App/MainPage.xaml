@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" >
+    <Grid Background="Blue" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition >
             <ColumnDefinition></ColumnDefinition>
@@ -19,32 +19,40 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-      
 
 
-        <StackPanel Grid.Row="0" Grid.Column="0" Background="Red" Margin="10" Tapped="onNokiaTap">
-            <TextBlock Text="Nokia" FontSize="80"></TextBlock>
+
+        <StackPanel Margin="10 10 0 20" Grid.Row="0" Background="White" Grid.Column="0"  Tapped="onNokiaTap">
+            <Image Source="/Assets/Logos/Nokia_Logo.png" Stretch="Fill" Margin="10"/>
         </StackPanel>
-        <StackPanel Grid.Row="0" Grid.Column="1" Background="Red" Margin="10" Tapped="onSamsungTap">
-            <TextBlock Text="Samsung" FontSize="80"></TextBlock>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Background="White" Margin="10 10 0 20" Tapped="onSamsungTap">
+            <Image Source="/Assets/Logos/Samsung_Logo.png" Stretch="Fill" Margin="10"/>
         </StackPanel>
-        <StackPanel Grid.Row="0" Grid.Column="2" Background="Red" Margin="10" Tapped="onSonyTap">
-            <TextBlock Text="Sony" FontSize="80"></TextBlock>
+
+        <StackPanel Grid.Row="0" Grid.Column="2" Background="White"  Margin="10 10 0 20" Tapped="onSonyTap">
+            <Image Source="/Assets/Logos/Sony_Logo.png" Stretch="Fill" Margin="10"/>
         </StackPanel>
-        <StackPanel Grid.Row="0" Grid.Column="3" Background="Red" Margin="10" Tapped="onHTCTap">
-            <TextBlock Text="HTC" FontSize="80"></TextBlock>
+
+        <StackPanel Grid.Row="0" Grid.Column="3" Background="White"  Margin="10 10 10 20" Tapped="onHTCTap">
+            <Image Source="/Assets/Logos/HTC_Logo.jpg" Stretch="Fill" Margin="10"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="0" Background="Red" Margin="10" Tapped="onMotorolaTap">
-            <TextBlock Text="Motorola" FontSize="80"></TextBlock>
+        
+        <StackPanel Grid.Row="1" Grid.Column="0" Background="White" Margin="10 10 0 20" Tapped="onMotorolaTap">
+            <Image Source="/Assets/Logos/Motorola_Logo.jpg" Stretch="Fill" Margin="10"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="1" Background="Red" Margin="10" Tapped="onAppleTap">
-            <TextBlock Text="Apple" FontSize="80"></TextBlock>
+        
+        <StackPanel Grid.Row="1" Grid.Column="1" Background="White" Margin="10 10 0 20" Tapped="onAppleTap">
+            <Image Source="/Assets/Logos/Apple_Logo.png" Stretch="Fill" Margin="10" VerticalAlignment="Center"/>
+
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="2" Background="Red" Margin="10" Tapped="onBlackberryTap">
-            <TextBlock Text="Blackberry" FontSize="80" TextWrapping="Wrap"></TextBlock>
+        
+        <StackPanel Grid.Row="1" Grid.Column="2" Background="White" Margin="10 10 0 20" Tapped="onBlackberryTap">
+            <Image Source="/Assets/Logos/BlackBerry_Logo.png" Stretch="Fill" Margin="10"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="3" Background="Red" Margin="10" Tapped="onLGTap">
-            <TextBlock Text="LG" FontSize="80" FontFamily="Global User Interface"></TextBlock>
+        
+        <StackPanel Grid.Row="1" Grid.Column="3" Background="White" Margin="10 10 10 20" Tapped="onLGTap">
+            <Image Source="/Assets/Logos/LG_Logo.png" Stretch="Fill" Margin="10"/>
         </StackPanel>
     </Grid>
 </Page>

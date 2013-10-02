@@ -2,7 +2,8 @@
     x:Class="PhoneInformation.App.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:PhoneInformation.App">
+    xmlns:local="using:PhoneInformation.App"
+    RequestedTheme="Light">
 
     <Application.Resources>
         <ResourceDictionary>
