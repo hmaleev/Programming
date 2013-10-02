@@ -46,8 +46,8 @@ namespace PhoneInformation.App.Views.Brands
         private void onTap(object sender, TappedRoutedEventArgs e)
         {
             var x = itemGridView.SelectedItem as PhoneModel;
-          
-             this.Frame.Navigate(typeof(Views.DetailedInformation.DetailInformation));
+            Url.location = x.Link;
+             this.Frame.Navigate(typeof(Views.DetailedInformation.DetailInformation),x);
         }
 
         private void itemGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)

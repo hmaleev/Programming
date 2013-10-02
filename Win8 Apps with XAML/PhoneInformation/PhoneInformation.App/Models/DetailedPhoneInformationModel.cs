@@ -8,6 +8,9 @@ namespace PhoneInformation.App.Models
 {
     public class DetailedPhoneInformationModel
     {
+        public DetailedPhoneInformationModel()
+        {
+        }
 
         private string gps;
 
@@ -84,8 +87,6 @@ namespace PhoneInformation.App.Models
         public string TalkTime { get; set; }
         public string MusicPlayTime { get; set; }
 
-        public DetailedPhoneInformationModel()
-        {
-        }
+
     }
 }

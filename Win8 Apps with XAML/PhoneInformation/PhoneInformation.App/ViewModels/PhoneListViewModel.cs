@@ -11,10 +11,11 @@ namespace PhoneInformation.App.ViewModels
     {
         private ObservableCollection<PhoneModel> phones;
         private string brand;
-        public PhoneListViewModel(string brand)
+        public PhoneListViewModel()
         {
-            this.brand = brand;
+            this.brand = Url.brand;
         }
+
 
         public IEnumerable<PhoneModel> Phones
         {
@@ -23,7 +24,7 @@ namespace PhoneInformation.App.ViewModels
                 if (this.phones == null)
                 {
                     this.phones = new ObservableCollection<PhoneModel>();
-                    this.GetData(brand);
+                    this.GetData(this.brand);
 
                 }
                 return this.phones;

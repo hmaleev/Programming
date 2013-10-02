@@ -9,27 +9,21 @@ namespace PhoneInformation.App.ViewModels
 {
     class DetailedPhoneInformationViewModel : ViewModelBase
     {
-        private DetailedPhoneInformationModel detailedInfo;
-        private string url = "motorola_moto_x-5601.php";
-
-        //public DetailedPhoneInformationViewModel(string str)
-        //{
-        //    this.url = str;
-        //    this.url="motorola_moto_x-5601.php"
-
-        //}
+        private ObservableCollection<DetailedPhoneInformationModel> detailedInfo;
+        private string url;
 
         public DetailedPhoneInformationViewModel()
         {
+            this.url = Url.location;
         }
 
-        public DetailedPhoneInformationModel DetailedInfo
+        public IEnumerable<DetailedPhoneInformationModel> DetailedInfo
         {
             get
             {
                 if (this.detailedInfo == null)
                 {
-                    this.detailedInfo = new DetailedPhoneInformationModel();
+                    this.detailedInfo = new ObservableCollection<DetailedPhoneInformationModel>();
                     this.GetData(url);
 
                 }
@@ -39,20 +33,16 @@ namespace PhoneInformation.App.ViewModels
             {
                 if (this.detailedInfo == null)
                 {
-                    this.detailedInfo = new DetailedPhoneInformationModel();
+                    this.detailedInfo = new ObservableCollection<DetailedPhoneInformationModel>();
                 }
-                this.detailedInfo = value;
-                this.OnPropertyChanged(detailedInfo.GPS);
-                //this.SetObservableValues(this.detailedInfo, value);
+                this.SetObservableValues(this.detailedInfo, value);
             }
         }
 
         protected async void GetData( string str)
         {
             this.DetailedInfo =
-                await HttpRequest.Get<DetailedPhoneInformationModel>("http://localhost:63847/api/PhoneDetails?phoneUrl="+str);
-            // var sim = DetailedInfo.ToArray();
-            var s = this.DetailedInfo;
+                await HttpRequest.Get<IEnumerable<DetailedPhoneInformationModel>>("http://localhost:63847/api/PhoneDetails?phoneUrl="+str);
         }
     }
 }

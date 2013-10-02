@@ -43,13 +43,15 @@
             Grid.RowSpan="2"
             Padding="116,136,116,46"
             ItemsSource="{Binding Phones}"
-            SelectionMode="None"
+            SelectionMode="Extended"
+            SelectionChanged="itemGridView_SelectionChanged"
             IsSwipeEnabled="false">
             <GridView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Height="240" Width="110">
+                <DataTemplate >
+                    <StackPanel  Margin="0" Tapped="onTap">
                         <Image Source="{Binding ImageSrc}"
                                 Height="150"
+                               
                                  />
                         <TextBlock Text="{Binding Name}"
                                    FontSize="24"

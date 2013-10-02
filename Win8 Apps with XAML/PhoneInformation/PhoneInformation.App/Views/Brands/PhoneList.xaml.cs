@@ -1,5 +1,4 @@
-﻿using PhoneInformation.App.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,9 +20,9 @@ namespace PhoneInformation.App.Views.Brands
     /// A page that displays a collection of item previews.  In the Split Application this page
     /// is used to display and select one of the available groups.
     /// </summary>
-    public sealed partial class HTC : PhoneInformation.App.Common.LayoutAwarePage
+    public sealed partial class PhoneList : PhoneInformation.App.Common.LayoutAwarePage
     {
-        public HTC()
+        public PhoneList()
         {
             this.InitializeComponent();
         }
@@ -40,25 +39,6 @@ namespace PhoneInformation.App.Views.Brands
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
             // TODO: Assign a bindable collection of items to this.DefaultViewModel["Items"]
-        }
-        private void onTap(object sender, TappedRoutedEventArgs e)
-        {
-            var x = itemGridView.SelectedItem as PhoneModel;
-            Url.location = x.Link;
-            this.Frame.Navigate(typeof(Views.DetailedInformation.DetailInformation), x);
-        }
-        private void itemGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-            // Pho selected = itemGridView.SelectedItem as PhoneModel;
-            var selected = itemGridView.SelectedItems;
-
-            if (selected.Count == 2)
-            {
-                PhoneModel firstPhone = selected[0] as PhoneModel;
-                PhoneModel secondPhone = selected[1] as PhoneModel;
-                //  this.Frame.Navigate(typeof(Views.DetailedInformation.DetailInformation));
-            }
         }
     }
 }

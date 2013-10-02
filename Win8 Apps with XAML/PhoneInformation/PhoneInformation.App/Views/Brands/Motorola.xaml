@@ -47,17 +47,17 @@
             IsSwipeEnabled="false">
             <GridView.ItemTemplate>
                 <DataTemplate >
-                    <StackPanel Height="240" Width="110" Tapped="onTap" >
-                        <Image Source="{Binding ImageSrc}"
+                    <StackPanel  Margin="0" Tapped="onTap">
+                            <Image Source="{Binding ImageSrc}"
                                 Height="150"
                                
                                  />
-                        <TextBlock Text="{Binding Name}"
+                            <TextBlock Text="{Binding Name}"
                                    FontSize="24"
                                    FontWeight="Bold"
                                    TextWrapping="Wrap"
                                    TextAlignment="Center"/>
-                    </StackPanel>
+                        </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
