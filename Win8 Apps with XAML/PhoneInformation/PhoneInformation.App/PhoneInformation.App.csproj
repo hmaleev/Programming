@@ -119,6 +119,7 @@
     <Compile Include="Models\PhoneModel.cs" />
     <Compile Include="Models\Url.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ComparisonViewModel.cs" />
     <Compile Include="ViewModels\DetailedPhoneInformationViewModel.cs" />
     <Compile Include="ViewModels\PhoneListViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhoneInformation.App.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -39,6 +40,13 @@ namespace PhoneInformation.App.Views.Brands
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
             // TODO: Assign a bindable collection of items to this.DefaultViewModel["Items"]
+        }
+
+        private void StackPanel_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            var x = itemGridView.SelectedItem as PhoneModel;
+            Url.location = x.Link;
+            this.Frame.Navigate(typeof(Views.DetailedInformation.DetailInformation));
         }
     }
 }

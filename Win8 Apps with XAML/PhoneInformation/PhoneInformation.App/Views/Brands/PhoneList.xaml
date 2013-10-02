@@ -24,6 +24,17 @@
         <viewModel:PhoneListViewModel/>
     </Page.DataContext>
 
+    <Page.BottomAppBar>
+        <AppBar x:Name="bottomAppBar" Padding="10,0,10,0">
+            <Grid>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Style="{StaticResource CellphoneAppBarButtonStyle}"/>
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
+
 
     <!--
         This grid acts as a root panel for the page that defines two rows:
@@ -44,13 +55,12 @@
             TabIndex="1"
             Grid.RowSpan="2"
             Padding="116,136,116,46"
-                        ItemsSource="{Binding Phones}"
-
-            SelectionMode="None"
-            IsSwipeEnabled="false">
+            ItemsSource="{Binding Phones}"
+            SelectionMode="Multiple"
+            IsSwipeEnabled="True">
             <GridView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Height="240" Width="110">
+                    <StackPanel Height="240" Width="110" Tapped="StackPanel_Tapped">
                         <Image Source="{Binding ImageSrc}"
                                 Height="150"
                                  />

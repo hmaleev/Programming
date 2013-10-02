@@ -1235,12 +1235,13 @@
     </Style>
     -->
 
-    <!--
+   
     <Style x:Key="CellphoneAppBarButtonStyle" TargetType="ButtonBase" BasedOn="{StaticResource AppBarButtonStyle}">
         <Setter Property="AutomationProperties.AutomationId" Value="CellphoneAppBarButton"/>
-        <Setter Property="AutomationProperties.Name" Value="Cellphone"/>
+        <Setter Property="AutomationProperties.Name" Value="Compare"/>
         <Setter Property="Content" Value="&#xE1C9;"/>
     </Style>
+    <!--
     <Style x:Key="ReshareAppBarButtonStyle" TargetType="ButtonBase" BasedOn="{StaticResource AppBarButtonStyle}">
         <Setter Property="AutomationProperties.AutomationId" Value="ReshareAppBarButton"/>
         <Setter Property="AutomationProperties.Name" Value="Reshare"/>
