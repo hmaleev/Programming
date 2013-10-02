@@ -39,46 +39,50 @@ namespace PhoneInformation.App
         private void onNokiaTap(object sender, TappedRoutedEventArgs e)
         {
             Url.brand = "nokia";
-          this.Frame.Navigate(typeof( Views.Brands.Nokia));
+          this.Frame.Navigate(typeof( Views.Brands.PhoneList));
         }
 
         private void onSamsungTap(object sender, TappedRoutedEventArgs e)
         {
             Url.brand = "samsung";
-            this.Frame.Navigate(typeof(Views.Brands.Samsung));
+            this.Frame.Navigate(typeof(Views.Brands.PhoneList));
         }
 
         private void onSonyTap(object sender, TappedRoutedEventArgs e)
         {
             Url.brand = "sony";
-            this.Frame.Navigate(typeof(Views.Brands.Sony));
+            this.Frame.Navigate(typeof(Views.Brands.PhoneList));
         }
 
         private void onHTCTap(object sender, TappedRoutedEventArgs e)
         {
             Url.brand = "htc";
-           // this.Frame.Navigate(typeof(Views.Brands.PhoneList));
-            this.Frame.Navigate(typeof(Views.Brands.HTC));
+            this.Frame.Navigate(typeof(Views.Brands.PhoneList));
+            //this.Frame.Navigate(typeof(Views.Brands.HTC));
         }
 
         private void onMotorolaTap(object sender, TappedRoutedEventArgs e)
         {
-           this.Frame.Navigate(typeof(Views.Brands.Motorola));
+            Url.brand = "motorola";
+           this.Frame.Navigate(typeof(Views.Brands.PhoneList));
         }
 
         private void onAppleTap(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Views.Brands.Apple));
+            Url.brand = "apple";
+            this.Frame.Navigate(typeof(Views.Brands.PhoneList));
         }
 
         private void onBlackberryTap(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Views.Brands.Blackberry));
+            Url.brand ="blackberry";
+            this.Frame.Navigate(typeof(Views.Brands.PhoneList));
         }
 
         private void onLGTap(object sender, TappedRoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Views.Brands.LG));
+            Url.brand = "lg";
+            this.Frame.Navigate(typeof(Views.Brands.PhoneList));
         }
     }
 }

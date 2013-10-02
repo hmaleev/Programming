@@ -10,10 +10,10 @@ namespace PhoneInformation.App.ViewModels
     class PhoneListViewModel:ViewModelBase
     {
         private ObservableCollection<PhoneModel> phones;
-        private string brand;
+        private string brand = Url.brand;
         public PhoneListViewModel()
         {
-            this.brand = Url.brand;
+          //  this.brand = Url.brand;
         }
 
 

@@ -119,43 +119,11 @@
     <Compile Include="Models\PhoneModel.cs" />
     <Compile Include="Models\Url.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\ApplePhoneListViewModel.cs" />
-    <Compile Include="ViewModels\BlackberryPhoneListViewModel.cs" />
     <Compile Include="ViewModels\DetailedPhoneInformationViewModel.cs" />
-    <Compile Include="ViewModels\HTCPhoneListViewModel.cs" />
-    <Compile Include="ViewModels\LGPhoneListViewModel.cs" />
-    <Compile Include="ViewModels\MotorolaPhoneListViewModel.cs" />
-    <Compile Include="ViewModels\NokiaPhoneListViewModel.cs" />
     <Compile Include="ViewModels\PhoneListViewModel.cs" />
-    <Compile Include="ViewModels\SamsungPhoneListViewModel.cs" />
-    <Compile Include="ViewModels\SonyPhoneListViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
-    <Compile Include="Views\Brands\Apple.xaml.cs">
-      <DependentUpon>Apple.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Brands\Blackberry.xaml.cs">
-      <DependentUpon>Blackberry.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Brands\HTC.xaml.cs">
-      <DependentUpon>HTC.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Brands\LG.xaml.cs">
-      <DependentUpon>LG.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Brands\Motorola.xaml.cs">
-      <DependentUpon>Motorola.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Brands\Nokia.xaml.cs">
-      <DependentUpon>Nokia.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Brands\PhoneList.xaml.cs">
       <DependentUpon>PhoneList.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Brands\Samsung.xaml.cs">
-      <DependentUpon>Samsung.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Brands\Sony.xaml.cs">
-      <DependentUpon>Sony.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Comparison\Comparison.xaml.cs">
       <DependentUpon>Comparison.xaml</DependentUpon>
@@ -191,39 +159,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\Brands\Apple.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Brands\Blackberry.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Brands\HTC.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Brands\LG.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Brands\Motorola.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Brands\Nokia.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\Brands\PhoneList.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Brands\Samsung.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Brands\Sony.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
