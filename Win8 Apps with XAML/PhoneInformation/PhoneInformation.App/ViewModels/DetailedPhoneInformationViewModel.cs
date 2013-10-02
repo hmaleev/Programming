@@ -42,7 +42,7 @@ namespace PhoneInformation.App.ViewModels
         protected async void GetData( string str)
         {
             this.DetailedInfo =
-                await HttpRequest.Get<IEnumerable<DetailedPhoneInformationModel>>("http://localhost:63847/api/PhoneDetails?phoneUrl="+str);
+                await HttpRequest.Get<IEnumerable<DetailedPhoneInformationModel>>("http://phoneinformation.apphb.com//api/PhoneDetails?phoneUrl="+str);
         }
     }
 }

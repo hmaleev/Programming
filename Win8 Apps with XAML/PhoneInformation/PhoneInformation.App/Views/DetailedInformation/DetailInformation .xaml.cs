@@ -154,6 +154,18 @@ namespace PhoneInformation.App.Views.DetailedInformation
                 FeaturesInfo.Visibility = Visibility.Visible;
             }
         }
+                private void onBatteryTap(object sender, TappedRoutedEventArgs e)
+        {
+            if (BatteryInfo.Visibility == Visibility.Visible)
+            {
+                BatteryInfo.Visibility = Visibility.Collapsed;
+
+            }
+            else
+            {
+                BatteryInfo.Visibility = Visibility.Visible;
+            }
+        }
 
     }
 }

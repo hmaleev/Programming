@@ -15,9 +15,9 @@
     </Page.DataContext>
 
     <!--
-        This grid acts as a root panel for the page that defines two rows:
-        * Row 0 contains the back button and page title
-        * Row 1 contains the rest of the page layout
+    This grid acts as a root panel for the page that defines two rows:
+    * Row 0 contains the back button and page title
+    * Row 1 contains the rest of the page layout
     -->
     <Grid Style="{StaticResource LayoutRootStyle}">
         <Grid.RowDefinitions>
@@ -30,6 +30,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
+
             </Grid.ColumnDefinitions>
 
             <TextBlock Name="Link" Visibility="Visible" Text="{Binding Path=URL2, Mode=TwoWay}"/>
@@ -37,290 +38,810 @@
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="Detailed Information" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
+        <!-- START DATA -->
+        <ScrollViewer x:Name="scrollViewer" HorizontalScrollMode="Auto" 
+                      HorizontalScrollBarVisibility="Visible"
+                      VerticalScrollMode="Disabled"
+                      VerticalScrollBarVisibility="Hidden"
+                      Grid.Row="1">
+            <StackPanel x:Name="stackPanel" >
 
-        <StackPanel Grid.Row="1">
+                <Grid>
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
 
-            <ScrollViewer HorizontalScrollMode="Auto" 
-                        HorizontalScrollBarVisibility="Hidden"
-                        VerticalScrollMode="Disabled">
-                <StackPanel Orientation="Horizontal" >
+                    </Grid.ColumnDefinitions>
 
-                    <StackPanel Margin="20 0 0 0" >
-                        <TextBlock Text="General"
-                                  FontSize="42"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap" 
-                                   Tapped="onGeneralTap"
-                                 
-                                  TextAlignment="Center"></TextBlock>
-                        <StackPanel Name="GeneralInfo"  Width="300" Background="Blue"
-Visibility="Collapsed">
-                            <TextBlock Text="{Binding DetailedInfo[0].SecondGenNetwork}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"
-                                   Grid.Column="2"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].ThirdGenNetwork}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].FourthGenNetwork}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Sim}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Announced}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Status}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                        </StackPanel>
-                    </StackPanel>
-                    <StackPanel Margin="20 0 0 0" >
-                        <TextBlock Text="Body"
-                                  FontSize="42"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap" Tapped="onBodyTap" ></TextBlock>
-                        <StackPanel Name="BodyInfo" Width="300" Background="Blue"
-Visibility="Collapsed" Grid.Row="1" Grid.Column="1">
-                            <TextBlock Text="{Binding DetailedInfo[0].Dimensions}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Weight}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                    <TextBlock
+                        Grid.Row="0" 
+                        Grid.Column="0"
+                        Margin="20,0,0,0" 
+                        Text="General" 
+                        FontSize="42"
+                        FontWeight="Bold"
+                        TextWrapping="Wrap" 
+                        Tapped="onGeneralTap"
+                        TextAlignment="Center"/>
+                    <StackPanel 
+                        Grid.Row="1"
+                        Grid.Column="0" 
+                        Name="GeneralInfo" 
+                        Margin="5" 
+                        Width="300" 
+                        Background="Blue"
+                        Visibility="Visible">
 
-                        </StackPanel>
-                    </StackPanel>
-                    <StackPanel Margin="20 0 0 0" >
-                        <TextBlock Text="Display"
-                                  FontSize="42"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap" Tapped="onDisplayTap" ></TextBlock>
-                        <StackPanel Margin="10 0 0 0" Name="DisplayInfo" Width="300" Visibility="Collapsed">
-                            <TextBlock Text="{Binding DetailedInfo[0].DisplayType}"
+                        <TextBlock Text="{Binding DetailedInfo[0].SecondGenNetwork}"
                                    FontSize="20"
                                    FontWeight="Bold"
                                    TextWrapping="Wrap"/>
-                            <TextBlock  Text="{Binding DetailedInfo[0].Size}"
+                        <TextBlock Text="{Binding DetailedInfo[0].ThirdGenNetwork}"
                                    FontSize="20"
                                    FontWeight="Bold"
                                    TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Multitouch}"
+                        <TextBlock Text="{Binding DetailedInfo[0].FourthGenNetwork}"
                                    FontSize="20"
                                    FontWeight="Bold"
                                    TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Protection}"
+                        <TextBlock Text="{Binding DetailedInfo[0].Sim}"
                                    FontSize="20"
                                    FontWeight="Bold"
                                    TextWrapping="Wrap"/>
-
-                        </StackPanel>
-                    </StackPanel>
-                    <StackPanel Margin="20 0 0 0">
-                        <TextBlock Text="Sound"
-                                  FontSize="42"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap" Tapped="onSoundTap" ></TextBlock>
-                        <StackPanel Name="SoundInfo" Width="300" Visibility="Collapsed">
-                            <TextBlock Text="{Binding DetailedInfo[0].AlertTypes}"
+                        <TextBlock Text="{Binding DetailedInfo[0].Announced}"
                                    FontSize="20"
                                    FontWeight="Bold"
                                    TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Loudspeaker}"
+                        <TextBlock Text="{Binding DetailedInfo[0].Status}"
                                    FontSize="20"
                                    FontWeight="Bold"
                                    TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].AudioJack}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].OtherSoundFeatures}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
-                        </StackPanel>
                     </StackPanel>
 
-                    <StackPanel Margin="20 0 0 0">
-                        <TextBlock Text="Memory"
-                                  FontSize="42"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap" Tapped="onMemoryTap"></TextBlock>
-                        <StackPanel Name="MemoryInfo" Width="300" Visibility="Collapsed">
-                            <TextBlock Text="{Binding DetailedInfo[0].CardSlot}"
+                    <TextBlock
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Margin="20,0,0,0"
+                        Text="Body"
+                        FontSize="42"
+                        FontWeight="Bold"
+                        TextAlignment="Center"
+                        TextWrapping="Wrap"
+                        Tapped="onBodyTap" />
+                    <StackPanel
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Name="BodyInfo"
+                        Width="300"
+                        Margin="5"
+                        Background="Blue"
+                        Visibility="Visible">
+
+                        <TextBlock Text="{Binding DetailedInfo[0].Dimensions}"
                                    FontSize="20"
                                    FontWeight="Bold"
                                    TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Internal}"
+                        <TextBlock Text="{Binding DetailedInfo[0].Weight}"
                                    FontSize="20"
                                    FontWeight="Bold"
                                    TextWrapping="Wrap"/>
 
-                        </StackPanel>
-                    </StackPanel>
-                    <StackPanel Margin="20 0 0 0">
-                        <TextBlock Text="Data"
-                                  FontSize="42"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap" Tapped="onDataTap" ></TextBlock>
-                        <StackPanel Name="DataInfo" Width="300" Visibility="Collapsed">
-                            <TextBlock Text="{Binding DetailedInfo[0].GPRS}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].EDGE}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Speed}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].WLan}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Bluetooth}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].USB}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].NFC}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                        </StackPanel>
-                    </StackPanel>
-                    <StackPanel Margin="20 0 0 0">
-                        <TextBlock Text="Camera"
-                                  FontSize="42"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap" Tapped="onCameraTap" ></TextBlock>
-                        <StackPanel Name="CameraInfo" Width="300" Visibility="Collapsed">
-                            <TextBlock Text="{Binding DetailedInfo[0].Primary}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Secondary}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Video}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].CameraFeatures}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
-                        </StackPanel>
-                    </StackPanel>
-                    <StackPanel Margin="20 0 0 0">
-                        <TextBlock Text="Features"
-                                  FontSize="42"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap" Tapped="onFeaturesTap" ></TextBlock>
-                        <StackPanel Name="FeaturesInfo"  Width="300" Visibility="Collapsed">
-                            <TextBlock Text="{Binding DetailedInfo[0].OS}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Chipset}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].CPU}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].GPU}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Sensors}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Messaging}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Browser}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Radio}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].GPS}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Java}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Colors}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].OTherFeatures}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
-                        </StackPanel>
                     </StackPanel>
 
-                    <StackPanel Margin="20 0 0 0">
-                        <TextBlock Text="Battery"
-                                  FontSize="42"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap" Tapped="onSoundTap" ></TextBlock>
-                        <StackPanel Name="batteryInfo"  Width="300" Visibility="Collapsed">
-                            <TextBlock Text="{Binding DetailedInfo[0].AlertTypes}"
+                    <TextBlock
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Text="Display"
+                        Margin="20,0,0,0"
+                        FontSize="42"
+                        FontWeight="Bold"
+                        TextWrapping="Wrap"
+                        Tapped="onDisplayTap" />
+                    <StackPanel
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Name="DisplayInfo"
+                        Margin="5"
+                        Width="300"
+                        Background="Blue"
+                        Visibility="Collapsed">
+
+                        <TextBlock Text="{Binding DetailedInfo[0].DisplayType}"
                                    FontSize="20"
                                    FontWeight="Bold"
                                    TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Loudspeaker}"
+                        <TextBlock  Text="{Binding DetailedInfo[0].Size}"
+                                    FontSize="20"
+                                    FontWeight="Bold"
+                                    TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Multitouch}"
                                    FontSize="20"
                                    FontWeight="Bold"
                                    TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].AudioJack}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].OtherSoundFeatures}"
+                        <TextBlock Text="{Binding DetailedInfo[0].Protection}"
                                    FontSize="20"
                                    FontWeight="Bold"
                                    TextWrapping="Wrap"/>
 
-                        </StackPanel>
                     </StackPanel>
-                </StackPanel>
-            </ScrollViewer>
-        </StackPanel>
 
+                    <TextBlock
+                        Text="Sound"
+                        Margin="20,0,0,0"
+                        Grid.Row="0"
+                        Grid.Column="3"
+                        FontSize="42"
+                        FontWeight="Bold"
+                        TextWrapping="Wrap"
+                        Tapped="onSoundTap"/>
+                    <StackPanel
+                        Grid.Row="1"
+                        Grid.Column="3"
+                        Name="SoundInfo"
+                        Margin="5"
+                        Width="300"
+                        Background="Blue"
+                        Visibility="Collapsed">
+                        <TextBlock Text="{Binding DetailedInfo[0].AlertTypes}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Loudspeaker}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].AudioJack}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].OtherSoundFeatures}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                    <TextBlock
+                        Text="Memory"
+                        Margin="20,0,0,0"
+                        Grid.Row="0"
+                        Grid.Column="4"
+                        FontSize="42"
+                        FontWeight="Bold"
+                        TextWrapping="Wrap" Tapped="onMemoryTap"/>
+                    <StackPanel
+                        Grid.Row="1"
+                        Grid.Column="4"
+                        Name="MemoryInfo"
+                        Margin="5"
+                        Width="300"
+                        Background="Blue"
+                        Visibility="Collapsed">
+                        <TextBlock Text="{Binding DetailedInfo[0].CardSlot}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Internal}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                    <TextBlock
+                        Grid.Row="0"
+                        Grid.Column="5"
+                        Text="Data"
+                        Margin="20,0,0,0"
+                        FontSize="42"
+                        FontWeight="Bold"
+                        TextWrapping="Wrap" Tapped="onDataTap" />
+                    <StackPanel
+                        Grid.Row="1" 
+                        Grid.Column="5"
+                        Name="DataInfo"
+                        Margin="5"
+                        Width="300" 
+                        Background="Blue"
+                        Visibility="Collapsed">
+                        <TextBlock Text="{Binding DetailedInfo[0].GPRS}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].EDGE}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Speed}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].WLan}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Bluetooth}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].USB}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].NFC}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                    </StackPanel>
+
+                    <TextBlock
+                        Text="Camera"
+                        Margin="20,0,0,0"
+                        Grid.Row="0"
+                        Grid.Column="6"
+                        FontSize="42"
+                        FontWeight="Bold"
+                        TextWrapping="Wrap"
+                        Tapped="onCameraTap" />
+                    <StackPanel
+                        Grid.Row="1"
+                        Grid.Column="6"
+                        Name="CameraInfo"
+                        Margin="5" 
+                        Width="300" 
+                        Background="Blue"
+                        Visibility="Collapsed">
+                        <TextBlock Text="{Binding DetailedInfo[0].Primary}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Secondary}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Video}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].CameraFeatures}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                    <TextBlock
+                        Grid.Row="0"
+                        Grid.Column="7"
+                        Text="Features"
+                        Margin="20,0,0,0"
+                        FontSize="42"
+                        FontWeight="Bold"
+                        TextWrapping="Wrap" 
+                        Tapped="onFeaturesTap" />
+                    <StackPanel
+                        Grid.Row="1"
+                        Grid.Column="7"
+                        Name="FeaturesInfo"
+                        Margin="5"
+                        Width="300"
+                        Background="Blue"
+                        Visibility="Collapsed">
+                        <TextBlock Text="{Binding DetailedInfo[0].OS}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Chipset}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].CPU}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].GPU}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Sensors}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Messaging}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Browser}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Radio}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].GPS}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Java}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Colors}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].OTherFeatures}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                    <TextBlock
+                        Grid.Row="0"
+                        Grid.Column="8"
+                        Text="Battery"
+                        Margin="20,0,0,0"
+                        FontSize="42"
+                        FontWeight="Bold"
+                        TextWrapping="Wrap"
+                        Tapped="onBatteryTap" />
+                    <StackPanel 
+                        Grid.Row="1"
+                        Grid.Column="8"
+                        Name="BatteryInfo"
+                        Margin="5"
+                        Width="300"
+                        Background="Blue"
+                        Visibility="Collapsed">
+                        <TextBlock Text="{Binding DetailedInfo[0].BatteryType}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].StandbyTime}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].TalkTime}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].MusicPlayTime}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer x:Name="scrollViewer1" HorizontalScrollMode="Auto" 
+                      HorizontalScrollBarVisibility="Visible"
+                      VerticalScrollMode="Auto"
+                      VerticalScrollBarVisibility="Visible"
+                      Grid.Row="1">
+            <StackPanel>
+
+                <Grid >
+                    <Grid.RowDefinitions >
+                        
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+
+                       
+                    </Grid.RowDefinitions>
+
+                    <TextBlock
+                        Grid.Row="0" 
+                        Margin="20,0,0,0" 
+                        Text="General" 
+                        FontSize="42"
+                        FontWeight="Bold"
+                        TextWrapping="Wrap" 
+                        Tapped="onGeneralTap"
+                        TextAlignment="Center" HorizontalAlignment="Left"/>
+                    <StackPanel 
+                        Grid.Row="1"
+                        Name="GeneralInfoSnapped" 
+                        Margin="5" 
+                        Width="300" 
+                        Background="Blue"
+                        Visibility="Collapsed">
+
+                        <TextBlock Text="{Binding DetailedInfo[0].SecondGenNetwork}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].ThirdGenNetwork}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].FourthGenNetwork}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Sim}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Announced}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Status}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                    </StackPanel>
+
+                    <TextBlock
+                        Grid.Row="2"
+                        Margin="20,0,0,0"
+                        Text="Body"
+                        FontSize="42"
+                        FontWeight="Bold"
+                        TextAlignment="Center"
+                        TextWrapping="Wrap"
+                        Tapped="onBodyTap" HorizontalAlignment="Left" />
+                    <StackPanel
+                        Grid.Row="3"
+                        Name="BodyInfoSnapped"
+                        Width="300"
+                        Margin="5"
+                        Background="Blue"
+                        Visibility="Collapsed">
+
+                        <TextBlock Text="{Binding DetailedInfo[0].Dimensions}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Weight}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                    <TextBlock
+                        Grid.Row="4"
+                        Text="Display"
+                        Margin="20,0,0,0"
+                        FontSize="42"
+                        FontWeight="Bold"
+                        TextWrapping="Wrap"
+                        Tapped="onDisplayTap" />
+                    <StackPanel
+                        Grid.Row="5"
+                        Grid.Column="2"
+                        Name="DisplayInfoSnaped"
+                        Margin="5"
+                        Width="300"
+                        Background="Blue"
+                        Visibility="Collapsed">
+
+                        <TextBlock Text="{Binding DetailedInfo[0].DisplayType}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock  Text="{Binding DetailedInfo[0].Size}"
+                                    FontSize="20"
+                                    FontWeight="Bold"
+                                    TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Multitouch}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Protection}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                    <TextBlock
+                        Text="Sound"
+                        Margin="20,0,0,0"
+                        Grid.Row="6"
+                        FontSize="42"
+                        FontWeight="Bold"
+                        TextWrapping="Wrap"
+                        Tapped="onSoundTap"/>
+                    <StackPanel
+                        Grid.Row="7"
+                        Name="SoundInfoSnapped"
+                        Margin="5"
+                        Width="300"
+                        Background="Blue"
+                        Visibility="Collapsed">
+                        <TextBlock Text="{Binding DetailedInfo[0].AlertTypes}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Loudspeaker}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].AudioJack}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].OtherSoundFeatures}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                    <TextBlock
+                        Text="Memory"
+                        Margin="20,0,0,0"
+                        Grid.Row="8"
+                        FontSize="42"
+                        FontWeight="Bold"
+                        TextWrapping="Wrap" Tapped="onMemoryTap"/>
+                    <StackPanel
+                        Grid.Row="9"
+                        Grid.Column="4"
+                        Name="MemoryInfoSnapped"
+                        Margin="5"
+                        Width="300"
+                        Background="Blue"
+                        Visibility="Collapsed">
+                        <TextBlock Text="{Binding DetailedInfo[0].CardSlot}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Internal}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                    <TextBlock
+                        Grid.Row="10"
+                        Text="Data"
+                        Margin="20,0,0,0"
+                        FontSize="42"
+                        FontWeight="Bold"
+                        TextWrapping="Wrap" Tapped="onDataTap" />
+                    <StackPanel
+                        Grid.Row="11" 
+                        Name="DataInfoSnapped"
+                        Margin="5"
+                        Width="300" 
+                        Background="Blue"
+                        Visibility="Collapsed">
+                        <TextBlock Text="{Binding DetailedInfo[0].GPRS}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].EDGE}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Speed}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].WLan}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Bluetooth}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].USB}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].NFC}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                    </StackPanel>
+
+                    <TextBlock
+                        Text="Camera"
+                        Margin="20,0,0,0"
+                        Grid.Row="12"
+                        FontSize="42"
+                        FontWeight="Bold"
+                        TextWrapping="Wrap"
+                        Tapped="onCameraTap" />
+                    <StackPanel
+                        Grid.Row="13"
+                        Name="CameraInfoSnapped"
+                        Margin="5" 
+                        Width="300" 
+                        Background="Blue"
+                        Visibility="Collapsed">
+                        <TextBlock Text="{Binding DetailedInfo[0].Primary}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Secondary}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Video}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].CameraFeatures}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                    <TextBlock
+                        Grid.Row="13"
+                        Text="Features"
+                        Margin="20,0,0,0"
+                        FontSize="42"
+                        FontWeight="Bold"
+                        TextWrapping="Wrap" 
+                        Tapped="onFeaturesTap" />
+                    <StackPanel
+                        Grid.Row="14"
+                        Name="FeaturesInfoSnapped"
+                        Margin="5"
+                        Width="300"
+                        Background="Blue"
+                        Visibility="Collapsed">
+                        <TextBlock Text="{Binding DetailedInfo[0].OS}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Chipset}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].CPU}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].GPU}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Sensors}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Messaging}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Browser}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Radio}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].GPS}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Java}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].Colors}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].OTherFeatures}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                    <TextBlock
+                        Grid.Row="15"
+                        Text="Battery"
+                        Margin="20,0,0,0"
+                        FontSize="42"
+                        FontWeight="Bold"
+                        TextWrapping="Wrap"
+                        Tapped="onBatteryTap" />
+                    <StackPanel 
+                        Grid.Row="16"
+                        Name="BatteryInfoSnapped"
+                        Margin="5"
+                        Width="300"
+                        Background="Blue"
+                        Visibility="Collapsed">
+                        <TextBlock Text="{Binding DetailedInfo[0].BatteryType}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].StandbyTime}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].TalkTime}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding DetailedInfo[0].MusicPlayTime}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+        <!-- END DATA -->
         <VisualStateManager.VisualStateGroups>
 
             <!-- Visual states reflect the application's view state -->
             <VisualStateGroup x:Name="ApplicationViewStates">
-                <VisualState x:Name="FullScreenLandscape"/>
+                <VisualState x:Name="FullScreenLandscape">
+                	<Storyboard>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="scrollViewer1">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Collapsed</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="GeneralInfo">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Collapsed</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                		<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="BodyInfo">
+                			<DiscreteObjectKeyFrame KeyTime="0">
+                				<DiscreteObjectKeyFrame.Value>
+                					<Visibility>Collapsed</Visibility>
+                				</DiscreteObjectKeyFrame.Value>
+                			</DiscreteObjectKeyFrame>
+                		</ObjectAnimationUsingKeyFrames>
+                	</Storyboard>
+                </VisualState>
                 <VisualState x:Name="Filled"/>
 
                 <!-- The entire page respects the narrower 100-pixel margin convention for portrait -->
@@ -340,6 +861,20 @@ Visibility="Collapsed" Grid.Row="1" Grid.Column="1">
                         </ObjectAnimationUsingKeyFrames>
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="pageTitle" Storyboard.TargetProperty="Style">
                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedPageHeaderTextStyle}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="stackPanel">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<Visibility>Collapsed</Visibility>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="scrollViewer">
+                        	<DiscreteObjectKeyFrame KeyTime="0">
+                        		<DiscreteObjectKeyFrame.Value>
+                        			<Visibility>Collapsed</Visibility>
+                        		</DiscreteObjectKeyFrame.Value>
+                        	</DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
                     </Storyboard>
                 </VisualState>

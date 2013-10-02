@@ -13,7 +13,7 @@ namespace PhoneInformation.App.ViewModels
         private string brand = Url.brand;
         public PhoneListViewModel()
         {
-          //  this.brand = Url.brand;
+        
         }
 
 
@@ -42,7 +42,7 @@ namespace PhoneInformation.App.ViewModels
         protected async void GetData(string brand)
         {
             this.Phones =
-                await HttpRequest.Get<IEnumerable<PhoneModel>>("http://localhost:63847/api/PhoneList?brand="+brand);
+                await HttpRequest.Get<IEnumerable<PhoneModel>>("http://phoneinformation.apphb.com/api/PhoneList?brand="+brand);
         }
     }
 }
