@@ -38,50 +38,50 @@ namespace PhoneInformation.App
 
         private void onNokiaTap(object sender, TappedRoutedEventArgs e)
         {
-            Url.brand = "nokia";
+            Parameters.brand = "nokia";
           this.Frame.Navigate(typeof( Views.Brands.PhoneList));
         }
 
         private void onSamsungTap(object sender, TappedRoutedEventArgs e)
         {
-            Url.brand = "samsung";
+            Parameters.brand = "samsung";
             this.Frame.Navigate(typeof(Views.Brands.PhoneList));
         }
 
         private void onSonyTap(object sender, TappedRoutedEventArgs e)
         {
-            Url.brand = "sony";
+            Parameters.brand = "sony";
             this.Frame.Navigate(typeof(Views.Brands.PhoneList));
         }
 
         private void onHTCTap(object sender, TappedRoutedEventArgs e)
         {
-            Url.brand = "htc";
+            Parameters.brand = "htc";
             this.Frame.Navigate(typeof(Views.Brands.PhoneList));
             //this.Frame.Navigate(typeof(Views.Brands.HTC));
         }
 
         private void onMotorolaTap(object sender, TappedRoutedEventArgs e)
         {
-            Url.brand = "motorola";
+            Parameters.brand = "motorola";
            this.Frame.Navigate(typeof(Views.Brands.PhoneList));
         }
 
         private void onAppleTap(object sender, TappedRoutedEventArgs e)
         {
-            Url.brand = "apple";
+            Parameters.brand = "apple";
             this.Frame.Navigate(typeof(Views.Brands.PhoneList));
         }
 
         private void onBlackberryTap(object sender, TappedRoutedEventArgs e)
         {
-            Url.brand ="blackberry";
+            Parameters.brand ="blackberry";
             this.Frame.Navigate(typeof(Views.Brands.PhoneList));
         }
 
         private void onLGTap(object sender, TappedRoutedEventArgs e)
         {
-            Url.brand = "lg";
+            Parameters.brand = "lg";
             this.Frame.Navigate(typeof(Views.Brands.PhoneList));
         }
     }

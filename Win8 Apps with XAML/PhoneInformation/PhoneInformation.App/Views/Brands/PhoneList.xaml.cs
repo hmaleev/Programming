@@ -45,8 +45,21 @@ namespace PhoneInformation.App.Views.Brands
         private void StackPanel_Tapped(object sender, TappedRoutedEventArgs e)
         {
             var x = itemGridView.SelectedItem as PhoneModel;
-            Url.location = x.Link;
+            Parameters.location = x.Link;
+            this.Frame.Navigate(typeof(Views.DetailedInformation.DetailInformation));
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedItems = itemGridView.SelectedItems;
+            var firstPhone = selectedItems[0] as PhoneModel;
+            var secondPhone = selectedItems[1] as PhoneModel;
+            string[] splitedString = firstPhone.Link.Split('-','.');
+            Parameters.firstPhoneId = splitedString[1];
+            splitedString = secondPhone.Link.Split('-', '.');
+            Parameters.secondPhoneId = splitedString[1];
             this.Frame.Navigate(typeof(Views.Comparison.Comparison));
+
         }
     }
 }

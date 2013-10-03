@@ -48,17 +48,19 @@ namespace PhoneInformation.App.Views.Comparison
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
         }
-        
+
         private void onGeneralTap(object sender, TappedRoutedEventArgs e)
         {
-            if (GeneralInfo.Visibility==Visibility.Visible)
+            if (GeneralInfo.Visibility == Visibility.Visible)
             {
                 GeneralInfo.Visibility = Visibility.Collapsed;
+                GeneralInfoS.Visibility = Visibility.Collapsed;
 
             }
             else
             {
                 GeneralInfo.Visibility = Visibility.Visible;
+                GeneralInfoS.Visibility = Visibility.Visible;
             }
         }
         private void onBodyTap(object sender, TappedRoutedEventArgs e)
@@ -66,11 +68,13 @@ namespace PhoneInformation.App.Views.Comparison
             if (BodyInfo.Visibility == Visibility.Visible)
             {
                 BodyInfo.Visibility = Visibility.Collapsed;
+                BodyInfo2.Visibility = Visibility.Collapsed;
 
             }
             else
             {
                 BodyInfo.Visibility = Visibility.Visible;
+                BodyInfo2.Visibility = Visibility.Visible;
             }
         }
         private void onDisplayTap(object sender, TappedRoutedEventArgs e)
@@ -78,11 +82,13 @@ namespace PhoneInformation.App.Views.Comparison
             if (DisplayInfo.Visibility == Visibility.Visible)
             {
                 DisplayInfo.Visibility = Visibility.Collapsed;
+                DisplayInfo2.Visibility = Visibility.Collapsed;
 
             }
             else
             {
                 DisplayInfo.Visibility = Visibility.Visible;
+                DisplayInfo2.Visibility = Visibility.Visible;
             }
         }
         private void onSoundTap(object sender, TappedRoutedEventArgs e)
@@ -90,11 +96,13 @@ namespace PhoneInformation.App.Views.Comparison
             if (SoundInfo.Visibility == Visibility.Visible)
             {
                 SoundInfo.Visibility = Visibility.Collapsed;
+                SoundInfo2.Visibility = Visibility.Collapsed;
 
             }
             else
             {
                 SoundInfo.Visibility = Visibility.Visible;
+                SoundInfo2.Visibility = Visibility.Visible;
             }
         }
         private void onMemoryTap(object sender, TappedRoutedEventArgs e)
@@ -102,11 +110,13 @@ namespace PhoneInformation.App.Views.Comparison
             if (MemoryInfo.Visibility == Visibility.Visible)
             {
                 MemoryInfo.Visibility = Visibility.Collapsed;
+                MemoryInfo2.Visibility = Visibility.Collapsed;
 
             }
             else
             {
                 MemoryInfo.Visibility = Visibility.Visible;
+                MemoryInfo2.Visibility = Visibility.Visible;
             }
         }
         private void onDataTap(object sender, TappedRoutedEventArgs e)
@@ -114,11 +124,13 @@ namespace PhoneInformation.App.Views.Comparison
             if (DataInfo.Visibility == Visibility.Visible)
             {
                 DataInfo.Visibility = Visibility.Collapsed;
+                DataInfo2.Visibility = Visibility.Collapsed;
 
             }
             else
             {
                 DataInfo.Visibility = Visibility.Visible;
+                DataInfo2.Visibility = Visibility.Visible;
             }
         }
         private void onCameraTap(object sender, TappedRoutedEventArgs e)
@@ -126,11 +138,13 @@ namespace PhoneInformation.App.Views.Comparison
             if (CameraInfo.Visibility == Visibility.Visible)
             {
                 CameraInfo.Visibility = Visibility.Collapsed;
+                CameraInfo2.Visibility = Visibility.Collapsed;
 
             }
             else
             {
                 CameraInfo.Visibility = Visibility.Visible;
+                CameraInfo2.Visibility = Visibility.Visible;
             }
         }
         private void onFeaturesTap(object sender, TappedRoutedEventArgs e)
@@ -138,11 +152,13 @@ namespace PhoneInformation.App.Views.Comparison
             if (FeaturesInfo.Visibility == Visibility.Visible)
             {
                 FeaturesInfo.Visibility = Visibility.Collapsed;
+                FeaturesInfo2.Visibility = Visibility.Collapsed;
 
             }
             else
             {
                 FeaturesInfo.Visibility = Visibility.Visible;
+                FeaturesInfo2.Visibility = Visibility.Visible;
             }
         }
         private void onBatteryTap(object sender, TappedRoutedEventArgs e)
@@ -150,11 +166,13 @@ namespace PhoneInformation.App.Views.Comparison
             if (BatteryInfo.Visibility == Visibility.Visible)
             {
                 BatteryInfo.Visibility = Visibility.Collapsed;
+                BatteryInfo2.Visibility = Visibility.Collapsed;
 
             }
             else
             {
                 BatteryInfo.Visibility = Visibility.Visible;
+                BatteryInfo2.Visibility = Visibility.Visible;
             }
         }
 

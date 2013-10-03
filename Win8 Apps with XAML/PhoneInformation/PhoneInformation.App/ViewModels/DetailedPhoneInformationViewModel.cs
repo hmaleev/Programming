@@ -14,7 +14,7 @@ namespace PhoneInformation.App.ViewModels
 
         public DetailedPhoneInformationViewModel()
         {
-            this.url = Url.location;
+            this.url = Parameters.location;
         }
 
         public IEnumerable<DetailedPhoneInformationModel> DetailedInfo

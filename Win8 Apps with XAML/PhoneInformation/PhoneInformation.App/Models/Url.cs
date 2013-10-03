@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace PhoneInformation.App.Models
 {
-    public  class Url
+    public  class Parameters
     {
         public static string location;
         public static string brand;
-        public Url()
+        public static string firstPhoneId;
+        public static string secondPhoneId;
+        public Parameters()
         {
             
         }

@@ -29,7 +29,7 @@
             <Grid>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button Style="{StaticResource CellphoneAppBarButtonStyle}"/>
+                    <Button Style="{StaticResource CellphoneAppBarButtonStyle}" Click="Button_Click"/>
                 </StackPanel>
             </Grid>
         </AppBar>
@@ -71,7 +71,6 @@
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
-
         <!-- Vertical scrolling list only used when snapped -->
         <ListView
             x:Name="itemListView"

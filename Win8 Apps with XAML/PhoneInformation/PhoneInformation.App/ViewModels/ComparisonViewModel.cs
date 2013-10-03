@@ -10,11 +10,13 @@ namespace PhoneInformation.App.ViewModels
     class ComparisonViewModel:ViewModelBase
     {
           private ObservableCollection<DetailedPhoneInformationModel> detailedInfo;
-        private string url;
+        private string firstPhoneId;
+        private string secondPhoneId;
 
         public ComparisonViewModel()
         {
-            this.url = Url.location;
+            this.firstPhoneId = Parameters.firstPhoneId;
+            this.secondPhoneId = Parameters.secondPhoneId;
         }
 
         public IEnumerable<DetailedPhoneInformationModel> DetailedInfo
@@ -24,7 +26,7 @@ namespace PhoneInformation.App.ViewModels
                 if (this.detailedInfo == null)
                 {
                     this.detailedInfo = new ObservableCollection<DetailedPhoneInformationModel>();
-                    this.GetData("5322","3233");
+                    this.GetData(firstPhoneId,secondPhoneId);
 
                 }
                 return this.detailedInfo;
