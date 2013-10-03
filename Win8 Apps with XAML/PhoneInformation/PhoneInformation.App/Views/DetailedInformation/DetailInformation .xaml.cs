@@ -1,18 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using System.Text;
+using Windows.Storage;
+using Windows.Storage.Pickers;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-using PhoneInformation.App.ViewModels;
-using PhoneInformation.App.Models;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
@@ -23,7 +16,6 @@ namespace PhoneInformation.App.Views.DetailedInformation
     /// </summary>
     public sealed partial class DetailInformation : PhoneInformation.App.Common.LayoutAwarePage
     {
-        public string r;
         public DetailInformation()
         {
             this.InitializeComponent();
@@ -55,8 +47,9 @@ namespace PhoneInformation.App.Views.DetailedInformation
         /// <param name="pageState">An empty dictionary to be populated with serializable state.</param>
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
+
         }
-                private void onPhonesTap(object sender, TappedRoutedEventArgs e)
+        private void OnPhonesTap(object sender, TappedRoutedEventArgs e)
         {
             if (FirstPhoneInfo.Visibility == Visibility.Visible)
             {
@@ -68,7 +61,7 @@ namespace PhoneInformation.App.Views.DetailedInformation
                 FirstPhoneInfo.Visibility = Visibility.Visible;
             }
         }
-        private void onGeneralTap(object sender, TappedRoutedEventArgs e)
+        private void OnGeneralTap(object sender, TappedRoutedEventArgs e)
         {
             if (GeneralInfo.Visibility==Visibility.Visible)
             {
@@ -80,7 +73,7 @@ namespace PhoneInformation.App.Views.DetailedInformation
                 GeneralInfo.Visibility = Visibility.Visible;
             }
         }
-        private void onBodyTap(object sender, TappedRoutedEventArgs e)
+        private void OnBodyTap(object sender, TappedRoutedEventArgs e)
         {
             if (BodyInfo.Visibility == Visibility.Visible)
             {
@@ -92,7 +85,7 @@ namespace PhoneInformation.App.Views.DetailedInformation
                 BodyInfo.Visibility = Visibility.Visible;
             }
         }
-        private void onDisplayTap(object sender, TappedRoutedEventArgs e)
+        private void OnDisplayTap(object sender, TappedRoutedEventArgs e)
         {
             if (DisplayInfo.Visibility == Visibility.Visible)
             {
@@ -104,7 +97,7 @@ namespace PhoneInformation.App.Views.DetailedInformation
                 DisplayInfo.Visibility = Visibility.Visible;
             }
         }
-        private void onSoundTap(object sender, TappedRoutedEventArgs e)
+        private void OnSoundTap(object sender, TappedRoutedEventArgs e)
         {
             if (SoundInfo.Visibility == Visibility.Visible)
             {
@@ -116,7 +109,7 @@ namespace PhoneInformation.App.Views.DetailedInformation
                 SoundInfo.Visibility = Visibility.Visible;
             }
         }
-        private void onMemoryTap(object sender, TappedRoutedEventArgs e)
+        private void OnMemoryTap(object sender, TappedRoutedEventArgs e)
         {
             if (MemoryInfo.Visibility == Visibility.Visible)
             {
@@ -128,7 +121,7 @@ namespace PhoneInformation.App.Views.DetailedInformation
                 MemoryInfo.Visibility = Visibility.Visible;
             }
         }
-        private void onDataTap(object sender, TappedRoutedEventArgs e)
+        private void OnDataTap(object sender, TappedRoutedEventArgs e)
         {
             if (DataInfo.Visibility == Visibility.Visible)
             {
@@ -140,7 +133,7 @@ namespace PhoneInformation.App.Views.DetailedInformation
                 DataInfo.Visibility = Visibility.Visible;
             }
         }
-        private void onCameraTap(object sender, TappedRoutedEventArgs e)
+        private void OnCameraTap(object sender, TappedRoutedEventArgs e)
         {
             if (CameraInfo.Visibility == Visibility.Visible)
             {
@@ -152,7 +145,7 @@ namespace PhoneInformation.App.Views.DetailedInformation
                 CameraInfo.Visibility = Visibility.Visible;
             }
         }
-        private void onFeaturesTap(object sender, TappedRoutedEventArgs e)
+        private void OnFeaturesTap(object sender, TappedRoutedEventArgs e)
         {
             if (FeaturesInfo.Visibility == Visibility.Visible)
             {
@@ -164,7 +157,7 @@ namespace PhoneInformation.App.Views.DetailedInformation
                 FeaturesInfo.Visibility = Visibility.Visible;
             }
         }
-        private void onBatteryTap(object sender, TappedRoutedEventArgs e)
+        private void OnBatteryTap(object sender, TappedRoutedEventArgs e)
         {
             if (BatteryInfo.Visibility == Visibility.Visible)
             {
@@ -175,6 +168,136 @@ namespace PhoneInformation.App.Views.DetailedInformation
             {
                 BatteryInfo.Visibility = Visibility.Visible;
             }
+        }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string res = SavePhoneInformation();
+            
+            FileSavePicker savePicker = new FileSavePicker();
+            savePicker.SuggestedStartLocation = PickerLocationId.DocumentsLibrary;
+            savePicker.FileTypeChoices.Add("Plain Text", new List<string>() { ".txt" });
+            savePicker.SuggestedFileName = "PhoneInformation";
+            StorageFile file = await savePicker.PickSaveFileAsync();
+            if (file!=null)
+            {
+                  await FileIO.WriteTextAsync(file, res,Windows.Storage.Streams.UnicodeEncoding.Utf8);
+            }
+        }
+  
+        private string SavePhoneInformation()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Phone Model: ");
+            sb.AppendLine(PhoneName.Text);
+            sb.AppendLine("----------General Information----------");
+            sb.Append("2G Network: ");
+            sb.AppendLine(SecondGenNetwork.Text);
+            sb.Append("3G Network: ");
+            sb.AppendLine(ThirdGenNetwork.Text);
+            sb.Append("4G Network: ");
+            sb.AppendLine(FourthGenNetwork.Text);
+            sb.Append("Sim card size: ");
+            sb.AppendLine( Sim.Text);
+            sb.Append("Announced: ");
+            sb.AppendLine(Announced.Text);
+            sb.Append("Status: ");
+            sb.AppendLine(Status.Text);
+
+            sb.AppendLine("----------Body Information----------");
+            sb.Append("Dimensions: ");
+            sb.AppendLine(Dimensions.Text);
+            sb.Append("Weight: ");
+            sb.AppendLine(Weight.Text);
+
+            sb.AppendLine("----------Screen Information----------");
+            sb.Append("Display Type: ");
+            sb.AppendLine(DisplayType.Text);
+            sb.Append("Size: ");
+            sb.AppendLine(Size.Text);
+            sb.Append("Multitouch: ");
+            sb.AppendLine(Multitouch.Text);
+            sb.Append("Screen Protection: ");
+            sb.AppendLine(Protection.Text);
+
+            sb.AppendLine("----------Sound Information----------");
+            sb.Append("Alert Types: ");
+            sb.AppendLine(AlertTypes.Text);
+            sb.Append("Loudspeaker: ");
+            sb.AppendLine(Loudspeaker.Text);
+            sb.Append("3.5mm Audio Jack: ");
+            sb.AppendLine(AudioJack.Text);
+            sb.Append("Other Sound Features: ");
+            sb.AppendLine(OtherSoundFeatures.Text);
+
+            sb.AppendLine("----------Memory Information----------");
+            sb.Append("Card Slot: ");
+            sb.AppendLine(CardSlot.Text);
+            sb.Append("Internal Memory: ");
+            sb.AppendLine(Internal.Text);
+
+            sb.AppendLine("----------Data Information----------");
+            sb.Append("GPRS: ");
+            sb.AppendLine("Nokia");
+            sb.Append("EDGE: ");
+            sb.AppendLine("Nokia");
+            sb.Append("Speed: ");
+            sb.AppendLine("Nokia");
+            sb.Append("Wi-Fi: ");
+            sb.AppendLine("Nokia");
+            sb.Append("NFC: ");
+            sb.AppendLine("Nokia");
+            sb.Append("USB: ");
+            sb.AppendLine("Nokia");
+
+            sb.AppendLine("----------Camera Information----------");
+            sb.Append("Primary camera: ");
+            sb.AppendLine("Nokia");
+            sb.Append("Secondary camera: ");
+            sb.AppendLine("Nokia");
+            sb.Append("Video: ");
+            sb.AppendLine("Nokia");
+            sb.Append("Other camera features: ");
+            sb.AppendLine("Nokia");
+
+            sb.AppendLine("----------Features Information----------");
+            sb.Append("Operating Sytem: ");
+            sb.AppendLine("Nokia");
+            sb.Append("Chipset: ");
+            sb.AppendLine("Nokia");
+            sb.Append("CPU: ");
+            sb.AppendLine("Nokia");
+            sb.Append("GPU: ");
+            sb.AppendLine("Nokia");
+            sb.Append("Sensors: ");
+            sb.AppendLine("Nokia");
+            sb.Append("Messaging: ");
+            sb.AppendLine("Nokia");
+            sb.Append("Browser: ");
+            sb.AppendLine("Nokia");
+            sb.Append("Radio: ");
+            sb.AppendLine("Nokia");
+            sb.Append("GPS: ");
+            sb.AppendLine("Nokia");
+            sb.Append("Java: ");
+            sb.AppendLine("Nokia");
+            sb.Append("Colors: ");
+            sb.AppendLine("Nokia");
+            sb.Append("Other Features: ");
+            sb.AppendLine("Nokia");
+
+            sb.AppendLine("----------Battery Information----------");
+            sb.Append("Battery Type: ");
+            sb.AppendLine("Nokia");
+            sb.Append("Standby Time: ");
+            sb.AppendLine("Nokia");
+            sb.Append("Talk Time: ");
+            sb.AppendLine("Nokia");
+            sb.Append("Music Play Time");
+            sb.AppendLine("Nokia");
+
+            string res = sb.ToString();
+            return res;
         }
 
     }
