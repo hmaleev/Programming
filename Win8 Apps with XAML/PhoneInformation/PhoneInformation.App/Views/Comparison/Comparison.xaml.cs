@@ -49,6 +49,20 @@ namespace PhoneInformation.App.Views.Comparison
         {
         }
 
+        private void onPhonesTap(object sender, TappedRoutedEventArgs e)
+        {
+            if (FirstPhoneInfo.Visibility == Visibility.Visible)
+            {
+                FirstPhoneInfo.Visibility = Visibility.Collapsed;
+                SecondPhoneInfo.Visibility = Visibility.Collapsed;
+
+            }
+            else
+            {
+                FirstPhoneInfo.Visibility = Visibility.Visible;
+                SecondPhoneInfo.Visibility = Visibility.Visible;
+            }
+        }
         private void onGeneralTap(object sender, TappedRoutedEventArgs e)
         {
             if (GeneralInfo.Visibility == Visibility.Visible)

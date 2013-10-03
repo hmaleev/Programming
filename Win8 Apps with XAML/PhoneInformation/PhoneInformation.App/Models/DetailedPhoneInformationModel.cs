@@ -14,6 +14,9 @@ namespace PhoneInformation.App.Models
 
         private string gps;
 
+        public string ImageUrl { get; set; }
+        public string PhoneName { get; set; }
+
         //I General
         public string SecondGenNetwork { get; set; }
         public string ThirdGenNetwork { get; set; }

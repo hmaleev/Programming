@@ -56,7 +56,18 @@ namespace PhoneInformation.App.Views.DetailedInformation
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
         }
+                private void onPhonesTap(object sender, TappedRoutedEventArgs e)
+        {
+            if (FirstPhoneInfo.Visibility == Visibility.Visible)
+            {
+                FirstPhoneInfo.Visibility = Visibility.Collapsed;
 
+            }
+            else
+            {
+                FirstPhoneInfo.Visibility = Visibility.Visible;
+            }
+        }
         private void onGeneralTap(object sender, TappedRoutedEventArgs e)
         {
             if (GeneralInfo.Visibility==Visibility.Visible)

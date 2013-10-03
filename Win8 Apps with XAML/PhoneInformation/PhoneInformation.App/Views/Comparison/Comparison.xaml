@@ -55,13 +55,19 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
+                        
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
+                        
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
+                        
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
+                        
                         <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
 
@@ -71,6 +77,57 @@
                         Grid.Row="0" 
                         Grid.Column="0"
                         Margin="20,0,0,0" 
+                        Text="Phones" 
+                        FontSize="42"
+                        FontWeight="Bold"
+                        TextWrapping="Wrap" 
+                        Tapped="onPhonesTap"
+                        TextAlignment="Center"/>
+                    <StackPanel 
+                        Grid.Row="1"
+                        Grid.Column="0" 
+                        Name="FirstPhoneInfo" 
+                        Margin="5" 
+                        Width="300" 
+                        Background="#87CEEB"
+                        Visibility="Visible">
+
+                        <TextBlock Grid.Row="0"
+                            Text="{Binding DetailedInfo[0].PhoneName}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+
+
+                        <Image Source="{Binding DetailedInfo[0].ImageUrl}"
+                               MaxHeight="300"/>
+                        
+                    </StackPanel>
+                    <StackPanel 
+                        Grid.Row="2"
+                        Grid.Column="0" 
+                        Name="SecondPhoneInfo" 
+                        Margin="5" 
+                        Width="300" 
+                        Background="#87CEEB"
+                        Visibility="Visible">
+
+                        <TextBlock Grid.Row="0"
+                            Text="{Binding DetailedInfo[1].PhoneName}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+
+
+                        <Image Source="{Binding DetailedInfo[1].ImageUrl}"
+                               MaxHeight="300"/>
+                                 
+                    </StackPanel>
+
+                    <TextBlock
+                        Grid.Row="0" 
+                        Grid.Column="1"
+                        Margin="20,0,0,0" 
                         Text="General" 
                         FontSize="42"
                         FontWeight="Bold"
@@ -79,7 +136,7 @@
                         TextAlignment="Center"/>
                     <StackPanel 
                         Grid.Row="1"
-                        Grid.Column="0" 
+                        Grid.Column="1" 
                         Name="GeneralInfo" 
                         Margin="5" 
                         Width="300" 
@@ -117,7 +174,7 @@
                     </StackPanel>
                     <StackPanel 
                         Grid.Row="2"
-                        Grid.Column="0" 
+                        Grid.Column="1" 
                         Name="GeneralInfoS" 
                         Margin="5" 
                         Width="300" 
@@ -156,7 +213,7 @@
 
                     <TextBlock
                         Grid.Row="0"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         Margin="20,0,0,0"
                         Text="Body"
                         FontSize="42"
@@ -166,7 +223,7 @@
                         Tapped="onBodyTap" />
                     <StackPanel
                         Grid.Row="1"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         Name="BodyInfo"
                         Width="300"
                         Margin="5"
@@ -185,7 +242,7 @@
                     </StackPanel>
                     <StackPanel
                         Grid.Row="2"
-                        Grid.Column="1"
+                        Grid.Column="2"
                         Name="BodyInfo2"
                         Width="300"
                         Margin="5"
@@ -206,7 +263,7 @@
 
                     <TextBlock
                         Grid.Row="0"
-                        Grid.Column="2"
+                        Grid.Column="3"
                         Text="Display"
                         Margin="20,0,0,0"
                         FontSize="42"
@@ -215,7 +272,7 @@
                         Tapped="onDisplayTap" />
                     <StackPanel
                         Grid.Row="1"
-                        Grid.Column="2"
+                        Grid.Column="3"
                         Name="DisplayInfo"
                         Margin="5"
                         Width="300"
@@ -242,7 +299,7 @@
                     </StackPanel>
                     <StackPanel
                         Grid.Row="2"
-                        Grid.Column="2"
+                        Grid.Column="3"
                         Name="DisplayInfo2"
                         Margin="5"
                         Width="300"
@@ -273,14 +330,14 @@
                         Text="Sound"
                         Margin="20,0,0,0"
                         Grid.Row="0"
-                        Grid.Column="3"
+                        Grid.Column="4"
                         FontSize="42"
                         FontWeight="Bold"
                         TextWrapping="Wrap"
                         Tapped="onSoundTap"/>
                     <StackPanel
                         Grid.Row="1"
-                        Grid.Column="3"
+                        Grid.Column="4"
                         Name="SoundInfo"
                         Margin="5"
                         Width="300"
@@ -306,7 +363,7 @@
                     </StackPanel>
                     <StackPanel
                         Grid.Row="2"
-                        Grid.Column="3"
+                        Grid.Column="4"
                         Name="SoundInfo2"
                         Margin="5"
                         Width="300"
@@ -336,13 +393,13 @@
                         Text="Memory"
                         Margin="20,0,0,0"
                         Grid.Row="0"
-                        Grid.Column="4"
+                        Grid.Column="5"
                         FontSize="42"
                         FontWeight="Bold"
                         TextWrapping="Wrap" Tapped="onMemoryTap"/>
                     <StackPanel
                         Grid.Row="1"
-                        Grid.Column="4"
+                        Grid.Column="5"
                         Name="MemoryInfo"
                         Margin="5"
                         Width="300"
@@ -360,7 +417,7 @@
                     </StackPanel>
                     <StackPanel
                         Grid.Row="2"
-                        Grid.Column="4"
+                        Grid.Column="5"
                         Name="MemoryInfo2"
                         Margin="5"
                         Width="300"
@@ -380,7 +437,7 @@
 
                     <TextBlock
                         Grid.Row="0"
-                        Grid.Column="5"
+                        Grid.Column="6"
                         Text="Data"
                         Margin="20,0,0,0"
                         FontSize="42"
@@ -388,7 +445,7 @@
                         TextWrapping="Wrap" Tapped="onDataTap" />
                     <StackPanel
                         Grid.Row="1" 
-                        Grid.Column="5"
+                        Grid.Column="6"
                         Name="DataInfo"
                         Margin="5"
                         Width="300" 
@@ -425,7 +482,7 @@
                     </StackPanel>
                     <StackPanel
                         Grid.Row="2" 
-                        Grid.Column="5"
+                        Grid.Column="6"
                         Name="DataInfo2"
                         Margin="5"
                         Width="300" 
@@ -463,17 +520,17 @@
 
 
                     <TextBlock
+                        Grid.Row="0"
+                        Grid.Column="7"
                         Text="Camera"
                         Margin="20,0,0,0"
-                        Grid.Row="0"
-                        Grid.Column="6"
                         FontSize="42"
                         FontWeight="Bold"
                         TextWrapping="Wrap"
                         Tapped="onCameraTap" />
                     <StackPanel
                         Grid.Row="1"
-                        Grid.Column="6"
+                        Grid.Column="7"
                         Name="CameraInfo"
                         Margin="5" 
                         Width="300" 
@@ -499,7 +556,7 @@
                     </StackPanel>
                     <StackPanel
                         Grid.Row="2"
-                        Grid.Column="6"
+                        Grid.Column="7"
                         Name="CameraInfo2"
                         Margin="5" 
                         Width="300" 
@@ -527,7 +584,7 @@
 
                     <TextBlock
                         Grid.Row="0"
-                        Grid.Column="7"
+                        Grid.Column="8"
                         Text="Features"
                         Margin="20,0,0,0"
                         FontSize="42"
@@ -536,7 +593,7 @@
                         Tapped="onFeaturesTap" />
                     <StackPanel
                         Grid.Row="1"
-                        Grid.Column="7"
+                        Grid.Column="8"
                         Name="FeaturesInfo"
                         Margin="5"
                         Width="300"
@@ -594,7 +651,7 @@
                     </StackPanel>
                     <StackPanel
                         Grid.Row="2"
-                        Grid.Column="7"
+                        Grid.Column="8"
                         Name="FeaturesInfo2"
                         Margin="5"
                         Width="300"
@@ -654,7 +711,7 @@
 
                     <TextBlock
                         Grid.Row="0"
-                        Grid.Column="8"
+                        Grid.Column="9"
                         Text="Battery"
                         Margin="20,0,0,0"
                         FontSize="42"
@@ -663,7 +720,7 @@
                         Tapped="onBatteryTap" />
                     <StackPanel 
                         Grid.Row="1"
-                        Grid.Column="8"
+                        Grid.Column="9"
                         Name="BatteryInfo"
                         Margin="5"
                         Width="300"
@@ -689,7 +746,7 @@
                     </StackPanel>
                     <StackPanel 
                         Grid.Row="2"
-                        Grid.Column="8"
+                        Grid.Column="9"
                         Name="BatteryInfo2"
                         Margin="5"
                         Width="300"
