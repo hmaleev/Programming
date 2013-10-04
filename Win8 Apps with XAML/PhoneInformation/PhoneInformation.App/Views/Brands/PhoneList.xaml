@@ -18,7 +18,7 @@
             Source="{Binding Items}"/>
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
-        <x:String x:Key="AppName">My Application</x:String>
+        <x:String x:Key="AppName">Phone Information</x:String>
     </Page.Resources>
     <Page.DataContext>
         <viewModel:PhoneListViewModel/>
@@ -29,7 +29,7 @@
             <Grid>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button Style="{StaticResource CellphoneAppBarButtonStyle}" Click="Button_Click"/>
+                    <Button Style="{StaticResource CellphoneAppBarButtonStyle}" Click="CompareClick"/>
                 </StackPanel>
             </Grid>
         </AppBar>
@@ -44,7 +44,6 @@
             <RowDefinition Height="140"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
         <!-- Horizontal scrolling grid used in most view states -->
         <GridView
             x:Name="itemGridView"

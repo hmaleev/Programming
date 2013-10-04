@@ -5,10 +5,12 @@ using System.Linq;
 using PhoneInformation.App.HttpRequester;
 using PhoneInformation.App.Models;
 
+
 namespace PhoneInformation.App.ViewModels
 {
     class PhoneListViewModel:ViewModelBase
     {
+        
         private ObservableCollection<PhoneModel> phones;
         private string brand = Parameters.brand;
         public PhoneListViewModel()
@@ -42,7 +44,7 @@ namespace PhoneInformation.App.ViewModels
         protected async void GetData(string brand)
         {
             this.Phones =
-                await HttpRequest.Get<IEnumerable<PhoneModel>>("http://phoneinformation.apphb.com/api/PhoneList?brand="+brand);
+                await HttpRequest.Get<IEnumerable<PhoneModel>>("http://phoneinformation.apphb.com/api/PhoneList?brand=" + brand);
         }
     }
 }

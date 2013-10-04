@@ -49,144 +49,164 @@ namespace PhoneInformation.App.Views.Comparison
         {
         }
 
-        private void onPhonesTap(object sender, TappedRoutedEventArgs e)
+        private void OnTap(object sender, TappedRoutedEventArgs e)
         {
-            if (FirstPhoneInfo.Visibility == Visibility.Visible)
-            {
-                FirstPhoneInfo.Visibility = Visibility.Collapsed;
-                SecondPhoneInfo.Visibility = Visibility.Collapsed;
-
-            }
-            else
-            {
-                FirstPhoneInfo.Visibility = Visibility.Visible;
-                SecondPhoneInfo.Visibility = Visibility.Visible;
-            }
+            var obj = sender as TextBlock;
+            string text = obj.Text;
+            ShowPhoneDetails(text);
         }
-        private void onGeneralTap(object sender, TappedRoutedEventArgs e)
-        {
-            if (GeneralInfo.Visibility == Visibility.Visible)
-            {
-                GeneralInfo.Visibility = Visibility.Collapsed;
-                GeneralInfoS.Visibility = Visibility.Collapsed;
 
-            }
-            else
-            {
-                GeneralInfo.Visibility = Visibility.Visible;
-                GeneralInfoS.Visibility = Visibility.Visible;
-            }
-        }
-        private void onBodyTap(object sender, TappedRoutedEventArgs e)
+        private void ShowPhoneDetails(string text)
         {
-            if (BodyInfo.Visibility == Visibility.Visible)
+            switch (text)
             {
-                BodyInfo.Visibility = Visibility.Collapsed;
-                BodyInfo2.Visibility = Visibility.Collapsed;
+                default:
+                    break;
+                case "Phone":
+                    {
+                        if (FirstPhoneInfo.Visibility == Visibility.Visible)
+                        {
+                            FirstPhoneInfo.Visibility = Visibility.Collapsed;
+                            SecondPhoneInfo.Visibility = Visibility.Collapsed;
 
-            }
-            else
-            {
-                BodyInfo.Visibility = Visibility.Visible;
-                BodyInfo2.Visibility = Visibility.Visible;
-            }
-        }
-        private void onDisplayTap(object sender, TappedRoutedEventArgs e)
-        {
-            if (DisplayInfo.Visibility == Visibility.Visible)
-            {
-                DisplayInfo.Visibility = Visibility.Collapsed;
-                DisplayInfo2.Visibility = Visibility.Collapsed;
+                        }
+                        else
+                        {
+                            FirstPhoneInfo.Visibility = Visibility.Visible;
+                            SecondPhoneInfo.Visibility = Visibility.Visible;
+                        }
+                        break;
+                    }
+                case "General":
+                    {
+                        if (GeneralInfo.Visibility == Visibility.Visible )
+                        {
+                            GeneralInfo.Visibility = Visibility.Collapsed;
+                            GeneralInfo2.Visibility = Visibility.Collapsed;
+                        }
+                        else
+                        {
+                            GeneralInfo.Visibility = Visibility.Visible;
+                            GeneralInfo2.Visibility = Visibility.Visible;
+                        }
+                        break;
+                    }
+                case "Body":
+                    {
+                        if (BodyInfo.Visibility == Visibility.Visible )
+                        {
+                            BodyInfo.Visibility = Visibility.Collapsed;
+                            BodyInfo2.Visibility = Visibility.Collapsed;
+                        }
+                        else
+                        {
+                            BodyInfo.Visibility = Visibility.Visible;
+                            BodyInfo2.Visibility = Visibility.Visible;
+                        }
+                        break;
+                    }
+                case "Display":
+                    {
+                        if (DisplayInfo.Visibility == Visibility.Visible )
+                        {
+                            DisplayInfo.Visibility = Visibility.Collapsed;
+                            DisplayInfo2.Visibility = Visibility.Collapsed;
+                        }
+                        else
+                        {
+                            DisplayInfo.Visibility = Visibility.Visible;
+                            DisplayInfo2.Visibility = Visibility.Visible;
+                        }
+                        break;
+                    }
+                case "Sound":
+                    {
+                        if (SoundInfo.Visibility == Visibility.Visible )
+                        {
+                            SoundInfo.Visibility = Visibility.Collapsed;
+                            SoundInfo2.Visibility = Visibility.Collapsed;
 
-            }
-            else
-            {
-                DisplayInfo.Visibility = Visibility.Visible;
-                DisplayInfo2.Visibility = Visibility.Visible;
-            }
-        }
-        private void onSoundTap(object sender, TappedRoutedEventArgs e)
-        {
-            if (SoundInfo.Visibility == Visibility.Visible)
-            {
-                SoundInfo.Visibility = Visibility.Collapsed;
-                SoundInfo2.Visibility = Visibility.Collapsed;
+                        }
+                        else
+                        {
+                            SoundInfo.Visibility = Visibility.Visible;
+                            SoundInfo2.Visibility = Visibility.Visible;
+                        }
+                        break;
+                    }
+                case "Memory":
+                    {
+                        if (MemoryInfo.Visibility == Visibility.Visible )
+                        {
+                            MemoryInfo.Visibility = Visibility.Collapsed;
+                            MemoryInfo2.Visibility = Visibility.Collapsed;
+                        }
+                        else
+                        {
+                            MemoryInfo.Visibility = Visibility.Visible;
+                            MemoryInfo2.Visibility = Visibility.Visible;
+                        }
+                        break;
+                    }
+                case "Data":
+                    {
+                        if (DataInfo.Visibility == Visibility.Visible)
+                        {
+                            DataInfo.Visibility = Visibility.Collapsed;
+                            DataInfo2.Visibility = Visibility.Collapsed;
 
-            }
-            else
-            {
-                SoundInfo.Visibility = Visibility.Visible;
-                SoundInfo2.Visibility = Visibility.Visible;
-            }
-        }
-        private void onMemoryTap(object sender, TappedRoutedEventArgs e)
-        {
-            if (MemoryInfo.Visibility == Visibility.Visible)
-            {
-                MemoryInfo.Visibility = Visibility.Collapsed;
-                MemoryInfo2.Visibility = Visibility.Collapsed;
+                        }
+                        else
+                        {
+                            DataInfo.Visibility = Visibility.Visible;
+                            DataInfo2.Visibility = Visibility.Visible;
+                        }
+                        break;
+                    }
+                case "Camera":
+                    {
+                        if (CameraInfo.Visibility == Visibility.Visible)
+                        {
+                            CameraInfo.Visibility = Visibility.Collapsed;
+                            CameraInfo2.Visibility = Visibility.Collapsed;
 
-            }
-            else
-            {
-                MemoryInfo.Visibility = Visibility.Visible;
-                MemoryInfo2.Visibility = Visibility.Visible;
-            }
-        }
-        private void onDataTap(object sender, TappedRoutedEventArgs e)
-        {
-            if (DataInfo.Visibility == Visibility.Visible)
-            {
-                DataInfo.Visibility = Visibility.Collapsed;
-                DataInfo2.Visibility = Visibility.Collapsed;
+                        }
+                        else
+                        {
+                            CameraInfo.Visibility = Visibility.Visible;
+                            CameraInfo2.Visibility = Visibility.Visible;
+                        }
+                        break;
+                    }
+                case "Features":
+                    {
+                        if (FeaturesInfo.Visibility == Visibility.Visible )
+                        {
+                            FeaturesInfo.Visibility = Visibility.Collapsed;
+                            FeaturesInfo2.Visibility = Visibility.Collapsed;
+                        }
+                        else
+                        {
+                            FeaturesInfo.Visibility = Visibility.Visible;
+                            FeaturesInfo2.Visibility = Visibility.Visible;
+                        }
+                        break;
+                    }
+                case "Battery":
+                    {
+                        if (BatteryInfo.Visibility == Visibility.Visible )
+                        {
+                            BatteryInfo.Visibility = Visibility.Collapsed;
+                            BatteryInfo2.Visibility = Visibility.Collapsed;
 
-            }
-            else
-            {
-                DataInfo.Visibility = Visibility.Visible;
-                DataInfo2.Visibility = Visibility.Visible;
-            }
-        }
-        private void onCameraTap(object sender, TappedRoutedEventArgs e)
-        {
-            if (CameraInfo.Visibility == Visibility.Visible)
-            {
-                CameraInfo.Visibility = Visibility.Collapsed;
-                CameraInfo2.Visibility = Visibility.Collapsed;
-
-            }
-            else
-            {
-                CameraInfo.Visibility = Visibility.Visible;
-                CameraInfo2.Visibility = Visibility.Visible;
-            }
-        }
-        private void onFeaturesTap(object sender, TappedRoutedEventArgs e)
-        {
-            if (FeaturesInfo.Visibility == Visibility.Visible)
-            {
-                FeaturesInfo.Visibility = Visibility.Collapsed;
-                FeaturesInfo2.Visibility = Visibility.Collapsed;
-
-            }
-            else
-            {
-                FeaturesInfo.Visibility = Visibility.Visible;
-                FeaturesInfo2.Visibility = Visibility.Visible;
-            }
-        }
-        private void onBatteryTap(object sender, TappedRoutedEventArgs e)
-        {
-            if (BatteryInfo.Visibility == Visibility.Visible)
-            {
-                BatteryInfo.Visibility = Visibility.Collapsed;
-                BatteryInfo2.Visibility = Visibility.Collapsed;
-
-            }
-            else
-            {
-                BatteryInfo.Visibility = Visibility.Visible;
-                BatteryInfo2.Visibility = Visibility.Visible;
+                        }
+                        else
+                        {
+                            BatteryInfo.Visibility = Visibility.Visible;
+                            BatteryInfo2.Visibility = Visibility.Visible;
+                        }
+                        break;
+                    }
             }
         }
 

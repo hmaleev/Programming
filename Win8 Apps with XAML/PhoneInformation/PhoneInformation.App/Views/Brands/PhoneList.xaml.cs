@@ -40,16 +40,23 @@ namespace PhoneInformation.App.Views.Brands
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
             // TODO: Assign a bindable collection of items to this.DefaultViewModel["Items"]
+          
         }
 
         private void StackPanel_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            var x = itemGridView.SelectedItem as PhoneModel;
-            Parameters.location = x.Link;
-            this.Frame.Navigate(typeof(Views.DetailedInformation.DetailInformation));
+            if (itemGridView.SelectedItem!=null)
+            {
+                var x = itemGridView.SelectedItem as PhoneModel;
+                Parameters.location = x.Link;
+                this.Frame.Navigate(typeof(Views.DetailedInformation.DetailInformation));
+            }
+           
+          
+           
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void CompareClick(object sender, RoutedEventArgs e)
         {
             var selectedItems = itemGridView.SelectedItems;
             var firstPhone = selectedItems[0] as PhoneModel;

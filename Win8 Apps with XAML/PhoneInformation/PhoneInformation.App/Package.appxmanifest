@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="PhoneInformation.App.App">
-      <VisualElements DisplayName="PhoneInformation.App" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="PhoneInformation.App" ForegroundText="light" BackgroundColor="#464646">
+      <VisualElements DisplayName="PhoneInformation.App" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="PhoneInformation.App" ForegroundText="light" BackgroundColor="#000000" ToastCapable="true">
         <DefaultTile ShowName="allLogos" />
         <SplashScreen Image="Assets\SplashScreen.png" />
       </VisualElements>
