@@ -331,33 +331,33 @@ namespace PhoneInformation.App.Common
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             // Returning to a cached page through navigation shouldn't trigger state loading
-            if (this._pageKey != null) return;
+        //    if (this._pageKey != null) return;
 
-            var frameState = SuspensionManager.SessionStateForFrame(this.Frame);
-            this._pageKey = "Page-" + this.Frame.BackStackDepth;
+        //    var frameState = SuspensionManager.SessionStateForFrame(this.Frame);
+        //    this._pageKey = "Page-" + this.Frame.BackStackDepth;
 
-            if (e.NavigationMode == NavigationMode.New)
-            {
-                // Clear existing state for forward navigation when adding a new page to the
-                // navigation stack
-                var nextPageKey = this._pageKey;
-                int nextPageIndex = this.Frame.BackStackDepth;
-                while (frameState.Remove(nextPageKey))
-                {
-                    nextPageIndex++;
-                    nextPageKey = "Page-" + nextPageIndex;
-                }
+        //    if (e.NavigationMode == NavigationMode.New)
+        //    {
+        //        // Clear existing state for forward navigation when adding a new page to the
+        //        // navigation stack
+        //        var nextPageKey = this._pageKey;
+        //        int nextPageIndex = this.Frame.BackStackDepth;
+        //        while (frameState.Remove(nextPageKey))
+        //        {
+        //            nextPageIndex++;
+        //            nextPageKey = "Page-" + nextPageIndex;
+        //        }
 
-                // Pass the navigation parameter to the new page
-                this.LoadState(e.Parameter, null);
-            }
-            else
-            {
-                // Pass the navigation parameter and preserved page state to the page, using
-                // the same strategy for loading suspended state and recreating pages discarded
-                // from cache
-                this.LoadState(e.Parameter, (Dictionary<String, Object>)frameState[this._pageKey]);
-            }
+        //        // Pass the navigation parameter to the new page
+        //        this.LoadState(e.Parameter, null);
+        //    }
+        //    else
+        //    {
+        //        // Pass the navigation parameter and preserved page state to the page, using
+        //        // the same strategy for loading suspended state and recreating pages discarded
+        //        // from cache
+        //        this.LoadState(e.Parameter, (Dictionary<String, Object>)frameState[this._pageKey]);
+        //    }
         }
 
         /// <summary>
@@ -365,13 +365,14 @@ namespace PhoneInformation.App.Common
         /// </summary>
         /// <param name="e">Event data that describes how this page was reached.  The Parameter
         /// property provides the group to be displayed.</param>
-        protected override void OnNavigatedFrom(NavigationEventArgs e)
-        {
-            var frameState = SuspensionManager.SessionStateForFrame(this.Frame);
-            var pageState = new Dictionary<String, Object>();
-            this.SaveState(pageState);
-            frameState[_pageKey] = pageState;
-        }
+        /// 
+        //protected override void OnNavigatedFrom(NavigationEventArgs e)
+        //{
+        //    var frameState = SuspensionManager.SessionStateForFrame(this.Frame);
+        //    var pageState = new Dictionary<String, Object>();
+        //    this.SaveState(pageState);
+        //    frameState[_pageKey] = pageState;
+        //}
 
         /// <summary>
         /// Populates the page with content passed during navigation.  Any saved state is also

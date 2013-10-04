@@ -50,6 +50,8 @@
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="Detailed Information" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
         <!-- START DATA -->
+        <Canvas x:Name="PrintContainer" Margin="-3000" Opacity="0"/>
+
         <ScrollViewer x:Name="scrollViewer" HorizontalScrollMode="Auto" 
                       HorizontalScrollBarVisibility="Visible"
                       VerticalScrollMode="Disabled"
