@@ -11,27 +11,92 @@
 
         <Grid.RowDefinitions>
             <RowDefinition/>
+            <RowDefinition Height="2*"/>
             <RowDefinition Height="3*"/>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="4*"/>
+            <RowDefinition Height="5*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="6*" />
-            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <StackPanel x:Name="header" Grid.Row="0" Grid.ColumnSpan="2" Height="60"  Visibility="Collapsed">
             <StackPanel Orientation="Horizontal" >
                 <Image Source="ms-appx:///Assets/StoreLogo.png" HorizontalAlignment="Left" Stretch="None"/>
                 <RichTextBlock Foreground="Black" FontSize="20" TextAlignment="Left" FontFamily="Segoe UI">
-                    <Paragraph>Phone Information - Details</Paragraph>
+                    <Paragraph>Details</Paragraph>
                 </RichTextBlock>
             </StackPanel>
         </StackPanel>
 
         <RichTextBlock Foreground="Black" x:Name="textContent" FontSize="18" Grid.Row="1"  Grid.ColumnSpan="2" OverflowContentTarget="{Binding ElementName=firstLinkedContainer}" 
                        IsTextSelectionEnabled="True" TextAlignment="Left" FontFamily="Segoe UI" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Paragraph >
+                <Run Text="General" FontSize="42"/>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="2G Network:"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].SecondGenNetwork}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="3G Network:"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].ThirdGenNetwork}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+
+            <Paragraph>
+                <Run Text="4G Network:"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].ThirdGenNetwork}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+
+            <Paragraph>
+                <Run Text="Sim Card Size: "></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].Sim}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+
+            <Paragraph>
+                <Run Text="Announced: "></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].Announced}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+
+            <Paragraph>
+                <Run Text="Status: "></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].Status}"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+
+
+
+            <!--</Paragraph>
             <Paragraph>
                 <InlineUIContainer>
                     <StackPanel>
@@ -382,7 +447,7 @@
                         </StackPanel>
                     </StackPanel>
                 </InlineUIContainer>
-            </Paragraph>
+            </Paragraph>-->
         </RichTextBlock>
         <RichTextBlockOverflow x:Name="firstLinkedContainer" OverflowContentTarget="{Binding ElementName=continuationPageLinkedContainer}" Grid.Row="2" Grid.Column="0"/>
         <RichTextBlockOverflow x:Name="continuationPageLinkedContainer" Grid.Row="3" Grid.ColumnSpan="2"/>
