@@ -5,54 +5,111 @@
     xmlns:local="using:PhoneInformation.App"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" >
+
+    <StackPanel>
+        <Grid Name="Brands" Background="#87ceeb">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
 
-    <Grid Background="#87ceeb" >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition >
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
+
+            <StackPanel Margin="120,140,0,10" Grid.Row="0" Background="White" Grid.Column="0"  Tapped="onNokiaTap">
+                <Image Source="/Assets/Logos/Nokia_Logo.png" Stretch="Fill" Margin="10"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="0" Grid.Column="1" Background="White" Margin="10,140,0,10" Tapped="onSamsungTap">
+                <Image Source="/Assets/Logos/Samsung_Logo.png" Stretch="Fill" Margin="10" Height="234"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="0" Grid.Column="2" Background="White"  Margin="10,140,0,10" Tapped="onSonyTap">
+                <Image Source="/Assets/Logos/Sony_Logo.png" Stretch="Fill" Margin="10" Height="234"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="0" Grid.Column="3" Background="White"  Margin="10,140,10,10" Tapped="onHTCTap">
+                <Image Source="/Assets/Logos/HTC_Logo.jpg" Stretch="Fill" Margin="10" Height="234"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="0" Background="White" Margin="120,10,0,120" Tapped="onMotorolaTap">
+                <Image Source="/Assets/Logos/Motorola_Logo.jpg" Stretch="Fill" Margin="10" Height="250"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="1" Background="White" Margin="10,10,0,120" Tapped="onAppleTap">
+                <Image Source="/Assets/Logos/Apple_Logo.png" Stretch="Fill" Margin="10" VerticalAlignment="Center" Height="260"/>
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="2" Background="White" Margin="10,10,0,120" Tapped="onBlackberryTap">
+                <Image Source="/Assets/Logos/BlackBerry_Logo.png" Stretch="Fill" Margin="10" Height="250"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="3" Background="White" Margin="10,10,10,120" Tapped="onLGTap">
+                <Image Source="/Assets/Logos/LG_Logo.png" Stretch="Fill" Margin="10" Height="250"/>
+            </StackPanel>
+        </Grid>
 
 
+        <ScrollViewer Visibility="Collapsed" x:Name="scrollViewer" VerticalScrollMode="Auto" HorizontalScrollMode="Disabled">
+            <Grid Name="BrandsSnapped" Background="#87ceeb">
 
-        <StackPanel Margin="10 10 0 20" Grid.Row="0" Background="White" Grid.Column="0"  Tapped="onNokiaTap">
-            <Image Source="/Assets/Logos/Nokia_Logo.png" Stretch="Fill" Margin="10"/>
-        </StackPanel>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="160*"/>
+                    <RowDefinition Height="137*"/>
 
-        <StackPanel Grid.Row="0" Grid.Column="1" Background="White" Margin="10 10 0 20" Tapped="onSamsungTap">
-            <Image Source="/Assets/Logos/Samsung_Logo.png" Stretch="Fill" Margin="10"/>
-        </StackPanel>
+                    <RowDefinition Height="137*"/>
+                    <RowDefinition Height="137*"/>
 
-        <StackPanel Grid.Row="0" Grid.Column="2" Background="White"  Margin="10 10 0 20" Tapped="onSonyTap">
-            <Image Source="/Assets/Logos/Sony_Logo.png" Stretch="Fill" Margin="10"/>
-        </StackPanel>
+                    <RowDefinition Height="145*"/>
+                    <RowDefinition Height="202*"/>
+                    <RowDefinition Height="238*"/>
 
-        <StackPanel Grid.Row="0" Grid.Column="3" Background="White"  Margin="10 10 10 20" Tapped="onHTCTap">
-            <Image Source="/Assets/Logos/HTC_Logo.jpg" Stretch="Fill" Margin="10"/>
-        </StackPanel>
-        
-        <StackPanel Grid.Row="1" Grid.Column="0" Background="White" Margin="10 10 0 20" Tapped="onMotorolaTap">
-            <Image Source="/Assets/Logos/Motorola_Logo.jpg" Stretch="Fill" Margin="10"/>
-        </StackPanel>
-        
-        <StackPanel Grid.Row="1" Grid.Column="1" Background="White" Margin="10 10 0 20" Tapped="onAppleTap">
-            <Image Source="/Assets/Logos/Apple_Logo.png" Stretch="Fill" Margin="10" VerticalAlignment="Center"/>
+                    <RowDefinition Height="145*"/>
+                    <RowDefinition Height="200*"/>
 
-        </StackPanel>
-        
-        <StackPanel Grid.Row="1" Grid.Column="2" Background="White" Margin="10 10 0 20" Tapped="onBlackberryTap">
-            <Image Source="/Assets/Logos/BlackBerry_Logo.png" Stretch="Fill" Margin="10"/>
-        </StackPanel>
-        
-        <StackPanel Grid.Row="1" Grid.Column="3" Background="White" Margin="10 10 10 20" Tapped="onLGTap">
-            <Image Source="/Assets/Logos/LG_Logo.png" Stretch="Fill" Margin="10"/>
-        </StackPanel>
-    </Grid>
+                </Grid.RowDefinitions>
+
+                <StackPanel MaxWidth="300" Grid.Row="0" Background="White" Margin="10"  Tapped="onNokiaTap">
+                    <Image Source="/Assets/Logos/Nokia_Logo.png" Stretch="Fill" Margin="10"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" MaxWidth="300" Background="White" Margin="10" Tapped="onSamsungTap">
+                    <Image Source="/Assets/Logos/Samsung_Logo.png" Stretch="Fill" Margin="10" Height="234"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2"  Background="White" MaxWidth="300" Margin="10" Tapped="onSonyTap">
+                    <Image Source="/Assets/Logos/Sony_Logo.png" Stretch="Fill" Margin="10" Height="234"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="3"  Background="White"  Margin="10" MaxWidth="300" Tapped="onHTCTap">
+                    <Image Source="/Assets/Logos/HTC_Logo.jpg" Stretch="Fill" Margin="10" Height="234"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="4" Background="White" Margin="10" MaxWidth="300" Tapped="onMotorolaTap">
+                    <Image Source="/Assets/Logos/Motorola_Logo.jpg" Stretch="Fill" Margin="10" Height="250"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="5"  Background="White" Margin="10" MaxWidth="300" Tapped="onAppleTap" Grid.RowSpan="2">
+                    <Image Source="/Assets/Logos/Apple_Logo.png" Stretch="Fill" Margin="10" VerticalAlignment="Center" Height="260"/>
+
+                </StackPanel>
+
+                <StackPanel Grid.Row="6"  Background="White" Margin="10" MaxWidth="300" Tapped="onBlackberryTap">
+                    <Image Source="/Assets/Logos/BlackBerry_Logo.png" Stretch="Fill" Margin="10" Height="250"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="7" Background="White" Margin="10" MaxWidth="300" Tapped="onLGTap">
+                    <Image Source="/Assets/Logos/LG_Logo.png" Stretch="Fill" Margin="10" Height="250"/>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </StackPanel>
+
 </Page>

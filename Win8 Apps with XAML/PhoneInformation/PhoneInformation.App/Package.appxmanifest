@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="662c186e-783e-4fda-b9ab-8da9e46438c9" Publisher="CN=Hristo" Version="1.0.0.0" />
+  <Identity Name="662c186e-783e-4fda-b9ab-8da9e46438c9" Publisher="CN=Hristo" Version="1.0.0.3" />
   <Properties>
     <DisplayName>PhoneInformation.App</DisplayName>
     <PublisherDisplayName>Hristo</PublisherDisplayName>
@@ -34,6 +34,7 @@
             </SupportedFileTypes>
           </FileSavePicker>
         </Extension>
+        <Extension Category="windows.search" />
       </Extensions>
     </Application>
   </Applications>

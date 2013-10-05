@@ -13,6 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PackageCertificateKeyFile>PhoneInformation.App_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -122,6 +123,7 @@
     <Compile Include="ViewModels\ComparisonViewModel.cs" />
     <Compile Include="ViewModels\DetailedPhoneInformationViewModel.cs" />
     <Compile Include="ViewModels\PhoneListViewModel.cs" />
+    <Compile Include="ViewModels\SearchViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Views\Brands\PhoneList.xaml.cs">
       <DependentUpon>PhoneList.xaml</DependentUpon>
@@ -137,6 +139,9 @@
     </Compile>
     <Compile Include="Views\Printing\PrintPage.xaml.cs">
       <DependentUpon>PrintPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchResults\SearchResultsPage1.xaml.cs">
+      <DependentUpon>SearchResultsPage1.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -202,6 +207,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Printing\PrintPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SearchResults\SearchResultsPage1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

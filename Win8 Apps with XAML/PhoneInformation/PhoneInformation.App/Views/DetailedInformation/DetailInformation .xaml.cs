@@ -8,6 +8,8 @@ using Windows.Graphics.Printing;
 using Windows.Storage;
 using Windows.Storage.Pickers;
 using Windows.UI.Notifications;
+using Windows.UI.Popups;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
@@ -24,7 +26,7 @@ namespace PhoneInformation.App.Views.DetailedInformation
         }
 
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
-        {           
+        {
         }
 
         protected override void SaveState(Dictionary<String, Object> pageState)
@@ -192,23 +194,33 @@ namespace PhoneInformation.App.Views.DetailedInformation
                     }
             }
         }
+
         private async void OnSaveButtonClick(object sender, RoutedEventArgs e)
         {
-            string output = SavePhoneInformation();
-            
-            FileSavePicker savePicker = new FileSavePicker();
-            savePicker.SuggestedStartLocation = PickerLocationId.DocumentsLibrary;
-            savePicker.FileTypeChoices.Add("Plain Text", new List<string>() { ".txt" });
-            savePicker.SuggestedFileName = "PhoneInformation";
-            StorageFile file = await savePicker.PickSaveFileAsync();
-
-            XmlDocument toastXml = CreateToastNotification();
-
-            if (file!=null)
+            if (ApplicationView.Value != ApplicationViewState.Snapped)
             {
-              
-                await FileIO.WriteTextAsync(file, output,Windows.Storage.Streams.UnicodeEncoding.Utf8);
-                ShowToastNotification(toastXml);
+                string output = SavePhoneInformation();
+
+                FileSavePicker savePicker = new FileSavePicker();
+                savePicker.SuggestedStartLocation = PickerLocationId.DocumentsLibrary;
+                savePicker.FileTypeChoices.Add("Plain Text", new List<string>() { ".txt" });
+                savePicker.SuggestedFileName = "PhoneInformation";
+                StorageFile file = await savePicker.PickSaveFileAsync();
+
+                XmlDocument toastXml = CreateToastNotification();
+
+                if (file != null)
+                {
+
+                    await FileIO.WriteTextAsync(file, output, Windows.Storage.Streams.UnicodeEncoding.Utf8);
+                    ShowToastNotification(toastXml);
+                }
+            }
+            else
+            {
+                var message = new MessageDialog("This action is not supported in snapped view");
+                message.ShowAsync();
+
             }
         }
 
@@ -240,7 +252,7 @@ namespace PhoneInformation.App.Views.DetailedInformation
             sb.Append("4G Network: ");
             sb.AppendLine(FourthGenNetwork.Text);
             sb.Append("Sim card size: ");
-            sb.AppendLine( Sim.Text);
+            sb.AppendLine(Sim.Text);
             sb.Append("Announced: ");
             sb.AppendLine(Announced.Text);
             sb.Append("Status: ");
@@ -341,35 +353,26 @@ namespace PhoneInformation.App.Views.DetailedInformation
             string res = sb.ToString();
             return res;
         }
-  
-
-
-
 
         PrintDocument document = null;
         IPrintDocumentSource source = null;
         List<UIElement> pages = null;
         FrameworkElement page1;
-        protected event EventHandler pagesCreated;
+        protected event EventHandler PagesCreated;
         protected const double left = 0.075;
         protected const double top = 0.03;
-
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-           
-        }
 
         protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
         {
             if (document == null) return;
 
-            document.Paginate -= printDocument_Paginate;
-            document.GetPreviewPage -= printDocument_GetPreviewPage;
-            document.AddPages -= printDocument_AddPages;
+            document.Paginate -= PrintDocumentPaginate;
+            document.GetPreviewPage -= PrintDocumentGetPreviewPage;
+            document.AddPages -= PrintDocumentAddPages;
 
             // Remove the handler for printing initialization.
             PrintManager manager = PrintManager.GetForCurrentView();
-            manager.PrintTaskRequested -= manager_PrintTaskRequested;
+            manager.PrintTaskRequested -= ManagerPrintTaskRequested;
 
             PrintContainer.Children.Clear();
         }
@@ -388,7 +391,7 @@ namespace PhoneInformation.App.Views.DetailedInformation
             PrintContainer.UpdateLayout();
         }
 
-        void manager_PrintTaskRequested(PrintManager sender, PrintTaskRequestedEventArgs args)
+        void ManagerPrintTaskRequested(PrintManager sender, PrintTaskRequestedEventArgs args)
         {
             PrintTask task = null;
             task = args.Request.CreatePrintTask("Phone Information - Details", sourceRequested =>
@@ -397,7 +400,7 @@ namespace PhoneInformation.App.Views.DetailedInformation
             });
         }
 
-        void printDocument_AddPages(object sender, AddPagesEventArgs e)
+        void PrintDocumentAddPages(object sender, AddPagesEventArgs e)
         {
             for (int i = 0; i < pages.Count; i++)
             {
@@ -408,32 +411,32 @@ namespace PhoneInformation.App.Views.DetailedInformation
             printDoc.AddPagesComplete();
         }
 
-        void printDocument_GetPreviewPage(object sender, GetPreviewPageEventArgs e)
+        void PrintDocumentGetPreviewPage(object sender, GetPreviewPageEventArgs e)
         {
             PrintDocument printDoc = (PrintDocument)sender;
 
             printDoc.SetPreviewPage(e.PageNumber, pages[e.PageNumber - 1]);
         }
 
-        void printDocument_Paginate(object sender, PaginateEventArgs e)
+        void PrintDocumentPaginate(object sender, PaginateEventArgs e)
         {
             pages.Clear();
             PrintContainer.Children.Clear();
 
-            RichTextBlockOverflow lastRTBOOnPage;
+            RichTextBlockOverflow lastRtboOnPage;
             PrintTaskOptions printingOptions = ((PrintTaskOptions)e.PrintTaskOptions);
             PrintPageDescription pageDescription = printingOptions.GetPageDescription(0);
 
-            lastRTBOOnPage = AddOnePrintPreviewPage(null, pageDescription);
+            lastRtboOnPage = AddOnePrintPreviewPage(null, pageDescription);
 
-            while (lastRTBOOnPage.HasOverflowContent && lastRTBOOnPage.Visibility == Windows.UI.Xaml.Visibility.Visible)
+            while (lastRtboOnPage.HasOverflowContent && lastRtboOnPage.Visibility == Windows.UI.Xaml.Visibility.Visible)
             {
-                lastRTBOOnPage = AddOnePrintPreviewPage(lastRTBOOnPage, pageDescription);
+                lastRtboOnPage = AddOnePrintPreviewPage(lastRtboOnPage, pageDescription);
             }
 
-            if (pagesCreated != null)
+            if (PagesCreated != null)
             {
-                pagesCreated.Invoke(pages, null);
+                PagesCreated.Invoke(pages, null);
             }
 
             PrintDocument printDoc = (PrintDocument)sender;
@@ -441,12 +444,12 @@ namespace PhoneInformation.App.Views.DetailedInformation
             printDoc.SetPreviewPageCount(pages.Count, PreviewPageCountType.Intermediate);
         }
 
-        private RichTextBlockOverflow AddOnePrintPreviewPage(RichTextBlockOverflow lastRTBOAdded, PrintPageDescription printPageDescription)
+        private RichTextBlockOverflow AddOnePrintPreviewPage(RichTextBlockOverflow lastRtboAdded, PrintPageDescription printPageDescription)
         {
             FrameworkElement page;
             RichTextBlockOverflow link;
 
-            if (lastRTBOAdded == null)
+            if (lastRtboAdded == null)
             {
                 page = page1;
                 StackPanel footer = (StackPanel)page.FindName("footer");
@@ -454,7 +457,7 @@ namespace PhoneInformation.App.Views.DetailedInformation
             }
             else
             {
-                page = new ContinuationPage(lastRTBOAdded);
+                page = new ContinuationPage(lastRtboAdded);
             }
 
             page.Width = printPageDescription.PageSize.Width;
@@ -467,7 +470,7 @@ namespace PhoneInformation.App.Views.DetailedInformation
 
             printableArea.Width = page1.Width - marginWidth;
             printableArea.Height = page1.Height - marginHeight;
-          
+
             PrintContainer.Children.Add(page);
             PrintContainer.InvalidateMeasure();
             PrintContainer.UpdateLayout();
@@ -490,22 +493,29 @@ namespace PhoneInformation.App.Views.DetailedInformation
 
         private async void OnPrintButtonClick(object sender, RoutedEventArgs e)
         {
-            
-             document = new PrintDocument();
-            source = document.DocumentSource;
+            if (ApplicationView.Value != ApplicationViewState.Snapped)
+            {
+                document = new PrintDocument();
+                source = document.DocumentSource;
 
-            document.Paginate += printDocument_Paginate;
-            document.GetPreviewPage += printDocument_GetPreviewPage;
-            document.AddPages += printDocument_AddPages;
+                document.Paginate += PrintDocumentPaginate;
+                document.GetPreviewPage += PrintDocumentGetPreviewPage;
+                document.AddPages += PrintDocumentAddPages;
 
-            PrintManager manager = PrintManager.GetForCurrentView();
-            manager.PrintTaskRequested += manager_PrintTaskRequested;
+                PrintManager manager = PrintManager.GetForCurrentView();
+                manager.PrintTaskRequested += ManagerPrintTaskRequested;
 
-            pages = new List<UIElement>();
+                pages = new List<UIElement>();
 
-            PrepareContent();
-            await Windows.Graphics.Printing.PrintManager.ShowPrintUIAsync();
+                PrepareContent();
+                await Windows.Graphics.Printing.PrintManager.ShowPrintUIAsync();
+            }
+            else
+            {
+                var message = new MessageDialog("This action is not supported in snapped view");
+                message.ShowAsync();
 
+            }
         }
 
     }

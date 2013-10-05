@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Http;
 using PhoneInformation.App.HttpRequester;
 using PhoneInformation.App.Models;
+using Windows.UI.Popups;
 
 namespace PhoneInformation.App.ViewModels
 {
@@ -39,10 +41,20 @@ namespace PhoneInformation.App.ViewModels
             }
         }
 
-        protected async void GetData( string str)
+        protected async void GetData(string str)
         {
-            this.DetailedInfo =
-                await HttpRequest.Get<IEnumerable<DetailedPhoneInformationModel>>("http://phoneinformation.apphb.com//api/PhoneDetails?phoneUrl="+str);
+            try
+            {
+                            this.DetailedInfo =
+                await HttpRequest.Get<IEnumerable<DetailedPhoneInformationModel>>("http://phoneinformation.apphb.com//api/PhoneDetails?phoneUrl=" + str);
+
+            }
+            catch (HttpRequestException)
+            {
+                var msg = new MessageDialog("An error has occured");
+                msg.ShowAsync();
+                // throw;
+            }
         }
     }
 }

@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Http;
 using PhoneInformation.App.HttpRequester;
 using PhoneInformation.App.Models;
+using Windows.UI.Popups;
 
 namespace PhoneInformation.App.ViewModels
 {
-    class ComparisonViewModel:ViewModelBase
+    class ComparisonViewModel : ViewModelBase
     {
-          private ObservableCollection<DetailedPhoneInformationModel> detailedInfo;
+        private ObservableCollection<DetailedPhoneInformationModel> detailedInfo;
         private string firstPhoneId;
         private string secondPhoneId;
 
@@ -26,7 +28,7 @@ namespace PhoneInformation.App.ViewModels
                 if (this.detailedInfo == null)
                 {
                     this.detailedInfo = new ObservableCollection<DetailedPhoneInformationModel>();
-                    this.GetData(firstPhoneId,secondPhoneId);
+                    this.GetData(firstPhoneId, secondPhoneId);
 
                 }
                 return this.detailedInfo;
@@ -41,10 +43,20 @@ namespace PhoneInformation.App.ViewModels
             }
         }
 
-        protected async void GetData( string firstPhoneId, string secondPhoneId)
+        protected async void GetData(string firstPhoneId, string secondPhoneId)
         {
-            this.DetailedInfo =
-                await HttpRequest.Get<IEnumerable<DetailedPhoneInformationModel>>("http://phoneinformation.apphb.com/api/ComparePhones?firstPhoneId="+firstPhoneId+"&secondPhoneId="+secondPhoneId);
+            try
+            {
+                this.DetailedInfo =
+               await HttpRequest.Get<IEnumerable<DetailedPhoneInformationModel>>("http://phoneinformation.apphb.com/api/ComparePhones?firstPhoneId=" + firstPhoneId + "&secondPhoneId=" + secondPhoneId);
+            }
+            catch (HttpRequestException)
+            {
+                var msg = new MessageDialog("An error has occured");
+                msg.ShowAsync();
+                // throw;
+            }
+
         }
     }
 }

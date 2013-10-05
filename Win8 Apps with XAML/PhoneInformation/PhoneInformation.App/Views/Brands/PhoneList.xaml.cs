@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using PhoneInformation.App.Models;
 using Windows.UI.Popups;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Input;
 
@@ -24,17 +25,21 @@ namespace PhoneInformation.App.Views.Brands
         {
             try
             {
-                if (itemGridView.SelectedItem!=null)
+                if (ApplicationView.Value != ApplicationViewState.Snapped)
                 {
-                    var x = itemGridView.SelectedItem as PhoneModel;
-                    Parameters.location = x.Link;
+                    var selectedItem = itemGridView.SelectedItem as PhoneModel;
+                    Parameters.location = selectedItem.Link;
+                    this.Frame.Navigate(typeof(Views.DetailedInformation.DetailInformation));
+                }
+                else
+                {
+                    var selectedItem = itemListView.SelectedItem as PhoneModel;
+                    Parameters.location = selectedItem.Link;
                     this.Frame.Navigate(typeof(Views.DetailedInformation.DetailInformation));
                 }
             }
             catch (Exception)
             {
-                
-                
             }
         }
 
@@ -42,22 +47,45 @@ namespace PhoneInformation.App.Views.Brands
         {
             try
             {
-               var selectedItems = itemGridView.SelectedItems;
-               if (selectedItems.Count == 2)
+                if (ApplicationView.Value != ApplicationViewState.Snapped)
+                {
+                    var selectedItems = itemGridView.SelectedItems;
+                    if (selectedItems.Count == 2)
                     {
                         var firstPhone = selectedItems[0] as PhoneModel;
                         var secondPhone = selectedItems[1] as PhoneModel;
-                        string[] splitedString = firstPhone.Link.Split('-','.');
+                        string[] splitedString = firstPhone.Link.Split('-', '.');
                         Parameters.firstPhoneId = splitedString[1];
                         splitedString = secondPhone.Link.Split('-', '.');
                         Parameters.secondPhoneId = splitedString[1];
                         this.Frame.Navigate(typeof(Views.Comparison.Comparison));
                     }
-                else
+                    else
                     {
                         var message = new MessageDialog("You can compare only 2 phones");
                         message.ShowAsync();
                     }
+                }
+            
+                else
+                {
+                    var selectedItems = itemListView.SelectedItems;
+                    if (selectedItems.Count == 2)
+                    {
+                        var firstPhone = selectedItems[0] as PhoneModel;
+                        var secondPhone = selectedItems[1] as PhoneModel;
+                        string[] splitedString = firstPhone.Link.Split('-', '.');
+                        Parameters.firstPhoneId = splitedString[1];
+                        splitedString = secondPhone.Link.Split('-', '.');
+                        Parameters.secondPhoneId = splitedString[1];
+                        this.Frame.Navigate(typeof(Views.Comparison.Comparison));
+                    }
+                    else
+                    {
+                        var message = new MessageDialog("You can compare only 2 phones");
+                        message.ShowAsync();
+                    }
+                }
             }
             catch (Exception)
             {

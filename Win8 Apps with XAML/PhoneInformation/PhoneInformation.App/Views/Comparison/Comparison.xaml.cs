@@ -79,102 +79,134 @@ namespace PhoneInformation.App.Views.Comparison
                     }
                 case "General":
                     {
-                        if (GeneralInfo.Visibility == Visibility.Visible )
+                        if (GeneralInfo.Visibility == Visibility.Visible)
                         {
                             GeneralInfo.Visibility = Visibility.Collapsed;
                             GeneralInfo2.Visibility = Visibility.Collapsed;
+                            GeneralInfoSnapped.Visibility = Visibility.Collapsed;
+                            GeneralInfoSnapped2.Visibility = Visibility.Collapsed;
                         }
                         else
                         {
                             GeneralInfo.Visibility = Visibility.Visible;
                             GeneralInfo2.Visibility = Visibility.Visible;
+                            GeneralInfoSnapped.Visibility = Visibility.Visible;
+                            GeneralInfoSnapped2.Visibility = Visibility.Visible;
                         }
                         break;
                     }
                 case "Body":
                     {
-                        if (BodyInfo.Visibility == Visibility.Visible )
+                        if (BodyInfo.Visibility == Visibility.Visible)
                         {
                             BodyInfo.Visibility = Visibility.Collapsed;
                             BodyInfo2.Visibility = Visibility.Collapsed;
+                            BodyInfoSnapped.Visibility = Visibility.Collapsed;
+                            BodyInfoSnapped2.Visibility = Visibility.Collapsed;
                         }
                         else
                         {
                             BodyInfo.Visibility = Visibility.Visible;
                             BodyInfo2.Visibility = Visibility.Visible;
+                            BodyInfoSnapped.Visibility = Visibility.Visible;
+                            BodyInfoSnapped2.Visibility = Visibility.Visible;
                         }
                         break;
                     }
                 case "Display":
                     {
-                        if (DisplayInfo.Visibility == Visibility.Visible )
+                        if (DisplayInfo.Visibility == Visibility.Visible)
                         {
                             DisplayInfo.Visibility = Visibility.Collapsed;
                             DisplayInfo2.Visibility = Visibility.Collapsed;
+                            DisplayInfoSnaped.Visibility = Visibility.Collapsed;
+                            DisplayInfoSnaped2.Visibility = Visibility.Collapsed;
+
                         }
                         else
                         {
                             DisplayInfo.Visibility = Visibility.Visible;
                             DisplayInfo2.Visibility = Visibility.Visible;
+                            DisplayInfoSnaped.Visibility = Visibility.Visible;
+                            DisplayInfoSnaped2.Visibility = Visibility.Visible;
                         }
                         break;
                     }
                 case "Sound":
                     {
-                        if (SoundInfo.Visibility == Visibility.Visible )
+                        if (SoundInfo.Visibility == Visibility.Visible)
                         {
                             SoundInfo.Visibility = Visibility.Collapsed;
                             SoundInfo2.Visibility = Visibility.Collapsed;
+                            SoundInfoSnapped.Visibility = Visibility.Collapsed;
+                            SoundInfoSnapped2.Visibility = Visibility.Collapsed;
 
                         }
                         else
                         {
                             SoundInfo.Visibility = Visibility.Visible;
                             SoundInfo2.Visibility = Visibility.Visible;
+                            SoundInfoSnapped.Visibility = Visibility.Visible;
+                            SoundInfoSnapped2.Visibility = Visibility.Visible;
                         }
                         break;
                     }
                 case "Memory":
                     {
-                        if (MemoryInfo.Visibility == Visibility.Visible )
+                        if (MemoryInfo.Visibility == Visibility.Visible)
                         {
                             MemoryInfo.Visibility = Visibility.Collapsed;
                             MemoryInfo2.Visibility = Visibility.Collapsed;
+                            MemoryInfoSnapped.Visibility = Visibility.Collapsed;
+                            MemoryInfoSnapped2.Visibility = Visibility.Collapsed;
                         }
                         else
                         {
                             MemoryInfo.Visibility = Visibility.Visible;
                             MemoryInfo2.Visibility = Visibility.Visible;
+                            
+                            MemoryInfoSnapped.Visibility = Visibility.Visible;
+                            MemoryInfoSnapped2.Visibility = Visibility.Visible;
                         }
                         break;
                     }
                 case "Data":
                     {
-                        if (DataInfo.Visibility == Visibility.Visible)
+                        if (DataInfo.Visibility == Visibility.Visible )
                         {
                             DataInfo.Visibility = Visibility.Collapsed;
                             DataInfo2.Visibility = Visibility.Collapsed;
+                            DataInfoSnapped.Visibility = Visibility.Collapsed;
+                            DataInfoSnapped2.Visibility = Visibility.Collapsed;
 
                         }
                         else
                         {
                             DataInfo.Visibility = Visibility.Visible;
                             DataInfo2.Visibility = Visibility.Visible;
+                            
+                            DataInfoSnapped.Visibility = Visibility.Visible;
+                            DataInfoSnapped2.Visibility = Visibility.Visible;
                         }
                         break;
                     }
                 case "Camera":
                     {
-                        if (CameraInfo.Visibility == Visibility.Visible)
+                        if (CameraInfo.Visibility == Visibility.Visible )
                         {
                             CameraInfo.Visibility = Visibility.Collapsed;
                             CameraInfo2.Visibility = Visibility.Collapsed;
+                            CameraInfoSnapped.Visibility = Visibility.Collapsed;
+                            CameraInfoSnapped2.Visibility = Visibility.Collapsed;
 
                         }
                         else
                         {
                             CameraInfo.Visibility = Visibility.Visible;
                             CameraInfo2.Visibility = Visibility.Visible;
+                            
+                            CameraInfoSnapped.Visibility = Visibility.Visible;
+                            CameraInfoSnapped2.Visibility = Visibility.Visible;
                         }
                         break;
                     }
@@ -184,11 +216,17 @@ namespace PhoneInformation.App.Views.Comparison
                         {
                             FeaturesInfo.Visibility = Visibility.Collapsed;
                             FeaturesInfo2.Visibility = Visibility.Collapsed;
+
+                            FeaturesInfoSnapped.Visibility = Visibility.Collapsed;
+                            FeaturesInfoSnapped2.Visibility = Visibility.Collapsed;
                         }
                         else
                         {
                             FeaturesInfo.Visibility = Visibility.Visible;
                             FeaturesInfo2.Visibility = Visibility.Visible;
+                            
+                            FeaturesInfoSnapped.Visibility = Visibility.Visible;
+                            FeaturesInfoSnapped2.Visibility = Visibility.Visible;
                         }
                         break;
                     }
@@ -198,12 +236,16 @@ namespace PhoneInformation.App.Views.Comparison
                         {
                             BatteryInfo.Visibility = Visibility.Collapsed;
                             BatteryInfo2.Visibility = Visibility.Collapsed;
+                            BatteryInfoSnapped.Visibility = Visibility.Collapsed;
+                            BatteryInfoSnapped2.Visibility = Visibility.Collapsed;
 
                         }
                         else
                         {
                             BatteryInfo.Visibility = Visibility.Visible;
                             BatteryInfo2.Visibility = Visibility.Visible;
+                            BatteryInfoSnapped.Visibility = Visibility.Visible;
+                            BatteryInfoSnapped2.Visibility = Visibility.Visible;
                         }
                         break;
                     }
