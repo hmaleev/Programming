@@ -17,381 +17,431 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="5*" />
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
 
         <StackPanel x:Name="header" Grid.Row="0" Grid.ColumnSpan="2" Height="60"  Visibility="Collapsed">
             <StackPanel Orientation="Horizontal" >
                 <Image Source="ms-appx:///Assets/StoreLogo.png" HorizontalAlignment="Left" Stretch="None"/>
                 <RichTextBlock Foreground="Black" FontSize="20" TextAlignment="Left" FontFamily="Segoe UI">
-                    <Paragraph>Details</Paragraph>
+                    <Paragraph>
+                        <Run Text="{Binding DetailedInfo[0].PhoneName}" FontSize="42" FontWeight="Bold"></Run>
+                        <Run Text=" - Details" FontSize="42" FontWeight="Bold"></Run>
+                    </Paragraph>
                 </RichTextBlock>
             </StackPanel>
         </StackPanel>
 
         <RichTextBlock Foreground="Black" x:Name="textContent" FontSize="18" Grid.Row="1"  Grid.ColumnSpan="2" OverflowContentTarget="{Binding ElementName=firstLinkedContainer}" 
                        IsTextSelectionEnabled="True" TextAlignment="Left" FontFamily="Segoe UI" VerticalAlignment="Top" HorizontalAlignment="Left">
+
+            <Paragraph>
+                <InlineUIContainer >
+                    <Image Source="{Binding DetailedInfo[0].ImageUrl}"
+                               VerticalAlignment="Center"
+                           MaxHeight="320"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph></Paragraph>
+                <!-- General-->
             <Paragraph >
                 <Run Text="General" FontSize="42"/>
             </Paragraph>
             <Paragraph>
-                <Run Text="2G Network:"></Run>
+                <Run Text="2G Network:" FontWeight="Bold"></Run>
                 <InlineUIContainer>
                     <TextBlock Text="{Binding DetailedInfo[0].SecondGenNetwork}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
                 </InlineUIContainer>
             </Paragraph>
             <Paragraph>
-                <Run Text="3G Network:"></Run>
+                <Run Text="3G Network:" FontWeight="Bold"></Run>
                 <InlineUIContainer>
                     <TextBlock Text="{Binding DetailedInfo[0].ThirdGenNetwork}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
                 </InlineUIContainer>
             </Paragraph>
-
             <Paragraph>
-                <Run Text="4G Network:"></Run>
+                <Run Text="4G Network"  FontWeight="Bold"></Run>
                 <InlineUIContainer>
                     <TextBlock Text="{Binding DetailedInfo[0].FourthGenNetwork}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
                 </InlineUIContainer>
             </Paragraph>
-
             <Paragraph>
-                <Run Text="Sim Card Size: "></Run>
+                <Run Text="Sim Card: " FontWeight="Bold"></Run>
                 <InlineUIContainer>
                     <TextBlock Text="{Binding DetailedInfo[0].Sim}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
                 </InlineUIContainer>
             </Paragraph>
-
             <Paragraph>
-                <Run Text="Announced: "></Run>
+                <Run Text="Announced: " FontWeight="Bold"></Run>
                 <InlineUIContainer>
                     <TextBlock Text="{Binding DetailedInfo[0].Announced}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
                 </InlineUIContainer>
             </Paragraph>
-
             <Paragraph>
-                <Run Text="Status: "></Run>
+                <Run Text="Status: " FontWeight="Bold"></Run>
                 <InlineUIContainer>
                     <TextBlock Text="{Binding DetailedInfo[0].Status}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
                 </InlineUIContainer>
             </Paragraph>
-
+            <!-- Body-->
             <Paragraph >
                 <Run Text="Body" FontSize="42"/>
             </Paragraph>
             <Paragraph>
-                <Run Text="Dimensions"></Run>
-            <InlineUIContainer>
+                <Run Text="Dimensions" FontWeight="Bold"></Run>
+                <InlineUIContainer>
                     <TextBlock Text="{Binding DetailedInfo[0].Dimensions}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
                 </InlineUIContainer>
             </Paragraph>
             <Paragraph>
-                <Run Text="Weight"></Run>
+                <Run Text="Weight" FontWeight="Bold"></Run>
                 <InlineUIContainer>
                     <TextBlock Text="{Binding DetailedInfo[0].Weight}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
                 </InlineUIContainer>
             </Paragraph>
-
+            <!-- Display-->
             <Paragraph >
                 <Run Text="Display" FontSize="42"/>
             </Paragraph>
-
             <Paragraph>
-                <Run Text="Display type:"></Run>
+                <Run Text="Display type:" FontWeight="Bold"></Run>
                 <InlineUIContainer>
                     <TextBlock Text="{Binding DetailedInfo[0].DisplayType}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
                 </InlineUIContainer>
             </Paragraph>
             <Paragraph>
-                <Run Text="Size:"></Run>
+                <Run Text="Size:" FontWeight="Bold"></Run>
                 <InlineUIContainer>
                     <TextBlock Text="{Binding DetailedInfo[0].Size}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
                 </InlineUIContainer>
             </Paragraph>
             <Paragraph>
-                <Run Text="Protection:"></Run>
+                <Run Text="Protection:" FontWeight="Bold"></Run>
                 <InlineUIContainer>
                     <TextBlock Text="{Binding DetailedInfo[0].Protection}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
                 </InlineUIContainer>
             </Paragraph>
             <Paragraph>
-                <Run Text="Multitouch:"></Run>
+                <Run Text="Multitouch:" FontWeight="Bold"></Run>
                 <InlineUIContainer>
                     <TextBlock Text="{Binding DetailedInfo[0].Multitouch}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
                 </InlineUIContainer>
             </Paragraph>
-
+            <!-- Sound-->
             <Paragraph >
                 <Run Text="Sound" FontSize="42"/>
             </Paragraph>
-
             <Paragraph>
-                <Run Text="Alert Types:"></Run>
+                <Run Text="Alert Types:" FontWeight="Bold"></Run>
                 <InlineUIContainer>
                     <TextBlock Text="{Binding DetailedInfo[0].AlertTypes}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
                 </InlineUIContainer>
             </Paragraph>
             <Paragraph>
-                <Run Text="Loudspeaker:"></Run>
+                <Run Text="Loudspeaker:" FontWeight="Bold"></Run>
                 <InlineUIContainer>
                     <TextBlock Text="{Binding DetailedInfo[0].Loudspeaker}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
                 </InlineUIContainer>
             </Paragraph>
             <Paragraph>
-                <Run Text="3.5mm Audio Jack:"></Run>
+                <Run Text="3.5mm Audio Jack:" FontWeight="Bold"></Run>
                 <InlineUIContainer>
                     <TextBlock Text="{Binding DetailedInfo[0].AudioJack}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
                 </InlineUIContainer>
             </Paragraph>
             <Paragraph>
-                <Run Text="Other Sound Features:"></Run>
+                <Run Text="Other Sound Features:" FontWeight="Bold"></Run>
                 <InlineUIContainer>
                     <TextBlock Text="{Binding DetailedInfo[0].OtherSoundFeatures}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
                 </InlineUIContainer>
             </Paragraph>
-            <!--</Paragraph>
-            
-                            <TextBlock Text="{Binding DetailedInfo[0].CardSlot}"
+            <!-- Memory-->
+            <Paragraph >
+                <Run Text="Memory" FontSize="42"/>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="Card slot:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].CardSlot}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Internal}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
-                        </StackPanel>
-                    </StackPanel>
                 </InlineUIContainer>
             </Paragraph>
             <Paragraph>
+                <Run Text="Internal memory:" FontWeight="Bold"></Run>
                 <InlineUIContainer>
-                    <StackPanel>
-                        <TextBlock
-                        Grid.Row="10"
-                        Text="Data"
-                        Margin="20,0,0,0"
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap" />
-                        <StackPanel
-                        Grid.Row="11" 
-                        Name="DataInfoSnapped"
-                        Margin="5">
-                            <TextBlock Text="{Binding DetailedInfo[0].GPRS}"
+                    <TextBlock Text="{Binding DetailedInfo[0].Internal}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].EDGE}"
+                </InlineUIContainer>
+            </Paragraph>
+            <!-- Data-->
+            <Paragraph>
+                <Run Text="Data" FontSize="42"/>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="GPRS:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].GPRS}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Speed}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].WLan}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Bluetooth}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].USB}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].NFC}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                        </StackPanel>
-                    </StackPanel>
                 </InlineUIContainer>
             </Paragraph>
             <Paragraph>
+                <Run Text="EDGE:" FontWeight="Bold"></Run>
                 <InlineUIContainer>
-                    <StackPanel>
-                        <TextBlock
-                        Text="Camera"
-                        Margin="20,0,0,0"
-                        Grid.Row="12"
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap" />
-                        <StackPanel
-                        Grid.Row="13"
-                        Name="CameraInfoSnapped">
-                            <TextBlock Text="{Binding DetailedInfo[0].Primary}"
+                    <TextBlock Text="{Binding DetailedInfo[0].EDGE}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Secondary}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Video}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].CameraFeatures}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
-                        </StackPanel>
-                    </StackPanel>
                 </InlineUIContainer>
             </Paragraph>
             <Paragraph>
+                <Run Text="Speed:" FontWeight="Bold"></Run>
                 <InlineUIContainer>
-                    <StackPanel>
-                        <TextBlock
-                        Grid.Row="14"
-                        Text="Features"
-                        Margin="20,0,0,0"
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap"  />
-                        <StackPanel
-                        Grid.Row="15"
-                        Name="FeaturesInfoSnapped">
-                            <TextBlock Text="{Binding DetailedInfo[0].OS}"
+                    <TextBlock Text="{Binding DetailedInfo[0].Speed}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Chipset}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].CPU}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].GPU}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Sensors}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Messaging}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Browser}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Radio}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].GPS}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Java}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].Colors}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].OTherFeatures}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
-                        </StackPanel>
-                    </StackPanel>
                 </InlineUIContainer>
             </Paragraph>
             <Paragraph>
+                <Run Text="Wi-Fi:" FontWeight="Bold"></Run>
                 <InlineUIContainer>
-                    <StackPanel>
-                        <TextBlock
-                        Grid.Row="16"
-                        Text="Battery"
-                        Margin="20,0,0,0"
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap" />
-                        <StackPanel 
-                        Grid.Row="17"
-                        Name="BatteryInfoSnapped">
-                            <TextBlock Text="{Binding DetailedInfo[0].BatteryType}"
+                    <TextBlock Text="{Binding DetailedInfo[0].WLan}"
                                    FontSize="20"
-                                   FontWeight="Bold"
                                    TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].StandbyTime}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].TalkTime}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-                            <TextBlock Text="{Binding DetailedInfo[0].MusicPlayTime}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
-                        </StackPanel>
-                    </StackPanel>
                 </InlineUIContainer>
-            </Paragraph>-->
+            </Paragraph>
+            <Paragraph>
+                <Run Text="Bluetooth:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].Bluetooth}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="USB:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].USB}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="NFC:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].NFC}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <!-- Camera-->
+            <Paragraph >
+                <Run Text="Camera" FontSize="42"/>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="Primary camera:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].Primary}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="Secondary camera:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].Secondary}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="Video:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].Video}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="Other camera features:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].CameraFeatures}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <!-- Features-->
+            <Paragraph >
+                <Run Text="Features" FontSize="42"/>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="Operating System:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].OS}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="Chipset:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].Chipset}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="CPU:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].CPU}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="GPU:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].GPU}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="Sensors:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].Semsors}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="Messaging:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].Messaging}"
+                                   FontSize="20"
+                                   
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="Browser:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].Browser}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="Radio:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].Radio}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="GPS:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].GPS}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="Java:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].Java}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="Colors:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].Colors}"
+                                   FontSize="20"
+                                   
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="Other Features:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].OtherFeatures}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <!--Battery-->
+            <Paragraph >
+                <Run Text="Battery" FontSize="42"/>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="Battery type:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].BatteryType}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="Standby time:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].StandbyTime}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="Talk time:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].TalkTime}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
+            <Paragraph>
+                <Run Text="Music play time:" FontWeight="Bold"></Run>
+                <InlineUIContainer>
+                    <TextBlock Text="{Binding DetailedInfo[0].MusicPlayTime}"
+                                   FontSize="20"
+                                   TextWrapping="Wrap"/>
+                </InlineUIContainer>
+            </Paragraph>
         </RichTextBlock>
         <RichTextBlockOverflow x:Name="firstLinkedContainer" OverflowContentTarget="{Binding ElementName=continuationPageLinkedContainer}" Grid.Row="2" Grid.Column="0"/>
         <RichTextBlockOverflow x:Name="continuationPageLinkedContainer" Grid.Row="3" Grid.ColumnSpan="2"/>

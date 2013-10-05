@@ -12,8 +12,6 @@ namespace PhoneInformation.App.Models
         {
         }
 
-        private string gps;
-
         public string ImageUrl { get; set; }
         public string PhoneName { get; set; }
 
@@ -69,17 +67,7 @@ namespace PhoneInformation.App.Models
         public string Messaging { get; set; }
         public string Browser { get; set; }
         public string Radio { get; set; }
-        public string GPS
-        {
-            get
-            {
-                return this.gps;
-            }
-            set
-            {
-                this.gps = value;
-            }
-        }
+        public string GPS {get; set;}
         public string Java { get; set; }
         public string Colors { get; set; }
         public string OtherFeatures { get; set; }
