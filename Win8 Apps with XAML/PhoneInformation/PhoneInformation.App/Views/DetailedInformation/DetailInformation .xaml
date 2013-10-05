@@ -19,6 +19,7 @@
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                     <Button Style="{StaticResource SaveAppBarButtonStyle}" Click="OnSaveButtonClick"/>
+                    <Button Style="{StaticResource DocumentAppBarButtonStyle}" Click="OnPrintButtonClick"/>
 
                 </StackPanel>
             </Grid>

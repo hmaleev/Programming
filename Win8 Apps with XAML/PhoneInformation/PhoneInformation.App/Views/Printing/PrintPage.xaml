@@ -23,7 +23,6 @@
 
         <StackPanel x:Name="header" Grid.Row="0" Grid.ColumnSpan="2" Height="60"  Visibility="Collapsed">
             <StackPanel Orientation="Horizontal" >
-                <Image Source="ms-appx:///Assets/StoreLogo.png" HorizontalAlignment="Left" Stretch="None"/>
                 <RichTextBlock Foreground="Black" FontSize="20" TextAlignment="Left" FontFamily="Segoe UI">
                     <Paragraph>
                         <Run Text="{Binding DetailedInfo[0].PhoneName}" FontSize="42" FontWeight="Bold"></Run>
@@ -445,8 +444,6 @@
         </RichTextBlock>
         <RichTextBlockOverflow x:Name="firstLinkedContainer" OverflowContentTarget="{Binding ElementName=continuationPageLinkedContainer}" Grid.Row="2" Grid.Column="0"/>
         <RichTextBlockOverflow x:Name="continuationPageLinkedContainer" Grid.Row="3" Grid.ColumnSpan="2"/>
-        <Image Source="ms-appx:///Assets/Logo.png" x:Name="scenarioImage"  HorizontalAlignment="Right" Grid.Row="2" Grid.Column="1" Margin="10"/>
-
         <StackPanel x:Name="footer"  Grid.Row="4" Grid.Column="0" VerticalAlignment="Top" Visibility="Collapsed">
             <Image Source="ms-appx:///Assets/StoreLogo.png" HorizontalAlignment="Left" Stretch="None"/>
             <RichTextBlock Foreground="Black" FontSize="16" TextAlignment="Left" FontFamily="Segoe UI">

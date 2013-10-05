@@ -346,7 +346,7 @@ namespace PhoneInformation.App.Views.DetailedInformation
 
 
 
-                PrintDocument document = null;
+        PrintDocument document = null;
         IPrintDocumentSource source = null;
         List<UIElement> pages = null;
         FrameworkElement page1;
@@ -356,19 +356,7 @@ namespace PhoneInformation.App.Views.DetailedInformation
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            document = new PrintDocument();
-            source = document.DocumentSource;
-
-            document.Paginate += printDocument_Paginate;
-            document.GetPreviewPage += printDocument_GetPreviewPage;
-            document.AddPages += printDocument_AddPages;
-
-            PrintManager manager = PrintManager.GetForCurrentView();
-            manager.PrintTaskRequested += manager_PrintTaskRequested;
-
-            pages = new List<UIElement>();
-
-            PrepareContent();
+           
         }
 
         protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
@@ -500,8 +488,25 @@ namespace PhoneInformation.App.Views.DetailedInformation
             return link;
         }
 
+        private async void OnPrintButtonClick(object sender, RoutedEventArgs e)
+        {
+            
+             document = new PrintDocument();
+            source = document.DocumentSource;
 
+            document.Paginate += printDocument_Paginate;
+            document.GetPreviewPage += printDocument_GetPreviewPage;
+            document.AddPages += printDocument_AddPages;
 
+            PrintManager manager = PrintManager.GetForCurrentView();
+            manager.PrintTaskRequested += manager_PrintTaskRequested;
+
+            pages = new List<UIElement>();
+
+            PrepareContent();
+            await Windows.Graphics.Printing.PrintManager.ShowPrintUIAsync();
+
+        }
 
     }
 }
