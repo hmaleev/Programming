@@ -1,0 +1,1 @@
+﻿This application does not collect any personal information. It requires Internet connection to connect with server in order to show the flight.
