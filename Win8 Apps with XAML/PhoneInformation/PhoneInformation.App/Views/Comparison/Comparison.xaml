@@ -83,11 +83,11 @@
 
                         <TextBlock Grid.Row="0"
                             Text="{Binding DetailedInfo[0].PhoneName}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"
-                                   TextAlignment="Center"
-                                   Name="PhoneName"/>
+                            FontSize="20"
+                            FontWeight="Bold"
+                            TextWrapping="Wrap"
+                            TextAlignment="Center"
+                            Name="PhoneName"/>
                         <Image Source="{Binding DetailedInfo[0].ImageUrl}"
                                MaxHeight="250"
                                VerticalAlignment="Center"
@@ -104,11 +104,11 @@
 
                         <TextBlock Grid.Row="0"
                             Text="{Binding DetailedInfo[1].PhoneName}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"
-                                   TextAlignment="Center"
-                                   Name="PhoneName2"/>
+                            FontSize="20"
+                            FontWeight="Bold"
+                            TextWrapping="Wrap"
+                            TextAlignment="Center"
+                            Name="PhoneName2"/>
                         <Image Source="{Binding DetailedInfo[1].ImageUrl}"
                                MaxHeight="250"
                                VerticalAlignment="Center"

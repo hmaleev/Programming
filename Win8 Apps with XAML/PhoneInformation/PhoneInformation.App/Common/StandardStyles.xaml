@@ -62,6 +62,13 @@
         </Style.Setters>
     </Style>
 
+    <Style TargetType="TextBlock" x:Key="TexBlockFeatureContent">
+        <Style.Setters>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style.Setters>
+    </Style>
+
 
     <!-- End of user Styles -->
 
@@ -698,7 +705,7 @@
     -->
     <Style x:Key="DocumentAppBarButtonStyle" TargetType="ButtonBase" BasedOn="{StaticResource AppBarButtonStyle}">
         <Setter Property="AutomationProperties.AutomationId" Value="DocumentAppBarButton"/>
-        <Setter Property="AutomationProperties.Name" Value="Document"/>
+        <Setter Property="AutomationProperties.Name" Value="Print"/>
         <Setter Property="Content" Value="&#xE130;"/>
     </Style>
 <!--
