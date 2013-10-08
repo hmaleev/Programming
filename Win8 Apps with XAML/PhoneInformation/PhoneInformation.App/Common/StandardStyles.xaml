@@ -33,7 +33,7 @@
 
     <!-- Start of User Styles -->
 
-    <Style TargetType="TextBlock" x:Key="TextBlockHeaderStyle">
+    <Style TargetType="TextBlock" x:Key="TexBlockCategoryTitleStyle">
         <Style.Setters>
             <Setter Property="FontSize" Value="42"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
@@ -43,7 +43,7 @@
         </Style.Setters>
     </Style>
 
-    <Style TargetType="TextBlock" x:Key="TextBlockHeaderStyleSnapped">
+    <Style TargetType="TextBlock" x:Key="TexBlockCategoryTitleStyleSnapped">
         <Style.Setters>
             <Setter Property="FontSize" Value="42"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
@@ -53,6 +53,15 @@
             <Setter Property="HorizontalAlignment" Value="Left"/>
         </Style.Setters>
     </Style>
+
+    <Style TargetType="TextBlock" x:Key="TexBlockFeatureName">
+        <Style.Setters>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style.Setters>
+    </Style>
+
 
     <!-- End of user Styles -->
 

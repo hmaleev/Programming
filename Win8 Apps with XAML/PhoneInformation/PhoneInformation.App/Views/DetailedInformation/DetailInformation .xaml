@@ -81,7 +81,7 @@
                         Grid.Row="0" 
                         Grid.Column="0"
                         Text="Phone" 
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyle}"
                         Tapped="OnTap"/>
                     <StackPanel 
                         Grid.Row="1"
@@ -92,10 +92,8 @@
                         Visibility="Visible">
 
                         <TextBlock Grid.Row="0"
-                            Text="{Binding DetailedInfo[0].PhoneName}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"
+                                   Text="{Binding DetailedInfo[0].PhoneName}"
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"
                                    TextAlignment="Center"
                                    Name="PhoneName"/>
                         <Image Source="{Binding DetailedInfo[0].ImageUrl}"
@@ -109,7 +107,7 @@
                         Grid.Row="0" 
                         Grid.Column="1"
                         Text="General" 
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyle}"
                         Tapped="OnTap"/>
                     <Grid Grid.Row="1" 
                         Grid.Column="1"
@@ -127,35 +125,17 @@
                             Visibility="Visible"
                             Margin="5">
                             <TextBlock Text="2G Network"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"
-                                      />
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}" />
                             <TextBlock Text="3G Network"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"
-                                    />
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="4G Network"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"
-                                 />
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Sim Card Size:"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"
-                                 />
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Announced"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"
-                                     />
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Status"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"
-                                      />
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         </StackPanel>
                         <StackPanel 
                             Grid.Row="0"
@@ -194,7 +174,7 @@
                         Grid.Row="0"
                         Grid.Column="2"
                         Text="Body" 
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyle}"
                         Tapped="OnTap" />
                     <Grid Grid.Row="1" 
                           Grid.Column="2"
@@ -213,13 +193,9 @@
                             Margin="5">
 
                             <TextBlock Text="Dimensions: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Weight: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
 
                         </StackPanel>
                         <StackPanel
@@ -242,7 +218,7 @@
                         Grid.Row="0"
                         Grid.Column="3"
                         Text="Display"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyle}"
                         Tapped="OnTap" />
                     <Grid Grid.Row="1"
                         Grid.Column="3"
@@ -257,25 +233,13 @@
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0" Margin="5">
                             <TextBlock Text="Display Type: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"
-                                       />
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock  Text="Size: "
-                                    FontSize="20"
-                                    FontWeight="Bold"
-                                    TextWrapping="Wrap"
-                                        />
+                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Multitouch: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                       
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Protection: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"
-                                      />
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
 
                         </StackPanel>
                         <StackPanel Grid.Column="1" Margin="5">
@@ -302,7 +266,7 @@
                         Text="Sound"
                         Grid.Row="0"
                         Grid.Column="4"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyle}"
                         Tapped="OnTap"/>
                     <Grid Grid.Row="1"
                         Grid.Column="4"
@@ -319,21 +283,13 @@
 
                         Margin="5">
                             <TextBlock Text="Alert Types: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Loudspeaker: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="3.5mm Audio Jack: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Other Sound Features: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
 
                         </StackPanel>
                         <StackPanel Grid.Column="1"
@@ -363,7 +319,7 @@
                         Text="Memory"
                         Grid.Row="0"
                         Grid.Column="5"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}" 
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyle}" 
                         Tapped="OnTap"/>
                     <Grid Grid.Row="1"
                           Background="#87CEEB"
@@ -378,9 +334,7 @@
 
                         <StackPanel Grid.Column="0" Margin="5">
                             <TextBlock Text="Card Slot:"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Internal Memory: "
                                    FontSize="20"
                                    FontWeight="Bold"
@@ -404,7 +358,7 @@
                         Grid.Row="0"
                         Grid.Column="6"
                         Text="Data"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyle}"
                         Tapped="OnTap" />
                     <Grid Grid.Row="1" 
                         Grid.Column="6"
@@ -484,7 +438,7 @@
                         Text="Camera"
                         Grid.Row="0"
                         Grid.Column="7"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyle}"
                         Tapped="OnTap" />
                     <Grid Grid.Row="1"
                         Grid.Column="7"
@@ -540,7 +494,7 @@
                         Grid.Row="0"
                         Grid.Column="8"
                         Text="Features"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyle}"
                         Tapped="OnTap" />
                     <Grid Grid.Row="1"
                         Grid.Column="8"
@@ -661,7 +615,7 @@
                         Grid.Row="0"
                         Grid.Column="9"
                         Text="Battery"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyle}"
                         Tapped="OnTap" />
                     <Grid Grid.Row="1"
                         Grid.Column="9"
@@ -759,7 +713,7 @@
                     <TextBlock
                         Grid.Row="0" 
                         Text="General" 
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyleSnapped}"
                         Tapped="OnTap" />
                     <StackPanel 
                         Grid.Row="1"
@@ -816,7 +770,7 @@
                     <TextBlock
                         Grid.Row="2"
                         Text="Body"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyleSnapped}"
                         Tapped="OnTap"/>
                     <StackPanel
                         Grid.Row="3"
@@ -848,7 +802,7 @@
                     <TextBlock
                         Grid.Row="4"
                         Text="Display"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyleSnapped}"
                         Tapped="OnTap" />
                     <StackPanel
                         Grid.Row="5"
@@ -900,7 +854,7 @@
                     <TextBlock
                         Text="Sound"
                         Grid.Row="6"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyleSnapped}"
                         Tapped="OnTap"/>
                     <StackPanel
                         Grid.Row="7"
@@ -949,7 +903,7 @@
                     <TextBlock
                         Text="Memory"
                         Grid.Row="8"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyleSnapped}"
                         Tapped="OnTap"/>
                     <StackPanel
                         Grid.Row="9"
@@ -982,7 +936,7 @@
                     <TextBlock
                         Grid.Row="10"
                         Text="Data"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyleSnapped}"
                         Tapped="OnTap" />
                     <StackPanel
                         Grid.Row="11" 
@@ -1052,7 +1006,7 @@
                     <TextBlock
                         Text="Camera"
                         Grid.Row="12"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyleSnapped}"
                         Tapped="OnTap" />
                     <StackPanel
                         Grid.Row="13"
@@ -1099,7 +1053,7 @@
                     <TextBlock
                         Grid.Row="14"
                         Text="Features"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}" 
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyleSnapped}" 
                         Tapped="OnTap" />
                     <StackPanel
                         Grid.Row="15"
@@ -1210,7 +1164,7 @@
                     <TextBlock
                         Grid.Row="16"
                         Text="Battery"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyleSnapped}"
                         Tapped="OnTap" />
                     <StackPanel 
                         Grid.Row="17"

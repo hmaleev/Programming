@@ -71,7 +71,7 @@
                         Grid.Row="0" 
                         Grid.Column="0"
                         Text="Phone" 
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyle}"
                         Tapped="OnTap"/>
                     <StackPanel 
                         Grid.Row="1"
@@ -120,7 +120,7 @@
                         Grid.Row="0" 
                         Grid.Column="1"
                         Text="General" 
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyle}"
                         Tapped="OnTap"/>
                     <Grid Grid.Row="1" 
                         Grid.Column="1"
@@ -277,7 +277,7 @@
                         Grid.Row="0"
                         Grid.Column="2"
                         Text="Body"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyle}"
                         Tapped="OnTap" />
                     <Grid Grid.Row="1" 
                           Grid.Column="2"
@@ -365,7 +365,7 @@
                         Grid.Row="0"
                         Grid.Column="3"
                         Text="Display"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyle}"
                         Tapped="OnTap" />
                     <Grid Grid.Row="1"
                         Grid.Column="3"
@@ -470,7 +470,7 @@
                         Text="Sound"
                         Grid.Row="0"
                         Grid.Column="4"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyle}"
                         Tapped="OnTap"/>
                     <Grid Grid.Row="1"
                         Grid.Column="4"
@@ -581,7 +581,7 @@
                         Text="Memory"
                         Grid.Row="0"
                         Grid.Column="5"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyle}"
                         Tapped="OnTap"/>
                     <Grid Grid.Row="1"
                           Background="#87CEEB"
@@ -654,7 +654,7 @@
                         Grid.Row="0"
                         Grid.Column="6"
                         Text="Data"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyle}"
                         Tapped="OnTap" />
                     <Grid Grid.Row="1" 
                         Grid.Column="6"
@@ -807,7 +807,7 @@
                         Text="Camera"
                         Grid.Row="0"
                         Grid.Column="7"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyle}"
                         Tapped="OnTap" />
                     <Grid Grid.Row="1"
                         Grid.Column="7"
@@ -912,7 +912,7 @@
                         Grid.Row="0"
                         Grid.Column="8"
                         Text="Features"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyle}"
                         Tapped="OnTap" />
                     <Grid Grid.Row="1"
                         Grid.Column="8"
@@ -1148,7 +1148,7 @@
                         Grid.Row="0"
                         Grid.Column="9"
                         Text="Battery"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyle}"
                         Tapped="OnTap" />
                     <Grid Grid.Row="1"
                         Grid.Column="9"
@@ -1317,7 +1317,7 @@
                     <TextBlock
                         Grid.Row="0" 
                         Text="General" 
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyleSnapped}"
                         Tapped="OnTap"/>
                     <StackPanel 
                         Grid.Row="1"
@@ -1425,7 +1425,7 @@
                     <TextBlock
                         Grid.Row="3"
                         Text="Body"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyleSnapped}"
                         Tapped="OnTap" />
                     <StackPanel
                         Grid.Row="4"
@@ -1483,7 +1483,7 @@
                     <TextBlock
                         Grid.Row="6"
                         Text="Display"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyleSnapped}"
                         Tapped="OnTap" />
                     <StackPanel
                         Grid.Row="7"
@@ -1580,7 +1580,7 @@
                     <TextBlock
                         Text="Sound"
                         Grid.Row="9"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyleSnapped}"
                         Tapped="OnTap"/>
                     <StackPanel
                         Grid.Row="10"
@@ -1672,7 +1672,7 @@
                     <TextBlock
                         Text="Memory"
                         Grid.Row="12"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyleSnapped}"
                         Tapped="OnTap"/>
                     <StackPanel
                         Grid.Row="13"
@@ -1732,7 +1732,7 @@
                     <TextBlock
                         Grid.Row="15"
                         Text="Data"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyleSnapped}"
                         Tapped="OnTap" />
                     <StackPanel
                         Grid.Row="16" 
@@ -1866,7 +1866,7 @@
                     <TextBlock
                         Text="Camera"
                         Grid.Row="18"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyleSnapped}"
                         Tapped="OnTap" />
                     <StackPanel
                         Grid.Row="19"
@@ -1954,7 +1954,7 @@
                     <TextBlock
                         Grid.Row="21"
                         Text="Features"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyleSnapped}"
                         Tapped="OnTap" />
                     <StackPanel
                         Grid.Row="22"
@@ -2170,7 +2170,7 @@
                     <TextBlock
                         Grid.Row="24"
                         Text="Battery"
-                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
+                        Style="{StaticResource ResourceKey=TexBlockCategoryTitleStyleSnapped}"
                         Tapped="OnTap" />
                     <StackPanel 
                         Grid.Row="25"
