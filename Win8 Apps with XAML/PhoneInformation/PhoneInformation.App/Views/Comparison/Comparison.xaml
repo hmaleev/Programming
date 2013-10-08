@@ -146,55 +146,36 @@
                         </Grid.RowDefinitions>
 
                         <TextBlock Grid.Row="0" Grid.Column="0" Text="2G Network"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Grid.Row="1" Grid.Column="0" Text="3G Network"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Grid.Row="2" Grid.Column="0" Text="4G Network"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Grid.Row="3" Grid.Column="0" Text="Sim Card Size:"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Grid.Row="4" Grid.Column="0" Text="Announced"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Grid.Row="5" Grid.Column="0" Text="Status"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
 
                         <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding DetailedInfo[0].SecondGenNetwork}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                    Name="SecondGenNetwork"/>
                         <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding DetailedInfo[0].ThirdGenNetwork}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                    Name="ThirdGenNetwork"/>
                         <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding DetailedInfo[0].FourthGenNetwork}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
-                                     Name="FourthGenNetwork"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
+                                   Name="FourthGenNetwork"/>
                         <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding DetailedInfo[0].Sim}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
-                                         Name="Sim"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
+                                   Name="Sim"/>
                         <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding DetailedInfo[0].Announced}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
-                                         Name="Announced"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
+                                   Name="Announced"/>
                         <TextBlock Grid.Row="5" Grid.Column="1" Text="{Binding DetailedInfo[0].Status}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
-                                        Name="Status" />
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
+                                   Name="Status" />
 
                     </Grid>
                     <Grid Grid.Row="2" 
@@ -202,9 +183,7 @@
                         Visibility="Collapsed"
                         Name="GeneralInfo2"
                         Background="#87CEEB"
-                        Margin="5"
-                    
->
+                        Margin="5">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
@@ -215,29 +194,17 @@
                             Visibility="Visible"
                             Margin="5">
                             <TextBlock Text="2G Network"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="3G Network"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="4G Network"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Sim Card Size:"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap" />
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}" />
                             <TextBlock Text="Announced"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap" />
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}" />
                             <TextBlock Text="Status"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap" />
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}" />
                         </StackPanel>
                         <StackPanel 
                             Grid.Row="0"
@@ -246,29 +213,23 @@
                             Visibility="Visible">
 
                             <TextBlock Text="{Binding DetailedInfo[1].SecondGenNetwork}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
-                                        Name="SecondGenNetwork2"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
+                                   Name="SecondGenNetwork2"/>
                             <TextBlock Text="{Binding DetailedInfo[1].ThirdGenNetwork}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
-                                       Name="ThirdGenNetwork2"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
+                                   Name="ThirdGenNetwork2"/>
                             <TextBlock Text="{Binding DetailedInfo[1].FourthGenNetwork}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
-                                        Name="FourthGenNetwork2"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
+                                   Name="FourthGenNetwork2"/>
                             <TextBlock Text="{Binding DetailedInfo[1].Sim}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
-                                         Name="Sim2"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
+                                   Name="Sim2"/>
                             <TextBlock Text="{Binding DetailedInfo[1].Announced}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
-                                         Name="Announced2"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
+                                   Name="Announced2"/>
                             <TextBlock Text="{Binding DetailedInfo[1].Status}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
-                                        Name="Status2" />
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
+                                   Name="Status2" />
                         </StackPanel>
 
                     </Grid>
@@ -296,13 +257,9 @@
                             Margin="5">
 
                             <TextBlock Text="Dimensions: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Weight: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
 
                         </StackPanel>
                         <StackPanel
@@ -311,13 +268,11 @@
                             Margin="5">
 
                             <TextBlock Text="{Binding DetailedInfo[0].Dimensions}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
-                                       Name="Dimensions"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
+                                   Name="Dimensions"/>
                             <TextBlock Text="{Binding DetailedInfo[0].Weight}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
-                                       Name="Weight"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
+                                   Name="Weight"/>
 
                         </StackPanel>
                     </Grid>
@@ -336,11 +291,9 @@
                             Grid.Column="0"
                             Margin="5">
                             <TextBlock Text="Dimensions: "
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Weight: "
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         </StackPanel>
                         <StackPanel
                             Grid.Row="0"
@@ -348,14 +301,10 @@
                             Margin="5">
 
                             <TextBlock Text="{Binding DetailedInfo[1].Dimensions}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"
+                                  Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                        Name="Dimensions2"/>
                             <TextBlock Text="{Binding DetailedInfo[1].Weight}"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                        Name="Weight2"/>
 
                         </StackPanel>
@@ -380,40 +329,28 @@
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0" Margin="5">
                             <TextBlock Text="Display Type: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock  Text="Size: "
-                                    FontSize="20"
-                                    FontWeight="Bold"
-                                    TextWrapping="Wrap"/>
+                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Multitouch: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Protection: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
 
                         </StackPanel>
                         <StackPanel Grid.Column="1" Margin="5">
                             <TextBlock Text="{Binding DetailedInfo[0].DisplayType}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
+                                       Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                        Name="DisplayType"/>
                             <TextBlock  Text="{Binding DetailedInfo[0].Size}"
-                                    FontSize="20"
-                                    TextWrapping="Wrap"
+                                        Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                         Name="Size"/>
                             <TextBlock Text="{Binding DetailedInfo[0].Multitouch}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
+                                       Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                        Name="Multitouch"/>
                             <TextBlock Text="{Binding DetailedInfo[0].Protection}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
-                                        Name="Protection"/>
+                                       Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
+                                       Name="Protection"/>
                         </StackPanel>
                     </Grid>
                     <Grid Grid.Row="2"
@@ -429,38 +366,26 @@
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0" Margin="5">
                             <TextBlock Text="Display Type: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock  Text="Size: "
-                                    FontSize="20"
-                                    FontWeight="Bold"
-                                    TextWrapping="Wrap" />
+                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}" />
                             <TextBlock Text="Multitouch: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Protection: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap" />
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}" />
                         </StackPanel>
                         <StackPanel Grid.Column="1" Margin="5">
                             <TextBlock Text="{Binding DetailedInfo[1].DisplayType}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                        Name="DisplayType2"/>
                             <TextBlock  Text="{Binding DetailedInfo[1].Size}"
-                                    FontSize="20"
-                                    TextWrapping="Wrap"
+                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                         Name="Size2"/>
                             <TextBlock Text="{Binding DetailedInfo[1].Multitouch}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                        Name="Multitouch2"/>
                             <TextBlock Text="{Binding DetailedInfo[1].Protection}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                         Name="Protection2"/>
 
                         </StackPanel>
@@ -487,40 +412,28 @@
 
                         Margin="5">
                             <TextBlock Text="Alert Types: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Loudspeaker: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="3.5mm Audio Jack: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Other Sound Features: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
 
                         </StackPanel>
                         <StackPanel Grid.Column="1"
                                      Margin="5">
                             <TextBlock Text="{Binding DetailedInfo[0].AlertTypes}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                        Name="AlertTypes"/>
                             <TextBlock Text="{Binding DetailedInfo[0].Loudspeaker}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                        Name="Loudspeaker"/>
                             <TextBlock Text="{Binding DetailedInfo[0].AudioJack}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                        Name="AudioJack"/>
                             <TextBlock Text="{Binding DetailedInfo[0].OtherSoundFeatures}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                        Name="OtherSoundFeatures"/>
                         </StackPanel>
                     </Grid>
@@ -538,21 +451,13 @@
                         <StackPanel Grid.Column="0"
                                     Margin="5">
                             <TextBlock Text="Alert Types: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Loudspeaker: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="3.5mm Audio Jack: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Other Sound Features: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
 
                         </StackPanel>
                         <StackPanel Grid.Column="1"
@@ -596,13 +501,9 @@
 
                         <StackPanel Grid.Column="0" Margin="5">
                             <TextBlock Text="Card Slot:"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Internal Memory: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         </StackPanel>
                         <StackPanel Grid.Column="1" Margin="5">
                             <TextBlock Text="{Binding DetailedInfo[0].CardSlot}"
@@ -629,13 +530,9 @@
 
                         <StackPanel Grid.Column="0" Margin="5">
                             <TextBlock Text="Card Slot:"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Internal Memory: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         </StackPanel>
                         <StackPanel Grid.Column="1" Margin="5">
                             <TextBlock Text="{Binding DetailedInfo[1].CardSlot}"
@@ -670,33 +567,19 @@
                         <StackPanel Margin="5" Grid.Column="0">
 
                             <TextBlock Text="GPRS: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="EDGE: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Speed: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Wi-Fi: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Bluetooth: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="USB: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="NFC: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         </StackPanel>
                         <StackPanel Grid.Column="1" Margin="5">
                             <TextBlock Text="{Binding DetailedInfo[0].GPRS}"
@@ -743,33 +626,19 @@
                         <StackPanel Margin="5" Grid.Column="0">
 
                             <TextBlock Text="GPRS: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="EDGE: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Speed: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Wi-Fi: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Bluetooth: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="USB: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="NFC: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         </StackPanel>
                         <StackPanel Grid.Column="1" Margin="5">
                             <TextBlock Text="{Binding DetailedInfo[1].GPRS}"
@@ -820,24 +689,15 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
 
-
                         <StackPanel Grid.Column="0" Margin="5" >
                             <TextBlock Text="Primary camera:"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Secondary camera:"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Video"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Camera Features: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
 
                         </StackPanel>
                         <StackPanel Grid.Column="1" Margin="5" >
@@ -871,40 +731,28 @@
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0" Margin="5" >
                             <TextBlock Text="Primary camera:"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Secondary camera:"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Video"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Camera Features: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
+                            
                         </StackPanel>
                         <StackPanel Grid.Column="1" Margin="5" >
                             <TextBlock Text="{Binding DetailedInfo[1].Primary}"
                                        Name="PrimaryCamera2"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                       Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                             <TextBlock Text="{Binding DetailedInfo[1].Secondary}"
                                        Name="SecondaryCamera2"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                       Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                             <TextBlock Text="{Binding DetailedInfo[1].Video}"
                                        Name="Video2"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                       Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                             <TextBlock Text="{Binding DetailedInfo[1].CameraFeatures}"
                                        Name="CameraFeatures2"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                       Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                         </StackPanel>
                     </Grid>
 
@@ -927,53 +775,29 @@
 
                         <StackPanel Margin="5" Grid.Column="0">
                             <TextBlock Text="Operating System:"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Chipset: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="CPU: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="GPU: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Sensors: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Messaging: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Browser: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Radio: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="GPS: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Java: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Colors: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Other Features: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
 
                         </StackPanel>
                         <StackPanel Margin="5" Grid.Column="1">
@@ -1042,53 +866,29 @@
 
                         <StackPanel Margin="5" Grid.Column="0">
                             <TextBlock Text="Operating System:"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Chipset: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="CPU: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="GPU: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Sensors: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Messaging: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Browser: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Radio: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="GPS: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Java: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Colors: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Other Features: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
 
                         </StackPanel>
                         <StackPanel Margin="5" Grid.Column="1">
@@ -1164,21 +964,13 @@
                         <StackPanel  Grid.Column="0"
                         Margin="5">
                             <TextBlock Text="Battery Type: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Standby Time: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Talk Time: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Music Play Time: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         </StackPanel>
                         <StackPanel  Grid.Column="1"  Margin="5">
                             <TextBlock Text="{Binding DetailedInfo[0].BatteryType}"
@@ -1214,21 +1006,13 @@
                         <StackPanel  Grid.Column="0"
                         Margin="5">
                             <TextBlock Text="Battery Type: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Standby Time: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Talk Time: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Music Play Time: "
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         </StackPanel>
                         <StackPanel  Grid.Column="1"  Margin="5">
                             <TextBlock Text="{Binding DetailedInfo[1].BatteryType}"
@@ -1328,47 +1112,29 @@
                         Visibility="Collapsed">
 
                         <TextBlock Text="2G Network"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].SecondGenNetwork}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                         <TextBlock Text="3G Network"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].ThirdGenNetwork}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                         <TextBlock Text="4G Network"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].FourthGenNetwork}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                         <TextBlock Text="Sim"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Sim}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                         <TextBlock Text="Announced"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Announced}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                         <TextBlock Text="Status"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Status}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                     </StackPanel>
                     <StackPanel 
                         Grid.Row="2"
@@ -1379,47 +1145,29 @@
                         Visibility="Collapsed">
 
                         <TextBlock Text="2G Network"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].SecondGenNetwork}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                         <TextBlock Text="3G Network"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].ThirdGenNetwork}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                         <TextBlock Text="4G Network"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].FourthGenNetwork}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                         <TextBlock Text="Sim"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Sim}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                         <TextBlock Text="Announced"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Announced}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                         <TextBlock Text="Status"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Status}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                     </StackPanel>
 
                     <TextBlock
@@ -1436,21 +1184,14 @@
                         Visibility="Collapsed">
 
                         <TextBlock Text="Dimensions"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Dimensions}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Weight"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Weight}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                     </StackPanel>
                     <StackPanel
@@ -1462,21 +1203,15 @@
                         Visibility="Collapsed">
 
                         <TextBlock Text="Dimensions"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Dimensions}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Weight"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
 
                         <TextBlock Text="{Binding DetailedInfo[1].Weight}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                     </StackPanel>
 
@@ -1495,40 +1230,24 @@
                         Visibility="Collapsed">
 
                         <TextBlock Text="Display type"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].DisplayType}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Size"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock  Text="{Binding DetailedInfo[0].Size}"
-                                    FontSize="20"
-                                    TextWrapping="Wrap"/>
+                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Multitouch"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Multitouch}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Protection"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Protection}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                     </StackPanel>
                     <StackPanel
@@ -1540,40 +1259,24 @@
                         Visibility="Collapsed">
 
                         <TextBlock Text="Display type"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].DisplayType}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Size"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock  Text="{Binding DetailedInfo[1].Size}"
-                                    FontSize="20"
-                                    TextWrapping="Wrap"/>
+                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Multitouch"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Multitouch}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Protection"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Protection}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                     </StackPanel>
 
@@ -1590,40 +1293,24 @@
                         Background="#87CEEB"
                         Visibility="Collapsed">
                         <TextBlock Text="Alert types"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].AlertTypes}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Loudspeaker"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Loudspeaker}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="3.5mm audio jack"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].AudioJack}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Other sound features"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].OtherSoundFeatures}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                     </StackPanel>
                     <StackPanel
                         Grid.Row="11"
@@ -1633,40 +1320,24 @@
                         Background="#87CEEB"
                         Visibility="Collapsed">
                         <TextBlock Text="Alert types"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].AlertTypes}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Loudspeaker"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Loudspeaker}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="3.5mm audio jack"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].AudioJack}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Other sound features"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].OtherSoundFeatures}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                     </StackPanel>
 
                     <TextBlock
@@ -1684,22 +1355,14 @@
                         Visibility="Collapsed">
 
                         <TextBlock Text="Card slot"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].CardSlot}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Internal memory"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Internal}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                     </StackPanel>
                     <StackPanel
                         Grid.Row="14"
@@ -1711,22 +1374,14 @@
                         Visibility="Collapsed">
 
                         <TextBlock Text="Card slot"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].CardSlot}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Internal memory"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
-
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Internal}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                     </StackPanel>
 
                     <TextBlock
@@ -1743,60 +1398,39 @@
                         Visibility="Collapsed">
 
                         <TextBlock Text="GPRS"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].GPRS}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="EDGE"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].EDGE}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Speed"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Speed}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Wi-Fi"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].WLan}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Bluetooth"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Bluetooth}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="USB"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].USB}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="NFC"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].NFC}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                     </StackPanel>
                     <StackPanel
                         Grid.Row="17" 
@@ -1807,60 +1441,39 @@
                         Visibility="Collapsed">
 
                         <TextBlock Text="GPRS"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].GPRS}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="EDGE"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].EDGE}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Speed"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Speed}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Wi-Fi"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].WLan}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Bluetooth"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Bluetooth}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="USB"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].USB}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="NFC"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].NFC}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
                     </StackPanel>
 
                     <TextBlock
@@ -1877,36 +1490,24 @@
                         Visibility="Collapsed">
 
                         <TextBlock Text="Primary camera"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Primary}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Secondary camera"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Secondary}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Video"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Video}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Other camera features"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].CameraFeatures}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                     </StackPanel>
                     <StackPanel
@@ -1918,36 +1519,24 @@
                         Visibility="Collapsed">
 
                         <TextBlock Text="Primary camera"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Primary}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Secondary camera"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Secondary}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Video"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Video}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Other camera features"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].CameraFeatures}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                     </StackPanel>
 
@@ -1965,100 +1554,64 @@
                         Visibility="Collapsed">
 
                         <TextBlock Text="Operating System"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].OS}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Chipset"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Chipset}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="CPU"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].CPU}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="GPU"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].GPU}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Sensors"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Sensors}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Messaging"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Messaging}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Browser"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Browser}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Radio"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Radio}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="GPS"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].GPS}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Java"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Java}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Colors"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Colors}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Other features"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].OtherFeatures}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                     </StackPanel>
                     <StackPanel
@@ -2070,100 +1623,64 @@
                         Visibility="Collapsed">
 
                         <TextBlock Text="Operating System"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].OS}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Chipset"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Chipset}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="CPU"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].CPU}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="GPU"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].GPU}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Sensors"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Sensors}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Messaging"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Messaging}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Browser"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Browser}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Radio"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Radio}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="GPS"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].GPS}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Java"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Java}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Colors"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Colors}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Other features"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].OtherFeatures}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                     </StackPanel>
 
@@ -2181,36 +1698,24 @@
                         Visibility="Collapsed">
 
                         <TextBlock Text="Battery type"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].BatteryType}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Standby time"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].StandbyTime}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Talk time"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].TalkTime}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                         <TextBlock Text="Music play time"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].MusicPlayTime}"
-                                   FontSize="20"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
 
                     </StackPanel>
                     <StackPanel 
@@ -2222,33 +1727,25 @@
                         Visibility="Collapsed">
 
                         <TextBlock Text="Battery type"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].BatteryType}"
                                    FontSize="20"
                                    TextWrapping="Wrap"/>
 
                         <TextBlock Text="Standby time"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].StandbyTime}"
                                    FontSize="20"
                                    TextWrapping="Wrap"/>
 
                         <TextBlock Text="Talk time"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].TalkTime}"
                                    FontSize="20"
                                    TextWrapping="Wrap"/>
 
                         <TextBlock Text="Music play time"
-                                   FontSize="20"
-                                   FontWeight="Bold"
-                                   TextWrapping="Wrap"/>
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].MusicPlayTime}"
                                    FontSize="20"
                                    TextWrapping="Wrap"/>
