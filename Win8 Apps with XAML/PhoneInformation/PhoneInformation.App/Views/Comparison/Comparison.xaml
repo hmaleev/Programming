@@ -70,13 +70,9 @@
                     <TextBlock
                         Grid.Row="0" 
                         Grid.Column="0"
-                        Margin="20,0,0,0" 
                         Text="Phone" 
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap" 
-                        Tapped="OnTap"
-                        TextAlignment="Center"/>
+                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Tapped="OnTap"/>
                     <StackPanel 
                         Grid.Row="1"
                         Grid.Column="0" 
@@ -123,13 +119,9 @@
                     <TextBlock
                         Grid.Row="0" 
                         Grid.Column="1"
-                        Margin="20,0,0,0" 
                         Text="General" 
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap" 
-                        Tapped="OnTap"
-                        TextAlignment="Center"/>
+                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
+                        Tapped="OnTap"/>
                     <Grid Grid.Row="1" 
                         Grid.Column="1"
                         Visibility="Collapsed"
@@ -284,12 +276,8 @@
                     <TextBlock
                         Grid.Row="0"
                         Grid.Column="2"
-                        Margin="20,0,0,0"
                         Text="Body"
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextAlignment="Center"
-                        TextWrapping="Wrap"
+                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
                         Tapped="OnTap" />
                     <Grid Grid.Row="1" 
                           Grid.Column="2"
@@ -377,10 +365,7 @@
                         Grid.Row="0"
                         Grid.Column="3"
                         Text="Display"
-                        Margin="20,0,0,0"
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap"
+                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
                         Tapped="OnTap" />
                     <Grid Grid.Row="1"
                         Grid.Column="3"
@@ -483,12 +468,9 @@
 
                     <TextBlock
                         Text="Sound"
-                        Margin="20,0,0,0"
                         Grid.Row="0"
                         Grid.Column="4"
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap"
+                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
                         Tapped="OnTap"/>
                     <Grid Grid.Row="1"
                         Grid.Column="4"
@@ -597,12 +579,9 @@
 
                     <TextBlock
                         Text="Memory"
-                        Margin="20,0,0,0"
                         Grid.Row="0"
                         Grid.Column="5"
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap" 
+                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
                         Tapped="OnTap"/>
                     <Grid Grid.Row="1"
                           Background="#87CEEB"
@@ -675,10 +654,7 @@
                         Grid.Row="0"
                         Grid.Column="6"
                         Text="Data"
-                        Margin="20,0,0,0"
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap" 
+                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
                         Tapped="OnTap" />
                     <Grid Grid.Row="1" 
                         Grid.Column="6"
@@ -829,12 +805,9 @@
 
                     <TextBlock
                         Text="Camera"
-                        Margin="20,0,0,0"
                         Grid.Row="0"
                         Grid.Column="7"
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap"
+                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
                         Tapped="OnTap" />
                     <Grid Grid.Row="1"
                         Grid.Column="7"
@@ -939,10 +912,7 @@
                         Grid.Row="0"
                         Grid.Column="8"
                         Text="Features"
-                        Margin="20,0,0,0"
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap" 
+                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
                         Tapped="OnTap" />
                     <Grid Grid.Row="1"
                         Grid.Column="8"
@@ -1178,10 +1148,7 @@
                         Grid.Row="0"
                         Grid.Column="9"
                         Text="Battery"
-                        Margin="20,0,0,0"
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap"
+                        Style="{StaticResource ResourceKey=TextBlockHeaderStyle}"
                         Tapped="OnTap" />
                     <Grid Grid.Row="1"
                         Grid.Column="9"
@@ -1349,13 +1316,9 @@
 
                     <TextBlock
                         Grid.Row="0" 
-                        Margin="20,0,0,0" 
                         Text="General" 
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap" 
-                        Tapped="OnTap"
-                        TextAlignment="Center" HorizontalAlignment="Left"/>
+                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
+                        Tapped="OnTap"/>
                     <StackPanel 
                         Grid.Row="1"
                         Name="GeneralInfoSnapped" 
@@ -1459,17 +1422,11 @@
                                    TextWrapping="Wrap"/>
                     </StackPanel>
 
-
                     <TextBlock
                         Grid.Row="3"
-                        Margin="20,0,0,0"
                         Text="Body"
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextAlignment="Center"
-                        TextWrapping="Wrap"
-                        Tapped="OnTap"
-                        HorizontalAlignment="Left" />
+                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
+                        Tapped="OnTap" />
                     <StackPanel
                         Grid.Row="4"
                         Name="BodyInfoSnapped"
@@ -1523,14 +1480,10 @@
 
                     </StackPanel>
 
-
                     <TextBlock
                         Grid.Row="6"
                         Text="Display"
-                        Margin="20,0,0,0"
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap"
+                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
                         Tapped="OnTap" />
                     <StackPanel
                         Grid.Row="7"
@@ -1624,14 +1577,10 @@
 
                     </StackPanel>
 
-
                     <TextBlock
                         Text="Sound"
-                        Margin="20,0,0,0"
                         Grid.Row="9"
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap"
+                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
                         Tapped="OnTap"/>
                     <StackPanel
                         Grid.Row="10"
@@ -1720,14 +1669,10 @@
                                    TextWrapping="Wrap"/>
                     </StackPanel>
 
-
                     <TextBlock
                         Text="Memory"
-                        Margin="20,0,0,0"
                         Grid.Row="12"
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap" 
+                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
                         Tapped="OnTap"/>
                     <StackPanel
                         Grid.Row="13"
@@ -1784,14 +1729,10 @@
                                    TextWrapping="Wrap"/>
                     </StackPanel>
 
-
                     <TextBlock
                         Grid.Row="15"
                         Text="Data"
-                        Margin="20,0,0,0"
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap" 
+                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
                         Tapped="OnTap" />
                     <StackPanel
                         Grid.Row="16" 
@@ -1922,14 +1863,10 @@
                                    TextWrapping="Wrap"/>
                     </StackPanel>
 
-
                     <TextBlock
                         Text="Camera"
-                        Margin="20,0,0,0"
                         Grid.Row="18"
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap"
+                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
                         Tapped="OnTap" />
                     <StackPanel
                         Grid.Row="19"
@@ -2014,14 +1951,10 @@
 
                     </StackPanel>
 
-
                     <TextBlock
                         Grid.Row="21"
                         Text="Features"
-                        Margin="20,0,0,0"
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap" 
+                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
                         Tapped="OnTap" />
                     <StackPanel
                         Grid.Row="22"
@@ -2234,14 +2167,10 @@
 
                     </StackPanel>
 
-
                     <TextBlock
                         Grid.Row="24"
                         Text="Battery"
-                        Margin="20,0,0,0"
-                        FontSize="42"
-                        FontWeight="Bold"
-                        TextWrapping="Wrap"
+                        Style="{StaticResource ResourceKey=TextBlockHeaderStyleSnapped}"
                         Tapped="OnTap" />
                     <StackPanel 
                         Grid.Row="25"
@@ -2401,6 +2330,3 @@
 
     </Grid>
 </common:LayoutAwarePage>
-
-
-
