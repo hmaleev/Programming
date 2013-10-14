@@ -112,6 +112,9 @@
     <Compile Include="Common\RichTextColumns.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="HttpRequester\HttpRequest.cs" />
+    <Compile Include="ItemsPage1.xaml.cs">
+      <DependentUpon>ItemsPage1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -154,18 +157,18 @@
   <ItemGroup>
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\Logo.scale-80.png" />
-    <Content Include="Assets\Logos\Apple_Logo.png" />
-    <Content Include="Assets\Logos\BlackBerry_Logo.png" />
-    <Content Include="Assets\Logos\HTC_Logo.jpg" />
-    <Content Include="Assets\Logos\LG_logo.png" />
-    <Content Include="Assets\Logos\Motorola_Logo.jpg" />
-    <Content Include="Assets\Logos\Nokia_Logo.png" />
-    <Content Include="Assets\Logos\Samsung_Logo.png" />
-    <Content Include="Assets\Logos\Sony_Logo.png" />
-    <Content Include="Assets\Logos\StoreLogo.scale-100.png" />
-    <Content Include="Assets\Logos\StoreLogo.scale-140.png" />
-    <Content Include="Assets\Logos\WideLogo.scale-100.png" />
-    <Content Include="Assets\Logos\WideLogo.scale-80.png" />
+    <Content Include="Assets\BrandLogos\Apple_Logo.png" />
+    <Content Include="Assets\BrandLogos\BlackBerry_Logo.png" />
+    <Content Include="Assets\BrandLogos\HTC_Logo.png" />
+    <Content Include="Assets\BrandLogos\LG_logo.png" />
+    <Content Include="Assets\BrandLogos\Motorola_Logo.jpg" />
+    <Content Include="Assets\BrandLogos\Nokia_Logo.png" />
+    <Content Include="Assets\BrandLogos\Samsung_Logo.png" />
+    <Content Include="Assets\BrandLogos\Sony_Logo.png" />
+    <Content Include="Assets\BrandLogos\StoreLogo.scale-100.png" />
+    <Content Include="Assets\BrandLogos\StoreLogo.scale-140.png" />
+    <Content Include="Assets\BrandLogos\WideLogo.scale-100.png" />
+    <Content Include="Assets\BrandLogos\WideLogo.scale-80.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\SmallLogo.scale-80.png" />
     <Content Include="Assets\SmallLogo.targetsize-32.png" />
@@ -185,6 +188,10 @@
     <Page Include="Common\StandardStyles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ItemsPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
