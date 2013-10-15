@@ -185,53 +185,53 @@
                         Background="#87CEEB"
                         Margin="5">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="350"/>
                         </Grid.ColumnDefinitions>
-                        <StackPanel 
-                            Grid.Row="0"
-                            Grid.Column="0" 
-                            Visibility="Visible"
-                            Margin="5">
-                            <TextBlock Text="2G Network"
-                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
-                            <TextBlock Text="3G Network"
-                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
-                            <TextBlock Text="4G Network"
-                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
-                            <TextBlock Text="Sim Card Size:"
-                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}" />
-                            <TextBlock Text="Announced"
-                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}" />
-                            <TextBlock Text="Status"
-                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}" />
-                        </StackPanel>
-                        <StackPanel 
-                            Grid.Row="0"
-                            Grid.Column="1" 
-                            Margin="5"
-                            Visibility="Visible">
+                        <Grid.RowDefinitions>
 
-                            <TextBlock Text="{Binding DetailedInfo[1].SecondGenNetwork}"
+                            <RowDefinition/>
+                            <RowDefinition/>
+
+                            <RowDefinition/>
+                            <RowDefinition/>
+
+                            <RowDefinition/>
+                            <RowDefinition/>
+
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="2G Network"
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="3G Network"
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="4G Network"
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
+                        <TextBlock Grid.Row="3" Grid.Column="0" Text="Sim Card Size:"
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
+                        <TextBlock Grid.Row="4" Grid.Column="0" Text="Announced"
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
+                        <TextBlock Grid.Row="5" Grid.Column="0" Text="Status"
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
+
+                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding DetailedInfo[1].SecondGenNetwork}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                    Name="SecondGenNetwork2"/>
-                            <TextBlock Text="{Binding DetailedInfo[1].ThirdGenNetwork}"
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding DetailedInfo[1].ThirdGenNetwork}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                    Name="ThirdGenNetwork2"/>
-                            <TextBlock Text="{Binding DetailedInfo[1].FourthGenNetwork}"
+                        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding DetailedInfo[1].FourthGenNetwork}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                    Name="FourthGenNetwork2"/>
-                            <TextBlock Text="{Binding DetailedInfo[1].Sim}"
+                        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding DetailedInfo[1].Sim}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                    Name="Sim2"/>
-                            <TextBlock Text="{Binding DetailedInfo[1].Announced}"
+                        <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding DetailedInfo[1].Announced}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                    Name="Announced2"/>
-                            <TextBlock Text="{Binding DetailedInfo[1].Status}"
+                        <TextBlock Grid.Row="5" Grid.Column="1" Text="{Binding DetailedInfo[1].Status}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                    Name="Status2" />
-                        </StackPanel>
-
                     </Grid>
 
                     <TextBlock
@@ -260,7 +260,6 @@
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Weight: "
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
-
                         </StackPanel>
                         <StackPanel
                             Grid.Row="0"
@@ -273,7 +272,6 @@
                             <TextBlock Text="{Binding DetailedInfo[0].Weight}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                    Name="Weight"/>
-
                         </StackPanel>
                     </Grid>
                     <Grid Grid.Row="2" 
@@ -306,7 +304,6 @@
                             <TextBlock Text="{Binding DetailedInfo[1].Weight}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                        Name="Weight2"/>
-
                         </StackPanel>
                     </Grid>
 
@@ -336,7 +333,6 @@
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Protection: "
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
-
                         </StackPanel>
                         <StackPanel Grid.Column="1" Margin="5">
                             <TextBlock Text="{Binding DetailedInfo[0].DisplayType}"
@@ -387,7 +383,6 @@
                             <TextBlock Text="{Binding DetailedInfo[1].Protection}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                         Name="Protection2"/>
-
                         </StackPanel>
                     </Grid>
 
@@ -419,7 +414,6 @@
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Other Sound Features: "
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
-
                         </StackPanel>
                         <StackPanel Grid.Column="1"
                                      Margin="5">
@@ -458,7 +452,6 @@
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Other Sound Features: "
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
-
                         </StackPanel>
                         <StackPanel Grid.Column="1"
                                      Margin="5">
@@ -478,7 +471,6 @@
                                    FontSize="20"
                                    TextWrapping="Wrap"
                                        Name="OtherSoundFeatures2"/>
-
                         </StackPanel>
                     </Grid>
 
@@ -515,7 +507,6 @@
                                    TextWrapping="Wrap"
                                       Name="Internal"/>
                         </StackPanel>
-
                     </Grid>
                     <Grid Grid.Row="2"
                           Background="#87CEEB"
@@ -544,7 +535,6 @@
                                    TextWrapping="Wrap"
                                       Name="Internal2"/>
                         </StackPanel>
-
                     </Grid>
 
                     <TextBlock
@@ -565,7 +555,6 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Margin="5" Grid.Column="0">
-
                             <TextBlock Text="GPRS: "
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="EDGE: "
@@ -624,7 +613,6 @@
                         </Grid.ColumnDefinitions>
 
                         <StackPanel Margin="5" Grid.Column="0">
-
                             <TextBlock Text="GPRS: "
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="EDGE: "
@@ -698,7 +686,6 @@
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Camera Features: "
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
-
                         </StackPanel>
                         <StackPanel Grid.Column="1" Margin="5" >
                             <TextBlock Text="{Binding DetailedInfo[0].Primary}"
@@ -738,7 +725,6 @@
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Camera Features: "
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
-                            
                         </StackPanel>
                         <StackPanel Grid.Column="1" Margin="5" >
                             <TextBlock Text="{Binding DetailedInfo[1].Primary}"
@@ -798,7 +784,6 @@
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Other Features: "
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
-
                         </StackPanel>
                         <StackPanel Margin="5" Grid.Column="1">
                             <TextBlock Text="{Binding DetailedInfo[0].OS}"
@@ -849,9 +834,7 @@
                                        Name="OtherFeatures"
                                    FontSize="20"
                                    TextWrapping="Wrap"/>
-
                         </StackPanel>
-
                     </Grid>
                     <Grid Grid.Row="2"
                         Grid.Column="8"
@@ -889,7 +872,6 @@
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Other Features: "
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
-
                         </StackPanel>
                         <StackPanel Margin="5" Grid.Column="1">
                             <TextBlock Text="{Binding DetailedInfo[1].OS}"
@@ -941,7 +923,6 @@
                                    FontSize="20"
                                    TextWrapping="Wrap"/>
                         </StackPanel>
-
                     </Grid>
 
                     <TextBlock
@@ -989,7 +970,6 @@
                                        Name="MusicPlayTime"
                                    FontSize="20"
                                    TextWrapping="Wrap"/>
-
                         </StackPanel>
                     </Grid>
                     <Grid Grid.Row="2"
@@ -1050,49 +1030,41 @@
 
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
-
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
 
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
-
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
 
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
-
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
 
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
-
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
         
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
-
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
 
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
-
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
 
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
-
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
 
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
-
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
 
@@ -1115,22 +1087,27 @@
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].SecondGenNetwork}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
+                        
                         <TextBlock Text="3G Network"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].ThirdGenNetwork}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
+                        
                         <TextBlock Text="4G Network"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].FourthGenNetwork}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
+                        
                         <TextBlock Text="Sim"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Sim}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
+                        
                         <TextBlock Text="Announced"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Announced}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
+                        
                         <TextBlock Text="Status"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Status}"
@@ -1148,22 +1125,27 @@
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].SecondGenNetwork}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
+                        
                         <TextBlock Text="3G Network"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].ThirdGenNetwork}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
+                        
                         <TextBlock Text="4G Network"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].FourthGenNetwork}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
+                        
                         <TextBlock Text="Sim"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Sim}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
+                        
                         <TextBlock Text="Announced"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Announced}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
+                        
                         <TextBlock Text="Status"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Status}"
@@ -1192,7 +1174,6 @@
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Weight}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
-
                     </StackPanel>
                     <StackPanel
                         Grid.Row="5"
@@ -1209,10 +1190,8 @@
 
                         <TextBlock Text="Weight"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
-
                         <TextBlock Text="{Binding DetailedInfo[1].Weight}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
-
                     </StackPanel>
 
                     <TextBlock
@@ -1248,7 +1227,6 @@
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].Protection}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
-
                     </StackPanel>
                     <StackPanel
                         Grid.Row="8"
@@ -1277,7 +1255,6 @@
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].Protection}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
-
                     </StackPanel>
 
                     <TextBlock
@@ -1508,7 +1485,6 @@
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].CameraFeatures}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
-
                     </StackPanel>
                     <StackPanel
                         Grid.Row="20"
@@ -1537,7 +1513,6 @@
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].CameraFeatures}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
-
                     </StackPanel>
 
                     <TextBlock
@@ -1612,7 +1587,6 @@
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].OtherFeatures}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
-
                     </StackPanel>
                     <StackPanel
                         Grid.Row="23"
@@ -1681,7 +1655,6 @@
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[1].OtherFeatures}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
-
                     </StackPanel>
 
                     <TextBlock
@@ -1716,7 +1689,6 @@
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         <TextBlock Text="{Binding DetailedInfo[0].MusicPlayTime}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"/>
-
                     </StackPanel>
                     <StackPanel 
                         Grid.Row="26"
@@ -1749,7 +1721,6 @@
                         <TextBlock Text="{Binding DetailedInfo[1].MusicPlayTime}"
                                    FontSize="20"
                                    TextWrapping="Wrap"/>
-
                     </StackPanel>
 
                 </Grid>
@@ -1757,7 +1728,6 @@
         </ScrollViewer>
 
         <VisualStateManager.VisualStateGroups>
-
             <!-- Visual states reflect the application's view state -->
             <VisualStateGroup x:Name="ApplicationViewStates">
                 <VisualState x:Name="FullScreenLandscape">
@@ -1786,7 +1756,6 @@
                     </Storyboard>
                 </VisualState>
                 <VisualState x:Name="Filled"/>
-
                 <!-- The entire page respects the narrower 100-pixel margin convention for portrait -->
                 <VisualState x:Name="FullScreenPortrait">
                     <Storyboard>
@@ -1795,7 +1764,6 @@
                         </ObjectAnimationUsingKeyFrames>
                     </Storyboard>
                 </VisualState>
-
                 <!-- The back button and title have different styles when snapped -->
                 <VisualState x:Name="Snapped">
                     <Storyboard>
@@ -1819,11 +1787,9 @@
                                 </DiscreteObjectKeyFrame.Value>
                             </DiscreteObjectKeyFrame>
                         </ObjectAnimationUsingKeyFrames>
-
                     </Storyboard>
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-
     </Grid>
 </common:LayoutAwarePage>

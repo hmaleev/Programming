@@ -36,53 +36,79 @@ namespace PhoneInformation.App
         {
         }
 
-        private void onNokiaTap(object sender, TappedRoutedEventArgs e)
+        private void onTap(object sender, TappedRoutedEventArgs e)
         {
-          Parameters.brand = "nokia";
-          this.Frame.Navigate(typeof( Views.Brands.PhoneList));
+            int index ;
+            if (itemGridView.SelectedIndex!=-1)
+            {
+                index = itemGridView.SelectedIndex;
+            }
+            else if(itemListView.SelectedIndex!=-1)
+            {
+                index = itemListView.SelectedIndex;
+            }
+            else
+            {
+                index = -1;
+            }
+            SelectBrand(index);
         }
-
-        private void onSamsungTap(object sender, TappedRoutedEventArgs e)
+  
+        private void SelectBrand(int index)
         {
-            Parameters.brand = "samsung";
-            this.Frame.Navigate(typeof(Views.Brands.PhoneList));
-        }
-
-        private void onSonyTap(object sender, TappedRoutedEventArgs e)
-        {
-            Parameters.brand = "sony";
-            this.Frame.Navigate(typeof(Views.Brands.PhoneList));
-        }
-
-        private void onHTCTap(object sender, TappedRoutedEventArgs e)
-        {
-            Parameters.brand = "htc";
-            this.Frame.Navigate(typeof(Views.Brands.PhoneList));
-            //this.Frame.Navigate(typeof(Views.Brands.HTC));
-        }
-
-        private void onMotorolaTap(object sender, TappedRoutedEventArgs e)
-        {
-            Parameters.brand = "motorola";
-           this.Frame.Navigate(typeof(Views.Brands.PhoneList));
-        }
-
-        private void onAppleTap(object sender, TappedRoutedEventArgs e)
-        {
-            Parameters.brand = "apple";
-            this.Frame.Navigate(typeof(Views.Brands.PhoneList));
-        }
-
-        private void onBlackberryTap(object sender, TappedRoutedEventArgs e)
-        {
-            Parameters.brand ="blackberry";
-            this.Frame.Navigate(typeof(Views.Brands.PhoneList));
-        }
-
-        private void onLGTap(object sender, TappedRoutedEventArgs e)
-        {
-            Parameters.brand = "lg";
-            this.Frame.Navigate(typeof(Views.Brands.PhoneList));
+            switch (index)
+            {
+                default:
+                    break;
+                case 0:
+                    {
+                        Parameters.brand = "nokia";
+                        this.Frame.Navigate(typeof( Views.Brands.PhoneList));
+                        break;
+                    }
+                    case 1:
+                    {
+                        Parameters.brand = "samsung";
+                        this.Frame.Navigate(typeof( Views.Brands.PhoneList));
+                        break;
+                    }
+                    case 2:
+                    {
+                        Parameters.brand = "blackberry";
+                        this.Frame.Navigate(typeof( Views.Brands.PhoneList));
+                        break;
+                    }
+                    case 3:
+                    {
+                        Parameters.brand = "lg";
+                        this.Frame.Navigate(typeof( Views.Brands.PhoneList));
+                        break;
+                    }
+                    case 4:
+                    {
+                        Parameters.brand = "apple";
+                        this.Frame.Navigate(typeof( Views.Brands.PhoneList));
+                        break;
+                    }
+                    case 5:
+                    {
+                        Parameters.brand = "motorola";
+                        this.Frame.Navigate(typeof( Views.Brands.PhoneList));
+                        break;
+                    }
+                    case 6:
+                    {
+                        Parameters.brand = "sony";
+                        this.Frame.Navigate(typeof( Views.Brands.PhoneList));
+                        break;
+                    }
+                    case 7:
+                    {
+                        Parameters.brand = "htc";
+                        this.Frame.Navigate(typeof( Views.Brands.PhoneList));
+                        break;
+                    }
+            }
         }
     }
 }

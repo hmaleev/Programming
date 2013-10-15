@@ -112,9 +112,6 @@
     <Compile Include="Common\RichTextColumns.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="HttpRequester\HttpRequest.cs" />
-    <Compile Include="ItemsPage1.xaml.cs">
-      <DependentUpon>ItemsPage1.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -165,10 +162,6 @@
     <Content Include="Assets\BrandLogos\Nokia_Logo.png" />
     <Content Include="Assets\BrandLogos\Samsung_Logo.png" />
     <Content Include="Assets\BrandLogos\Sony_Logo.png" />
-    <Content Include="Assets\BrandLogos\StoreLogo.scale-100.png" />
-    <Content Include="Assets\BrandLogos\StoreLogo.scale-140.png" />
-    <Content Include="Assets\BrandLogos\WideLogo.scale-100.png" />
-    <Content Include="Assets\BrandLogos\WideLogo.scale-80.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\SmallLogo.scale-80.png" />
     <Content Include="Assets\SmallLogo.targetsize-32.png" />
@@ -188,10 +181,6 @@
     <Page Include="Common\StandardStyles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="ItemsPage1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>

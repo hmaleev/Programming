@@ -24,18 +24,18 @@
             TabIndex="1"
             Grid.RowSpan="2"
             Padding="116,136,116,46"
-            SelectionMode="None"
+            SelectionMode="Single"
             IsSwipeEnabled="false">
 
-            <Image Source="/Assets/BrandLogos/Nokia_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10"/>
-            <Image Source="/Assets/BrandLogos/Samsung_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10"/>
-            <Image Source="/Assets/BrandLogos/Blackberry_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10"/>
-            <Image Source="/Assets/BrandLogos/LG_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10"/>
+            <Image Source="/Assets/BrandLogos/Nokia_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
+            <Image Source="/Assets/BrandLogos/Samsung_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
+            <Image Source="/Assets/BrandLogos/Blackberry_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
+            <Image Source="/Assets/BrandLogos/LG_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
 
-            <Image Source="/Assets/BrandLogos/Apple_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10"/>
-            <Image Source="/Assets/BrandLogos/Motorola_Logo.jpg" Width="250" Height="250" Stretch="Fill" Margin="10"/>
-            <Image Source="/Assets/BrandLogos/Sony_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10"/>
-            <Image Source="/Assets/BrandLogos/HTC_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10"/>
+            <Image Source="/Assets/BrandLogos/Apple_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
+            <Image Source="/Assets/BrandLogos/Motorola_Logo.jpg" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
+            <Image Source="/Assets/BrandLogos/Sony_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
+            <Image Source="/Assets/BrandLogos/HTC_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
 
         </GridView>
 
@@ -50,19 +50,19 @@
             Visibility="Collapsed"
             Margin="0,-10,0,0"
             Padding="10,0,0,60"
-            SelectionMode="None"
+            SelectionMode="Single"
             IsSwipeEnabled="false">
 
 
-            <Image Source="/Assets/BrandLogos/Nokia_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10"/>
-            <Image Source="/Assets/BrandLogos/Samsung_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10"/>
-            <Image Source="/Assets/BrandLogos/Blackberry_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10"/>
-            <Image Source="/Assets/BrandLogos/LG_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10"/>
+            <Image Source="/Assets/BrandLogos/Nokia_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
+            <Image Source="/Assets/BrandLogos/Samsung_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
+            <Image Source="/Assets/BrandLogos/Blackberry_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
+            <Image Source="/Assets/BrandLogos/LG_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
 
-            <Image Source="/Assets/BrandLogos/Apple_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10"/>
-            <Image Source="/Assets/BrandLogos/Motorola_Logo.jpg" Width="250" Height="250" Stretch="Fill" Margin="10"/>
-            <Image Source="/Assets/BrandLogos/Sony_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10"/>
-            <Image Source="/Assets/BrandLogos/HTC_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10"/>
+            <Image Source="/Assets/BrandLogos/Apple_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
+            <Image Source="/Assets/BrandLogos/Motorola_Logo.jpg" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
+            <Image Source="/Assets/BrandLogos/Sony_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
+            <Image Source="/Assets/BrandLogos/HTC_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
 
         </ListView>
 
