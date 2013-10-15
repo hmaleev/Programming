@@ -260,6 +260,8 @@
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Weight: "
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
+                            <TextBlock Text="Other features: "
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         </StackPanel>
                         <StackPanel
                             Grid.Row="0"
@@ -272,6 +274,9 @@
                             <TextBlock Text="{Binding DetailedInfo[0].Weight}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                    Name="Weight"/>
+                            <TextBlock Text="{Binding DetailedInfo[0].OtherBodyFeatures}"
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
+                                   Name="OtherBodyFeatures"/>
                         </StackPanel>
                     </Grid>
                     <Grid Grid.Row="2" 
@@ -292,6 +297,8 @@
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                             <TextBlock Text="Weight: "
                                    Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
+                            <TextBlock Text="Other features: "
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureName}"/>
                         </StackPanel>
                         <StackPanel
                             Grid.Row="0"
@@ -304,6 +311,9 @@
                             <TextBlock Text="{Binding DetailedInfo[1].Weight}"
                                    Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
                                        Name="Weight2"/>
+                           <TextBlock Text="{Binding DetailedInfo[1].OtherBodyFeatures}"
+                                   Style="{StaticResource ResourceKey=TexBlockFeatureContent}"
+                                       Name="OtherBodyFeatures2"/>
                         </StackPanel>
                     </Grid>
 

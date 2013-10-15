@@ -17,7 +17,7 @@
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="PhoneInformation.App.App">
       <VisualElements DisplayName="Phone Information" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="Phone Information" ForegroundText="dark" BackgroundColor="#87CEEB" ToastCapable="true">
         <DefaultTile ShowName="allLogos" ShortName="Phone Info" WideLogo="Assets\WideLogo.png" />
-        <SplashScreen Image="Assets\SplashScreen.png" />
+        <SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#87CEEB" />
       </VisualElements>
       <Extensions>
         <Extension Category="windows.fileTypeAssociation">
@@ -34,7 +34,6 @@
             </SupportedFileTypes>
           </FileSavePicker>
         </Extension>
-        <Extension Category="windows.search" />
       </Extensions>
     </Application>
   </Applications>

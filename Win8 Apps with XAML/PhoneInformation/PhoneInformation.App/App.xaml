@@ -16,9 +16,9 @@
                 <ResourceDictionary Source="Common/StandardStyles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
-            <SolidColorBrush x:Key="ListViewItemSelectedPointerOverBackgroundThemeBrush" Color="RoyalBlue" />
-            <SolidColorBrush x:Key="ListViewItemSelectedPointerOverBorderThemeBrush" Color="RoyalBlue" />
-            <SolidColorBrush x:Key="ListViewItemSelectedBackgroundThemeBrush" Color="#87ceeb" />
+            <SolidColorBrush x:Key="ListViewItemSelectedPointerOverBackgroundThemeBrush" Color="Blue" />
+            <SolidColorBrush x:Key="ListViewItemSelectedPointerOverBorderThemeBrush" Color="Blue" />
+            <SolidColorBrush x:Key="ListViewItemSelectedBackgroundThemeBrush" Color="RoyalBlue" />
             <SolidColorBrush x:Key="ListViewItemSelectedForegroundThemeBrush" Color="White"/>
             <SolidColorBrush x:Key="AppBarBackgroundThemeBrush" Color="#87ceeb" />
 

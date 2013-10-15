@@ -25,7 +25,7 @@
             Grid.RowSpan="2"
             Padding="116,136,116,46"
             SelectionMode="Single"
-            IsSwipeEnabled="false">
+            IsSwipeEnabled="True">
 
             <Image Source="/Assets/BrandLogos/Nokia_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
             <Image Source="/Assets/BrandLogos/Samsung_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
@@ -36,7 +36,6 @@
             <Image Source="/Assets/BrandLogos/Motorola_Logo.jpg" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
             <Image Source="/Assets/BrandLogos/Sony_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
             <Image Source="/Assets/BrandLogos/HTC_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
-
         </GridView>
 
         <!-- Vertical scrolling list only used when snapped -->
@@ -51,8 +50,7 @@
             Margin="0,-10,0,0"
             Padding="10,0,0,60"
             SelectionMode="Single"
-            IsSwipeEnabled="false">
-
+            IsSwipeEnabled="True">
 
             <Image Source="/Assets/BrandLogos/Nokia_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
             <Image Source="/Assets/BrandLogos/Samsung_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
@@ -63,18 +61,15 @@
             <Image Source="/Assets/BrandLogos/Motorola_Logo.jpg" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
             <Image Source="/Assets/BrandLogos/Sony_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
             <Image Source="/Assets/BrandLogos/HTC_Logo.png" Width="250" Height="250" Stretch="Fill" Margin="10" Tapped="onTap"/>
-
         </ListView>
-
 
         <!-- Back button and page title -->
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="140"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="backButton" IsEnabled="True" Style="{StaticResource BackButtonStyle}"/>
-            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="TEST" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}"/>
+            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="Main Page" IsHitTestVisible="false" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
 
         <VisualStateManager.VisualStateGroups>
