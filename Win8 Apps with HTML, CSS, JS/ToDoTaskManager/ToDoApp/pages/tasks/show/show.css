@@ -1,0 +1,101 @@
+﻿.show section[role=main] {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+body, html {
+    width: 100%;
+}
+
+.win-listview {
+    height: 700px;
+    margin-left: 120px;
+}
+
+.win-item {
+    width: 400px;
+    height: 200px;
+}
+
+.template {
+  padding:10px 10px -10px -10px;
+
+    background-color: #24029c;
+    display: inline-block;
+    width: 400px;
+    height: 200px;
+    overflow-y: auto;
+}
+
+
+    .template img {
+        float: left;
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+    }
+
+    .template h2 {
+        font-size: 3.0em;
+        word-wrap: break-word;
+        margin-bottom: 10px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .template #content {
+        display: block;
+        clear: both;
+        font-size: 1.5em;
+        word-wrap: break-word;
+        text-align: center;
+    }
+
+    .template #finishDate {
+        position: relative;
+        font-size: 1.2em;
+        right: 20px;
+        margin-top: 60px;
+        display: block;
+        float: right;
+    }
+
+    .template .txt {
+        display: block;
+    }
+
+@media screen and (-ms-view-state: snapped) {
+    .show section[role=main] {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .win-listview {
+        width: 280px;
+        margin-left: 20px;
+    }
+
+    .win-item {
+        width: 280px;
+    }
+
+    .template {
+        background-color: #24029c;
+        display: inline-block;
+        width: 280px;
+        overflow-y: auto;
+    }
+    #tasks {
+        display: none;
+        overflow-y:auto;
+    }
+
+    
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .show section[role=main] {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
