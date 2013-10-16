@@ -43,17 +43,22 @@ namespace PhoneInformation.App.ViewModels
 
         protected async void GetData(string str)
         {
+            string message = string.Empty;
             try
             {
                             this.DetailedInfo =
                 await HttpRequest.Get<IEnumerable<DetailedPhoneInformationModel>>("http://phoneinformation.apphb.com//api/PhoneDetails?phoneUrl=" + str);
 
             }
-            catch (HttpRequestException)
+            catch (Exception)
             {
-                var msg = new MessageDialog("An error has occured");
-                msg.ShowAsync();
-                // throw;
+                message ="An error has occured";
+               // throw;
+            }
+            if (message!= null || message!= string.Empty )
+            {
+                var msg = new MessageDialog(message);
+                await msg.ShowAsync();
             }
         }
     }
