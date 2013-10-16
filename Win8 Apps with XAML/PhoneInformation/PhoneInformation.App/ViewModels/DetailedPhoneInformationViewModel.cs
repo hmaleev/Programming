@@ -46,16 +46,15 @@ namespace PhoneInformation.App.ViewModels
             string message = string.Empty;
             try
             {
-                            this.DetailedInfo =
-                await HttpRequest.Get<IEnumerable<DetailedPhoneInformationModel>>("http://phoneinformation.apphb.com//api/PhoneDetails?phoneUrl=" + str);
+                this.DetailedInfo =
+    await HttpRequest.Get<IEnumerable<DetailedPhoneInformationModel>>("http://phoneinformation.apphb.com//api/PhoneDetails?phoneUrl=" + str);
 
             }
             catch (Exception)
             {
-                message ="An error has occured";
-               // throw;
+                message = "An error has occured";
             }
-            if (message!= null || message!= string.Empty )
+            if (message != string.Empty)
             {
                 var msg = new MessageDialog(message);
                 await msg.ShowAsync();

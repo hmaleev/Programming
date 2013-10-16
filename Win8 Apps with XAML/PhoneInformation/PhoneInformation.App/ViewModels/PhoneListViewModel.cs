@@ -9,14 +9,14 @@ using Windows.UI.Popups;
 
 namespace PhoneInformation.App.ViewModels
 {
-    class PhoneListViewModel:ViewModelBase
+    class PhoneListViewModel : ViewModelBase
     {
-        
+
         private ObservableCollection<PhoneModel> phones;
         private string brand = Parameters.brand;
         public PhoneListViewModel()
         {
-        
+
         }
 
 
@@ -44,18 +44,22 @@ namespace PhoneInformation.App.ViewModels
 
         protected async void GetData(string brand)
         {
+            string message = string.Empty;
             try
             {
-                 this.Phones =
-                await HttpRequest.Get<IEnumerable<PhoneModel>>("http://phoneinformation.apphb.com/api/PhoneList?brand=" + brand);
+                this.Phones =
+               await HttpRequest.Get<IEnumerable<PhoneModel>>("http://phoneinformation.apphb.com/api/PhoneList?brand=" + brand);
             }
-            catch (HttpRequestException)
+            catch (Exception)
             {
-                var msg = new MessageDialog("An error has occured");
-                msg.ShowAsync();
-               // throw;
+                message = "An error has occured";
             }
-           
+            if (message != string.Empty)
+            {
+                var msg = new MessageDialog(message);
+                await msg.ShowAsync();
+            }
+
         }
     }
 }

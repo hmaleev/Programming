@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="24234hmaleev.PhoneInformation" Publisher="CN=4A66E1DD-C7BE-410B-9E1E-DF9D303F9993" Version="1.0.0.2" />
+  <Identity Name="24234hmaleev.PhoneInformation" Publisher="CN=4A66E1DD-C7BE-410B-9E1E-DF9D303F9993" Version="1.0.0.3" />
   <Properties>
     <DisplayName>Phone Information</DisplayName>
     <PublisherDisplayName>hmaleev</PublisherDisplayName>
