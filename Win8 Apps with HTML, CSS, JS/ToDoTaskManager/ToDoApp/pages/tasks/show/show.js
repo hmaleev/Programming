@@ -16,6 +16,10 @@
             var appBar = document.getElementById("appbar").winControl;
             appBar.disabled = false;
 
+            if (DataPersister.userData.data == undefined || DataPersister.userData.data == '') {
+                appBar.show();
+            }
+
             var addButton = document.getElementById("add");
             var updateButton = document.getElementById("edit");
             var backButton = document.getElementById("back-button");

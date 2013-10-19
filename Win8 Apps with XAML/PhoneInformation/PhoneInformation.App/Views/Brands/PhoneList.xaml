@@ -44,32 +44,62 @@
             <RowDefinition Height="140"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <!-- Horizontal scrolling grid used in most view states -->
-        <GridView
-            x:Name="itemGridView"
-            AutomationProperties.AutomationId="ItemsGridView"
-            AutomationProperties.Name="Items"
-            TabIndex="1"
-            Grid.RowSpan="2"
-            Padding="116,136,116,46"
-            ItemsSource="{Binding Phones}"
-            SelectionMode="Multiple"
-            IsSwipeEnabled="True">
-            <GridView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Height="240" Width="110" Tapped="StackPanel_Tapped">
-                        <Image Source="{Binding ImageSrc}"
+
+        <SemanticZoom  Grid.RowSpan="2">
+            <SemanticZoom.ZoomedInView >
+                <GridView
+                    x:Name="itemGridView"
+                    AutomationProperties.AutomationId="ItemsGridView"
+                    AutomationProperties.Name="Items"
+                    TabIndex="1"
+                    Padding="116,136,116,46"
+                    ItemsSource="{Binding Phones}"
+                    SelectionMode="Multiple"
+                    IsSwipeEnabled="True">
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Height="240" Width="110" Tapped="StackPanel_Tapped">
+                                <Image Source="{Binding ImageSrc}"
                                 Height="150"
                                  />
-                        <TextBlock Text="{Binding Name}"
+                                <TextBlock Text="{Binding Name}"
                                    FontSize="24"
                                    FontWeight="Bold"
                                    TextWrapping="Wrap"
                                    TextAlignment="Center"/>
-                    </StackPanel>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
+                            </StackPanel>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </SemanticZoom.ZoomedInView>
+            <SemanticZoom.ZoomedOutView>
+                <GridView
+                    x:Name="itemGridViewZoomedOut"
+                    TabIndex="1"
+                    Padding="116,136,116,46"
+                    ItemsSource="{Binding Phones}"
+                    SelectionMode="Multiple"
+                    IsSwipeEnabled="True"
+                    IsActiveView="True">
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Height="80" Width="40" Tapped="StackPanel_Tapped_1">
+                                <Image Source="{Binding ImageSrc}"
+                                Height="50"/>
+                                <TextBlock Text="{Binding Name}"
+                                   FontSize="10"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"
+                                   TextAlignment="Center"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </SemanticZoom.ZoomedOutView>
+        </SemanticZoom>
+        
+        <!-- Horizontal scrolling grid used in most view states -->
+        
         <!-- Vertical scrolling list only used when snapped -->
         <ListView
             x:Name="itemListView"

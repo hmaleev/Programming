@@ -49,6 +49,13 @@
         }
     };
 
+    app.onsettings = function (e) {
+        e.detail.applicationcommands = {
+            "PrivacyPolicy": { title: "Privacy Policy", href: "/pages/settings/privacyPolicy.html" }
+        };
+        WinJS.UI.SettingsFlyout.populateSettings(e);
+    };
+
     app.oncheckpoint = function (args) {
         if (DataPersister.userData.remember) {
             localSettings.values["user"] = DataPersister.userData.sessionKey;
