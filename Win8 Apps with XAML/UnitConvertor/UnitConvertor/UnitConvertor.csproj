@@ -106,9 +106,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ConversionFormulas\Distance.cs" />
-    <Compile Include="ConversionFormulas\Speed.cs" />
-    <Compile Include="ConversionFormulas\Temperature.cs" />
+    <Compile Include="Formulas\Area.cs" />
+    <Compile Include="Formulas\Distance.cs" />
+    <Compile Include="Formulas\Speed.cs" />
+    <Compile Include="Formulas\Temperature.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
