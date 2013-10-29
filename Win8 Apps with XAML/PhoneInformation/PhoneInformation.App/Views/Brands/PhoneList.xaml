@@ -83,11 +83,11 @@
                     IsActiveView="True">
                     <GridView.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Height="80" Width="40" Tapped="StackPanel_Tapped_1">
+                            <StackPanel Height="110" Width="45" Tapped="StackPanel_Tapped_1">
                                 <Image Source="{Binding ImageSrc}"
-                                Height="50"/>
+                                Height="63"/>
                                 <TextBlock Text="{Binding Name}"
-                                   FontSize="10"
+                                   FontSize="12"
                                    FontWeight="Bold"
                                    TextWrapping="Wrap"
                                    TextAlignment="Center"/>
