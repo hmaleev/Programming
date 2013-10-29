@@ -8,6 +8,28 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <TextBox HorizontalAlignment="Left" Margin="102,133,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="200" InputScope="Number"/>
+        <TextBox HorizontalAlignment="Left" Margin="102,231,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="200" IsReadOnly="True"/>
+        <ComboBox HorizontalAlignment="Left" Margin="307,133,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem>m/s</ComboBoxItem>
+            <ComboBoxItem>km/h</ComboBoxItem>
+            <ComboBoxItem>mi/h</ComboBoxItem>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="307,231,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem>m/s</ComboBoxItem>
+            <ComboBoxItem>km/h</ComboBoxItem>
+            <ComboBoxItem>mi/h</ComboBoxItem>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="102,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="325" FontSize="30">
+        	<Run Text="Is Equal to"/>
+        	<LineBreak/>
+        	<Run/>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="750,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" Width="325" FontSize="30">
+        	<Run Text="History"/>
+        	<LineBreak/>
+        	<Run/>
+        </TextBlock>
 
     </Grid>
 </Page>

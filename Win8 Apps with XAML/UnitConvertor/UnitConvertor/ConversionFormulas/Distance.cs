@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace UnitConvertor
+namespace UnitConvertor.ConversionFormulas
 {
-    public class Distance
+        public class Distance
     {
         public Distance()
         {
@@ -113,9 +110,9 @@ namespace UnitConvertor
                         distance *= 1609.344f;
                         break;
                     }
-
             }
             return distance;
         }
     }
+
 }

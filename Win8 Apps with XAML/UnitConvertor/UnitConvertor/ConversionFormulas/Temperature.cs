@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 
-namespace ConsoleApplication1
+namespace UnitConvertor.ConversionFormulas
 {
-    public class Temperature
+       public class Temperature
     {
         public Temperature()
         {
@@ -13,7 +13,6 @@ namespace ConsoleApplication1
         {
             float result = 0;
             temperature = InitialUnitToCelsius(initialUnit, temperature);
-
             return result = CelsiusToFinalUnit(finalUnit, temperature, ref result);
         }
 
