@@ -48,7 +48,7 @@
     <TargetPlatformVersion>8.0</TargetPlatformVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
     <PackageCertificateKeyFile>ToDoApp_StoreKey.pfx</PackageCertificateKeyFile>
-    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <PackageCertificateThumbprint>2C5BA1F1C2756BDB233059EA16FA544267ABB535</PackageCertificateThumbprint>
   </PropertyGroup>
   <ItemGroup>
@@ -87,6 +87,7 @@
     <Content Include="js\scripts\popUpMessage.js" />
     <Content Include="js\scripts\uiEditor.js" />
     <Content Include="js\YeahToast.js" />
+    <Content Include="ToDoApp_StoreKey.pfx" />
     <None Include="Package.StoreAssociation.xml" />
     <Content Include="packages.config" />
     <Content Include="pages\menu\login\login.css" />

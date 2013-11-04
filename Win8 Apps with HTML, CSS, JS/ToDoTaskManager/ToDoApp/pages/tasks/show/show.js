@@ -2,6 +2,8 @@
 /// <reference path="../../../js/scripts/popUpMessage.js" />
 /// <reference path="../../../js/scripts/uiEditor.js" />
 /// <reference path="../../../js/scripts/httpRequester.js" />
+/// <reference path="//Microsoft.WinJS.1.0/js/ui.js" />
+/// <reference path="//Microsoft.WinJS.1.0/js/base.js" />
 // For an introduction to the Page Control template, see the following documentation:
 // http://go.microsoft.com/fwlink/?LinkId=232511
 (function () {
@@ -19,6 +21,7 @@
             if (DataPersister.userData.data == undefined || DataPersister.userData.data == '') {
                 appBar.show();
             }
+            var localStorage = window.localStorage;
 
             var addButton = document.getElementById("add");
             var updateButton = document.getElementById("edit");
@@ -30,6 +33,22 @@
             var logoutButton = document.getElementById("logout").winControl;
            // var notificationShown = false;
             var selectedTasks = new Array();
+
+           
+            var localTasks = JSON.parse(localStorage.getItem("taskContent"));
+            var taskData = [];
+           
+            if (localTasks !== null) {
+                    for (var i = 0; i < localTasks.length; i++) {
+                        taskData[i] = localTasks[i]._backingData;
+                    }
+                DataPersister.userData.data = taskData;
+
+                var list = document.getElementById("tasks").winControl;
+                list.itemDataSource = new WinJS.Binding.List(DataPersister.userData.data).dataSource;
+               
+                console.log(DataPersister.userData.data);
+            }
 
             addButton.addEventListener("click", function () {
                 WinJS.Navigation.navigate("pages/tasks/create/create.html");
@@ -91,8 +110,11 @@
                     DataPersister.userData.data.splice(selectedTasks[i], 1);
                 }
                 selectedTasks = new Array();
+                localStorage.setItem("deleteTasks", "true");
                 DataPersister.update();
+               
                 WinJS.Navigation.navigate("/pages/tasks/show/show.html");
+                localStorage.removeItem("deleteTasks");
                 DataPersister.userData.hasChanges = true;
             });
 
@@ -108,30 +130,30 @@
                 WinJS.Navigation.navigate("/pages/tasks/show/show.html");
             });
 
-            syncButton.addEventListener("click", function () {
-                if (!DataPersister.userData.hasChanges) {
-                    return;
-                }
+            //syncButton.addEventListener("click", function () {
+            //    if (!DataPersister.userData.hasChanges) {
+            //        return;
+            //    }
 
-                var progressBar = new UI.ProgressBar(document.body);
-                progressBar.Show();
+            //    var progressBar = new UI.ProgressBar(document.body);
+            //    progressBar.Show();
 
-                Request.UserSync(DataPersister.userData.sessionKey, JSON.stringify(DataPersister.userData.data)).then(function (request) {
+            //    Request.UserSync(DataPersister.userData.sessionKey, JSON.stringify(DataPersister.userData.data)).then(function (request) {
                    
-                    progressBar.Hide();
-                    //Message.Show("true");\
-                    if (DataPersister.userData.hasChanges) {
-                        YeahToast.show({ title: "Sync done" });
-                        //notificationShown = true;
-                    }
-                    DataPersister.userData.hasChanges = false;
+            //        progressBar.Hide();
+            //        //Message.Show("true");\
+            //        if (DataPersister.userData.hasChanges) {
+            //            YeahToast.show({ title: "Sync done" });
+            //            //notificationShown = true;
+            //        }
+            //        DataPersister.userData.hasChanges = false;
 
-                }, function (error) {
-                    progressBar.Hide();
-                    //Message.Show("false");
-                });
+            //    }, function (error) {
+            //        progressBar.Hide();
+            //        //Message.Show("false");
+            //    });
 
-            });
+            //});
 
             logoutButton.addEventListener("click", function () {
                 var progressBar = new UI.ProgressBar(document.body);

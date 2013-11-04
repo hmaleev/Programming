@@ -15,6 +15,7 @@
         finishDate: "",
         status: ""
     };
+    var localStorage = window.localStorage;
 
     var createNewTask = function (title, content, finishDate) {
         var newTask = {
@@ -46,7 +47,7 @@
     var makeBindableTasks = function () {
 
         var list = new Array();
-
+        var toDelete = localStorage.getItem("deleteTasks");
         for (var i in userData.data) {
 
             var title = userData.data[i].title;
@@ -56,6 +57,13 @@
 
             list.push(getObservableTask(title, content, finishDate, status));
         }
+        if (userData.data.length>0) {
+            localStorage.setItem("taskContent", JSON.stringify(list));
+        }
+         if (userData.data.length===0 && toDelete==="true")  {
+            localStorage.removeItem("taskContent");
+        }
+        
 
         return new WinJS.Binding.List(list);
     }
