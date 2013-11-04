@@ -141,6 +141,7 @@
                     progressBar.Hide();
                     DataPersister.userData.remember = false;
                     localSettings.values["user"] = undefined;
+                    localStorage.removeItem("remember");
                     WinJS.Navigation.navigate("pages/menu/login/login.html");
 
                 }, function (request) {

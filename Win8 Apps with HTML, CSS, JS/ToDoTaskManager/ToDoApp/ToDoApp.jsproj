@@ -87,7 +87,6 @@
     <Content Include="js\scripts\popUpMessage.js" />
     <Content Include="js\scripts\uiEditor.js" />
     <Content Include="js\YeahToast.js" />
-    <None Include="ToDoApp_StoreKey.pfx" />
     <None Include="Package.StoreAssociation.xml" />
     <Content Include="packages.config" />
     <Content Include="pages\menu\login\login.css" />

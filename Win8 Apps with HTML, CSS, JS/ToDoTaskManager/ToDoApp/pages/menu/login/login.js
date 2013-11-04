@@ -42,7 +42,7 @@
 
             var appBar = document.getElementById("appbar").winControl
             appBar.disabled = true;
-
+            var localStorage = window.localStorage;
             var userInput = document.getElementById("user");
             var passwordInput = document.getElementById("pass");
             var remmemberCheckBox = document.getElementById("remmember");
@@ -51,46 +51,69 @@
             var registerButton = document.getElementById("create-account-button");
             var recoveryButton = document.getElementById("password-recover-button");
 
+            if (localStorage.getItem("remember") !== null) {
+                var loadingBar = new UI.ProgressBar(document.body);
+                loadingBar.Show();
+                var input = JSON.parse( localStorage.getItem("remember"));
+                Request.UserLogin(input.username, input.password).then(function (request) {
+                    loadingBar.Hide();
+                    var response = JSON.parse(request.response);
+                    DataPersister.userData.username = input.username;
+                    DataPersister.userData.sessionKey = response.sessionKey;
+                
+                    WinJS.Navigation.navigate("pages/tasks/show/show.html");
+
+                });
+            }
+
             loginButton.addEventListener("click", function () {
                 var loadingBar = new UI.ProgressBar(document.body);
                 loadingBar.Show();
 
                 UI.ChageBorderColor([userInput, passwordInput], Const.InputDefaultFieldColor);
+               
+                    var remmember = remmemberCheckBox.checked;
+                    var username = userInput.value;
+                    var password = passwordInput.value;
+                    var message = "";
+                    if (remmember == true) {
+                        var values = { username: username, password: password };
+                        localStorage.setItem("remember", JSON.stringify(values));
+                    }
+                    var wrongInputs = new Array();
 
-                var username = userInput.value;
-                var password = passwordInput.value;
-                var remmember = remmemberCheckBox.value;
-                var message = "";
-                var wrongInputs = new Array();
+                    var userCheck = Check.Username(username);
+                    if (userCheck != "") {
+                        message += userCheck;
+                        wrongInputs.push(userInput);
+                    }
 
-                var userCheck = Check.Username(username);
-                if (userCheck != "") {
-                    message += userCheck;
-                    wrongInputs.push(userInput);
-                }
+                    var checkPassword = Check.Password(password);
+                    if (checkPassword != "") {
+                        wrongInputs.push(passwordInput);
+                        message += checkPassword;
+                    }
 
-                var checkPassword = Check.Password(password);
-                if (checkPassword != "") {
-                    wrongInputs.push(passwordInput);
-                    message += checkPassword;
-                }
-
-                if (wrongInputs.length != 0) {
-                    UI.ChageBorderColor(wrongInputs, Const.InputWrongFieldColor);
-                    loadingBar.Hide();
-                    Message.Show(message);
-                    return;
-                }
-
+                    if (wrongInputs.length != 0) {
+                        UI.ChageBorderColor(wrongInputs, Const.InputWrongFieldColor);
+                        loadingBar.Hide();
+                        Message.Show(message);
+                        return;
+                    }
+                
                 Request.UserLogin(username, password).then(function (request) {
                     loadingBar.Hide();
                     var response = JSON.parse(request.response);
                     DataPersister.userData.username = username;
                     DataPersister.userData.sessionKey = response.sessionKey;
                     DataPersister.userData.remember = remmemberCheckBox.checked;
-                    if (response.data != "" && response.data !== undefined) {
-                        DataPersister.userData.data = JSON.parse(response.data);
-                        DataPersister.update();
+                    //if (response.data != "" && response.data !== undefined) {
+                    //    DataPersister.userData.data = JSON.parse(response.data);
+                    //    DataPersister.update();
+                    //}
+                    if (DataPersister.userData.remember==true) {
+                        var values={username:username, password:password};
+                        localStorage.setItem("remember", JSON.stringify(values));
                     }
 
                     WinJS.Navigation.navigate("pages/tasks/show/show.html");
