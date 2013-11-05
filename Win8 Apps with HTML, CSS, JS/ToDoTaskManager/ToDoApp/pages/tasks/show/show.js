@@ -119,8 +119,16 @@
             });
 
             updateButton.addEventListener("click", function () {
-                var taskToEdit = selectedTasks[0];
-                WinJS.Navigation.navigate("/pages/tasks/update/update.html", taskToEdit);
+                if (selectedTasks.length==1) {
+                    var taskToEdit = selectedTasks[0];
+                    WinJS.Navigation.navigate("/pages/tasks/update/update.html", taskToEdit);
+                }
+                else if (selectedTasks.length == 0) {
+                    Message.Show("No task selected");
+                } else {
+                    Message.Show("Please select only one task");
+                }
+              
             });
 
             finishButton.addEventListener("click", function () {
