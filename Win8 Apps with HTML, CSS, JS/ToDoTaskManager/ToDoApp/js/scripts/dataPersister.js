@@ -3,6 +3,7 @@
 (function () {
     var userData = {
         username: "",
+        password:"",
         sessionKey: "",
         remember: false,
         data: new Array(),
@@ -58,10 +59,10 @@
             list.push(getObservableTask(title, content, finishDate, status));
         }
         if (userData.data.length>0) {
-            localStorage.setItem("taskContent", JSON.stringify(list));
+            localStorage.setItem(userData.username, JSON.stringify(list));
         }
          if (userData.data.length===0 && toDelete==="true")  {
-            localStorage.removeItem("taskContent");
+             localStorage.removeItem(userData.username);
         }
         
 

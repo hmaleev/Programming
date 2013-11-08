@@ -10,7 +10,6 @@
     "use strict";
 
     var applicationData = Windows.Storage.ApplicationData.current;
-
     var localSettings = applicationData.localSettings;
 
     WinJS.UI.Pages.define("/pages/tasks/show/show.html", {
@@ -24,19 +23,20 @@
             }
             var localStorage = window.localStorage;
 
+            var lView = element.querySelector("#tasks").winControl;
+            lView.addEventListener("selectionchanged", this.selectionChanged);
+
             var addButton = document.getElementById("add");
-            var updateButton = document.getElementById("edit");
-            var visited;
-            var syncButton = document.getElementById("sync");
-            var tasksList = document.getElementById("tasks").winControl;
+            var editButton = document.getElementById("edit");
+            var uploadTasksButton = document.getElementById("sync");
+            var downloadTasksButton = document.getElementById("download");
+
             var deleteButton = document.getElementById("delete").winControl;
             var finishButton = document.getElementById("finish").winControl;
             var logoutButton = document.getElementById("logout").winControl;
-            // var notificationShown = false;
-            var selectedTasks = new Array();
+            var selectedTasks = null;
 
-
-            var localTasks = JSON.parse(localStorage.getItem("taskContent"));
+            var localTasks = JSON.parse(localStorage.getItem(DataPersister.userData.username));
             var taskData = [];
 
             if (localTasks !== null) {
@@ -44,70 +44,42 @@
                     taskData[i] = localTasks[i]._backingData;
                 }
                 DataPersister.userData.data = taskData;
-
                 var list = document.getElementById("tasks").winControl;
                 list.itemDataSource = new WinJS.Binding.List(DataPersister.userData.data).dataSource;
-
-                console.log(DataPersister.userData.data);
+            }
+            else {
+                DataPersister.userData.data = null;
             }
 
             addButton.addEventListener("click", function () {
                 WinJS.Navigation.navigate("pages/tasks/create/create.html");
             });
 
-            tasksList.addEventListener("contextmenu", function () {
-                var triger = this.winControl;
-                selectedTasks = new Array();
-
-                triger.selection.getItems().then(function (items) {
-
-                    for (var i in items) {
-                        selectedTasks.push(items[i].index);
-                    }
-                });
-            });
-
-            //appBar.addEventListener("beforeshow", function () {
-            //    if (selectedTasks.length > 1) {
-            //        appBar.hideCommands("add");
-            //        appBar.hideCommands("edit");
-            //        appBar.showCommands("delete");
-            //        appBar.showCommands("finish");
-            //        if (DataPersister.userData.hasChanges) {
-            //            appBar.showCommands("sync");
+            //tasksList.addEventListener("contextmenu", function () {
+            //    var triger = this.winControl;
+            //    selectedTasks = new Array();
+            //    triger.selection.getItems().then(function (items) {
+            //        if (items.length>0) {
+            //            for (var i in items) {
+            //                selectedTasks.push(items[i].index);
+            //            }
             //        }
-            //        else {
-            //            appBar.hideCommands("sync");
-            //        }
-            //    }
-            //    else if (selectedTasks.length > 0) {
-            //        appBar.hideCommands("add");
-            //        appBar.showCommands("edit");
-            //        appBar.showCommands("delete");
-            //        appBar.showCommands("finish");
-            //        if (DataPersister.userData.hasChanges) {
-            //            appBar.showCommands("sync");
-            //        }
-            //        else {
-            //            appBar.hideCommands("sync");
-            //        }
-            //    }
-            //    else {
-            //        appBar.showCommands("add");
-            //        appBar.hideCommands("edit");
-            //        appBar.hideCommands("delete");
-            //        appBar.hideCommands("finish");
-            //        if (DataPersister.userData.hasChanges) {
-            //            appBar.showCommands("sync");
-            //        }
-            //        else {
-            //            appBar.hideCommands("sync");
-            //        }
-            //    }
+                   
+            //    });
             //});
 
+
             deleteButton.addEventListener("click", function () {
-                
+                if (lView.selection._listView !== null) {
+                    selectedTasks = lView.selection.getIndices();
+                }
+                else {
+                    return;
+                }
+                if (selectedTasks.length == 0) {
+                    Message.Show("No task(s) selected");
+                }
+
                 if (selectedTasks!==null && selectedTasks.length>=0) {
                     for (var i = selectedTasks.length - 1; i >= 0 ; i--) {
                         DataPersister.userData.data.splice(selectedTasks[i], 1);
@@ -120,12 +92,16 @@
                     DataPersister.userData.hasChanges = true;
                     selectedTasks = null;
                 }
-               
-                
-               
             });
 
-            updateButton.addEventListener("click", function () {
+            editButton.addEventListener("click", function () {
+                if (lView.selection._listView!==null) {
+                    selectedTasks = lView.selection.getIndices();
+                }
+                else {
+                    return;
+                }
+                
                 if (selectedTasks!==null && selectedTasks.length == 1) {
                     var taskToEdit = selectedTasks[0];
                     WinJS.Navigation.navigate("/pages/tasks/update/update.html", taskToEdit);
@@ -135,10 +111,18 @@
                 } else {
                     Message.Show("Please select only one task");
                 }
-
             });
 
             finishButton.addEventListener("click", function () {
+                if (lView.selection._listView !== null) {
+                    selectedTasks = lView.selection.getIndices();
+                }
+                else {
+                    return;
+                }
+                if (selectedTasks.length == 0) {
+                    Message.Show("No task(s) selected");
+                }
                 DataPersister.finishTasks(selectedTasks);
                 DataPersister.userData.hasChanges = true;
                 DataPersister.update();
@@ -146,30 +130,68 @@
                 selectedTasks = null;
             });
 
-            //syncButton.addEventListener("click", function () {
-            //    if (!DataPersister.userData.hasChanges) {
-            //        return;
-            //    }
+            uploadTasksButton.addEventListener("click", function () {
+                if (!DataPersister.userData.hasChanges) {
+                    return;
+                }
 
-            //    var progressBar = new UI.ProgressBar(document.body);
-            //    progressBar.Show();
+                var progressBar = new UI.ProgressBar(document.body);
+                progressBar.Show();
 
-            //    Request.UserSync(DataPersister.userData.sessionKey, JSON.stringify(DataPersister.userData.data)).then(function (request) {
+                Request.UserSync(DataPersister.userData.sessionKey, JSON.stringify(DataPersister.userData.data)).then(function (request) {
 
-            //        progressBar.Hide();
-            //        //Message.Show("true");\
-            //        if (DataPersister.userData.hasChanges) {
-            //            YeahToast.show({ title: "Sync done" });
-            //            //notificationShown = true;
-            //        }
-            //        DataPersister.userData.hasChanges = false;
+                    progressBar.Hide();
+                    if (DataPersister.userData.hasChanges) {
+                        YeahToast.show({ title: "Sync done" });
+                    }
+                    DataPersister.userData.hasChanges = false;
 
-            //    }, function (error) {
-            //        progressBar.Hide();
-            //        Message.Show("false");
-            //    });
+                }, function (error) {
+                    progressBar.Hide();
+                    Message.Show("false");
+                });
+            });
 
-            //});
+            downloadTasksButton.addEventListener("click", function () {
+
+                var userData = JSON.parse(localStorage.getItem("remember"));
+                if (userData == null) {
+                    userData = {};
+                    userData.username = DataPersister.userData.username;
+                    userData.password = DataPersister.userData.password;
+                }
+                Request.UserDownloadTasks(userData.username, userData.password).then(function (request) {
+
+                    var response = JSON.parse(request.response);
+                    if (response.data != "" && response.data !== undefined) {
+                        DataPersister.userData.data = JSON.parse(response.data);
+                        DataPersister.userData.username = userData.username;
+                        DataPersister.userData.sessionKey = response.sessionKey;
+                        DataPersister.update();
+                    }
+                   
+                    WinJS.Navigation.navigate("pages/tasks/show/show.html");
+
+                }, function (error) {
+                    var respons;
+                    if (error.response != "") {
+                        respons = JSON.parse(error.response);
+                    }
+                    else {
+                        respons = "";
+                    }
+
+                    if (respons == Request.ErrorMessages.UserNotExist) {
+                        UI.ChageBorderColor([userInput, passwordInput], Const.InputWrongFieldColor);
+                        Message.Show(Request.ErrorMessages.UserNotExist);
+                    }
+                    else {
+                        var msgpopup = new Windows.UI.Popups.MessageDialog(Request.ErrorMessages.UnhandledError);
+                        msgpopup.commands.append(new Windows.UI.Popups.UICommand("Ok"));
+                        msgpopup.showAsync();
+                    }
+                });
+            });
 
             logoutButton.addEventListener("click", function () {
                 var progressBar = new UI.ProgressBar(document.body);

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="24234hmaleev.ToDoTaskManager" Version="1.0.2.8" Publisher="CN=4A66E1DD-C7BE-410B-9E1E-DF9D303F9993" />
+  <Identity Name="24234hmaleev.ToDoTaskManager" Version="1.0.3.2" Publisher="CN=4A66E1DD-C7BE-410B-9E1E-DF9D303F9993" />
   <Properties>
     <DisplayName>To Do Task Manager</DisplayName>
     <PublisherDisplayName>hmaleev</PublisherDisplayName>
@@ -19,9 +19,19 @@
         <DefaultTile ShowName="allLogos" ShortName="To Do" />
         <SplashScreen Image="images\splashScreen100scale.png" BackgroundColor="#00A9EC" />
       </VisualElements>
+      <Extensions>
+        <Extension Category="windows.fileSavePicker">
+          <FileSavePicker>
+            <SupportedFileTypes>
+              <FileType>.txt</FileType>
+            </SupportedFileTypes>
+          </FileSavePicker>
+        </Extension>
+      </Extensions>
     </Application>
   </Applications>
   <Capabilities>
+    <Capability Name="removableStorage" />
     <Capability Name="internetClient" />
   </Capabilities>
 </Package>

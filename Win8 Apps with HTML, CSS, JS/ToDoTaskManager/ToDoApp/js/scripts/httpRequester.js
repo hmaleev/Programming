@@ -17,6 +17,15 @@
         UserLogin: function (username, password) {
             var data = {
                 username: username,
+                pasword:password,
+                authoCode: CryptoJS.SHA1(username + password).toString(),
+            };
+
+            return this._httpRequester(this._serverRootUrl() + "user/login/", "post", data);
+        },
+        UserDownloadTasks: function (username, password) {
+            var data = {
+                username: username,
                 authoCode: CryptoJS.SHA1(username + password).toString(),
             };
 
@@ -70,11 +79,11 @@
         },
 
         ErrorMessages: {
-            UserNotExist: "User or password are wrong",
-            UserOrEmailAreWrong: "User or email are wrong",
+            UserNotExist: "User doesn't exist",
+            UserOrEmailAreWrong: "Username or email are wrong",
             UnhandledError: "Something went wrong :(",
             UserOrPasswordAreWrong: "Username or password are wrong",
-            UsernameExist: "User already exist"
+            UsernameExist: "Username already exists"
         }
     });
 }())

@@ -59,6 +59,7 @@
                     loadingBar.Hide();
                     var response = JSON.parse(request.response);
                     DataPersister.userData.username = input.username;
+                    DataPersister.userData.password = input.password;
                     DataPersister.userData.sessionKey = response.sessionKey;
                 
                     WinJS.Navigation.navigate("pages/tasks/show/show.html");
@@ -105,6 +106,7 @@
                     loadingBar.Hide();
                     var response = JSON.parse(request.response);
                     DataPersister.userData.username = username;
+                    DataPersister.userData.password = password;
                     DataPersister.userData.sessionKey = response.sessionKey;
                     DataPersister.userData.remember = remmemberCheckBox.checked;
                     //if (response.data != "" && response.data !== undefined) {
@@ -114,7 +116,11 @@
                     if (DataPersister.userData.remember==true) {
                         var values={username:username, password:password};
                         localStorage.setItem("remember", JSON.stringify(values));
-                    }
+                        }
+                //    else {
+                    //    localStorage.setItem("password", JSON.stringify(values));
+                    //}
+
 
                     WinJS.Navigation.navigate("pages/tasks/show/show.html");
 
